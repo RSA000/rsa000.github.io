@@ -21,6 +21,12 @@ var control = function(ev) {
 	var center = function(){
 		/* Coordinates to set to */
 		window.scrollTo(40, 215);
+		/* Set scale? */
+		var scale = 'scale(1)';
+		document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
+		document.body.style.msTransform =   scale;       // IE 9
+		document.body.style.transform = scale;     // General
+
 	};
 	
 	/* Not sure */
