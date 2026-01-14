@@ -16,11 +16,21 @@ var control = function(ev) {
 (function(){
 	/*The DEFAULT variable is displayed when no menu items on the lower screen are hovered over. */
 	var DEFAULT = 'img/MainMenu.jpg';
+	var forcePosition = true;
 	
 	/*This function continuously scrolls the screen to the 40,215 coordinates */
 	var center = function(){
-		/* Coordinates to set to */
-		window.scrollTo({40,215);
+		/**
+		 * Moves the user's camera to an optimal position.
+		 */
+			if(!forcePosition) return;
+
+			const x = 40;
+			const y = 227;
+
+			if(window.scrollX === x && window.scrollY === y) return;
+			window.scrollTo(x,y);
+		}
 	};
 	
 	/* Not sure */
