@@ -23,7 +23,7 @@ body > div {
 div.scrollmenu {
 	background-color: #ffb220;
 	white-space: nowrap;
-	overflow-y: clip;
+	overflow-y: auto;
 	border-radius: 7%;
 	padding: 5px;
 }
