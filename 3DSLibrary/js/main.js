@@ -30,8 +30,7 @@ var control = function(ev) {
 
 			if(window.scrollX === x && window.scrollY === y) return;
 			window.scrollTo(x,y);
-		}
-	};
+		};
 	
 	/* Not sure */
 	var init = function(anchors) {
