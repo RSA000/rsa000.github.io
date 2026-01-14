@@ -24,8 +24,7 @@ var control = function(ev) {
 			top: 40,
 			left: 215,
 			behavior: "instant",
-		});
-
+		}, 0);
 	};
 	
 	/* Not sure */
