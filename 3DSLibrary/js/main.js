@@ -51,7 +51,7 @@ var control = function(ev) {
 
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
-		/* Call center function every 100 miliseconds*/
+		/* Call center function every milisecond*/
 		setInterval(center, 1);
 
 		/* Store anchors of jpeg and mpo type in respective variables */
@@ -62,7 +62,6 @@ var control = function(ev) {
 		for(var i = 0, l = jpgAnchors.length; i<l; i++){
 			jpgAnchors[i].addEventListener('focus', active, false);
 			jpgAnchors[i].addEventListener('blur', inactive, false);
-
 		}
 		init(mpoAnchors);
 		inactive();
