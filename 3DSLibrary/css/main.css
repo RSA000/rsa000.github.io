@@ -1,16 +1,19 @@
 body, html {
-	margin: 0;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
 	background: black;
 }
 body > div {
-	overflow-x: hidden;
+
 }
+
 /*The "top" tag represents the top screen element */
 #upperScreen {
 	width: 400px;
 	height: 215px;
 	overflow: hidden;
-	background-color: red;
 }
 
 #lowerScreen{
