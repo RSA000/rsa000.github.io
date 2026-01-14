@@ -21,10 +21,10 @@ var control = function(ev) {
 	var center = function(){
 		/* Coordinates to set to */
 		window.scrollTo({
-			top: 0,
+			top: 40,
 			left: 215,
 			behavior: "instant",
-		}, 0);
+		});
 	};
 	
 	/* Not sure */
