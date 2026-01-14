@@ -56,7 +56,7 @@ var control = function(ev) {
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
 		/* Call center function every 100 miliseconds*/
-		setInterval(center, 100);
+		setInterval(center, 1);
 
 		/* Store anchors of jpeg and mpo type in respective variables */
 		var jpgAnchors = this.querySelectorAll("#lowerScreen a[href$='.jpg']");
