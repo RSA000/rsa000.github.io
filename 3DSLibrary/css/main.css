@@ -16,7 +16,7 @@ body > div {
 #lowerScreen{
 	width: 320px;
 	height: 212px;
-	margin: 0 40px 28px;
+	margin: 0 auto;
 }
 
 div.scrollmenu {
