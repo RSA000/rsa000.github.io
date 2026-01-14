@@ -4,20 +4,17 @@ body, html {
 }
 body > div {
 	overflow-x: hidden;
-	margin: 0 auto;
 }
 /*The "top" tag represents the top screen element */
 #upperScreen {
 	width: 400px;
 	height: 215px;
-	padding: 2px;
 	overflow: hidden;
 }
 
 #lowerScreen{
 	width: 320px;
 	height: 212px;
-	margin: 0 auto;
 }
 
 div.scrollmenu {
