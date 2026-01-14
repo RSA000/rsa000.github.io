@@ -11,11 +11,14 @@ body > div {
 	width: 400px;
 	height: 215px;
 	padding: 2px;
+	overflow: hidden;
 }
 
 #lowerScreen{
 	width: 320px;
 	height: 212px;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 div.scrollmenu {
@@ -28,13 +31,14 @@ div.scrollmenu {
 
 div.scrollmenu a {
 	margin: 6px 4px;
-	height:88px;
+	height:212px;
 	width: 308px;
 	display: block;
 	color: white;
 	text-align: center;
 	padding: 2px;
 	border-radius: 7%;
+	overflow-x: hidden;
 }
 
 div.scrollmenu a:hover {

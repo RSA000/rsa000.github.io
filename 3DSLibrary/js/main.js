@@ -20,7 +20,6 @@ var control = function(ev) {
 	
 	/*This function continuously scrolls the screen to the 40,215 coordinates */
 	var center = function(){
-
 		window.setInterval(function() {
 			window.scrollTo(40, 215);
 		}, 0);
