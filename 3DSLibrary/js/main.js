@@ -22,7 +22,7 @@ var control = function(ev) {
 	var center = function(){
 		window.setInterval(function() {
 			window.scrollTo(40, 215);
-		}, 0);
+		});
 	};
 	
 	/* Not sure */
