@@ -22,7 +22,7 @@ var control = function(ev) {
 		/* Coordinates to set to */
 		window.scrollTo({
 			top: 0,
-			left: 0,
+			left: 215,
 			behavior: "instant",
 		}, 0);
 	};
