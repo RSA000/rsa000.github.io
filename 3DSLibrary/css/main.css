@@ -11,9 +11,8 @@ body > div {
 	width: 400px;
 	height: 215px;
 	background: #ffb220;
-	border: 2px solid green;
+	border: 2px solid gray;
 	border-radius: 5%
-	padding: 2px;
 	overflow: hidden;
 }
 
@@ -21,9 +20,9 @@ body > div {
 .lowerScreen{
 	width: 320px;
 	height: 240px;
-	border: 2px solid green;
+	border: 2px solid gray;
 	border-radius: 5%
-	padding: 2px;
+	padding-top: 1px;
 	overflow: hidden;
 	margin-left:35px;
 
@@ -41,13 +40,13 @@ div.lowerScreen {
 /* Lower Screen link CSS. */
 div.lowerScreen a {
 	margin: 6px 4px;
-	height:91px;
-	width: 308px;
+	height:50px;
+	width: 300px;
 	display: block;
 	color: white;
 	text-align: center;
 	padding: 2px;
-	border-radius: 7%;
+	border-radius: 8%;
 	overflow-x: hidden;
 }
 
