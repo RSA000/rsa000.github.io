@@ -55,6 +55,7 @@ var control = function(ev) {
 		setInterval(center, 1);
 
 		/* Store anchors of jpeg and mpo type in respective variables */
+		/*
 		var jpgAnchors = this.querySelectorAll("#lowerScreenHome a[href$='.jpg']");
 		var mpoAnchors = this.querySelectorAll("#lowerScreenHome a[href$='.mpo']");
 		init(jpgAnchors);
@@ -69,6 +70,8 @@ var control = function(ev) {
 			mpoAnchors[i].addEventListener('focus', active, false);
 			mpoAnchors[i].addEventListener('blur', inactive, false);
 		}
+		*/
 	}, false);
+
 
 })()

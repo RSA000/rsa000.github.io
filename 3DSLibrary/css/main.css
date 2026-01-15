@@ -11,43 +11,53 @@ body > div {
 	width: 400px;
 	height: 215px;
 	background: #ffb220;
-	border: 2px solid gray;
-	border-radius: 5%
+	border: 5px solid #9c9a9a;
+	border-radius: 5%;
 	overflow: hidden;
 }
+
+/* Top Heading settings.*/
+#topHeading{
+	border: 3px solid #9c9a9a;
+	margin: 11px;
+	text-align: center;
+	color: white;
+	background-color: gray;
+}
+
 
 /* Lower screen settings.*/
 .lowerScreen{
 	width: 320px;
 	height: 240px;
-	border: 2px solid gray;
-	border-radius: 5%
+	border: 5px solid #9c9a9a;
+	border-radius: 5%;
 	padding-top: 1px;
 	overflow: hidden;
 	margin-left:35px;
+	margin-top:3px;
 
 }
 
 /* Lower Screen CSS. */
 div.lowerScreen {
 	background-color: #ffb220;
-	white-space: nowrap;
-	overflow-y: auto;
-	border-radius: 5%;
-	padding: 2px;
+	overflow-y: scroll;
 }
 
-/* Lower Screen link CSS. */
+/* Lower Screen div link CSS. */
 div.lowerScreen a {
 	margin: 6px 4px;
 	height:50px;
 	width: 300px;
 	display: block;
-	color: white;
-	text-align: center;
 	padding: 2px;
-	border-radius: 8%;
-	overflow-x: hidden;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	background-color: gray;
+
+
 }
 
 /* Lower Screen link CSS when hovering. */
