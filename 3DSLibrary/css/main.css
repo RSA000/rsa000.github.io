@@ -30,23 +30,22 @@ body > div {
 .lowerScreen{
 	width: 315px;
 	height: 235px;
-	border: 5px solid #9c9a9a;
-	border-radius: 5%;
+	border: 3px solid #9c9a9a;
 	padding-top: 1px;
-	overflow: hidden;
-	margin-left:35px;
-	margin-top:3px;
+	margin-left:40px;
+	background-color: #ffb220;
 
 }
 
 
 #lowerScreenMenu{
-	background-color: #ffb220;
-	overflow-y: scroll;
 	height: 220px;
 	width: 300px;
 	margin-left: 7px;
-	margin-top: 5px
+	margin-top: 5px;
+	background-color: #ffb220;
+	overflow-y: scroll;
+
 
 	}
 
