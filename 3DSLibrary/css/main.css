@@ -10,6 +10,10 @@ body > div {
 .upperScreen {
 	width: 400px;
 	height: 215px;
+	background: #ffb220;
+	border: 2px solid green;
+	border-radius: 5%
+	padding: 2px;
 	overflow: hidden;
 }
 
@@ -17,7 +21,12 @@ body > div {
 .lowerScreen{
 	width: 320px;
 	height: 240px;
+	border: 2px solid green;
+	border-radius: 5%
+	padding: 2px;
+	overflow: hidden;
 	margin-left:35px;
+
 }
 
 /* Lower Screen CSS. */
@@ -25,8 +34,8 @@ div.lowerScreen {
 	background-color: #ffb220;
 	white-space: nowrap;
 	overflow-y: auto;
-	border-radius: 7%;
-	padding: 5px;
+	border-radius: 5%;
+	padding: 2px;
 }
 
 /* Lower Screen link CSS. */

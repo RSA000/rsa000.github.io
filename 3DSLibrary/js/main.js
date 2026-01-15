@@ -46,7 +46,7 @@ var control = function(ev) {
 		/* Store html element "upperScreen in variable "upperScreenHome" */
 		var upperScreen = document.getElementById("upperScreenHome");
 		/* Set upperScreens background to default image url file */
-		upperScreen.style.background = "url("+DEFAULT+")";
+		/* upperScreen.style.background = "url("+DEFAULT+")"; */
 	};
 
 	/* When content is loaded */
