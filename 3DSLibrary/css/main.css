@@ -28,8 +28,8 @@ body > div {
 
 /* Lower screen settings.*/
 .lowerScreen{
-	width: 320px;
-	height: 240px;
+	width: 315px;
+	height: 235px;
 	border: 5px solid #9c9a9a;
 	border-radius: 5%;
 	padding-top: 1px;
@@ -39,29 +39,32 @@ body > div {
 
 }
 
-/* Lower Screen CSS. */
-div.lowerScreen {
+
+#lowerScreenMenu{
 	background-color: #ffb220;
 	overflow-y: scroll;
-}
+	height: 220px;
+	width: 300px;
+	margin-left: 7px;
+	margin-top: 5px
+
+	}
 
 /* Lower Screen div link CSS. */
-div.lowerScreen a {
+#lowerScreenMenu a {
 	margin: 6px 4px;
 	height:50px;
-	width: 300px;
+	width: 285px;
 	display: block;
 	padding: 2px;
 	font-size: 30px;
 	text-align: center;
 	color: white;
 	background-color: gray;
-
-
 }
 
 /* Lower Screen link CSS when hovering. */
-div.lowerScreen a:hover {
+#lowerScreenMenu a:hover {
 	background-color: #777;
 }
 
