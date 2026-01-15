@@ -36,15 +36,15 @@ var control = function(ev) {
 	
 	/* Display image when menu item is selected */
 	var active = function(ev) {
-		var top = document.getElementById("upperScreen");
+		var top = document.getElementById("upperScreenHome");
 		var value = this.getAttribute('description');
 		top.style.background = "url("+value+")";
 	};
 	
 	/* Function for setting top screen when inactive */
 	var inactive = function(ev) {
-		/* Store html element "upperScreen in variable "upperScreen" */
-		var upperScreen = document.getElementById("upperScreen");
+		/* Store html element "upperScreen in variable "upperScreenHome" */
+		var upperScreen = document.getElementById("upperScreenHome");
 		/* Set upperScreens background to default image url file */
 		upperScreen.style.background = "url("+DEFAULT+")";
 	};
@@ -55,8 +55,8 @@ var control = function(ev) {
 		setInterval(center, 1);
 
 		/* Store anchors of jpeg and mpo type in respective variables */
-		var jpgAnchors = this.querySelectorAll("#lowerScreen a[href$='.jpg']");
-		var mpoAnchors = this.querySelectorAll("#lowerScreen a[href$='.mpo']");
+		var jpgAnchors = this.querySelectorAll("#lowerScreenHome a[href$='.jpg']");
+		var mpoAnchors = this.querySelectorAll("#lowerScreenHome a[href$='.mpo']");
 		init(jpgAnchors);
 		inactive();
 		for(var i = 0, l = jpgAnchors.length; i<l; i++){

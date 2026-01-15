@@ -6,20 +6,22 @@ body > div {
 
 }
 
-/*The "top" tag represents the top screen element */
-#upperScreen {
+/* Upper screen settings.*/
+.upperScreen {
 	width: 400px;
 	height: 215px;
 	overflow: hidden;
 }
 
-#lowerScreen{
+/* Lower screen settings.*/
+.lowerScreen{
 	width: 320px;
 	height: 240px;
 	margin-left:35px;
 }
 
-div.scrollmenu {
+/* Lower Screen CSS. */
+div.lowerScreen {
 	background-color: #ffb220;
 	white-space: nowrap;
 	overflow-y: auto;
@@ -27,7 +29,8 @@ div.scrollmenu {
 	padding: 5px;
 }
 
-div.scrollmenu a {
+/* Lower Screen link CSS. */
+div.lowerScreen a {
 	margin: 6px 4px;
 	height:91px;
 	width: 308px;
@@ -39,7 +42,8 @@ div.scrollmenu a {
 	overflow-x: hidden;
 }
 
-div.scrollmenu a:hover {
+/* Lower Screen link CSS when hovering. */
+div.lowerScreen a:hover {
 	background-color: #777;
 }
 
