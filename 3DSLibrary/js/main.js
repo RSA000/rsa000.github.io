@@ -54,27 +54,8 @@ var control = function(ev) {
 
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
-
 		/* Call center function every milisecond*/
 		setInterval(center, 1);
-
-		/* Store anchors of jpeg and mpo type in respective variables */
-		/*
-		var jpgAnchors = this.querySelectorAll("#lowerScreenHome a[href$='.jpg']");
-		var mpoAnchors = this.querySelectorAll("#lowerScreenHome a[href$='.mpo']");
-		init(jpgAnchors);
-		inactive();
-		for(var i = 0, l = jpgAnchors.length; i<l; i++){
-			jpgAnchors[i].addEventListener('focus', active, false);
-			jpgAnchors[i].addEventListener('blur', inactive, false);
-		}
-		init(mpoAnchors);
-		inactive();
-		for(var i = 0, l = mpoAnchors.length; i<l; i++){
-			mpoAnchors[i].addEventListener('focus', active, false);
-			mpoAnchors[i].addEventListener('blur', inactive, false);
-		}
-		*/
 	}, false);
 
 
