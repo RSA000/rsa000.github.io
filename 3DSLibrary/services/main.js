@@ -20,7 +20,7 @@ var control = function(ev) {
 		window.scrollTo(40,215);
 	};
 
-
+	/*
 	var link_selected = function(ev) {
 		var topScreen = document.getElementById("topHeading");
 		var value = this.getAttribute("description");
@@ -39,7 +39,7 @@ var control = function(ev) {
 		link.addEventListener('focus', link_selected);
 		link.addEventListener('blur', link_unselect);
 	});
-
+	*/
 
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
