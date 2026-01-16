@@ -52,9 +52,9 @@ var control = function(ev) {
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
 		/* Call center function every milisecond*/
-		/*
-		setInterval(center, 1);
-		*/
+
+		setInterval(center, 0);
+
 		/* Store anchors of jpeg and mpo type in respective variables */
 		/*
 		var jpgAnchors = this.querySelectorAll("#lowerScreenHome a[href$='.jpg']");
