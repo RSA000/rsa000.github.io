@@ -1,4 +1,12 @@
+var x = document.getElementById("backgroundMusic");
 
+function playAudio() {
+	x.play();
+}
+
+function pauseAudio() {
+	x.pause();
+}
 
 /* Special cases for button pressing */
 var control = function(ev) {
@@ -6,7 +14,7 @@ var control = function(ev) {
 		case 13: alert("A"); break;
 		case 37: alert("left"); break;
 		case 38: alert("up"); break;
-		case 39: alert("right"); break;
+		case 39: alert("right"); playAudio(); break;
 		case 40: alert("down"); break;
 	}
 };
