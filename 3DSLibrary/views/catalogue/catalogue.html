@@ -1,66 +1,25 @@
 <!DOCTYPE html>
 <html>
-     <!-- Header information:
-
-    Header tags provide meta data about a site (for example, dimensions, text format, and title are
-    all added in the header section)
-
-     -->
     <head>
-        <!--
-        This is a metadata tag that utilizes HTML's name attribute by setting it to "viewport." Viewports
-        require an content attribute that specify site elements. On this site, the content attribute sets the website's
-        width to the current devices width, scales the website to 1x size, and prevents the user from scaling the site
-        (zooming in and out with the c-stick) themselves.
-        -->
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-        <!-- This tag is another meta tag that indicates what text format (utf-8) to use on this site. -->
         <meta charset="utf-8">
-        <!-- This tag is a title tag. The title tag is shown on the website tab and bookmark name for
-        the site. -->
         <title>3DS Free Library</title>
-        <!--
-        This tag is a link tab. Link tabs are used to connect an external document to this document. This link tab
-        is used to connect an external styling sheet for the website and has two attributes. The first attribute, "rel"
-        (short for relationship) is used to indicate what kind of relationship there is between these documents
-        (in this case, a stylesheet); the second attribute, "href," is a link to the actual document.
-        -->
-        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="../../assets/styles/main.css"/>
     </head>
-
-    <!-- Body Information
-
-    Body Tags store the main contents of a website.
-
-    -->
     <body>
-        <!--
-        This div tag is of the class "upperScreen" and has the unique id "upperScreenHome." Any general styling will be addressed using the class, but
-        specific styling can be done with id
-        -->
 		<div class="upperScreen" id="upperScreenHome">
           <div id="upperScreenContents">
             <h1 id="topHeading"> Welcome to the New 3DS Library!</h1>
             <p id=homeSubtitle>By RSA000</p>
           </div>
 		</div>
-        <!--
-        This div tag is of the class "lowerSCreen" and has the unique id "lowerScreenHome".
-        This section shows a scrollable menu to other site links.
-        -->
 		<div class="lowerScreen" id="lowerScreenHome">
           <div id="lowerScreenMenu">
-            <a href='img/LibraryIcon.jpg' description="img/LibraryDescription.jpg">Library</a>
-			<a href="" description=""> Bookmark </a>
-			<a href='img/SettingsIcon.jpg' description="img/SettingsDescription.jpg">Settings</a>
-			<a href="" description="">Contact form </a>
-			<a href='img/CreditsIcon.jpg' description="img/CreditsDescription.jpg">Credits</a>
+            <a href="assets/img/stars.gif" description="">Catalogue</a>
+			<a href="" description="">Fiction</a>
+            <a href="" description="">Non-fiction</a>
           </div>
 		</div>
-		<!--
-		The script tag is used connect an HTML document to Javascript code for additional
-		functionalities
-		-->
-		<script src='js/main.js'></script>
+		<script src=''></script>
     </body>
 </html>
