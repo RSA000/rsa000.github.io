@@ -13,9 +13,18 @@ body, html {
 	background: #D88442;
 }
 
-#upperScreenHome{
-	background: #D88442;
 
+#upperScreenHome{
+	border: 3px solid #9c9a9a;
+	background: #D88442;
+}
+
+#upperScreenContents{
+	border: 3px solid #9c9a9a;
+	background: #797979;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-top: 4px;
 }
 
 /* Top Heading settings.*/
@@ -24,6 +33,7 @@ body, html {
 	text-align: center;
 	color: white;
 }
+
 
 /* Top Subtitle settins.*/
 #homeSubtitle{
