@@ -21,13 +21,9 @@ var control = function(ev) {
 	/*This function continuously scrolls the screen to the 40,215 coordinates */
 	var center = function(){
 		/* Scroll to designated coordinates */
-		/*
-		window.scrollTo({
-			top: 40,
-			left: 215,
-			behavior: "instant",
-		});
-		*/
+
+		window.scrollTo(40,215);
+
 	};
 	
 	/* Not sure */
