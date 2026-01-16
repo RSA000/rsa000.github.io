@@ -1,8 +1,10 @@
 /* HTML body settings */
 body, html {
-	margin: auto;
 	background: black;
+	margin: 0px;
+
 }
+
 
 /* Upper screen settings.*/
 .upperScreen {
@@ -10,6 +12,7 @@ body, html {
 	height: 205px;
 	background: #ffb220;
 	border: 5px solid #9c9a9a;
+	overflow: hidden;
 }
 
 /* Top Heading settings.*/
@@ -28,6 +31,7 @@ body, html {
 	height: 234px;
 	border: 3px solid #9c9a9a;
 	background-color: #ffb220;
+	margin: 0 40px 28px;
 }
 
 
