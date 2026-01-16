@@ -33,5 +33,6 @@ var control = function(ev) {
 	document.addEventListener('DOMContentLoaded', function(ev) {
 		/* Call center function every milisecond*/
 		setInterval(center, 1);
+		active();
 	}, false);
 })()
