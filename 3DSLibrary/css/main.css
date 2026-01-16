@@ -38,6 +38,7 @@ body, html {
 #lowerScreenMenu{
 	height: 200px;
 	width: 300px;
+	padding-top: 4px;
 	padding-bottom: 4px;
 	margin-left: 7px;
 	margin-top: 15px;
