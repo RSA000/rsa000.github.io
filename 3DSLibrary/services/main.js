@@ -22,6 +22,8 @@ var control = function(ev) {
 
 (function(){
 
+	document.addEventListener('keydown', control);
+
 	/*This function continuously scrolls the screen to the 40,215 coordinates */
 	var center = function(){
 		/* Scroll to designated coordinates */
