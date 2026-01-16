@@ -10,6 +10,7 @@ body > div {
 .upperScreen {
 	width: 385px;
 	height: 200px;
+	margin: auto;
 	background: #ffb220;
 	border: 5px solid #9c9a9a;
 	overflow: hidden;
