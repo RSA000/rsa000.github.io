@@ -12,9 +12,9 @@ function pauseAudio() {
 var control = function(ev) {
 	switch(ev.which) {
 		case 13: alert("A"); break;
-		case 37: alert("left"); break;
+		case 37: pauseAudio(); break;
 		case 38: alert("up"); break;
-		case 39: alert("right"); playAudio(); break;
+		case 39: playAudio(); break;
 		case 40: alert("down"); break;
 	}
 };
@@ -33,6 +33,7 @@ var control = function(ev) {
 
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
+		playAudio();
 		/* Call center function every milisecond*/
 		setInterval(center, 1);
 	}, false);
