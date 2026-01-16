@@ -1,6 +1,5 @@
 
-/* Not sure, could be special cases for button pressing */
-/*
+/* Special cases for button pressing */
 var control = function(ev) {
 	switch(ev.which) {
 		case 13: alert("A"); break;
@@ -10,7 +9,6 @@ var control = function(ev) {
 		case 40: alert("down"); break;
 	}
 };
-*/
 
 
 (function(){
