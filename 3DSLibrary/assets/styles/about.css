@@ -29,8 +29,7 @@ body, html {
     background-size: 1200px;
     width: 375px;
     height: 150px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: auto;
     margin-top: 25px;
 }
 
