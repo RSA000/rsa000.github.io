@@ -33,11 +33,10 @@ margin-top: 25px;
 
 #rat{
     position: absolute;
-    object-position: 0px -9px;
+    left: 300px;
+    top: 84px;
     width: 62px;
     height: 74px;
-    margin-top: -77px;
-    margin-left: 303px;
     background: #20bfbf;
     border-radius: 69%;
 }
