@@ -10,7 +10,7 @@ body > div {
 .upperScreen {
 	width: 390px;
 	height: 205px;
-	margin: auto;
+	margin: 0 auto;
 	background: #ffb220;
 	border: 5px solid #9c9a9a;
 	overflow: hidden;
@@ -30,8 +30,8 @@ body > div {
 .lowerScreen{
 	width: 313px;
 	height: 234px;
+	margin: 0 auto;
 	border: 3px solid #9c9a9a;
-	margin-left:40px;
 	background-color: #ffb220;
 
 }
