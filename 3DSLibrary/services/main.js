@@ -19,13 +19,18 @@ var control = function(ev) {
 		/* Scroll to designated coordinates */
 		window.scrollTo(40,215);
 	};
+
+
+	var link_selected = function(ev) {
+		var topScreen = document.getElementById("topHeading");
+		var value = this.getAttribute("description");
+		topScreen.style.backgroundImage = "url(" + value + ")";
+	};
 	
 
-	/* Display image when menu item is selected */
-	var active = function(ev) {
-		var top = document.getElementById("upperScreenHome");
-		var value = this.getAttribute('description');
-		top.style.background = "url("+value+")";
+	var link_unselect = function(ev) {
+		var topScreen = document.getElementById("upperScreenContents");
+		topScreen.style
 	};
 	
 
@@ -33,6 +38,5 @@ var control = function(ev) {
 	document.addEventListener('DOMContentLoaded', function(ev) {
 		/* Call center function every milisecond*/
 		setInterval(center, 1);
-		active();
 	}, false);
 })()
