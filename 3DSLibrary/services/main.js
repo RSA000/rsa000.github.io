@@ -21,25 +21,6 @@ var control = function(ev) {
 	};
 
 
-	var link_selected = function(ev) {
-		var topScreen = document.getElementById("topHeading");
-		var value = this.getAttribute("description");
-		topScreen.style.backgroundImage = "url(" + value + ")";
-	};
-	
-
-	var link_unselect = function(ev) {
-		var topScreen = document.getElementById("upperScreenContents");
-		topScreen.style;
-	};
-	
-
-	var links = document.querySelectorAll('#lowerScreenMenu a');
-	links.forEach(function(link) {
-		link.addEventListener('focus', link_selected);
-		link.addEventListener('blur', link_unselect);
-	});
-
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
 		/* Call center function every milisecond*/
