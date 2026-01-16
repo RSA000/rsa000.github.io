@@ -26,7 +26,6 @@ body, html {
 .lowerScreen{
 	width: 313px;
 	height: 234px;
-	position: static;
 	border: 3px solid #9c9a9a;
 	background-color: #ffb220;
 }
