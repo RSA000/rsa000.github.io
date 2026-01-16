@@ -1,9 +1,8 @@
+/* HTML body settings */
 body, html {
 	margin: auto;
 	background: black;
-}
-body > div {
-
+	overflow: hidden;
 }
 
 /* Upper screen settings.*/
@@ -29,6 +28,7 @@ body > div {
 .lowerScreen{
 	width: 313px;
 	height: 234px;
+	position: static;
 	margin-left:40px;
 	border: 3px solid #9c9a9a;
 	background-color: #ffb220;
