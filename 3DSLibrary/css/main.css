@@ -1,7 +1,7 @@
 /* HTML body settings */
 body, html {
 	background: black;
-	overflow: hidden;
+	margin: 0px;
 }
 
 
