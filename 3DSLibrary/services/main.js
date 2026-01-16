@@ -34,6 +34,13 @@ var control = function(ev) {
 	};
 	
 
+	var links = document.querySelectorAll('#lowerScreenMenu a');
+	links.forEach(function(link) {
+		link.addEventListener('focus', link_selected);
+		link.addEventListener('blur', link_unselect);
+	});
+
+
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
 		/* Call center function every milisecond*/
