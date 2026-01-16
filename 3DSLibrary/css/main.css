@@ -9,18 +9,27 @@ body, html {
 .upperScreen {
 	width: 390px;
 	height: 205px;
-	background: #ffb220;
-	border: 5px solid #9c9a9a;
+	background: #D88442;
 }
 
+#upperScreenHome{
+	border: 3px solid #9c9a9a;
+	background: #D88442;
+
+}
 
 /* Top Heading settings.*/
 #topHeading{
-	border: 3px solid #9c9a9a;
 	margin: 11px;
 	text-align: center;
 	color: white;
-	background-color: gray;
+}
+
+/* Top Subtitle settins.*/
+#homeSubtitle{
+	margin: 11px;
+	text-align: center;
+	color: white;
 }
 
 
@@ -29,7 +38,7 @@ body, html {
 	width: 313px;
 	height: 234px;
 	border: 3px solid #9c9a9a;
-	background-color: #ffb220;
+	background-color: #D88442;
 	margin: 0 40px 28px;
 	overflow: hidden;
 }
