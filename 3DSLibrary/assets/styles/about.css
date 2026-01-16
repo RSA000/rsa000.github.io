@@ -80,7 +80,7 @@ color: white;
     padding-bottom: 4px;
     margin-left: 6px;
     margin-top: 9px;
-    background-color: #c0c1d5;
+    background-image: url("../../assets/img/stars.gif")
     overflow-y: scroll;
 }
 
