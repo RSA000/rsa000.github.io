@@ -1,8 +1,7 @@
 /* HTML body settings */
 body, html {
 	background: black;
-	margin: 0px;
-
+	overflow: hidden;
 }
 
 
@@ -32,6 +31,7 @@ body, html {
 	border: 3px solid #9c9a9a;
 	background-color: #ffb220;
 	margin: 0 40px 28px;
+	overflow: hidden;
 }
 
 
