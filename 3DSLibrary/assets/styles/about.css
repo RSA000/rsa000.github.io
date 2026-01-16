@@ -6,7 +6,6 @@ body, html {
     font-size: 16px;
 }
 
-
 /* Upper screen settings.*/
 .upperScreen {
     width: 394px;
@@ -17,18 +16,20 @@ body, html {
 
 
 #upperScreenHome{
-border: 3px solid #9c9a9a;
-background: #D88442;
+    border: 3px solid #9c9a9a;
+    background-image: url("../../assets/img/stars.gif");
+    background-position: 10px;
 }
 
 
 #upperScreenContents{
-position: relative;
-border: 3px solid #9c9a9a;
-background: #797979;
-margin-left: 10px;
-margin-right: 10px;
-margin-top: 25px;
+    position: relative;
+    border: 3px solid #9c9a9a;
+    background-image: url("../../assets/img/stars.gif");
+    background-size: 1200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 25px;
 }
 
 #rat{
@@ -37,8 +38,10 @@ margin-top: 25px;
     top: 84px;
     width: 62px;
     height: 74px;
-    background: #20bfbf;
-    border-radius: 69%;
+    background: #000;
+    border-radius: 70%;
+    background-blend-mode: hard-light;
+    border: 2px solid white;
 }
 
 
@@ -51,9 +54,9 @@ color: white;
 
 /* Top Subtitle settins.*/
 #homeSubtitle{
-margin: 11px;
-text-align: center;
-color: white;
+    margin: 11px;
+    text-align: center;
+    color: white;
 }
 
 
@@ -69,33 +72,33 @@ color: white;
 
 
 #lowerScreenMenu{
-height: 200px;
-width: 300px;
-padding-top: 4px;
-padding-bottom: 4px;
-margin-left: 6px;
-margin-top: 9px;
-background-color: #c0c1d5;
-overflow-y: scroll;
+    height: 200px;
+    width: 300px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 6px;
+    margin-top: 9px;
+    background-color: #c0c1d5;
+    overflow-y: scroll;
 }
 
 
 /* Lower Screen div link CSS. */
 #lowerScreenMenu a {
-margin: 6px 4px;
-height:40px;
-width: 285px;
-padding: 2px;
-display: block;
-font-size: 30px;
-text-align: center;
-color: white;
-background-color: gray;
+    margin: 6px 4px;
+    height:40px;
+    width: 285px;
+    padding: 2px;
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    background-color: gray;
 }
 
 
 /* Lower Screen link CSS when hovering. */
 #lowerScreenMenu a:hover {
-background-color: #777;
+    background-color: #777;
 }
 
