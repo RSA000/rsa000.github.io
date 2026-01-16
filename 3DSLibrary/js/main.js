@@ -53,7 +53,7 @@ var control = function(ev) {
 	document.addEventListener('DOMContentLoaded', function(ev) {
 		/* Call center function every milisecond*/
 
-		setInterval(center, 0);
+		setInterval(center, 1);
 
 		/* Store anchors of jpeg and mpo type in respective variables */
 		/*
