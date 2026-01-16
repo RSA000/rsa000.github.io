@@ -29,7 +29,6 @@ body, html {
 	position: static;
 	border: 3px solid #9c9a9a;
 	background-color: #ffb220;
-
 }
 
 
@@ -41,9 +40,7 @@ body, html {
 	margin-top: 5px;
 	background-color: #c0c1d5;
 	overflow-y: scroll;
-
-
-	}
+}
 
 /* Lower Screen div link CSS. */
 #lowerScreenMenu a {
@@ -57,6 +54,7 @@ body, html {
 	color: white;
 	background-color: gray;
 }
+
 
 /* Lower Screen link CSS when hovering. */
 #lowerScreenMenu a:hover {
