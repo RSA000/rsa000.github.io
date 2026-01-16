@@ -27,6 +27,8 @@ body, html {
     border: 3px solid #9c9a9a;
     background-image: url("../../assets/img/stars.gif");
     background-size: 1200px;
+    width: 375px;
+    height: 150px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 25px;
@@ -65,7 +67,7 @@ color: white;
     width: 313px;
     height: 230px;
     border: 3px solid #9c9a9a;
-    background-color: #D88442;
+    background-image: url("../../assets/img/stars.gif");
     margin: 0 40px 28px;
     overflow: hidden;
 }
