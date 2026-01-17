@@ -91,13 +91,10 @@ body, html {
 
 
 #lowerScreenMenu{
-height: 210px;
+	height: 210px;
 	width: 290px;
 	overflow-y: scroll;
-	padding: 2px;
-	margin: auto;
-	margin-top: auto;
-	margin-top: 5px;
+	margin: 5px auto;
 }
 
 
@@ -111,7 +108,7 @@ height: 210px;
 	font-size: 30px;
 	text-align: center;
 	color: white;
-	background-color: gray;
+	background-color: #333232;
 }
 
 
