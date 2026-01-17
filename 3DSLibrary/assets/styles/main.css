@@ -102,9 +102,6 @@ body, html {
 /* Lower Screen div link CSS. */
 #lowerScreenMenu a {
 	margin: 6px 4px;
-	height: 40px;
-	width: 285px;
-	padding: 2px;
 	display: block;
 	font-size: 30px;
 	text-align: center;
