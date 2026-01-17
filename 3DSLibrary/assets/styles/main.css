@@ -121,3 +121,11 @@ body, html {
 	background-color: #777;
 }
 
+
+#feedbackFormText{
+	height: 150px;
+	width: 400px;
+	padding: 2px;
+	border: 2px solid gray;
+}
+
