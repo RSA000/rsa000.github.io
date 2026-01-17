@@ -7,9 +7,9 @@
 */
 (function(){
 
-	/* The center function scrolls the screen to the 40,215 coordinates */
+	/* The center function scrolls the screen to the 40,215 coordinates. */
 	var center = function(){
-		// Scroll to designated coordinates
+		// Scroll to designated coordinates.
 		window.scrollTo(40,215);
 	};
 
@@ -25,7 +25,7 @@
 		topSubtitle.innerHTML = subtitleValue;
 	};
 
-	/*Function returns title to original message when no items are selected */
+	/*Function returns title to original message when no items are selected. */
 	var inactive = function(ev) {
 		var topHeading = document.getElementById("topHeading");
 		var topSubtitle = document.getElementById("topSubtitle");
@@ -34,15 +34,20 @@
 	};
 
 
-	/* When content is loaded */
+	/* When content is loaded. */
 	document.addEventListener('DOMContentLoaded', function(ev) {
-		// Call center function every milisecond
+
+		// Call center function every milisecond.
 		setInterval(center, 4);
-		// Store all <a> tags within the "lowerScreenMenu" div in variable "anchors"
+
+		// Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
 		var anchors = this.querySelectorAll("#lowerScreenMenu a");
 		inactive();
+		// For each anchor, add event listener.
 		for(var i = 0, l = anchors.length; i<l; i++){
+			// When focused on, apply active function with "this" selected anchor.
 			anchors[i].addEventListener('focus', active, false);
+			// When no anchors are selected, revert to greeting heading and subtitle.
 			anchors[i].addEventListener('blur', inactive, false);
 		}
 	}, false);
