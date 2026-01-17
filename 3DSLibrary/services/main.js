@@ -7,12 +7,13 @@
 */
 (function(){
 
-	/* The center function scrolls the screen to the 40,215 coordinates. */
+	/* The center function scrolls the screen to the 40,215 coordinates.*/
 	var center = function(){
 		// Scroll to designated coordinates.
 		window.scrollTo(40,215);
 	};
 
+	/* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
 	var active = function(ev) {
 		// get top screen Heading and subtitles and store in variables.
 		var topHeading = document.getElementById("topHeading");
@@ -27,9 +28,12 @@
 
 	/*Function returns title to original message when no items are selected. */
 	var inactive = function(ev) {
+		// Get top heading and subtitle tags (<h1> and <p>, respectively).
 		var topHeading = document.getElementById("topHeading");
 		var topSubtitle = document.getElementById("topSubtitle");
+		// Update heading and subtitle.
 		topHeading.innerHTML = "Welcome to the New 3DS Library";
+		topSubtitle.innerHTML = "By RSA000";
 
 	};
 
