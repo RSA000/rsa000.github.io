@@ -62,7 +62,6 @@ body, html {
 	border-radius: 70%;
 	background-blend-mode: hard-light;
 	border: 2px solid white;
-	transform: scaleX(-1);
 }
 
 
