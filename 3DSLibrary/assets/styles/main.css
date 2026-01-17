@@ -91,7 +91,7 @@ body, html {
 
 
 #lowerScreenMenu{
-height: 195px;
+height: 210px;
 	width: 290px;
 	overflow-y: scroll;
 	display: grid;
@@ -100,7 +100,7 @@ height: 195px;
 	padding: 2px;
 	margin: auto;
 	margin-top: auto;
-	margin-top: 10px;
+	margin-top: 5px;
 }
 
 
