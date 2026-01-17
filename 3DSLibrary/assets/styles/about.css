@@ -79,8 +79,6 @@ color: white;
     padding-bottom: 4px;
     margin-left: 6px;
     margin-top: 9px;
-    background-image: url("../../assets/img/stars.gif")
-    overflow-y: scroll;
 }
 
 
@@ -95,6 +93,7 @@ color: white;
     text-align: center;
     color: white;
     background-color: gray;
+    opacity: 70%;
 }
 
 

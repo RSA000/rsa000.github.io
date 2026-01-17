@@ -6,6 +6,10 @@ body, html {
 	font-size: 16px;
 }
 
+.content{
+
+	background: rgba(204, 204, 204, 0.5)
+}
 
 /* Upper screen settings.*/
 .upperScreen {
@@ -18,13 +22,14 @@ body, html {
 
 #upperScreenHome{
 	border: 3px solid #9c9a9a;
-	background: #D88442;
+	background-image: url("../../assets/img/stars.gif");
 }
 
 
 #upperScreenContents{
 	border: 3px solid #9c9a9a;
-	background: #797979;
+	background-image: url("../../assets/img/stars.gif");
+	background-size: 1200px;
 	width: 375px;
 	height: 165px;
 	margin: auto;
@@ -53,7 +58,7 @@ body, html {
 	width: 313px;
 	height: 230px;
 	border: 3px solid #9c9a9a;
-	background-color: #D88442;
+	background-image: url("../../assets/img/stars.gif");
 	margin: 0 40px 28px;
 	overflow: hidden;
 }
@@ -66,7 +71,6 @@ body, html {
 	padding-bottom: 4px;
 	margin-left: 6px;
 	margin-top: 9px;
-	background-color: #c0c1d5;
 	overflow-y: scroll;
 }
 
@@ -74,7 +78,7 @@ body, html {
 /* Lower Screen div link CSS. */
 #lowerScreenMenu a {
 	margin: 6px 4px;
-	height:40px;
+	height: 40px;
 	width: 285px;
 	padding: 2px;
 	display: block;
@@ -82,11 +86,13 @@ body, html {
 	text-align: center;
 	color: white;
 	background-color: gray;
+	opacity: 70%;
 }
 
 
 /* Lower Screen link CSS when hovering. */
 #lowerScreenMenu a:hover {
 	background-color: #777;
+	opacity: 100%;
 }
 
