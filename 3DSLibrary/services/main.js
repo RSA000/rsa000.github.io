@@ -43,11 +43,11 @@
 				changeHeader(this.innerText);
 				changeSubtitle(this.getAttribute('description'));
 			});
-		});;
+		});
 
 
 		// Call center function every milisecond
-		setInterval(center, 1);
+		setInterval(center, 4);
 
 	}, false);
 })()
