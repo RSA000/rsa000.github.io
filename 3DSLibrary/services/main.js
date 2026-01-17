@@ -53,5 +53,6 @@
 
 		// Call center function every milisecond
 		setInterval(center, 1);
+
 	}, false);
 })()
