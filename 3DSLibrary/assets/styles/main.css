@@ -94,9 +94,6 @@ body, html {
 height: 210px;
 	width: 290px;
 	overflow-y: scroll;
-	display: grid;
-	justify-content: center;
-	border: 1px dashed lightgray;
 	padding: 2px;
 	margin: auto;
 	margin-top: auto;
@@ -123,26 +120,24 @@ height: 210px;
 	background-color: #777;
 }
 
+
 #lowerScreenFeedback{
 	height: 200px;
 	width: 300px;
 	overflow-y: scroll;
-	justify-content: center;
-	display: grid;
 	margin: 5px auto;
 }
+
 
 #feedbackFormText{
 	height: 150px;
 	width: 290px;
 	padding: 2px;
-
 }
+
 
 #feedbackButton{
 	position: relative;
 	margin: 5px auto;
-	justify-content: center;
-	display: grid;
 }
 
