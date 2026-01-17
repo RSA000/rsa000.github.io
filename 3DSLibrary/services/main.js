@@ -7,19 +7,6 @@
 */
 (function(){
 
-
-	/* The changeHeader function changes the top screen's header text. */
-	var changeHeader = function(newHeading){
-		document.getElementById("topHeading").innerHTML = newHeading;
-	};
-
-
-	/* Change substitle paragraph under heading of top screen. */
-	var changeSubtitle = function(newSubtitle){
-			document.getElementById("topSubtitle").innerHTML = newSubtitle;
-	};
-
-
 	/* The center function scrolls the screen to the 40,215 coordinates */
 	var center = function(){
 		// Scroll to designated coordinates
@@ -31,20 +18,6 @@
 
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
-
-		// Save all <a> tags in variable "links"
-		var links = document.querySelectorAll('a');
-
-		// For each <a> tag element in links:
-		links.forEach(function(link) {
-			// When selected with keyboard (tab or 3DS d-pad):
-			link.addEventListener('focus', function(e) {
-				// Change header based on link text
-				changeHeader(this.innerText);
-				changeSubtitle(this.getAttribute('description'));
-			});
-		});
-
 
 		// Call center function every milisecond
 		setInterval(center, 4);
