@@ -95,6 +95,7 @@ body, html {
 	width: 290px;
 	overflow-y: scroll;
 	margin: 5px auto;
+	margin-left: 10px;
 }
 
 
@@ -134,7 +135,7 @@ body, html {
 
 
 #feedbackButton{
-	position: relative;
 	margin: 5px auto;
+	margin-left: 75px;
 }
 
