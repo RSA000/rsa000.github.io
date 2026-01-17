@@ -86,13 +86,11 @@ body, html {
 	text-align: center;
 	color: white;
 	background-color: gray;
-	opacity: 70%;
 }
 
 
 /* Lower Screen link CSS when hovering. */
 #lowerScreenMenu a:hover {
 	background-color: #777;
-	opacity: 100%;
 }
 
