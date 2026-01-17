@@ -19,5 +19,7 @@
 
 		// Call center function every milisecond
 		setInterval(center, 4);
+
 	}, false);
+
 })()
