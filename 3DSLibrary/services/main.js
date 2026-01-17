@@ -13,13 +13,29 @@
 		window.scrollTo(40,215);
 	};
 
+	var active = function(ev) {
+		var topHeading = document.getElementById("topHeading");
+		topHeading.innerHTML = "test";
+	};
+
+
+	var inactive = function(ev) {
+		var top = document.getElementById("topHeading");
+		top.style.innerHTML = "Hi";
+	};
+
 
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
-
 		// Call center function every milisecond
 		setInterval(center, 4);
-
+		var anchors = this.querySelectorAll("#lowerScreenMenu a");
+		inactive();
+		alert("hi");
+		for(var i = 0, l = anchors.length; i<l; i++){
+			anchors[i].addEventListener('focus', active, false);
+			anchors[i].addEventListener('blur', inactive, false);
+		}
 	}, false);
 
 })()
