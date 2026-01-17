@@ -46,9 +46,26 @@ body, html {
 	color: white;
 }
 
+
 .upperScreenImages{
 
 }
+
+
+.lowerLeft{
+	position: absolute;
+	left: 18px;
+	top: 107px;
+	width: 62px;
+	height: 74px;
+	background: #000;
+	border-radius: 70%;
+	background-blend-mode: hard-light;
+	border: 2px solid white;
+	transform: scaleX(-1);
+}
+
+
 
 .lowerRight{
 	position: absolute;
