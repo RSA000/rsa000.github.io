@@ -6,11 +6,6 @@ body, html {
 	font-size: 16px;
 }
 
-.content{
-
-	background: rgba(204, 204, 204, 0.5)
-}
-
 /* Upper screen settings.*/
 .upperScreen {
 	width: 394px;
