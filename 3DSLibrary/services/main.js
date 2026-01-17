@@ -15,13 +15,20 @@
 
 	var active = function(ev) {
 		var topHeading = document.getElementById("topHeading");
-		topHeading.innerHTML = "test";
+		var topSubtitle = document.getElementById("topSubtitle");
+		var headingValue = this.innerHTML;
+		var subtitleValue = this.getAttribute("description");
+
+		topHeading.innerHTML = headingValue;
+		topSubtitle.innerHTML = subtitleValue;
 	};
 
 
 	var inactive = function(ev) {
-		var top = document.getElementById("topHeading");
-		top.style.innerHTML = "Hi";
+		var topHeading = document.getElementById("topHeading");
+		var topSubtitle = document.getElementById("topSubtitle");
+		topHeading.innerHTML = "Welcome to the New 3DS Library";
+
 	};
 
 
@@ -29,9 +36,9 @@
 	document.addEventListener('DOMContentLoaded', function(ev) {
 		// Call center function every milisecond
 		setInterval(center, 4);
+		// Store all <a> tags within the "lowerScreenMenu" div in variable "anchors"
 		var anchors = this.querySelectorAll("#lowerScreenMenu a");
 		inactive();
-		alert("hi");
 		for(var i = 0, l = anchors.length; i<l; i++){
 			anchors[i].addEventListener('focus', active, false);
 			anchors[i].addEventListener('blur', inactive, false);
