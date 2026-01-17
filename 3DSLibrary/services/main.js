@@ -14,16 +14,18 @@
 	};
 
 	var active = function(ev) {
+		// get top screen Heading and subtitles and store in variables.
 		var topHeading = document.getElementById("topHeading");
 		var topSubtitle = document.getElementById("topSubtitle");
+		// Get innerHTML and description attributes of current element.
 		var headingValue = this.innerHTML;
 		var subtitleValue = this.getAttribute("description");
-
+		// Update innerHTML of top heading and subtitle to heading and subtitle values.
 		topHeading.innerHTML = headingValue;
 		topSubtitle.innerHTML = subtitleValue;
 	};
 
-
+	/*Function returns title to original message when no items are selected */
 	var inactive = function(ev) {
 		var topHeading = document.getElementById("topHeading");
 		var topSubtitle = document.getElementById("topSubtitle");
