@@ -91,13 +91,16 @@ body, html {
 
 
 #lowerScreenMenu{
-	height: 200px;
-	width: 300px;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	margin-left: 6px;
-	margin-top: 9px;
+height: 195px;
+	width: 290px;
 	overflow-y: scroll;
+	display: grid;
+	justify-content: center;
+	border: 4px dashed lightgray;
+	padding: 2px;
+	margin: auto;
+	margin-top: auto;
+	margin-top: 10px;
 }
 
 
