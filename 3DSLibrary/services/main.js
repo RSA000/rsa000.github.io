@@ -14,34 +14,10 @@
 	};
 
 
-	var init = function(anchors) {
-		var link;
-		for(var i = 0, l = anchors.length; i<l; i++){
-			link = anchors[i].href;
-			anchors[i].style.background = "url("+link+")";
-		}
-	};
-
-
-	var active = function(ev) {
-		var top = document.getElementById("top");
-		var value = this.style.background;
-		top.style.background = value;
-	};
-
-
-	var inactive = function(ev) {
-		var top = document.getElementById("top");
-		top.style.background = "url("+DEFAULT+")";
-	};
-
-
-
 	/* When content is loaded */
 	document.addEventListener('DOMContentLoaded', function(ev) {
 
 		// Call center function every milisecond
 		setInterval(center, 4);
-
 	}, false);
 })()
