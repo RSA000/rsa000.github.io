@@ -13,6 +13,7 @@
 		window.scrollTo(40,215);
 	};
 
+
 	/* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
 	var active = function(ev) {
 		// get top screen Heading and subtitles and store in variables.
@@ -26,6 +27,7 @@
 		topSubtitle.innerHTML = subtitleValue;
 	};
 
+
 	/*Function returns title to original message when no items are selected. */
 	var inactive = function(ev) {
 		// Get top heading and subtitle tags (<h1> and <p>, respectively).
@@ -34,7 +36,6 @@
 		// Update heading and subtitle.
 		topHeading.innerHTML = "Welcome to the New 3DS Library";
 		topSubtitle.innerHTML = "By RSA000";
-
 	};
 
 
