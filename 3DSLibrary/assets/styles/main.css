@@ -25,9 +25,17 @@ body, html {
 
 }
 
+.upperScreenText{
+	background: black;
+	margin: auto;
+	width: fit-content;
+}
+
 
 /* Top Heading settings.*/
 .topHeading{
+	width: 250px;
+	margin: auto;
 	text-align: center;
 	color: white;
 }
