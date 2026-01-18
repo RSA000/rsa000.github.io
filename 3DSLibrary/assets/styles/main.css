@@ -14,19 +14,6 @@ body, html {
 	background-image: url("../../assets/img/backgrounds/stars.gif");
 }
 
-/* Homescreen */
-#upperScreenHome{
-	border: 3px solid #9c9a9a;
-	background-image: url("../../assets/img/backgrounds/stars.gif");
-}
-
-/* About */
-	#upperScreenAbout{
-	border: 3px solid #9c9a9a;
-	background-image: url("../../assets/img/backgrounds/stars.gif");
-}
-
-
 #upperScreenContents{
 	border: 3px solid #9c9a9a;
 	background-image: url("../../assets/img/backgrounds/stars.gif");
