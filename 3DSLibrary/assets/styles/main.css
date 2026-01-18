@@ -14,7 +14,7 @@ body, html {
 	background-image: url("../../assets/img/backgrounds/stars.gif");
 }
 
-#upperScreenContents{
+.upperScreenContents{
 	border: 3px solid #9c9a9a;
 	background-image: url("../../assets/img/backgrounds/stars.gif");
 	background-size: 1200px;
@@ -27,14 +27,14 @@ body, html {
 
 
 /* Top Heading settings.*/
-#topHeading{
+.topHeading{
 	text-align: center;
 	color: white;
 }
 
 
 /* Top Subtitle settins.*/
-#topSubtitle{
+.topSubtitle{
 	margin: 11px;
 	text-align: center;
 	color: white;
@@ -83,7 +83,7 @@ body, html {
 }
 
 
-#lowerScreenMenu{
+.lowerScreenMenu{
 	height: 210px;
 	width: 290px;
 	overflow-y: scroll;
@@ -93,7 +93,7 @@ body, html {
 
 
 /* Lower Screen div link CSS. */
-#lowerScreenMenu a {
+.lowerScreenMenu a {
 	margin: 6px 4px;
 	display: block;
 	font-size: 30px;
@@ -104,12 +104,12 @@ body, html {
 
 
 /* Lower Screen link CSS when hovering. */
-#lowerScreenMenu a:hover {
+.lowerScreenMenu a:hover {
 	background-color: #777;
 }
 
 
-#lowerScreenFeedback{
+.lowerScreenFeedback{
 	height: 200px;
 	width: 300px;
 	overflow-y: scroll;
@@ -126,6 +126,6 @@ body, html {
 
 #feedbackButton{
 	margin: 5px auto;
-	margin-left: 75px;
+	margin-left: 85px;
 }
 
