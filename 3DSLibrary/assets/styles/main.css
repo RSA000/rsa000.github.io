@@ -29,6 +29,7 @@ body, html {
 	background: black;
 	margin: auto;
 	width: fit-content;
+	height: 160px;
 }
 
 
@@ -43,8 +44,10 @@ body, html {
 
 /* Top Subtitle settins.*/
 .topSubtitle{
+	background: black;
 	width: 200px;
 	margin: auto;
+	padding-top: 10px;
 	text-align: center;
 	color: white;
 }
