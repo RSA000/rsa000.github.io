@@ -35,7 +35,8 @@ body, html {
 
 /* Top Subtitle settins.*/
 .topSubtitle{
-	margin: 11px;
+	width: 200px;
+	margin: auto;
 	text-align: center;
 	color: white;
 }
