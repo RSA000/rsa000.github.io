@@ -14,6 +14,7 @@ body, html {
 	background-image: url("../../assets/img/backgrounds/stars.gif");
 }
 
+/* Container for upperScreen contents.*/
 .upperScreenContents{
 	border: 3px solid #9c9a9a;
 	background-image: url("../../assets/img/backgrounds/stars.gif");
@@ -22,9 +23,9 @@ body, html {
 	height: 165px;
 	margin: auto;
 	margin-top: 20px;
-
 }
 
+/* Container for upperScreen text.*/
 .upperScreenText{
 	background: black;
 	border-radius:8%;
@@ -42,8 +43,7 @@ body, html {
 	color: white;
 }
 
-
-/* Top Subtitle settins.*/
+/* Top Subtitle settings.*/
 .topSubtitle{
 	background: black;
 	width: 200px;
@@ -53,12 +53,12 @@ body, html {
 	color: white;
 }
 
-
+/* Top Screen's images container. */
 .upperScreenImages{
 
 }
 
-
+/* Top screen lower left image. */
 .lowerLeft{
 	position: absolute;
 	left: 18px;
@@ -71,7 +71,7 @@ body, html {
 	border: 2px solid white;
 }
 
-
+/* Top screen lower right image. */
 .lowerRight{
 	position: absolute;
 	left: 317px;
@@ -84,7 +84,6 @@ body, html {
 	border: 2px solid white;
 }
 
-
 /* Lower screen settings.*/
 .lowerScreen{
 	width: 313px;
@@ -95,7 +94,6 @@ body, html {
 	overflow: hidden;
 }
 
-
 .lowerScreenMenu{
 	height: 210px;
 	width: 290px;
@@ -103,7 +101,6 @@ body, html {
 	margin: 5px auto;
 	margin-left: 10px;
 }
-
 
 /* Lower Screen div link CSS. */
 .lowerScreenMenu a {
@@ -115,12 +112,10 @@ body, html {
 	background-color: #333232;
 }
 
-
 /* Lower Screen link CSS when hovering. */
 .lowerScreenMenu a:hover {
 	background-color: #777;
 }
-
 
 .lowerScreenFeedback{
 	height: 200px;
@@ -129,16 +124,13 @@ body, html {
 	margin: 5px auto;
 }
 
-
 #feedbackFormText{
 	height: 150px;
 	width: 290px;
 	padding: 2px;
 }
 
-
 #feedbackButton{
 	margin: 5px auto;
 	margin-left: 85px;
 }
-
