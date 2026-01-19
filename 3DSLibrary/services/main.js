@@ -39,11 +39,21 @@
 	};
 
 
+
+
 	/* When content is loaded. */
 	document.addEventListener('DOMContentLoaded', function(ev) {
 
-		// Call center function every milisecond.
-		setInterval(center, 4);
+		// If the user agent does not contain "Nintendo 3DS"
+		if(navigator.userAgent.indexOf("Nintendo 3DS") == -1) {
+			// Redirect to another page
+			// location.replace("");
+		}
+		else{
+			// Call center function every milisecond.
+			setInterval(center, 4);
+		}
+
 
 		// Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
 		var anchors = this.querySelectorAll(".lowerScreenMenu a");
