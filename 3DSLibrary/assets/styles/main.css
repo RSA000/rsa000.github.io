@@ -1,54 +1,73 @@
-/* HTML body settings */
+/* HTML general body settings */
 body, html {
+
+	/* Container */
 	background: black;
 	margin: 0px;
+
+	/* Text */
 	font-family: monospace;
 	font-size: 16px;
 }
 
 /* Main container for upper screen.*/
 .upperScreen {
-	width: 394px;
-	height: 210px;
-	border: 3px solid #9c9a9a;
+
+	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
+	border: 3px solid #9c9a9a;
+	height: 210px;
+	width: 394px;
 }
 
 /* Container for upperScreen contents.*/
 .upperScreenContents{
-	border: 3px solid #9c9a9a;
+
+	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
 	background-size: 1200px;
-	width: 375px;
+	border: 3px solid #9c9a9a;
 	height: 165px;
+	width: 375px;
 	margin: auto;
 	margin-top: 20px;
 }
 
 /* Container for upperScreen text.*/
 .upperScreenText{
+
+	/* Container */
 	background: black;
 	border-radius:8%;
+	height: 140px;
+	width: 350px;
 	margin: auto;
-	width: fit-content;
-	height: 160px;
+	padding-top: 5px;
 }
 
 
 /* Top Heading settings.*/
 .topHeading{
+
+	/* Container */
 	width: 290px;
 	margin: auto;
+
+	/* Text */
 	text-align: center;
 	color: white;
 }
 
 /* Top Subtitle settings.*/
 .topSubtitle{
+
+	/* Container */
 	background: black;
 	width: 200px;
 	margin: auto;
 	padding-top: 10px;
+
+	/* Text */
 	text-align: center;
 	color: white;
 }
@@ -60,77 +79,97 @@ body, html {
 
 /* Top screen lower left image. */
 .lowerLeft{
-	position: absolute;
-	left: 18px;
-	top: 110px;
-	width: 60px;
-	height: 72px;
+
+	/* Container */
 	background: #000;
-	border-radius: 70%;
 	background-blend-mode: hard-light;
 	border: 2px solid white;
+	border-radius: 70%;
+	position: absolute;
+	height: 72px;
+	width: 60px;
+	left: 18px;
+	top: 110px;
 }
 
 /* Top screen lower right image. */
 .lowerRight{
-	position: absolute;
-	left: 317px;
-	top: 110px;
-	width: 60px;
-	height: 72px;
+
+	/* Container */
 	background: #000;
-	border-radius: 70%;
 	background-blend-mode: hard-light;
 	border: 2px solid white;
+	border-radius: 70%;
+	position: absolute;
+	height: 72px;
+	width: 60px;
+	left: 317px;
+	top: 110px;
 }
 
 /* Lower screen settings.*/
 .lowerScreen{
-	width: 313px;
-	height: 230px;
-	border: 3px solid #9c9a9a;
+
+	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
+	border: 3px solid #9c9a9a;
+	height: 230px;
+	width: 313px;
+	/* Important for proper framing */
 	margin: 0 40px 28px;
-	overflow: hidden;
 }
 
 .lowerScreenMenu{
+
+	/* Container */
 	height: 210px;
 	width: 290px;
-	overflow-y: scroll;
 	margin: 5px auto;
 	margin-left: 10px;
+	overflow-y: scroll;
 }
 
 /* Lower Screen div link CSS. */
 .lowerScreenMenu a {
-	margin: 6px 4px;
+
+	/* Container */
+	background-color: #333232;
 	display: block;
+	margin: 6px 4px;
+
+	/* Text */
 	font-size: 30px;
 	text-align: center;
 	color: white;
-	background-color: #333232;
 }
 
 /* Lower Screen link CSS when hovering. */
 .lowerScreenMenu a:hover {
+
+	/* Container */
 	background-color: #777;
 }
 
 .lowerScreenFeedback{
+
+	/* Container */
 	height: 200px;
 	width: 300px;
-	overflow-y: scroll;
 	margin: 5px auto;
+	overflow-y: scroll;
 }
 
 #feedbackFormText{
+
+	/* Container */
 	height: 150px;
 	width: 290px;
 	padding: 2px;
 }
 
 #feedbackButton{
+
+	/* Container */
 	margin: 5px auto;
 	margin-left: 85px;
 }
