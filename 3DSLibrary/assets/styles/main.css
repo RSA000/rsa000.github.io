@@ -37,7 +37,6 @@ body, html {
 .upperScreenText{
 
 	/* Container */
-	background: black;
 	border-radius:8%;
 	height: 140px;
 	width: 350px;
@@ -50,10 +49,13 @@ body, html {
 .topHeading{
 
 	/* Container */
+	background: black;
+	height: 90x;
 	width: 290px;
 	margin: auto;
 
 	/* Text */
+	font-size: 27px;
 	text-align: center;
 	color: white;
 }
@@ -63,9 +65,10 @@ body, html {
 
 	/* Container */
 	background: black;
-	width: 200px;
+	height:20px;
+	width: fit-content;
 	margin: auto;
-	padding-top: 10px;
+	margin-top: 15px;
 
 	/* Text */
 	text-align: center;
