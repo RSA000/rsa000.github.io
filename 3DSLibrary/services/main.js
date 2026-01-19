@@ -46,11 +46,14 @@
 
 		// If the user agent does not contain "Nintendo 3DS"
 		if(navigator.userAgent.indexOf("Nintendo 3DS") == -1) {
-			// Redirect to another page
-			// location.replace("");
+			// Set body style to grid display.
+			document.body.style.display = 'grid';
+			// Set content to center.
+			document.body.style.justifyContent = 'center';
 		}
+		// Otherwise,
 		else{
-			// Call center function every milisecond.
+			// Call center function every miliseconds.
 			setInterval(center, 4);
 		}
 
