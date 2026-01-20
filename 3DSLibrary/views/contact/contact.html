@@ -21,14 +21,13 @@
           <div class="lowerScreenFeedback">
             <form id="FeedbackForm" action="https://api.web3forms.com/submit" method="POST">
               <input type="hidden" name="access_key" value="1095361b-0dab-4b39-bdb5-21bc49ba465e">
-              <input id="feedbackFormName" type="text" name="name" required>
-              <input id="feedbackFormEmail" type="email" name="email" required>
+              <input id="feedbackFormName" type="text" name="name" value="name" required>
+              <input id="feedbackFormEmail" type="email" name="email" value="email" required>
               <textarea id="feedbackFormMessage" name="message" required></textarea>
               <button id="feedbackFormButton" type="submit">Submit</button>
             </form>
           </div>
 		</div>
-        <script src='../../services/main.js'></script>
         <script src='../../services/contact.js'></script>
     </body>
 </html>
