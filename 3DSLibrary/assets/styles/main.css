@@ -162,6 +162,12 @@ body, html {
 	overflow-y: scroll;
 }
 
+#testH1{
+
+	background: white;
+}
+
+
 #upperScreenRead{
 	height: 480px;
 	width: 400px;

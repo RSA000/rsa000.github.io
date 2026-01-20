@@ -8,6 +8,7 @@
         .then(text => {
             const portion = text.substring(0, 100); // first 100 characters
             document.getElementById('textContainer').textContent = portion;
+            document.getElementById("testH1").innerHTML = portion;
         })
         .catch(error => console.error('Error loading text file:', error));
     }, false)
