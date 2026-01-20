@@ -15,7 +15,7 @@
 		var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
 		// Get innerHTML and description attributes of current element.
 		var headingValue = this.innerHTML;
-		var subtitleValue = this.getAttribute("description");
+		var subtitleValue = this.dataset.description;
 		// Update innerHTML of top heading and subtitle to heading and subtitle values.
 		topHeading.innerHTML = headingValue;
 		topSubtitle.innerHTML = subtitleValue;
