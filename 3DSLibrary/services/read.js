@@ -5,21 +5,27 @@
         // Initialize a GET request to the URL
         xhr.open('GET', 'https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt', true);
 
-        // Set up the callback for when the request completes
+        // Configure what to do when the request completes.
+            // Essentially this assigning a function to handle the request.
         xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) { // DONE
+            // A readyState value of 4 means GET state is done (4).
+            if (xhr.readyState === 4) {
+                // If status code is not an error.
                 if (xhr.status >= 200 && xhr.status < 300) {
+                    // Create variable text, and store response text within.
                     var text = xhr.responseText;
-                    var portion = text.substring(0, 100); // first 100 characters
-                    document.getElementById('textContainer').textContent = portion;
-                    document.getElementById("testH1").innerHTML = portion;
+                    // Store 2000 Characters of text to variable portion.
+                    var portion = text.substring(0, 2000);
+                    // Get text container and set content to portion.
+                    document.getElementById('textContainerRead').textContent = portion;
                 } else {
+                    // Otherwise, log status and alert user.
                     console.error('Error loading text file:', xhr.statusText);
+                    alert("uh oh :/");
                 }
             }
         };
-
-        // Send the request
+        // Send actual request.
         xhr.send();
     }, false);
 })();

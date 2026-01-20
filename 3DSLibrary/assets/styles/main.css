@@ -162,23 +162,26 @@ body, html {
 	overflow-y: scroll;
 }
 
-#testH1{
-
-	background: white;
-}
-
 
 #upperScreenRead{
+
+	/* Container */
 	height: 480px;
 	width: 400px;
 }
 
 
-#textContainer{
+#textContainerRead{
+
+	/* Container */
 	background: papayawhip;
 	height: 470px;
 	width: 295px;
 	margin: 5px auto;
+	overflow-y: scroll;
+
+	/* Text */
+	font-size: 10px;
 }
 
 
