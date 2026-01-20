@@ -162,17 +162,43 @@ body, html {
 	overflow-y: scroll;
 }
 
-#feedbackFormText{
+
+#FeedbackForm{
+	/* Container */
+	margin: 5px 8px auto;
+}
+
+#feedbackFormName{
 
 	/* Container */
-	height: 150px;
-	width: 290px;
+	height: 30px;
+	width: 280px;
+	margin: auto;
 	padding: 2px;
 }
 
-#feedbackButton{
+#feedbackFormEmail{
+
+	/* Container */
+	height: 30px;
+	width: 280px;
+	margin: auto;
+	padding: 2px;
+
+}
+
+#feedbackFormMessage{
+
+	/* Container */
+	height: 80px;
+	width: 280px;
+	padding: 2px;
+
+}
+
+#feedbackFormButton{
 
 	/* Container */
 	margin: 5px auto;
-	margin-left: 85px;
+	margin-left: 120px;
 }
