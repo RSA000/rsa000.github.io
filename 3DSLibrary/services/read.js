@@ -18,14 +18,15 @@
                     var portion = text.substring(0, 2000);
                     // Get text container and set content to portion.
                     document.getElementById('textContainerRead').textContent = portion;
-                } else {
-                    // Otherwise, log status and alert user.
-                    console.error('Error loading text file:', xhr.statusText);
-                    alert("uh oh :/");
+                }
+                else {
+                // Otherwise, log status and alert user.
+                console.error('Error loading text file:', xhr.statusText);
+                alert("uh oh :/");
                 }
             }
         };
-        // Send actual request.
-        xhr.send();
+    // Send actual request.
+    xhr.send();
     }, false);
 })();
