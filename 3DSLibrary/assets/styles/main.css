@@ -162,6 +162,19 @@ body, html {
 	overflow-y: scroll;
 }
 
+#upperScreenRead{
+	height: 480px;
+	width: 400px;
+}
+
+
+#textContainer{
+	background: papayawhip;
+	height: 470px;
+	width: 295px;
+	margin: 5px auto;
+}
+
 
 #FeedbackForm{
 	/* Container */
