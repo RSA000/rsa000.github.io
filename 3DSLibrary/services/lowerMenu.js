@@ -7,12 +7,6 @@
 */
 (function(){
 
-	/* The center function scrolls the screen to the 40,215 coordinates.*/
-	var center = function(){
-		// Scroll to designated coordinates.
-		window.scrollTo(40,215);
-	};
-
 
 	/* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
 	var active = function(ev) {
@@ -40,23 +34,8 @@
 
 
 
-
 	/* When content is loaded. */
 	document.addEventListener('DOMContentLoaded', function(ev) {
-
-		// If the user agent does not contain "Nintendo 3DS"
-		if(navigator.userAgent.indexOf("Nintendo 3DS") == -1) {
-			// Set body style to grid display.
-			document.body.style.display = 'grid';
-			// Set content to center.
-			document.body.style.justifyContent = 'center';
-		}
-		// Otherwise,
-		else{
-			// Call center function every miliseconds.
-			setInterval(center, 4);
-		}
-
 
 		// Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
 		var anchors = this.querySelectorAll(".lowerScreenMenu a");
