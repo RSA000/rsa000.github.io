@@ -2,21 +2,20 @@
 
     const textContainer = document.getElementById('textContainerRead');
 
-
     /* The scrollUp function scrolls the text container up*/
     var scrollUp = function() {
 
         // "scrollBy" does not appear to work.
         console.log("Scrolling up");
-        textContainer.scrollTop -= 10;
+        textContainer.scrollTop -= 20;
     };
 
 
-     /* The scrollUp function scrolls the text container down.*/
+    /* The scrollUp function scrolls the text container down.*/
     var scrollDown = function() {
         // "scrollBy" does not appear to work.
         console.log("Scrolling down");
-        textContainer.scrollTop += 10;
+        textContainer.scrollTop += 20;
     };
 
 
@@ -50,21 +49,28 @@
      * @param {KeyboardEvent} e
      */
     function globalHandleKeyDown(e){
+        // Prevent default before when key is pressed down.
         preventKey(e);
 
         // Create name that store corresponding value to keycodes key (null if no matches)
+            // For example, the name would be "Down" if the keycode was equal to 40.
         const name = keycodes[e.keyCode];
 
         // If name is not null.
+            // For example, if down was pressed, the value of name would be "Down"
         if(name) {
-                //
-                const callbacks = pressCallbacks[name];
-
-                for(var i = 0; i < callbacks.length; i++) {
-                    callbacks[i]();
-                }
+            // Assign constant "callbacks" to index of pressCallbacks[name]
+                // For exmaple, pressCallbacks["Down"] would return a list of functions (currently just one, "scrollDown(),").
+            const callbacks = pressCallbacks[name];
+            // For range of callbacks,
+                // Currently, all lists either hold 1 or 0 functions
+            for(var i = 0; i < callbacks.length; i++) {
+                // index and call function at callbacks[i];
+                callbacks[i]();
+            }
         }
     }
+
 
     /**
      * Process keyup logic. Call this when using window.onkeyup, and you want to use the global.js input detection system
@@ -79,6 +85,7 @@
             pressStates[name] = false;
         }
     }
+
 
     /**
      * Clears all input
