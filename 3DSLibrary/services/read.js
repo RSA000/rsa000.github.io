@@ -18,7 +18,7 @@
                     // Store 2000 Characters of text to variable portion.
                     var portion = text.substring(0, 5000);
                     // Get text container and set content to portion.
-                    document.getElementById('textContainerRead').textContent = portion;
+                    document.getElementById('bookText').innerHTML = portion;
                 }
                 else {
                 // Otherwise, log status and alert user.
