@@ -9,6 +9,16 @@
         40: "Down"
     };
 
+    var pressStates = {};
+
+    var pressCallbacks = {
+        "Left": [],
+        "Up": [],
+        "Right": [],
+        "Down": [],
+        "A": []
+    };
+
 
     //
     var control = function(ev) {
