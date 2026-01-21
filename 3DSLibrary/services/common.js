@@ -29,7 +29,6 @@
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        window.addEventListener("blur", releaseAllKeys, false);
 
 
         // If the user agent does not contain "Nintendo 3DS"
