@@ -1,5 +1,27 @@
 (function() {
 
+
+    /* The scrollUp function scrolls the text container up*/
+    var scrollUp = function(ev) {
+        var textContainer = document.getElementById('textContainerRead');
+
+        // "scrollBy" does not appear to work.
+        console.log("up");
+        textContainer.scrollTop -= 10;
+    };
+
+     /* The scrollUp function scrolls the text container down.*/
+    var scrollDown = function(ev) {
+
+        var textContainer = document.getElementById('textContainerRead');
+
+        // "scrollBy" does not appear to work.
+        console.log("up");
+        textContainer.scrollTop -= 10;
+    };
+
+
+
     /* wolfyxon's stuff */
 
     // Dictionary that creates key-value pairs for keycodes and their corresponding text value.
@@ -14,20 +36,11 @@
 
     var pressStates = {};
 
-    /* The control function reads d-pad input and performs an action  */
-    var scrollUp = function(ev) {
-        var textContainer = document.getElementById('textContainerRead');
-
-        // "scrollBy" does not appear to work.
-        console.log("up");
-        textContainer.scrollTop -= 10;
-    };
-
     var pressCallbacks = {
         "Left": [],
         "Up": [scrollUp],
         "Right": [],
-        "Down": [scrollUp],
+        "Down": [scrollDown],
         "A": []
     };
 
@@ -42,8 +55,10 @@
     function globalHandleKeyDown(e){
         preventKey(e);
 
+        // Create name that store corresponding value to keycodes key (null if no matches)
         const name = keycodes[e.keyCode];
 
+        // If name is not null.
         if(name) {
             if(!pressStates[name]) {
                 const callbacks = pressCallbacks[name];
