@@ -16,9 +16,9 @@
 
     var pressCallbacks = {
         "Left": [],
-        "Up": [],
+        "Up": [].push(control),
         "Right": [],
-        "Down": [],
+        "Down": [].push(control),
         "A": []
     };
 
