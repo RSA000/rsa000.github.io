@@ -16,13 +16,7 @@
                     // Create variable text, and store response text within.
                     var text = xhr.responseText;
                     // Create variable "portion"
-                    var portion = "";
-                    var i = 0;
-                    while (portion.length < 5000) {
-
-                        portion = (portion + text.substring(i, i + 20) + "\n");
-                        i += 20;
-                    }
+                    var portion = text.substring(0, 5000);
                     // Get text container and set content to portion.
                     document.getElementById('p1').innerHTML = portion;
                 }
