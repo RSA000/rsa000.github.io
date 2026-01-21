@@ -10,14 +10,14 @@
             // Up
             case 38:
                 console.log("up");
-                textContainer.scrollBy(0, -2);
-                document.body.scrollBy(0, 100);
+                textContainer.scrollBy(0, -20);
                 break;
             // Right
             case 39: break;
             // Down
-            case 40: break;
-                textContainer.scrollBy(0, 2);
+            case 40:
+                console.log("down");
+                textContainer.scrollBy(0, 20);
                 break;
         }
     };
