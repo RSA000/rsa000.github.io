@@ -6,15 +6,6 @@
  */
 (function(){
 
-    var control = function(ev) {
-        switch(ev.which) {
-            case 37: alert("left"); break;
-            case 38: alert("up"); break;
-            case 39: alert("right"); break;
-            case 40: alert("down"); break;
-        }
-    };
-
     /* The center function scrolls the screen to the 40,215 coordinates.*/
     var center = function(){
         // Scroll to designated coordinates.
@@ -24,8 +15,6 @@
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-
-        document.addEventListener('keydown', control);
 
         // If the user agent does not contain "Nintendo 3DS"
         if(navigator.userAgent.indexOf("Nintendo 3DS") == -1) {
