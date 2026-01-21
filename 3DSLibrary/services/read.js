@@ -3,6 +3,7 @@
         // Create a new XMLHttpRequest object
         var xhr = new XMLHttpRequest();
         // Initialize a GET request to the URL
+        // INITIALIZE, NOT SEND!
         xhr.open('GET', 'https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt', true);
 
         // Configure what to do when the state of xhr changes.
