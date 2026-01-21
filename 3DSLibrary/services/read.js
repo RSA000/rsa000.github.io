@@ -1,5 +1,6 @@
 (function() {
 
+    /* wolfyxon's stuff */
     const keycodes = {
         13: "A",
         65: "A",
@@ -19,32 +20,7 @@
         "A": []
     };
 
-    /* The control function reads d-pad input and performs an action  */
-    var control = function(ev) {
-        var textContainer = document.getElementById('textContainerRead');
-        switch(ev.which) {
-            // Left
-            case 37: break;
-            // Up
-            case 38:
-                // "scrollBy" does not appear to work.
-                console.log("up");
-                textContainer.scrollTop -= 10;
-                break;
-            // Right
-            case 39: break;
-            // Down
-            case 40:
-                // "scrollBy" does not appear to work.
-                console.log("down");
-                textContainer.scrollTop += 10;
-                break;
-        }
-    };
 
-
-
-    // wolfyxon's stuff
     /**
      * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
      * @param {KeyboardEvent} e
@@ -106,12 +82,36 @@
     // end of wolfyxon
 
 
+    /* The control function reads d-pad input and performs an action  */
+    var control = function(ev) {
+        var textContainer = document.getElementById('textContainerRead');
+        switch(ev.which) {
+            // Left
+            case 37: break;
+            // Up
+            case 38:
+                // "scrollBy" does not appear to work.
+                console.log("up");
+                textContainer.scrollTop -= 10;
+                break;
+                // Right
+            case 39: break;
+            // Down
+            case 40:
+                // "scrollBy" does not appear to work.
+                console.log("down");
+                textContainer.scrollTop += 10;
+                break;
+        }
+    };
+
+
 
 
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        // Create event listener that runs control function every time key input is taken (d-pad)
-        document.addEventListener('keydown', control);
+        // // Create event listener that runs control function every time key input is taken (d-pad)
+        // document.addEventListener('keydown', control);
 
 
         // Create a new XMLHttpRequest object
