@@ -3,18 +3,20 @@
 
     //
     var control = function(ev) {
+        var textContainer = document.getElementById('textContainerRead');
         switch(ev.which) {
             // Left
             case 37: break;
             // Up
             case 38:
-                var textContainer = document.getElementById('textContainerRead');
-                textContainer.scrollBy(0, 10);
+                textContainer.scrollBy(0, -2);
                 break;
             // Right
             case 39: break;
             // Down
             case 40: break;
+                textContainer.scrollBy(0, 2);
+                break;
         }
     };
 
