@@ -112,10 +112,6 @@
 
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        // Create event listener that runs control function every time key input is taken (d-pad)
-        document.addEventListener('keydown', control);
-
-
         // Create a new XMLHttpRequest object
         var xhr = new XMLHttpRequest();
         // Initialize a GET request to the URL
