@@ -35,6 +35,7 @@
     // Create empty container for press states
     var pressStates = {};
 
+
     var pressCallbacks = {
         "Left": [],
         "Up": [scrollUp],
@@ -136,7 +137,7 @@
                     // Create variable text, and store response text within.
                     var text = xhr.responseText;
                     // Create variable "portion"
-                    var portion = text.substring(0, 5000);
+                    var portion = text.substring(0, 10000);
                     // Create new paragraph element and store in variable para.
                     para = document.createElement("p");
                     // Update para's inner text to current portion of text.
@@ -149,7 +150,8 @@
                 else {
                 // Otherwise, log status and alert user.
                 console.error('Error loading text file:', xhr.statusText);
-                alert("uh oh :/");
+                // Needed to see on 3DS.
+                alert("uh oh :/" + xhr.statusText);
                 }
             }
         };
