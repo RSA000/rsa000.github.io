@@ -15,10 +15,16 @@
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Create variable text, and store response text within.
                     var text = xhr.responseText;
-                    // Store 2000 Characters of text to variable portion.
-                    var portion = text.substring(0, 5000);
+                    // Create variable "portion"
+                    var portion = "";
+                    var i = 0;
+                    while (portion.length < 5000) {
+
+                        portion = (portion + text.substring(i, i + 20) + "\n");
+                        i += 20;
+                    }
                     // Get text container and set content to portion.
-                    document.getElementById('bookText').innerHTML = portion;
+                    document.getElementById('p1').innerHTML = portion;
                 }
                 else {
                 // Otherwise, log status and alert user.
