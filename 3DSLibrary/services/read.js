@@ -17,8 +17,14 @@
                     var text = xhr.responseText;
                     // Create variable "portion"
                     var portion = text.substring(0, 5000);
-                    // Get text container and set content to portion.
-                    document.getElementById('p1').innerHTML = portion;
+                    // Create new paragraph element and store in variable para.
+                    para = document.createElement("p");
+                    // Update para's inner text to current portion of text.
+                    para.innerText = portion;
+                    // Store textContainerElement in variable.
+                    const textContainer = document.getElementById('textContainerRead');
+                    // Append paragraph to textContainer
+                    textContainer.appendChild(para);
                 }
                 else {
                 // Otherwise, log status and alert user.
