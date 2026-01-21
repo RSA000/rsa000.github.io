@@ -19,7 +19,7 @@
         "A": []
     };
 
-    /* The control function reads d-pad input and performs an action */
+    /* The control function reads d-pad input and performs an action  */
     var control = function(ev) {
         var textContainer = document.getElementById('textContainerRead');
         switch(ev.which) {
@@ -87,7 +87,8 @@
     function releaseAllKeys() {
         pressStates = {};
     }
-    window.addEventListener('keydown', control, false);
+
+    window.addEventListener("keydown", globalHandleKeyDown, false);
     window.addEventListener("keyup", globalHandleKeyUp, false);
     window.addEventListener("blur", releaseAllKeys, false);
 
@@ -110,7 +111,7 @@
     document.addEventListener('DOMContentLoaded', function(ev) {
 
         // Create event listener that runs control function every time key input is taken (d-pad)
-
+        document.addEventListener('keydown', control);
 
 
         // Create a new XMLHttpRequest object
