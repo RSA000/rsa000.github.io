@@ -17,7 +17,7 @@
 
         // "scrollBy" does not appear to work.
         console.log("up");
-        textContainer.scrollTop -= 10;
+        textContainer.scrollTop += 10;
     };
 
 
