@@ -49,7 +49,7 @@
      * @param {KeyboardEvent} e
      */
     function globalHandleKeyDown(e){
-        // Prevent default before when key is pressed down.
+        // Prevent default action when key is pressed down.
         preventKey(e);
 
         // Create name that store corresponding value to keycodes key (null if no matches)
