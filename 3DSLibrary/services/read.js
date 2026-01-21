@@ -7,7 +7,10 @@
             // Left
             case 37: break;
             // Up
-            case 38: break;
+            case 38:
+                var textContainer = document.getElementById('textContainerRead');
+                textContainer.scrollBy(0, 10);
+                break;
             // Right
             case 39: break;
             // Down
