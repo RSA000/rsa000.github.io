@@ -22,26 +22,21 @@
 
     /* wolfyxon's stuff */
 
-    // Dictionary that creates key-value pairs for keycodes and their corresponding text value.
-    const keycodes = {
-        13: "A",
-        65: "A",
-        37: "Left",
-        38: "Up",
-        39: "Right",
-        40: "Down"
-    };
-
     // Create empty container for press states
     var pressStates = {};
 
 
     var pressCallbacks = {
-        "Left": [],
-        "Up": [scrollUp],
-        "Right": [],
-        "Down": [scrollDown],
-        "A": []
+        // Left
+        37: [],
+        // Up
+        38: [scrollUp],
+        // Right
+        39: [],
+        // Down
+        40: [scrollDown],
+        // A
+        65: []
     };
 
 
@@ -66,16 +61,11 @@
         // Prevent default action when key is pressed down.
         preventKey(e);
 
-        // Create name that store corresponding value to keycodes key (null if no matches)
-            // For example, the name would be "Down" if the keycode was equal to 40.
-        const name = keycodes[e.keyCode];
 
-        // If name is not null.
-            // For example, if down was pressed, the value of name would be "Down"
-        if(name) {
+        if(pressCallbacks[e.keyCode]) {
             // Assign constant "callbacks" to index of pressCallbacks[name]
                 // For exmaple, pressCallbacks["Down"] would return a list of functions (currently just one, "scrollDown(),").
-            const callbacks = pressCallbacks[name];
+            const callbacks = pressCallbacks[e.keyCode];
             // For range of callbacks,
                 // Currently, all lists either hold 1 or 0 functions
             for(var i = 0; i < callbacks.length; i++) {
@@ -93,7 +83,7 @@
     function globalHandleKeyUp(e){
         preventKey(e);
 
-        const name = keycodes[e.keyCode];
+        // const name = keycodes[e.keyCode];
 
         if(name) {
             pressStates[name] = false;
