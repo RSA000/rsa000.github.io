@@ -1,5 +1,14 @@
 (function() {
 
+    const keycodes = {
+        13: "A",
+        65: "A",
+        37: "Left",
+        38: "Up",
+        39: "Right",
+        40: "Down"
+    };
+
 
     //
     var control = function(ev) {
