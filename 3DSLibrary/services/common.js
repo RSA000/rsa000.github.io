@@ -25,6 +25,8 @@
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+        document.addEventListener('keydown', control);
+
         // If the user agent does not contain "Nintendo 3DS"
         if(navigator.userAgent.indexOf("Nintendo 3DS") == -1) {
             // Set body style to grid display.
@@ -36,7 +38,7 @@
         else{
             // Call center function every miliseconds.
             setInterval(center, 4);
-            setInterval(control, 4);
+
         }
     }, false);
 
