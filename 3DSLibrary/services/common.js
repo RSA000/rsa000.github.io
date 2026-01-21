@@ -6,6 +6,15 @@
  */
 (function(){
 
+    var control = function(ev) {
+        switch(ev.which) {
+            case 37: alert("left"); break;
+            case 38: alert("up"); break;
+            case 39: alert("right"); break;
+            case 40: alert("down"); break;
+        }
+    };
+
     /* The center function scrolls the screen to the 40,215 coordinates.*/
     var center = function(){
         // Scroll to designated coordinates.
@@ -27,6 +36,7 @@
         else{
             // Call center function every miliseconds.
             setInterval(center, 4);
+            setInterval(control, 4);
         }
     }, false);
 
