@@ -9,7 +9,9 @@
             case 37: break;
             // Up
             case 38:
+                console.log("up");
                 textContainer.scrollBy(0, -2);
+                document.body.scrollBy(0, 100);
                 break;
             // Right
             case 39: break;
