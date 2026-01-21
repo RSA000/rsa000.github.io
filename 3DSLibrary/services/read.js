@@ -1,6 +1,8 @@
 (function() {
 
     /* wolfyxon's stuff */
+
+    // Dictionary that creates key-value pairs for keycodes and their corresponding text value.
     const keycodes = {
         13: "A",
         65: "A",
@@ -110,8 +112,8 @@
 
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        // // Create event listener that runs control function every time key input is taken (d-pad)
-        // document.addEventListener('keydown', control);
+        // Create event listener that runs control function every time key input is taken (d-pad)
+        document.addEventListener('keydown', control);
 
 
         // Create a new XMLHttpRequest object
