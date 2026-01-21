@@ -1,5 +1,31 @@
 (function() {
 
+
+
+    /* The control function reads d-pad input and performs an action  */
+    var control = function(ev) {
+        var textContainer = document.getElementById('textContainerRead');
+        switch(ev.which) {
+            // Left
+            case 37: break;
+            // Up
+            case 38:
+                // "scrollBy" does not appear to work.
+                console.log("up");
+                textContainer.scrollTop -= 10;
+                break;
+                // Right
+            case 39: break;
+            // Down
+            case 40:
+                // "scrollBy" does not appear to work.
+                console.log("down");
+                textContainer.scrollTop += 10;
+                break;
+        }
+    };
+
+
     /* wolfyxon's stuff */
 
     // Dictionary that creates key-value pairs for keycodes and their corresponding text value.
@@ -16,9 +42,9 @@
 
     var pressCallbacks = {
         "Left": [],
-        "Up": [].push(control),
+        "Up": [control],
         "Right": [],
-        "Down": [].push(control),
+        "Down": [control],
         "A": []
     };
 
@@ -84,28 +110,6 @@
     // end of wolfyxon
 
 
-    /* The control function reads d-pad input and performs an action  */
-    var control = function(ev) {
-        var textContainer = document.getElementById('textContainerRead');
-        switch(ev.which) {
-            // Left
-            case 37: break;
-            // Up
-            case 38:
-                // "scrollBy" does not appear to work.
-                console.log("up");
-                textContainer.scrollTop -= 10;
-                break;
-                // Right
-            case 39: break;
-            // Down
-            case 40:
-                // "scrollBy" does not appear to work.
-                console.log("down");
-                textContainer.scrollTop += 10;
-                break;
-        }
-    };
 
 
 
