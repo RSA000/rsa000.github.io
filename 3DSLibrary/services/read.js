@@ -1,22 +1,21 @@
 (function() {
 
+    const textContainer = document.getElementById('textContainerRead');
+
 
     /* The scrollUp function scrolls the text container up*/
-    var scrollUp = function(ev) {
-        var textContainer = document.getElementById('textContainerRead');
+    var scrollUp = function() {
 
         // "scrollBy" does not appear to work.
-        console.log("up");
+        console.log("Scrolling up");
         textContainer.scrollTop -= 10;
     };
 
+
      /* The scrollUp function scrolls the text container down.*/
-    var scrollDown = function(ev) {
-
-        var textContainer = document.getElementById('textContainerRead');
-
+    var scrollDown = function() {
         // "scrollBy" does not appear to work.
-        console.log("up");
+        console.log("Scrolling down");
         textContainer.scrollTop += 10;
     };
 
@@ -34,6 +33,7 @@
         40: "Down"
     };
 
+    // Create empty container for press states
     var pressStates = {};
 
     var pressCallbacks = {
@@ -43,9 +43,6 @@
         "Down": [scrollDown],
         "A": []
     };
-
-
-
 
 
     /**
@@ -60,15 +57,12 @@
 
         // If name is not null.
         if(name) {
-            if(!pressStates[name]) {
+                //
                 const callbacks = pressCallbacks[name];
 
                 for(var i = 0; i < callbacks.length; i++) {
                     callbacks[i]();
                 }
-            }
-
-            pressStates[name] = true;
         }
     }
 
@@ -93,9 +87,6 @@
         pressStates = {};
     }
 
-    window.addEventListener("keydown", globalHandleKeyDown, false);
-    window.addEventListener("keyup", globalHandleKeyUp, false);
-    window.addEventListener("blur", releaseAllKeys, false);
 
     // This prevents the browser from moving the page using the arrow keys
     function preventKey(event){
@@ -107,7 +98,7 @@
 
         event.preventDefault();
         return false;
-    }
+    };
     // end of wolfyxon
 
 
@@ -116,6 +107,10 @@
 
 
     document.addEventListener('DOMContentLoaded', function(ev) {
+
+        window.addEventListener("keydown", globalHandleKeyDown, false);
+        window.addEventListener("keyup", globalHandleKeyUp, false);
+        window.addEventListener("blur", releaseAllKeys, false);
 
         // Create a new XMLHttpRequest object
         var xhr = new XMLHttpRequest();
