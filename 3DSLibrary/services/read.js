@@ -29,14 +29,14 @@
             // Up
             case 38:
                 console.log("up");
-                textContainer.scrollBy(0, -20);
+                textContainer.scrollTop -= 20;
                 break;
             // Right
             case 39: break;
             // Down
             case 40:
                 console.log("down");
-                textContainer.scrollBy(0, 20);
+                textContainer.scrollTop += 20;
                 break;
         }
     };
@@ -111,6 +111,7 @@
 
         // Create event listener that runs control function every time key input is taken (d-pad)
         document.addEventListener('keydown', control);
+
 
         // Create a new XMLHttpRequest object
         var xhr = new XMLHttpRequest();
