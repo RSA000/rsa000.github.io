@@ -26,6 +26,66 @@
 
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+
+        /**
+         * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
+         * @param {KeyboardEvent} e
+         */
+        function globalHandleKeyDown(e){
+            preventKey(e);
+
+            const name = keycodes[e.keyCode];
+
+            if(name) {
+                if(!pressStates[name]) {
+                    const callbacks = pressCallbacks[name];
+
+                    for(var i = 0; i < callbacks.length; i++) {
+                        callbacks[i]();
+                    }
+                }
+
+                pressStates[name] = true;
+            }
+        }
+
+        /**
+         * Process keyup logic. Call this when using window.onkeyup, and you want to use the global.js input detection system
+         * @param {KeyboardEvent} e
+         */
+        function globalHandleKeyUp(e){
+            preventKey(e);
+
+            const name = keycodes[e.keyCode];
+
+            if(name) {
+                pressStates[name] = false;
+            }
+        }
+
+        /**
+         * Clears all input
+         */
+        function releaseAllKeys() {
+            pressStates = {};
+        }
+
+        window.addEventListener("keydown", globalHandleKeyDown, false);
+        window.addEventListener("keyup", globalHandleKeyUp, false);
+        window.addEventListener("blur", releaseAllKeys, false);
+
+        // This prevents the browser from moving the page using the arrow keys
+        function preventKey(event){
+            if(event.keyCode === 8) return true; //backspace
+            if(event.keyCode === 116) return true; //f5
+            if(event.keyCode === 13) return true; //enter
+
+            if(event.charCode || (event.key && event.key.length === 1 )) return true; // allow character keys
+
+            event.preventDefault();
+            return false;
+        }
+
         // Create event listener that runs control function every time key input is taken (d-pad)
         document.addEventListener('keydown', control);
 
