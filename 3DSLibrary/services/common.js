@@ -1,16 +1,16 @@
+/* The center function scrolls the screen to the 40,215 coordinates.*/
+function center(){
+    // Scroll to designated coordinates.
+    window.scrollTo(40,215);
+};
+
+
 /*
- * This is an immediately invoked function expression.
- * This means that after this function is created it will immediately run.
- * All variables are within the functions scope and not the main programs global scope;
- * this is a means of encapsulating data.
+ * Things within this function will not pollute global scope
  */
 (function(){
 
-    /* The center function scrolls the screen to the 40,215 coordinates.*/
-    function center(){
-        // Scroll to designated coordinates.
-        window.scrollTo(40,215);
-    };
+
 
 
     /* When content is loaded. */

@@ -1,9 +1,23 @@
+/**
+ *
+ * This is the main Javascript functionality behind the "read.html" page and provides a means for
+ * updating the text within the page of a currently selected book. Currently, there is no means of
+ * tracking
+ *
+ * 3DS Keycodes:
+ *              Left 37,
+ *              Up 38,
+ *              Right 39,
+ *              Down 40,
+ *              A 65
+ *
+ */
+
 (function() {
 
-    // Left 37, Up 38, Right 39, Down 40, A 65
-
-    currentPosition = 0;
-
+    // Set current book position to 0th character.
+    var currentPosition = 0;
+    // Set current text to empty string.
     var text = "";
 
     /**
@@ -17,40 +31,51 @@
     };
 
 
+    /**
+     *
+     * This function takes a number (0 or 1) that indicates the page direction and updates
+     * the textContainerReader
+     *
+     * @param {direction}
+     */
     function updatePage(direction){
+        // Store textContainerRead element.
+        var textContainer = document.getElementById('textContainerRead');
+        // Store first paragraph of textContainerRead in "containerParagraph."
+        var containerParagraph = textContainer.getElementsByTagName("p")[0];
+        // Clear current paragraph
+        console.log("Clearing Screen");
+        containerParagraph.innerText = "";
 
+        // If direction is forwards.
         if (direction == 0){
-            // Clear current paragraph
-            console.log("Clearing Screen");
-            const textContainer = document.getElementById('textContainerRead');
-            textContainer.getElementsByTagName("p")[0].innerText = "";
-            var portion = text.substring(currentPosition + 10000, currentPosition + 20000);
-            // Create new paragraph element and store in variable para.
-            // Update para's inner text to current portion of text.
-            textContainer.getElementsByTagName("p")[0].innerText = portion;
-            // Store textContainerElement in variable.
-            // Append paragraph to textContainer
+            // Update current position and store current portion.
+            currentPosition = currentPosition + 4000;
+            var portion = text.substring(currentPosition, currentPosition + 4000);
+            // Set screen to current portion
+            containerParagraph.innerText = portion;
+            // Log successful page turn.
             console.log("Next Page");
-            currentPosition = currentPosition + 10000;
         }
-        else if (direction == 1){
-            // Clear current paragraph
-            console.log("Clearing Screen");
-            const textContainer = document.getElementById('textContainerRead');
-            textContainer.getElementsByTagName("p")[0].innerText = "";
-            var portion = text.substring(currentPosition - 20000, currentPosition);
-            // Create new paragraph element and store in variable para.
-            // Update para's inner text to current portion of text.
-            textContainer.getElementsByTagName("p")[0].innerText = portion;
-            // Store textContainerElement in variable.
-            // Append paragraph to textContainer
+        // If direction is backwards.
+        else if ((direction == 1) && (currentPosition > 0)){
+            // Update current position and store current portion.
+            currentPosition = currentPosition - 8000;
+            var portion = text.substring(currentPosition, currentPosition + 8000);
+            // Update container paragraph to current portion.
+            containerParagraph.innerText = portion;
+            // Log successful page turn.
             console.log("Previous Page");
-            currentPosition = currentPosition - 10000;
         }
+        // Scroll to top of screen
+        scroll(textContainer, 10000);
     };
 
-    /* wolfyxon's stuff */
 
+    /**
+     * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
+     *        https://github.com/Wolfyxon/3ds-web-stuff*
+     */
     /**
      *
      * This prevents the browser from moving the page using the arrow keys
@@ -84,7 +109,7 @@
         }
         else if (event.keyCode == 39){
             updatePage(0);
-            scroll(element, 10000);
+
 
         }
         else if (event.keyCode == 40){
