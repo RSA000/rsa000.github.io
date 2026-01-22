@@ -9,7 +9,7 @@
     /* The center function scrolls the screen to the 40,215 coordinates.*/
     function center(){
         // Scroll to designated coordinates.
-        document.scrollTo(40,215);
+        window.scrollTo(40,215);
     };
 
 
