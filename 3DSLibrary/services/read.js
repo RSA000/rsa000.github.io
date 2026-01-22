@@ -24,7 +24,7 @@
             console.log("Clearing Screen");
             const textContainer = document.getElementById('textContainerRead');
             textContainer.getElementsByTagName("p")[0].innerText = "";
-            var portion = text.substring(currentPosition, currentPosition + 10000);
+            var portion = text.substring(currentPosition + 10000, currentPosition + 20000);
             // Create new paragraph element and store in variable para.
             // Update para's inner text to current portion of text.
             textContainer.getElementsByTagName("p")[0].innerText = portion;
@@ -80,13 +80,13 @@
         preventKey(event);
 
         if(event.keyCode == 38) {
-            scroll(element, 10);
+            scroll(element, 20);
         }
         else if (event.keyCode == 39){
             updatePage(0);
         }
         else if (event.keyCode == 40){
-            scroll(element, -10);
+            scroll(element, -20);
         }
         else if (event.keyCode == 37) {
             updatePage(1);
