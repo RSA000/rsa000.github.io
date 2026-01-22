@@ -9,7 +9,7 @@
      * @param {element}
      * @param {Int}
      */
-    var scroll = function(element, amount) {
+    function scroll(element, amount) {
         console.log("Scrolling");
         element.scrollTop -= amount;
     };
@@ -57,7 +57,7 @@
      * Process keyup logic. Call this when using window.onkeyup, and you want to use the global.js input detection system
      * @param {KeyboardEvent} event
      */
-    function globalHandleKeyUp(event){
+    function readHandleKeyUp(event){
         // Currently, just prevent default bevavior.
         preventKey(event);
     }
@@ -75,7 +75,7 @@
             readHandleKeyDown(e, document.getElementById('textContainerRead'));
         });
 
-        window.addEventListener("keyup", globalHandleKeyUp, false);
+        window.addEventListener("keyup", readHandleKeyUp, false);
 
         // Create a new XMLHttpRequest object
         var xhr = new XMLHttpRequest();
