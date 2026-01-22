@@ -37,16 +37,14 @@
             // Clear current paragraph
             console.log("Clearing Screen");
             const textContainer = document.getElementById('textContainerRead');
-            textContainer.getElementsByTagName("p")[0].remove();
+            textContainer.getElementsByTagName("p")[0].innerText = "";
             var portion = text.substring(currentPosition - 20000, currentPosition);
             // Create new paragraph element and store in variable para.
-            para = document.createElement("p");
             // Update para's inner text to current portion of text.
-            para.innerText = portion;
+            textContainer.getElementsByTagName("p")[0].innerText = portion;
             // Store textContainerElement in variable.
             // Append paragraph to textContainer
-            textContainer.appendChild(para);
-            console.log("Previous");
+            console.log("Previous Page");
             currentPosition = currentPosition - 10000;
         }
     };
@@ -88,7 +86,7 @@
             updatePage(0);
         }
         else if (event.keyCode == 40){
-            scroll(element, 10);
+            scroll(element, -10);
         }
         else if (event.keyCode == 37) {
             updatePage(1);
