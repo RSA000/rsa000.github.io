@@ -7,7 +7,7 @@
 (function(){
 
     /* The center function scrolls the screen to the 40,215 coordinates.*/
-    function center(element){
+    function center(){
         // Scroll to designated coordinates.
         element.scrollTo(40,215);
     };
@@ -28,7 +28,7 @@
         // Otherwise,
         else{
             // Call center function every miliseconds.
-            setInterval(center(document.body), 4);
+            setInterval(center(), 4);
 
         }
     }, false);
