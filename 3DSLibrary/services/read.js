@@ -2,18 +2,16 @@
 
     const textContainer = document.getElementById('textContainerRead');
 
-    /* The scrollUp function scrolls the text container up*/
-    var scrollUp = function() {
 
-        // "scrollBy" does not appear to work.
+    /* The scrollUp function scrolls the text container up*/
+    var scrollUp = function(element) {
         console.log("Scrolling up");
         textContainer.scrollTop -= 20;
     };
 
 
     /* The scrollUp function scrolls the text container down.*/
-    var scrollDown = function() {
-        // "scrollBy" does not appear to work.
+    var scrollDown = function(element) {
         console.log("Scrolling down");
         textContainer.scrollTop += 20;
     };
@@ -21,10 +19,6 @@
 
 
     /* wolfyxon's stuff */
-
-    // Create empty container for press states
-    var pressStates = {};
-
 
     var pressCallbacks = {
         // Left
@@ -39,15 +33,21 @@
         65: []
     };
 
-
-    // This prevents the browser from moving the page using the arrow keys
+    /**
+     *
+     * This prevents the browser from moving the page using the arrow keys
+     * @param {keyboardEvent} event
+    */
     function preventKey(event){
         if(event.keyCode === 8) return true; //backspace
         if(event.keyCode === 116) return true; //f5
         if(event.keyCode === 13) return true; //enter
 
-        if(event.charCode || (event.key && event.key.length === 1 )) return true; // allow character keys
-
+        // If event.charCode is not null or event key is not null and length is equal to 1.
+        if(event.charCode || (event.key && event.key.length === 1 ))
+            // allow character keys and return true.
+            return true;
+        // Otherwise, prevent default action for event and return false.
         event.preventDefault();
         return false;
     };
@@ -55,22 +55,22 @@
 
     /**
      * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
-     * @param {KeyboardEvent} e
+     * @param {KeyboardEvent} event
      */
-    function globalHandleKeyDown(e){
+    function globalHandleKeyDown(event){
         // Prevent default action when key is pressed down.
-        preventKey(e);
+        preventKey(event);
 
 
-        if(pressCallbacks[e.keyCode]) {
+        if(pressCallbacks[event.keyCode]) {
             // Assign constant "callbacks" to index of pressCallbacks[name]
                 // For exmaple, pressCallbacks["Down"] would return a list of functions (currently just one, "scrollDown(),").
-            const callbacks = pressCallbacks[e.keyCode];
+            const callbacks = pressCallbacks[event.keyCode];
             // For range of callbacks,
                 // Currently, all lists either hold 1 or 0 functions
             for(var i = 0; i < callbacks.length; i++) {
                 // index and call function at callbacks[i];
-                callbacks[i]();
+                callbacks[i](textContainer);
             }
         }
     }
@@ -78,11 +78,11 @@
 
     /**
      * Process keyup logic. Call this when using window.onkeyup, and you want to use the global.js input detection system
-     * @param {KeyboardEvent} e
+     * @param {KeyboardEvent} event
      */
-    function globalHandleKeyUp(e){
-        // Currently, just do nothing
-        preventKey(e);
+    function globalHandleKeyUp(event){
+        // Currently, just prevent default bevavior.
+        preventKey(event);
     }
 
     // end of wolfyxon
