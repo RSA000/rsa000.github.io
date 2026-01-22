@@ -1,36 +1,17 @@
 (function() {
 
-    const textContainer = document.getElementById('textContainerRead');
-
-
-    /* The scrollUp function scrolls the text container up*/
-    var scrollUp = function(element) {
-        console.log("Scrolling up");
-        textContainer.scrollTop -= 20;
-    };
-
-
-    /* The scrollUp function scrolls the text container down.*/
-    var scrollDown = function(element) {
-        console.log("Scrolling down");
-        textContainer.scrollTop += 20;
-    };
-
-
-
     /* wolfyxon's stuff */
 
-    var pressCallbacks = {
-        // Left
-        37: [],
-        // Up
-        38: [scrollUp],
-        // Right
-        39: [],
-        // Down
-        40: [scrollDown],
-        // A
-        65: []
+    // Left 37, Up 38, Right 39, Down 40, A 65
+
+    /**
+     * The scrollUp function scrolls the text container up
+     * @param {element}
+     * @param {Int}
+     */
+    var scroll = function(element, amount) {
+        console.log("Scrolling");
+        element.scrollTop -= amount;
     };
 
     /**
@@ -57,23 +38,19 @@
      * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
      * @param {KeyboardEvent} event
      */
-    function globalHandleKeyDown(event){
+    function readHandleKeyDown(event, element){
         // Prevent default action when key is pressed down.
         preventKey(event);
 
 
-        if(pressCallbacks[event.keyCode]) {
-            // Assign constant "callbacks" to index of pressCallbacks[name]
-                // For exmaple, pressCallbacks["Down"] would return a list of functions (currently just one, "scrollDown(),").
-            const callbacks = pressCallbacks[event.keyCode];
-            // For range of callbacks,
-                // Currently, all lists either hold 1 or 0 functions
-            for(var i = 0; i < callbacks.length; i++) {
-                // index and call function at callbacks[i];
-                callbacks[i](textContainer);
+        if(event.keyCode == 38) {
+                scroll(element, 5);
             }
+        else if (event.keyCode == 40){
+                scroll(element, -5);
+
         }
-    }
+    };
 
 
     /**
@@ -94,7 +71,10 @@
 
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        window.addEventListener("keydown", globalHandleKeyDown, false);
+        window.addEventListener("keydown", function(e) {
+            readHandleKeyDown(e, document.getElementById('textContainerRead'));
+        });
+
         window.addEventListener("keyup", globalHandleKeyUp, false);
 
         // Create a new XMLHttpRequest object
