@@ -21,17 +21,6 @@
     var text = "";
 
     /**
-     * The scrollUp function scrolls the text container up
-     * @param {element}
-     * @param {Int}
-     */
-    function scroll(element, amount) {
-        console.log("Scrolling");
-        element.scrollTop -= amount;
-    };
-
-
-    /**
      *
      * This function takes a number (0 or 1) that indicates the page direction and updates
      * the textContainerReader
@@ -71,29 +60,6 @@
         scroll(textContainer, 10000);
     };
 
-
-    /**
-     * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
-     *        https://github.com/Wolfyxon/3ds-web-stuff*
-     */
-    /**
-     *
-     * This prevents the browser from moving the page using the arrow keys
-     * @param {keyboardEvent} event
-     */
-    function preventKey(event){
-        if(event.keyCode === 8) return true; //backspace
-        if(event.keyCode === 116) return true; //f5
-        if(event.keyCode === 13) return true; //enter
-
-        // If event.charCode is not null or event key is not null and length is equal to 1.
-        if(event.charCode || (event.key && event.key.length === 1 ))
-            // allow character keys and return true.
-            return true;
-        // Otherwise, prevent default action for event and return false.
-        event.preventDefault();
-        return false;
-    };
 
 
     /**
@@ -169,12 +135,6 @@
     };
     // Send actual request.
     xhr.send();
-
-
-
-
-
-
 
 
 
