@@ -28,7 +28,7 @@
         // Otherwise,
         else{
             // Call center function every miliseconds.
-            setInterval(center(), 4);
+            setInterval(center, 4);
 
         }
     }, false);
