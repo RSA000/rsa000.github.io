@@ -81,21 +81,8 @@
      * @param {KeyboardEvent} e
      */
     function globalHandleKeyUp(e){
+        // Currently, just do nothing
         preventKey(e);
-
-        // const name = keycodes[e.keyCode];
-
-        if(name) {
-            pressStates[name] = false;
-        }
-    }
-
-
-    /**
-     * Clears all input
-     */
-    function releaseAllKeys() {
-        pressStates = {};
     }
 
     // end of wolfyxon
@@ -109,7 +96,6 @@
 
         window.addEventListener("keydown", globalHandleKeyDown, false);
         window.addEventListener("keyup", globalHandleKeyUp, false);
-        window.addEventListener("blur", releaseAllKeys, false);
 
         // Create a new XMLHttpRequest object
         var xhr = new XMLHttpRequest();
