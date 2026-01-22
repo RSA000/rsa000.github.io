@@ -42,13 +42,11 @@
         // Prevent default action when key is pressed down.
         preventKey(event);
 
-
         if(event.keyCode == 38) {
-                scroll(element, 5);
+                scroll(element, 7);
             }
         else if (event.keyCode == 40){
-                scroll(element, -5);
-
+                scroll(element, -7);
         }
     };
 
