@@ -1,8 +1,10 @@
 (function() {
 
+    // Left 37, Up 38, Right 39, Down 40, A 65
+
     currentPosition = 0;
 
-    // Left 37, Up 38, Right 39, Down 40, A 65
+    var text = "";
 
     /**
      * The scrollUp function scrolls the text container up
@@ -19,7 +21,17 @@
         // Clear current paragraph
         console.log("Clearing Screen");
         const textContainer = document.getElementById('textContainerRead');
-        textContainer.getElementsByTagName("p")[0].innerHTML = "";
+        textContainer.getElementsByTagName("p")[0].remove();
+        var portion = text.substring(currentPosition, currentPosition + 10000);
+        // Create new paragraph element and store in variable para.
+        para = document.createElement("p");
+        // Update para's inner text to current portion of text.
+        para.innerText = portion;
+        // Store textContainerElement in variable.
+        // Append paragraph to textContainer
+        textContainer.appendChild(para);
+        console.log("Next Page");
+        currentPosition = currentPosition + 10000;
     };
 
     /* wolfyxon's stuff */
@@ -28,7 +40,7 @@
      *
      * This prevents the browser from moving the page using the arrow keys
      * @param {keyboardEvent} event
-    */
+     */
     function preventKey(event){
         if(event.keyCode === 8) return true; //backspace
         if(event.keyCode === 116) return true; //f5
@@ -75,13 +87,11 @@
 
     // end of wolfyxon
 
-
     // Create a new XMLHttpRequest object
     var xhr = new XMLHttpRequest();
     // Initialize a GET request to the URL
     // INITIALIZE, NOT SEND!
     xhr.open('GET', 'https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt', true);
-
     // Configure what to do when the state of xhr changes.
     // In this case, run a function.
     xhr.onreadystatechange = function() {
@@ -90,7 +100,7 @@
             // If status code is not an error.
             if (xhr.status >= 200 && xhr.status < 300) {
                 // Create variable text, and store response text within.
-                var text = xhr.responseText;
+                text = xhr.responseText;
                 // Create variable "portion"
                 var portion = text.substring(currentPosition, currentPosition + 10000);
                 // Create new paragraph element and store in variable para.
@@ -113,6 +123,12 @@
     };
     // Send actual request.
     xhr.send();
+
+
+
+
+
+
 
 
 
