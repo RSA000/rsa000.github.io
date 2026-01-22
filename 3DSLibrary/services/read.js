@@ -91,7 +91,7 @@
         }
         else if (event.keyCode == 37) {
             updatePage(1);
-            element.scrollTo({ top: 0, behavior: 'smooth' });
+            scroll(element, 10000);
         }
     };
 
