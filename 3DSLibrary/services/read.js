@@ -17,21 +17,40 @@
     };
 
 
-    function updatePage(){
-        // Clear current paragraph
-        console.log("Clearing Screen");
-        const textContainer = document.getElementById('textContainerRead');
-        textContainer.getElementsByTagName("p")[0].remove();
-        var portion = text.substring(currentPosition, currentPosition + 10000);
-        // Create new paragraph element and store in variable para.
-        para = document.createElement("p");
-        // Update para's inner text to current portion of text.
-        para.innerText = portion;
-        // Store textContainerElement in variable.
-        // Append paragraph to textContainer
-        textContainer.appendChild(para);
-        console.log("Next Page");
-        currentPosition = currentPosition + 10000;
+    function updatePage(direction){
+
+        if (direction == 0){
+            // Clear current paragraph
+            console.log("Clearing Screen");
+            const textContainer = document.getElementById('textContainerRead');
+            textContainer.getElementsByTagName("p")[0].remove();
+            var portion = text.substring(currentPosition, currentPosition + 10000);
+            // Create new paragraph element and store in variable para.
+            para = document.createElement("p");
+            // Update para's inner text to current portion of text.
+            para.innerText = portion;
+            // Store textContainerElement in variable.
+            // Append paragraph to textContainer
+            textContainer.appendChild(para);
+            console.log("Next Page");
+            currentPosition = currentPosition + 10000;
+        }
+        else if (direction == 1){
+            // Clear current paragraph
+            console.log("Clearing Screen");
+            const textContainer = document.getElementById('textContainerRead');
+            textContainer.getElementsByTagName("p")[0].remove();
+            var portion = text.substring(currentPosition - 20000, currentPosition);
+            // Create new paragraph element and store in variable para.
+            para = document.createElement("p");
+            // Update para's inner text to current portion of text.
+            para.innerText = portion;
+            // Store textContainerElement in variable.
+            // Append paragraph to textContainer
+            textContainer.appendChild(para);
+            console.log("Previous");
+            currentPosition = currentPosition - 10000;
+        }
     };
 
     /* wolfyxon's stuff */
@@ -68,10 +87,13 @@
             scroll(element, 7);
         }
         else if (event.keyCode == 39){
-            updatePage();
+            updatePage(0);
         }
         else if (event.keyCode == 40){
             scroll(element, -7);
+        }
+        else if (event.keyCode == 37) {
+            updatePage(1);
         }
     };
 
