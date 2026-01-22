@@ -55,7 +55,7 @@
             containerParagraph.innerText = "";
             // Update current position and store current portion.
             currentPosition = currentPosition - 4000;
-            var portion = text.substring(currentPosition, currentPosition + 8000);
+            var portion = text.substring(currentPosition, currentPosition + 4000);
             // Update container paragraph to current portion.
             containerParagraph.innerText = portion;
             // Log successful page turn.
