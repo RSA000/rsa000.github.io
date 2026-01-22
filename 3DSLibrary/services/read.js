@@ -84,13 +84,13 @@
         preventKey(event);
 
         if(event.keyCode == 38) {
-            scroll(element, 7);
+            scroll(element, 10);
         }
         else if (event.keyCode == 39){
             updatePage(0);
         }
         else if (event.keyCode == 40){
-            scroll(element, -7);
+            scroll(element, 10);
         }
         else if (event.keyCode == 37) {
             updatePage(1);
