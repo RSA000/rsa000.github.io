@@ -32,12 +32,14 @@
         var textContainer = document.getElementById('textContainerRead');
         // Store first paragraph of textContainerRead in "containerParagraph."
         var containerParagraph = textContainer.getElementsByTagName("p")[0];
-        // Clear current paragraph
-        console.log("Clearing Screen");
-        containerParagraph.innerText = "";
+
+
 
         // If direction is forwards.
         if (direction == 0){
+            // Clear current paragraph
+            console.log("Clearing textContainerReader contents");
+            containerParagraph.innerText = "";
             // Update current position and store current portion.
             currentPosition = currentPosition + 4000;
             var portion = text.substring(currentPosition, currentPosition + 4000);
@@ -48,16 +50,25 @@
         }
         // If direction is backwards.
         else if ((direction == 1) && (currentPosition > 0)){
+            // Clear current paragraph
+            console.log("Clearing textContainerReader contents");
+            containerParagraph.innerText = "";
             // Update current position and store current portion.
-            currentPosition = currentPosition - 8000;
+            currentPosition = currentPosition - 4000;
             var portion = text.substring(currentPosition, currentPosition + 8000);
             // Update container paragraph to current portion.
             containerParagraph.innerText = portion;
             // Log successful page turn.
             console.log("Previous Page");
         }
+        // Otherwise, do nothing (either at end or beginning of book.
+        else {
+            console.log("At book start");
+            return;
+        }
         // Scroll to top of screen
         scroll(textContainer, 10000);
+        return;
     };
 
 
@@ -69,21 +80,24 @@
     function readHandleKeyDown(event, element){
         // Prevent default action when key is pressed down.
         preventKey(event);
-
-        if(event.keyCode == 38) {
-            scroll(element, 17);
-        }
-        else if (event.keyCode == 39){
-            updatePage(0);
-
-
-        }
-        else if (event.keyCode == 40){
-            scroll(element, -17);
-        }
-        else if (event.keyCode == 37) {
-            updatePage(1);
-            scroll(element, 10000);
+        // Switch case for each button press code.
+        switch(event.keyCode){
+            // D-pad up.
+            case 38:
+                scroll(element,17);
+                break;
+            // D-pad right.
+            case 39:
+                updatePage(0);
+                break;
+            // D-pad down.
+            case 40:
+                scroll(element, -17);
+                break;
+            // D-pad left.
+            case 37:
+                updatePage(1);
+                break;
         }
     };
 
@@ -113,8 +127,9 @@
             if (xhr.status >= 200 && xhr.status < 300) {
                 // Create variable text, and store response text within.
                 text = xhr.responseText;
+                currentPosition += 4000;
                 // Create variable "portion"
-                var portion = text.substring(currentPosition, currentPosition + 10000);
+                var portion = text.substring(0, currentPosition);
                 // Create new paragraph element and store in variable para.
                 para = document.createElement("p");
                 // Update para's inner text to current portion of text.
@@ -123,7 +138,6 @@
                 const textContainer = document.getElementById('textContainerRead');
                 // Append paragraph to textContainer
                 textContainer.appendChild(para);
-                currentPosition += 10000;
             }
             else {
                 // Otherwise, log status and alert user.
