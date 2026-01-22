@@ -19,7 +19,7 @@
         // Clear current paragraph
         console.log("Clearing Screen");
         const textContainer = document.getElementById('textContainerRead');
-        textContainer.getElementsByTagName("p")[0].remove();
+        textContainer.getElementsByTagName("p")[0].innerHTML = "";
     };
 
     /* wolfyxon's stuff */
