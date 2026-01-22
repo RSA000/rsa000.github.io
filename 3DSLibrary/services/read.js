@@ -84,7 +84,8 @@
         }
         else if (event.keyCode == 39){
             updatePage(0);
-            element.scrollTo({ top: 0, behavior: 'smooth' });
+            scroll(element, 10000);
+
         }
         else if (event.keyCode == 40){
             scroll(element, -17);
