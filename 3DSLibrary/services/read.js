@@ -23,15 +23,13 @@
             // Clear current paragraph
             console.log("Clearing Screen");
             const textContainer = document.getElementById('textContainerRead');
-            textContainer.getElementsByTagName("p")[0].remove();
+            textContainer.getElementsByTagName("p")[0].innerText = "";
             var portion = text.substring(currentPosition, currentPosition + 10000);
             // Create new paragraph element and store in variable para.
-            para = document.createElement("p");
             // Update para's inner text to current portion of text.
-            para.innerText = portion;
+            textContainer.getElementsByTagName("p")[0].innerText = portion;
             // Store textContainerElement in variable.
             // Append paragraph to textContainer
-            textContainer.appendChild(para);
             console.log("Next Page");
             currentPosition = currentPosition + 10000;
         }
