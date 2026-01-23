@@ -41,8 +41,8 @@
             console.log("Clearing textContainerReader contents");
             containerParagraph.innerText = "";
             // Update current position and store current portion.
-            currentPosition = currentPosition + 4000;
-            var portion = text.substring(currentPosition, currentPosition + 4000);
+            var portion = text.substring(currentPosition, currentPosition + 1000);
+            currentPosition = currentPosition + 1000;
             // Set screen to current portion
             containerParagraph.innerText = portion;
             // Log successful page turn.
@@ -54,8 +54,8 @@
             console.log("Clearing textContainerReader contents");
             containerParagraph.innerText = "";
             // Update current position and store current portion.
-            currentPosition = currentPosition - 4000;
-            var portion = text.substring(currentPosition, currentPosition + 4000);
+            currentPosition = currentPosition - 1000;
+            var portion = text.substring(currentPosition, currentPosition + 1000);
             // Update container paragraph to current portion.
             containerParagraph.innerText = portion;
             // Log successful page turn.
@@ -63,7 +63,7 @@
         }
         // Otherwise, do nothing (either at end or beginning of book.
         else {
-            console.log("At book start");
+            console.log("On first page");
             return;
         }
         // Scroll to top of screen
@@ -127,17 +127,7 @@
             if (xhr.status >= 200 && xhr.status < 300) {
                 // Create variable text, and store response text within.
                 text = xhr.responseText;
-                currentPosition += 4000;
-                // Create variable "portion"
-                var portion = text.substring(0, currentPosition);
-                // Create new paragraph element and store in variable para.
-                para = document.createElement("p");
-                // Update para's inner text to current portion of text.
-                para.innerText = portion;
-                // Store textContainerElement in variable.
-                const textContainer = document.getElementById('textContainerRead');
-                // Append paragraph to textContainer
-                textContainer.appendChild(para);
+                updatePage(0);
             }
             else {
                 // Otherwise, log status and alert user.
