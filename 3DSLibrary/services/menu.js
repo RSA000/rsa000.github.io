@@ -41,6 +41,8 @@
         // Switch case for each button press code.
         switch(event.keyCode){
             case UP:
+                window.getElementsTagName("a")[1].focus()
+                console.log("up");
                 break;
             case DOWN:
                 break;
@@ -58,9 +60,8 @@
 
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
-            readHandleKeyDown(e, document.getElementById('textContainerRead'));
+            menuHandleKeyDown(e, document.getElementById('textContainerRead'));
         });
-    }, false);
 
         // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
         var anchors = this.querySelectorAll(".lowerScreenMenu a");
