@@ -27,26 +27,26 @@
         // Switch case for each button press code.
         console.log(event.keyCode);
         switch(event.keyCode){
-            case UP:
-                // Move focus to the next element, or loop back to the beginning
-                if (index >= 1) {
-                    elements[index - 1].focus(); // Move to the next element
-                } else {
-                    elements[0].focus();
-                }
-                break;
-            case DOWN:
-                // Move focus to the next element, or loop back to the beginning
-                if (index < elements.length - 1) {
-                    elements[index + 1].focus(); // Move to the next element
-                } else {
-                    elements[0].focus();
-                }
-                break;
-            case RIGHT:
-                break;
-            case LEFT:
-                break;
+            // case UP:
+            //     // Move focus to the next element, or loop back to the beginning
+            //     if (index >= 1) {
+            //         elements[index - 1].focus(); // Move to the next element
+            //     } else {
+            //         elements[0].focus();
+            //     }
+            //     break;
+            // case DOWN:
+            //     // Move focus to the next element, or loop back to the beginning
+            //     if (index < elements.length - 1) {
+            //         elements[index + 1].focus(); // Move to the next element
+            //     } else {
+            //         elements[0].focus();
+            //     }
+            //     break;
+            // case RIGHT:
+            //     break;
+            // case LEFT:
+            //     break;
         }
     };
 
