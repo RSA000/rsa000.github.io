@@ -31,12 +31,6 @@
                 if (index > 0) {
                     elements[index - 1].focus();
                     index -= 1;
-                } else {
-                    // Loop to last
-                    if (elements.length > 0) {
-                        elements[elements.length - 1].focus();
-                        index = elementLength -1;
-                    }
                 }
                 break;
             case DOWN:
@@ -44,12 +38,6 @@
                 if (index >= 0 && index < elements.length - 1) {
                     elements[index + 1].focus();
                     index += 1;
-                } else {
-                    // Loop to first
-                    if (elements.length > 0) {
-                        elements[0].focus();
-                        index = 0;
-                    }
                 }
                 break;
             case RIGHT:
