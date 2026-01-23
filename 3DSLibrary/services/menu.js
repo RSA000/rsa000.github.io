@@ -32,6 +32,7 @@
                 if (index >= 1) {
                     elements[index - 1].focus(); // Move to the next element
                 } else {
+                    elements[0].focus();
                 }
                 break;
             case DOWN:
