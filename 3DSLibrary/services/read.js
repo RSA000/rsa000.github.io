@@ -10,16 +10,16 @@
 (function() {
 
     // Set current book position to 0th character.
-    var currentPosition = 0;
+    let currentPosition = 0;
     // Create variable for storing page number.
-    var pages = 0;
-    var textChunks = [];
-
+    let pages = 0;
+    // Create list variable for storing sub-divided book text.
+    let textChunks = [];
 
     // Store textContainerRead element.
-    var textContainer = document.getElementById('textContainerRead');
+    let textContainer = document.getElementById('textContainerRead');
     // Store first paragraph of textContainerRead in "containerParagraph."
-    var containerParagraph = textContainer.getElementsByTagName("p")[0];
+    let containerParagraph = textContainer.getElementsByTagName("p")[0];
 
 
 
@@ -31,9 +31,10 @@
     * @param {url}
     *
     */
-    function getText(url){
+    function getText(url, callback){
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
-        var xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
+        // GET request using url, asychronous = true.
         xhr.open('GET', url, true);
         // Configure what function to perform when a state change occurs.
         xhr.onreadystatechange = function() {
@@ -42,15 +43,9 @@
                 // If status code is not an error.
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Create variable text, and store response text within.
-                    var text = xhr.responseText;
-                    // Loop through text in segments of 1000 characters push to list variable textChunks.
-                    for (var i = 0; i < text.length; i+=1000){
-                        textChunks.push(text.substring(i, i+1000));
-                    }
-                    // Update value of pages.
-                    pages = textChunks.length;
-                    // Display first page.
-                    updatePage(2);
+                    let text = xhr.responseText;
+                    // Call the callback with the chunks
+                    if (callback) callback(text);
                 }
                 // Otherwise display error messages.
                 else {
@@ -63,9 +58,21 @@
         };
         // Send request.
         xhr.send();
-        // Return textChunks.
-        return textChunks
     }
+
+
+    function loadBook(text){
+        // Loop through text in segments of 1000 characters push to list variable textChunks.
+        for (var i = 0; i < text.length; i+=1000){
+            textChunks.push(text.substring(i, i+1000));
+        }
+        // Now, chunks is ready to use
+        pages = textChunks.length;
+        updatePage(2); // Display first page
+    }
+
+
+
 
 
     /**
@@ -99,6 +106,7 @@
         // For first starting first page.
         else if (direction == 2){
             // Display first page.
+            Currentposition = 0;
             containerParagraph.innerText = "";
             containerParagraph.innerText = textChunks[0];
         }
@@ -143,6 +151,7 @@
         });
     }, false);
 
-    // Get textChunks from selected url.
-    textChunks = getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt");
+    // Get book text and load into textContainerRead paragraph element in read.html.
+    getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt", loadBook);
+
 })();
