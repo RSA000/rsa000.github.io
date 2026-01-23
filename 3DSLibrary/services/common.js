@@ -86,8 +86,10 @@ function commonHandleKeyDown(event, element){
             }
             break;
         case LEFT:
+            preventKey(event);
             break;
         case RIGHT:
+            preventKey(event);
             break;
     }
 };
