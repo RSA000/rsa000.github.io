@@ -17,13 +17,14 @@
 
     // Set current book position to 0th character.
     var currentPosition = 0;
+    // Create variable for storing page number.
     var pages = 0;
 
 
 
     /**
     *
-    * This function returns a list of strings subdivided from a string acquired through an
+    * getText(url) returns a list of strings subdivided from a string acquired through an
     * XMLHttpRequest to a passed url.
     *
     * @param {url}
@@ -31,12 +32,10 @@
     */
     function getText(url){
         var textChunks = [];
-        // Create a new XMLHttpRequest object
+        // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
         var xhr = new XMLHttpRequest();
-        // Initialize a GET request to the passed URL
         xhr.open('GET', 'https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt', true);
-        // Configure what to do when the state of xhr changes.
-        // In this case, run a function.
+        // Configure what function to perform when a state change occurs.
         xhr.onreadystatechange = function() {
             // A readyState value of 4 means GET state is done (4).
             if (xhr.readyState === 4) {
@@ -53,6 +52,7 @@
                     // Display first page.
                     updatePage(2);
                 }
+                // Otherwise display error messages.
                 else {
                     // Otherwise, log status and alert user.
                     console.error('Error loading text file:', xhr.statusText);
@@ -61,7 +61,7 @@
                 }
             }
         };
-        // Send actual request.
+        // Send request.
         xhr.send();
         // Return textChunks.
         return textChunks
