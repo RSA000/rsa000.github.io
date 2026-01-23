@@ -7,6 +7,8 @@
  */
 (function(){
 
+    let index = 0;
+
 
 
     /**
@@ -20,16 +22,28 @@
         // Find all anchors
         const elements = document.querySelectorAll("a");
         const elementLength = elements.length;
-
-        alert(elementLength);
+        // Start focus on first element.
+        elements[0].focus();
 
 
         // Switch case for each button press code.
-        console.log(event.keyCode);
+        console.log(elements);
         switch(event.keyCode){
             case UP:
+                // If index is not out of bounds.
+                if (index <= elementLength -1){
+                    // Update index
+                    index -= 1;
+                    elements[index].focus();
+                }
                 break;
             case DOWN:
+                // If index is not out of bounds.
+                if (index > -1){
+                    // Update index
+                    index += 1;
+                    elements[index].focus();
+                }
                 break;
             case RIGHT:
                 break;
