@@ -72,6 +72,9 @@
     }
 
 
+
+
+
     /**
      *
      * This function takes a number (0 or 1) that indicates the page direction and updates
@@ -146,9 +149,11 @@
         window.addEventListener("keydown", function(e) {
             readHandleKeyDown(e, document.getElementById('textContainerRead'));
         });
+
+        // Get book text and load into textContainerRead paragraph element in read.html.
+        getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt", loadBook);
+
     }, false);
 
-    // Get book text and load into textContainerRead paragraph element in read.html.
-    getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt", loadBook);
 
 })();

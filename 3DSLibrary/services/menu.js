@@ -60,7 +60,7 @@
 
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
-            menuHandleKeyDown(e, document.getElementById('textContainerRead'));
+            menuHandleKeyDown(e, document.getElementById('lowerScreenMenu'));
         });
 
         // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
