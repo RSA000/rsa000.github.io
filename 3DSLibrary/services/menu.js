@@ -23,26 +23,33 @@
         const elements = document.querySelectorAll("a");
         const elementLength = elements.length;
         // Start focus on first element.
-        elements[0].focus();
-
 
         // Switch case for each button press code.
-        console.log(elements);
         switch(event.keyCode){
             case UP:
                 // If index is not out of bounds.
-                if (index <= elementLength -1){
-                    // Update index
+                if (index > 0) {
+                    elements[index - 1].focus();
                     index -= 1;
-                    elements[index].focus();
+                } else {
+                    // Loop to last
+                    if (elements.length > 0) {
+                        elements[elements.length - 1].focus();
+                        index = elementLength -1;
+                    }
                 }
                 break;
             case DOWN:
                 // If index is not out of bounds.
-                if (index > -1){
-                    // Update index
+                if (index >= 0 && index < elements.length - 1) {
+                    elements[index + 1].focus();
                     index += 1;
-                    elements[index].focus();
+                } else {
+                    // Loop to first
+                    if (elements.length > 0) {
+                        elements[0].focus();
+                        index = 0;
+                    }
                 }
                 break;
             case RIGHT:
