@@ -31,6 +31,16 @@ function scroll(element, amount) {
  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  */
 
+
+function includes(container,search){
+    if (typeof(container) === 'string' || container instanceof Array){
+        return container.indexOf(search) !== -1;
+    }
+
+    return container[search] !== undefined;
+}
+
+
 function is3DS(){
     return includes(window.navigator.userAgent,"Nintendo 3DS");
 }
