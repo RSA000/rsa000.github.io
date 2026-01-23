@@ -68,13 +68,13 @@ function commonHandleKeyDown(event, element){
     // Prevent default action when key is pressed down.
     preventKey(event);
     // Switch case for each button press code.
+    console.log(event.keyCode);
     switch(event.keyCode){
         case UP:
             // Move focus to the next element, or loop back to the beginning
             if (index >= 1) {
                 elements[index - 1].focus(); // Move to the next element
             } else {
-                elements[elementLength-1].focus(); // Loop back to the first element
             }
             break;
         case DOWN:
@@ -82,14 +82,13 @@ function commonHandleKeyDown(event, element){
             if (index < elements.length - 1) {
                 elements[index + 1].focus(); // Move to the next element
             } else {
-                elements[0].focus(); // Loop back to the first element
             }
             break;
-        case LEFT:
-            preventKey(event);
-            break;
         case RIGHT:
-            preventKey(event);
+            event.preventDefault();
+            break;
+        case LEFT:
+            event.preventDefault();
             break;
     }
 };
