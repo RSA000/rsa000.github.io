@@ -144,7 +144,7 @@
 
 
     // Get textChunks from selected url.
-    const textChunks = getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt");
+    textChunks = getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt");
 
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
