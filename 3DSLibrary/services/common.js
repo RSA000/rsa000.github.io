@@ -61,6 +61,7 @@ function commonHandleKeyDown(event, element){
     // Find all focusable elements
     const focusableElements = 'a[href]';
     const elements = Array.from(document.querySelectorAll(focusableElements));
+    const elementLength = elements.length;
     const index = elements.indexOf(document.activeElement); // Get the current focused element
 
 
@@ -70,10 +71,10 @@ function commonHandleKeyDown(event, element){
     switch(event.keyCode){
         case UP:
             // Move focus to the next element, or loop back to the beginning
-            if (index < elements.length - 1) {
+            if (index >= 1) {
                 elements[index - 1].focus(); // Move to the next element
             } else {
-                elements[0].focus(); // Loop back to the first element
+                elements[elementLength-1].focus(); // Loop back to the first element
             }
             break;
         case DOWN:
