@@ -14,6 +14,9 @@
      * @param {KeyboardEvent} event
      */
     function commonHandleKeyDown(event, element){
+        preventKey(event);
+        // Prevent default action when key is pressed down.
+        event.preventDefault();
         // Find all focusable elements
         const focusableElements = 'a[href]';
         const elements = Array.from(document.querySelectorAll(focusableElements));
@@ -21,32 +24,30 @@
         const index = elements.indexOf(document.activeElement); // Get the current focused element
 
 
-        // Prevent default action when key is pressed down.
-        preventKey(event);
-        event.preventDefault();
+
         // Switch case for each button press code.
         console.log(event.keyCode);
         switch(event.keyCode){
-            // case UP:
-            //     // Move focus to the next element, or loop back to the beginning
-            //     if (index >= 1) {
-            //         elements[index - 1].focus(); // Move to the next element
-            //     } else {
-            //         elements[0].focus();
-            //     }
-            //     break;
-            // case DOWN:
-            //     // Move focus to the next element, or loop back to the beginning
-            //     if (index < elements.length - 1) {
-            //         elements[index + 1].focus(); // Move to the next element
-            //     } else {
-            //         elements[0].focus();
-            //     }
-            //     break;
-            // case RIGHT:
-            //     break;
-            // case LEFT:
-            //     break;
+            case UP:
+                // Move focus to the next element, or loop back to the beginning
+                if (index >= 1) {
+                    elements[index - 1].focus(); // Move to the next element
+                } else {
+                    elements[0].focus();
+                }
+                break;
+            case DOWN:
+                // Move focus to the next element, or loop back to the beginning
+                if (index < elements.length - 1) {
+                    elements[index + 1].focus(); // Move to the next element
+                } else {
+                    elements[0].focus();
+                }
+                break;
+            case RIGHT:
+                break;
+            case LEFT:
+                break;
         }
     };
 
