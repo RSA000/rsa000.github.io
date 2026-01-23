@@ -1,8 +1,7 @@
 /**
  *
  * This is the main Javascript functionality behind the "read.html" page and provides a means for
- * updating the text within the page of a currently selected book. Currently, there is no means of
- * tracking
+ * updating the text within the page of a currently selected book.
  *
  *
  */
