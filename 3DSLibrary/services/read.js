@@ -19,6 +19,8 @@
     var currentPosition = 0;
     // Create variable for storing page number.
     var pages = 0;
+    var textChunks = [];
+
 
     // Store textContainerRead element.
     var textContainer = document.getElementById('textContainerRead');
@@ -36,7 +38,6 @@
     *
     */
     function getText(url){
-        var textChunks = [];
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
@@ -47,9 +48,9 @@
                 // If status code is not an error.
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Create variable text, and store response text within.
-                    text = xhr.responseText;
+                    var text = xhr.responseText;
                     // Loop through text in segments of 1000 characters push to list variable textChunks.
-                    for (i = 0; i < text.length; i+=1000){
+                    for (var i = 0; i < text.length; i+=1000){
                         textChunks.push(text.substring(i, i+1000));
                     }
                     // Update value of pages.
