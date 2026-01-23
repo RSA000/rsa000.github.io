@@ -14,11 +14,9 @@
         var topHeading = document.getElementsByClassName("topHeading")[0];
         var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
         // Get innerHTML and description attributes of current element.
-        var headingValue = this.innerHTML;
-        var subtitleValue = this.dataset.description;
         // Update innerHTML of top heading and subtitle to heading and subtitle values.
-        topHeading.innerHTML = headingValue;
-        topSubtitle.innerHTML = subtitleValue;
+        topHeading.innerHTML = this.innerHTML;
+        topSubtitle.innerHTML = this.dataset.description;
     };
 
 
@@ -28,8 +26,8 @@
         var topHeading = document.getElementsByClassName("topHeading")[0];
         var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
         // Update heading and subtitle.
-        topHeading.innerHTML = "Welcome to the New 3DS Library";
-        topSubtitle.innerHTML = "By RSA000";
+        topHeading.innerHTML = topHeading.dataset.description;
+        topSubtitle.innerHTML = topSubtitle.dataset.description;
     };
 
 
