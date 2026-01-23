@@ -17,6 +17,7 @@
 
     // Set current book position to 0th character.
     var currentPosition = 0;
+    var pages = 0;
 
 
 
@@ -47,6 +48,8 @@
                     for (i = 0; i < text.length; i+=1000){
                         textChunks.push(text.substring(i, i+1000));
                     }
+                    // Update value of pages.
+                    pages = textChunks.length;
                     // Display first page.
                     updatePage(2);
                 }
@@ -81,7 +84,7 @@
 
 
         // If direction is forwards.
-        if (direction == 0){
+        if ((direction == 0) && (currentPosition < pages - 1)){
                 // Update position +1 and replace inner text with new chunk.
                 currentPosition += 1;
                 containerParagraph.innerText = "";
