@@ -53,12 +53,36 @@ function preventKey(event){
 // end of wolfyxon
 
 
+/**
+ * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
+ * @param {KeyboardEvent} event
+ */
+function commonHandleKeyDown(event){
+    // Prevent default action when key is pressed down.
+    // Switch case for each button press code.
+    switch(event.keyCode){
+        case UP:
+            scroll(element,17);
+            break;
+        case DOWN:
+            scroll(element, -17);
+            break;
+    }
+    preventKey(event);
+
+};
+
 /*
  * Things within this function will not pollute global scope
  */
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
+        window.addEventListener("keydown", function(e) {
+            readHandleKeyDown(e, document.getElementsByClassName("lowerScreenMenu")[0]);
+        });
+
 
         // If the user agent does not contain "Nintendo 3DS"
         if(navigator.userAgent.indexOf("Nintendo 3DS") == -1) {

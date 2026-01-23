@@ -72,9 +72,6 @@
     }
 
 
-
-
-
     /**
      *
      * This function takes a number (0 or 1) that indicates the page direction and updates
