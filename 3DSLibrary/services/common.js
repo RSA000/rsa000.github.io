@@ -57,8 +57,9 @@ function preventKey(event){
  * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
  * @param {KeyboardEvent} event
  */
-function commonHandleKeyDown(event){
+function commonHandleKeyDown(event, element){
     // Prevent default action when key is pressed down.
+    preventKey(event);
     // Switch case for each button press code.
     switch(event.keyCode){
         case UP:
@@ -68,7 +69,7 @@ function commonHandleKeyDown(event){
             scroll(element, -17);
             break;
     }
-    preventKey(event);
+
 
 };
 
@@ -80,7 +81,7 @@ function commonHandleKeyDown(event){
     document.addEventListener('DOMContentLoaded', function(ev) {
 
         window.addEventListener("keydown", function(e) {
-            readHandleKeyDown(e, document.getElementsByClassName("lowerScreenMenu")[0]);
+            commonHandleKeyDown(e, document.getElementsByClassName("lowerScreenMenu")[0]);
         });
 
 
