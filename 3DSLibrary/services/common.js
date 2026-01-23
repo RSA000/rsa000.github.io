@@ -85,6 +85,10 @@ function commonHandleKeyDown(event, element){
                 elements[0].focus(); // Loop back to the first element
             }
             break;
+        case LEFT:
+            break;
+        case RIGHT:
+            break;
     }
 };
 
