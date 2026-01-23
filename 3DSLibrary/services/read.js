@@ -20,6 +20,11 @@
     // Create variable for storing page number.
     var pages = 0;
 
+    // Store textContainerRead element.
+    var textContainer = document.getElementById('textContainerRead');
+    // Store first paragraph of textContainerRead in "containerParagraph."
+    var containerParagraph = textContainer.getElementsByTagName("p")[0];
+
 
 
     /**
@@ -34,7 +39,7 @@
         var textChunks = [];
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt', true);
+        xhr.open('GET', url, true);
         // Configure what function to perform when a state change occurs.
         xhr.onreadystatechange = function() {
             // A readyState value of 4 means GET state is done (4).
@@ -77,12 +82,6 @@
      *
      */
     function updatePage(direction){
-        // Store textContainerRead element.
-        var textContainer = document.getElementById('textContainerRead');
-        // Store first paragraph of textContainerRead in "containerParagraph."
-        var containerParagraph = textContainer.getElementsByTagName("p")[0];
-
-
         // If direction is forwards.
         if ((direction == 0) && (currentPosition < pages - 1)){
                 // Update position +1 and replace inner text with new chunk.
@@ -144,7 +143,7 @@
 
 
     // Get textChunks from selected url.
-    const textChunks = getText("nothing");
+    const textChunks = getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt");
 
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
