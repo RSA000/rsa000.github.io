@@ -61,6 +61,7 @@
 
 
     function loadBook(text){
+        textChunks = [];
         // Loop through text in segments of 1000 characters push to list variable textChunks.
         for (var i = 0; i < text.length; i+=1000){
             textChunks.push(text.substring(i, i+1000));
@@ -105,7 +106,7 @@
         // For first starting first page.
         else if (direction == 2){
             // Display first page.
-            Currentposition = 0;
+            currentPosition = 0;
             containerParagraph.innerText = "";
             containerParagraph.innerText = textChunks[0];
         }
