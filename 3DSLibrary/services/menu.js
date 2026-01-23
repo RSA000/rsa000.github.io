@@ -7,19 +7,6 @@
  */
 (function(){
 
-    let index = 0;
-
-
-
-    /**
-     * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
-     * @param {KeyboardEvent} event
-     */
-    function commonHandleKeyDown(event, element){
-
-    };
-
-
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
         // get top screen Heading and subtitles and store in variables.
@@ -46,10 +33,6 @@
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-
-        window.addEventListener("keydown", function(e) {
-            commonHandleKeyDown(e, document.getElementsByClassName("lowerScreenMenu")[0]);
-        });
 
         // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
         var anchors = this.querySelectorAll(".lowerScreenMenu a");
