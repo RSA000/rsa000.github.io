@@ -9,16 +9,16 @@
 (function() {
 
     // Set current book position to 0th character.
-    let currentPosition = 0;
+    var currentPosition = 0;
     // Create variable for storing page number.
-    let pages = 0;
+    var pages = 0;
     // Create list variable for storing sub-divided book text.
-    let textChunks = [];
+    var textChunks = [];
 
     // Store textContainerRead element.
-    let textContainer = document.getElementById('textContainerRead');
+    var textContainer = document.getElementById('textContainerRead');
     // Store first paragraph of textContainerRead in "containerParagraph."
-    let containerParagraph = textContainer.getElementsByTagName("p")[0];
+    var containerParagraph = textContainer.getElementsByTagName("p")[0];
 
 
 
@@ -32,7 +32,7 @@
     */
     function getText(url, callback){
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
-        let xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
         // GET request using url, asychronous = true.
         xhr.open('GET', url, true);
         // Configure what function to perform when a state change occurs.
@@ -42,7 +42,7 @@
                 // If status code is not an error.
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Create variable text, and store response text within.
-                    let text = xhr.responseText;
+                    var text = xhr.responseText;
                     // Call the callback with the chunks
                     if (callback) callback(text);
                 }
