@@ -17,9 +17,52 @@
 
     // Set current book position to 0th character.
     var currentPosition = 0;
-    // Set current text to empty string.
-    var text = "";
-    var textChunks = [];
+
+
+
+    /**
+    *
+    * This function returns a list of strings subdivided from a string acquired through an
+    * XMLHttpRequest to a passed url.
+    *
+    * @param {url}
+    *
+    */
+    function getText(url){
+        var textChunks = [];
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+        // Initialize a GET request to the passed URL
+        xhr.open('GET', 'https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt', true);
+        // Configure what to do when the state of xhr changes.
+        // In this case, run a function.
+        xhr.onreadystatechange = function() {
+            // A readyState value of 4 means GET state is done (4).
+            if (xhr.readyState === 4) {
+                // If status code is not an error.
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Create variable text, and store response text within.
+                    text = xhr.responseText;
+                    // Loop through text in segments of 1000 characters push to list variable textChunks.
+                    for (i = 0; i < text.length; i+=1000){
+                        textChunks.push(text.substring(i, i+1000));
+                    }
+                    // Display first page.
+                    updatePage(2);
+                }
+                else {
+                    // Otherwise, log status and alert user.
+                    console.error('Error loading text file:', xhr.statusText);
+                    // Needed to see on 3DS.
+                    alert("uh oh :/ " + xhr.statusText);
+                }
+            }
+        };
+        // Send actual request.
+        xhr.send();
+        // Return textChunks.
+        return textChunks
+    }
 
 
     /**
@@ -28,6 +71,7 @@
      * the textContainerReader
      *
      * @param {direction}
+     *
      */
     function updatePage(direction){
         // Store textContainerRead element.
@@ -36,43 +80,35 @@
         var containerParagraph = textContainer.getElementsByTagName("p")[0];
 
 
-
         // If direction is forwards.
         if (direction == 0){
-            if (currentPosition > 0){
+                // Update position +1 and replace inner text with new chunk.
                 currentPosition += 1;
                 containerParagraph.innerText = "";
                 containerParagraph.innerText = textChunks[currentPosition];
-
-            }
-            else{
-                containerParagraph.innerText = "";
-                containerParagraph.innerText = textChunks[currentPosition];
-                currentPosition += 1;
-            }
         }
         // If direction is backwards.
         else if (direction == 1){
-            // Clear current paragraph
-            console.log("Clearing textContainerReader contents");
-            containerParagraph.innerText = "";
-            // Update current position and store current portion.
-            currentPosition -= 1;
-            if (currentPosition >= 0){
+            // If current position is greater than 1 (not front page).
+            if (currentPosition > 0){
+                // Update current position and store current portion.
+                currentPosition -= 1;
+                // Clear current paragraph
+                containerParagraph.innerText = "";
+                // Display previous page.
                 containerParagraph.innerText = textChunks[currentPosition];
-                // Log successful page turn.
-                console.log("Previous Page");
             }
-            else{
-                portion = text.substring(0, 1000);
-                containerParagraphinnerText = portion;
-            }
+        }
+        // For first starting first page.
+        else if (direction == 2){
+            // Display first page.
+            containerParagraph.innerText = "";
+            containerParagraph.innerText = textChunks[0];
         }
         // Scroll to top of screen
         scroll(textContainer, 10000);
         return;
     };
-
 
 
     /**
@@ -115,38 +151,9 @@
 
     // end of wolfyxon
 
-    // Create a new XMLHttpRequest object
-    var xhr = new XMLHttpRequest();
-    // Initialize a GET request to the URL
-    // INITIALIZE, NOT SEND!
-    xhr.open('GET', 'https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt', true);
-    // Configure what to do when the state of xhr changes.
-    // In this case, run a function.
-    xhr.onreadystatechange = function() {
-        // A readyState value of 4 means GET state is done (4).
-        if (xhr.readyState === 4) {
-            // If status code is not an error.
-            if (xhr.status >= 200 && xhr.status < 300) {
-                // Create variable text, and store response text within.
-                text = xhr.responseText;
-
-                for (i = 0; i < text.length; i+=1000){
-                    textChunks.push(text.substring(i, i+1000));
-                }
-                updatePage(0);
-            }
-            else {
-                // Otherwise, log status and alert user.
-                console.error('Error loading text file:', xhr.statusText);
-                // Needed to see on 3DS.
-                alert("uh oh :/ " + xhr.statusText);
-            }
-        }
-    };
-    // Send actual request.
-    xhr.send();
 
 
+    const textChunks = getText("nothing");
 
     document.addEventListener('DOMContentLoaded', function(ev) {
 
