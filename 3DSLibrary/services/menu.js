@@ -41,7 +41,7 @@
         // Switch case for each button press code.
         switch(event.keyCode){
             case UP:
-                window.getElementsTagName("a")[1].focus()
+                window.getElementsByTagName("a")[1].focus()
                 console.log("up");
                 break;
             case DOWN:
