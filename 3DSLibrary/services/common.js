@@ -31,6 +31,10 @@ function scroll(element, amount) {
  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  */
 
+function is3DS(){
+    return includes(window.navigator.userAgent,"Nintendo 3DS");
+}
+
 /**
  *
  * This prevents the browser from moving the page using the arrow keys
@@ -87,6 +91,7 @@ function registerNon3DSlink(a){
                 return false;
             }, false);
         }
+        // end of wolfyxon
 
 
         // If the user agent does not contain "Nintendo 3DS"
