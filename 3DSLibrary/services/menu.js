@@ -8,6 +8,47 @@
 (function(){
 
 
+
+    /**
+     * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
+     * @param {KeyboardEvent} event
+     */
+    function commonHandleKeyDown(event, element){
+        // Find all focusable elements
+        const focusableElements = 'a[href]';
+        const elements = Array.from(document.querySelectorAll(focusableElements));
+        const elementLength = elements.length;
+        const index = elements.indexOf(document.activeElement); // Get the current focused element
+
+
+        // Prevent default action when key is pressed down.
+        preventKey(event);
+        event.preventDefault();
+        // Switch case for each button press code.
+        console.log(event.keyCode);
+        switch(event.keyCode){
+            case UP:
+                // Move focus to the next element, or loop back to the beginning
+                if (index >= 1) {
+                    elements[index - 1].focus(); // Move to the next element
+                } else {
+                }
+                break;
+            case DOWN:
+                // Move focus to the next element, or loop back to the beginning
+                if (index < elements.length - 1) {
+                    elements[index + 1].focus(); // Move to the next element
+                } else {
+                }
+                break;
+            case RIGHT:
+                break;
+            case LEFT:
+                break;
+        }
+    };
+
+
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
         // get top screen Heading and subtitles and store in variables.
@@ -34,6 +75,10 @@
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
+        window.addEventListener("keydown", function(e) {
+            commonHandleKeyDown(e, document.getElementsByClassName("lowerScreenMenu")[0]);
+        });
 
         // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
         var anchors = this.querySelectorAll(".lowerScreenMenu a");

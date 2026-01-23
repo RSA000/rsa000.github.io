@@ -67,58 +67,12 @@ function registerNon3DSlink(a){
 // end of wolfyxon
 
 
-/**
- * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
- * @param {KeyboardEvent} event
- */
-function commonHandleKeyDown(event, element){
-    // Find all focusable elements
-    const focusableElements = 'a[href]';
-    const elements = Array.from(document.querySelectorAll(focusableElements));
-    const elementLength = elements.length;
-    const index = elements.indexOf(document.activeElement); // Get the current focused element
-
-
-    // Prevent default action when key is pressed down.
-    preventKey(event);
-    // Switch case for each button press code.
-    console.log(event.keyCode);
-    switch(event.keyCode){
-        case UP:
-            // Move focus to the next element, or loop back to the beginning
-            if (index >= 1) {
-                elements[index - 1].focus(); // Move to the next element
-            } else {
-            }
-            break;
-        case DOWN:
-            // Move focus to the next element, or loop back to the beginning
-            if (index < elements.length - 1) {
-                elements[index + 1].focus(); // Move to the next element
-            } else {
-            }
-            break;
-        case RIGHT:
-            event.preventDefault();
-            break;
-        case LEFT:
-            event.preventDefault();
-            break;
-    }
-};
-
-
 /*
  * Things within this function will not pollute global scope
  */
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-
-        window.addEventListener("keydown", function(e) {
-            commonHandleKeyDown(e, document.getElementsByClassName("lowerScreenMenu")[0]);
-        });
-
 
         // If the user agent does not contain "Nintendo 3DS"
         if(navigator.userAgent.indexOf("Nintendo 3DS") == -1) {
