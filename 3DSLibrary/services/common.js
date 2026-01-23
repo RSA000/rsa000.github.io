@@ -100,23 +100,20 @@ function registerNon3DSlink(a){
                 alert(e.filename + ":" + e.lineno + " " + e.message);
                 return false;
             }, false);
+
+            // Call center function every miliseconds.
+            setInterval(center, 4);
         }
         // end of wolfyxon
 
-
         // If the user agent does not contain "Nintendo 3DS"
-        if(navigator.userAgent.indexOf("Nintendo 3DS") == -1) {
+        else {
             // Set body style to grid display.
             document.body.style.display = 'grid';
             // Set content to center.
             document.body.style.justifyContent = 'center';
         }
         // Otherwise,
-        else{
-            // Call center function every miliseconds.
-            setInterval(center, 4);
-
-        }
     }, false);
 
 })()
