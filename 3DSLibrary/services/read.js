@@ -4,12 +4,6 @@
  * updating the text within the page of a currently selected book. Currently, there is no means of
  * tracking
  *
- * 3DS Keycodes:
- *              Left 37,
- *              Up 38,
- *              Right 39,
- *              Down 40,
- *              A 65
  *
  */
 
@@ -123,28 +117,23 @@
         preventKey(event);
         // Switch case for each button press code.
         switch(event.keyCode){
-            // D-pad up.
-            case 38:
+            case UP:
                 scroll(element,17);
                 break;
-            // D-pad right.
-            case 39:
-                updatePage(0);
-                break;
-            // D-pad down.
-            case 40:
+            case DOWN:
                 scroll(element, -17);
                 break;
-            // D-pad left.
-            case 37:
+            case RIGHT:
+                updatePage(0);
+                break;
+            case LEFT:
                 updatePage(1);
                 break;
         }
     };
 
 
-    // Get textChunks from selected url.
-    textChunks = getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt");
+
 
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
@@ -153,4 +142,7 @@
             readHandleKeyDown(e, document.getElementById('textContainerRead'));
         });
     }, false);
+
+    // Get textChunks from selected url.
+    textChunks = getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt");
 })();

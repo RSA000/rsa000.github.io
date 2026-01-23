@@ -1,4 +1,10 @@
 
+// Declare constant values for button input values.
+const LEFT = 37;
+const RIGHT = 39;
+const UP = 38;
+const DOWN = 40;
+const A = 65;
 
 /* The center function scrolls the screen to the 40,215 coordinates.*/
 function center(){
