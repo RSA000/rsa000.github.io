@@ -18,31 +18,19 @@
         // Prevent default action when key is pressed down.
         event.preventDefault();
         // Find all focusable elements
-        const focusableElements = 'a[href]';
-        const elements = Array.from(document.querySelectorAll(focusableElements));
+        const focusableElements = "a";
+        const elements = Array.from(document.querySelectorAll());
         const elementLength = elements.length;
-        const index = elements.indexOf(document.activeElement); // Get the current focused element
 
+        alert(elementLength);
 
 
         // Switch case for each button press code.
         console.log(event.keyCode);
         switch(event.keyCode){
             case UP:
-                // Move focus to the next element, or loop back to the beginning
-                if (index >= 1) {
-                    elements[index - 1].focus(); // Move to the next element
-                } else {
-                    elements[0].focus();
-                }
                 break;
             case DOWN:
-                // Move focus to the next element, or loop back to the beginning
-                if (index < elements.length - 1) {
-                    elements[index + 1].focus(); // Move to the next element
-                } else {
-                    elements[0].focus();
-                }
                 break;
             case RIGHT:
                 break;
