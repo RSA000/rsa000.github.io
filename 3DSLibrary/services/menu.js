@@ -17,9 +17,8 @@
         preventKey(event);
         // Prevent default action when key is pressed down.
         event.preventDefault();
-        // Find all focusable elements
-        const focusableElements = "a";
-        const elements = Array.from(document.querySelectorAll());
+        // Find all anchors
+        const elements = document.querySelectorAll("a");
         const elementLength = elements.length;
 
         alert(elementLength);
