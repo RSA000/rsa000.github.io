@@ -143,29 +143,14 @@
     };
 
 
-    /**
-     * Process keyup logic. Call this when using window.onkeyup, and you want to use the global.js input detection system
-     * @param {KeyboardEvent} event
-     */
-    function readHandleKeyUp(event){
-        // Currently, just prevent default bevavior.
-        preventKey(event);
-    }
-
-
-
-
-
+    // Get textChunks from selected url.
     const textChunks = getText("nothing");
 
+    // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
-
+        // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
             readHandleKeyDown(e, document.getElementById('textContainerRead'));
         });
-
-        window.addEventListener("keyup", readHandleKeyUp, false);
-
-
     }, false);
 })();
