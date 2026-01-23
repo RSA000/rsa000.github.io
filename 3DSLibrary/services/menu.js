@@ -7,6 +7,7 @@
  */
 (function(){
 
+
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
         // get top screen Heading and subtitles and store in variables.
@@ -30,9 +31,36 @@
     };
 
 
+    /**
+     * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
+     * @param {KeyboardEvent} event
+     */
+    function menuHandleKeyDown(event, element){
+        // Prevent default action when key is pressed down.
+        preventKey(event);
+        // Switch case for each button press code.
+        switch(event.keyCode){
+            case UP:
+                break;
+            case DOWN:
+                break;
+            case RIGHT:
+                break;
+            case LEFT:
+                break;
+        }
+    };
+
+
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
+        // Add event listener for when a key is pressed down.
+        window.addEventListener("keydown", function(e) {
+            readHandleKeyDown(e, document.getElementById('textContainerRead'));
+        });
+    }, false);
 
         // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
         var anchors = this.querySelectorAll(".lowerScreenMenu a");
