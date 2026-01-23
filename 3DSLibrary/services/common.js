@@ -74,6 +74,21 @@ function registerNon3DSlink(a){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+
+        /**
+         * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
+         * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
+         * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+         */
+        // You can't access console logs on the 3DS, so it will show an alert when there's an error
+        if(is3DS()){
+            window.addEventListener("error", function(e) {
+                alert(e.filename + ":" + e.lineno + " " + e.message);
+                return false;
+            }, false);
+        }
+
+
         // If the user agent does not contain "Nintendo 3DS"
         if(navigator.userAgent.indexOf("Nintendo 3DS") == -1) {
             // Set body style to grid display.
