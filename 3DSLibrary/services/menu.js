@@ -17,34 +17,33 @@
      */
     function commonHandleKeyDown(event, element){
         preventKey(event);
-        // Prevent default action when key is pressed down.
-        event.preventDefault();
+
         // Find all anchors
         const elements = document.querySelectorAll("a");
         const elementLength = elements.length;
         // Start focus on first element.
 
         // Switch case for each button press code.
-        // switch(event.keyCode){
-        //     case UP:
-        //         // If index is not out of bounds.
-        //         if (index > 0) {
-        //             elements[index - 1].focus();
-        //             index -= 1;
-        //         }
-        //         break;
-        //     case DOWN:
-        //         // If index is not out of bounds.
-        //         if (index >= 0 && index < elements.length - 1) {
-        //             elements[index + 1].focus();
-        //             index += 1;
-        //         }
-        //         break;
-        //     case RIGHT:
-        //         break;
-        //     case LEFT:
-        //         break;
-        // }
+        switch(event.keyCode){
+            case UP:
+                // If index is not out of bounds.
+                if (index > 0) {
+                    elements[index - 1].focus();
+                    index -= 1;
+                }
+                break;
+            case DOWN:
+                // If index is not out of bounds.
+                if (index >= 0 && index < elements.length - 1) {
+                    elements[index + 1].focus();
+                    index += 1;
+                }
+                break;
+            case RIGHT:
+                break;
+            case LEFT:
+                break;
+        }
     };
 
 
