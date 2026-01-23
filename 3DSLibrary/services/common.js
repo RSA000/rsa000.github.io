@@ -58,20 +58,35 @@ function preventKey(event){
  * @param {KeyboardEvent} event
  */
 function commonHandleKeyDown(event, element){
+    // Find all focusable elements
+    const focusableElements = 'a[href]';
+    const elements = Array.from(document.querySelectorAll(focusableElements));
+    const index = elements.indexOf(document.activeElement); // Get the current focused element
+
+
     // Prevent default action when key is pressed down.
     preventKey(event);
     // Switch case for each button press code.
     switch(event.keyCode){
         case UP:
-            scroll(element,17);
+            // Move focus to the next element, or loop back to the beginning
+            if (index < elements.length - 1) {
+                elements[index - 1].focus(); // Move to the next element
+            } else {
+                elements[0].focus(); // Loop back to the first element
+            }
             break;
         case DOWN:
-            scroll(element, -17);
+            // Move focus to the next element, or loop back to the beginning
+            if (index < elements.length - 1) {
+                elements[index + 1].focus(); // Move to the next element
+            } else {
+                elements[0].focus(); // Loop back to the first element
+            }
             break;
     }
-
-
 };
+
 
 /*
  * Things within this function will not pollute global scope
