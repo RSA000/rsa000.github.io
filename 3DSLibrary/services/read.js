@@ -19,6 +19,8 @@
     var currentPosition = 0;
     // Set current text to empty string.
     var text = "";
+    var textChunks = [];
+
 
     /**
      *
@@ -37,34 +39,34 @@
 
         // If direction is forwards.
         if (direction == 0){
-            // Clear current paragraph
-            console.log("Clearing textContainerReader contents");
-            containerParagraph.innerText = "";
-            // Update current position and store current portion.
-            var portion = text.substring(currentPosition, currentPosition + 1000);
-            currentPosition = currentPosition + 1000;
-            // Set screen to current portion
-            containerParagraph.innerText = portion;
-            // Log successful page turn.
-            console.log("Next Page");
+            if (currentPosition > 0){
+                currentPosition += 1;
+                containerParagraph.innerText = "";
+                containerParagraph.innerText = textChunks[currentPosition];
+
+            }
+            else{
+                containerParagraph.innerText = "";
+                containerParagraph.innerText = textChunks[currentPosition];
+                currentPosition += 1;
+            }
         }
         // If direction is backwards.
-        else if ((direction == 1) && (currentPosition > 0)){
+        else if (direction == 1){
             // Clear current paragraph
             console.log("Clearing textContainerReader contents");
             containerParagraph.innerText = "";
             // Update current position and store current portion.
-            currentPosition = currentPosition - 1000;
-            var portion = text.substring(currentPosition, currentPosition + 1000);
-            // Update container paragraph to current portion.
-            containerParagraph.innerText = portion;
-            // Log successful page turn.
-            console.log("Previous Page");
-        }
-        // Otherwise, do nothing (either at end or beginning of book.
-        else {
-            console.log("On first page");
-            return;
+            currentPosition -= 1;
+            if (currentPosition >= 0){
+                containerParagraph.innerText = textChunks[currentPosition];
+                // Log successful page turn.
+                console.log("Previous Page");
+            }
+            else{
+                portion = text.substring(0, 1000);
+                containerParagraphinnerText = portion;
+            }
         }
         // Scroll to top of screen
         scroll(textContainer, 10000);
@@ -127,6 +129,10 @@
             if (xhr.status >= 200 && xhr.status < 300) {
                 // Create variable text, and store response text within.
                 text = xhr.responseText;
+
+                for (i = 0; i < text.length; i+=1000){
+                    textChunks.push(text.substring(i, i+1000));
+                }
                 updatePage(0);
             }
             else {
