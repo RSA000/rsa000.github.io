@@ -24,18 +24,6 @@ function scroll(element, amount) {
 };
 
 
-
-// Create header for menu HTML.
-function setHeader(content) {
-    const header = document.querySelector('head');
-    console.log(header); // Check if this logs a header element
-    if (header) {
-        header.innerHTML = content;
-    }
-}
-
-
-
 /**
  * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
@@ -95,8 +83,6 @@ function registerNon3DSlink(a){
  * Things within this function will not pollute global scope
  */
 (function(){
-
-
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
