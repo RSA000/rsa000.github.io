@@ -6,26 +6,6 @@ const UP = 38;
 const DOWN = 40;
 const A = 65;
 
-
-const headerTemplate = `
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta charset="utf-8">
-<title>3DS Free Library</title>
-<link rel="icon" href="../../assets/img/favicon/favicon-32x32.png" type="image/x-icon">
-<link rel="stylesheet" href="../../assets/styles/main.css">
-<script src="services/common.js"></script>
-`;
-
-
-const headerTemplateIndex = `
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta charset="utf-8">
-<title>3DS Free Library</title>
-<link rel="icon" href="assets/img/favicon/favicon-32x32.png" type="image/x-icon">
-<link rel="stylesheet" href="assets/styles/main.css">
-<script src="services/common.js"></script>
-`;
-
 /* The center function scrolls the screen to the 40,215 coordinates.*/
 function center(){
     // Scroll to designated coordinates.
