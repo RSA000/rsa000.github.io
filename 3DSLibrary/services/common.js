@@ -98,11 +98,21 @@ function registerNon3DSlink(a){
                 alert(e.filename + ":" + e.lineno + " " + e.message);
                 return false;
             }, false);
+            // end of wolfyxon
 
+            // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
+            var anchors = this.querySelectorAll(".body a");
+            inactive();
+            // For each anchor, add event listener.
+            for(var i = 0, l = anchors.length; i<l; i++){
+                if (anchors[i].getAttribute("3DS") == 0){
+                    registerNon3DSlink(anchors[i]);
+                }
+            }
             // Call center function every miliseconds.
             setInterval(center, 1);
         }
-        // end of wolfyxon
+
 
         // If the user agent does not contain "Nintendo 3DS"
         else {
