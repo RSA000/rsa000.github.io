@@ -61,6 +61,7 @@
 
 
     function loadBook(text){
+        // Reset textChunks contents
         textChunks = [];
         // Loop through text in segments of 1000 characters push to list variable textChunks.
         for (var i = 0; i < text.length; i+=1000){
@@ -68,7 +69,8 @@
         }
         // Now, chunks is ready to use
         pages = textChunks.length;
-        updatePage(2); // Display first page
+        // Display first page
+        updatePage(2);
     }
 
 
@@ -126,15 +128,19 @@
         // Switch case for each button press code.
         switch(event.keyCode){
             case UP:
-                scroll(element,17);
+                // Scroll up 15 pixels.
+                scroll(element,15);
                 break;
             case DOWN:
-                scroll(element, -17);
+                // Scroll down 15 pixels.
+                scroll(element, -15);
                 break;
             case RIGHT:
+                // Update page to next text chunk.
                 updatePage(0);
                 break;
             case LEFT:
+                // Update page to previous text chunk.
                 updatePage(1);
                 break;
         }
