@@ -13,7 +13,7 @@
     // Get current book name.
     var bookName = getCookie("bookName");
     // Get current book position cookie.
-    var pageNum = getCookie("pageNum");
+    var pageNum = parseInt(getCookie('pageNum'));
 
     // Create list variable for storing sub-divided book text.
     var textChunks = [];
