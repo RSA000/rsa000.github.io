@@ -31,7 +31,7 @@
                 slides[index].focus();
                 break;
             case DOWN:
-                if (index < slideLength -1){
+                if (index < slideLength -2){
                     index += 2;
                 }
                 slides[index].focus();
