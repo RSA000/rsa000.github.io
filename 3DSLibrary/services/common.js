@@ -6,7 +6,12 @@ const UP = 38;
 const DOWN = 40;
 const A = 65;
 
-/* The center function scrolls the screen to the 40,215 coordinates.*/
+
+/**
+ *
+ * The center function scrolls the screen to the 40,215 coordinates.
+ *
+ */
 function center(){
     // Scroll to designated coordinates.
     window.scrollTo(40,215);
@@ -14,7 +19,7 @@ function center(){
 
 
 /**
- * The scrollUp function scrolls the text container up
+ * The scrollUp function scrolls the selected element upwards.
  * @param {element}
  * @param {Int}
  */
@@ -25,23 +30,60 @@ function scroll(element, amount) {
 
 
 /**
- * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * <<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
- * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/**
+ * includes takes a container and a search element and returns a boolean value
+ * indicating if it exists within the container.
+ *
+ * @param {container}
+ * @param {search}
  */
-
-
 function includes(container,search){
+    // If container is a string or an array.
     if (typeof(container) === 'string' || container instanceof Array){
+        // Return true if indexo of container search is not -1 (string case).
         return container.indexOf(search) !== -1;
     }
+    // Return true if container index is not undefined (array case).
     return container[search] !== undefined;
 }
 
 
+/**
+ *
+ * Function returns if system is 3DS and false otherwise.
+ *
+ */
 function is3DS(){
-    return includes(window.navigator.userAgent,"Nintendo 3DS");
+    // If userAgent string is equal to "Nintendo 3DS"
+    if (includes(window.navigator.userAgent,"Nintendo 3DS")){
+        // Call center function every milisecond.
+        setInterval(center, 1);
+
+        // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
+        var anchors = this.querySelectorAll(".lowerScreenMenu a");
+        // For each anchor, add event listener.
+        for(var i = 0, l = anchors.length; i<l; i++){
+            // If 3DS attribute is equal to 1.
+            if (anchors[i].getAttribute("3DS") === "1"){
+                // Add event listener to display message for non-compatible site link when selected.
+                registerNon3DSlink(anchors[i]);
+            }
+        }
+        // Add event listener for errors.
+        window.addEventListener("error", function(e) {
+            // Alert event.filename + line number where error occurred + error message.
+            alert(e.filename + ":" + e.lineno + " " + e.message);
+            // Return true.
+            return true;
+        }, false);
+    }
+    return false;
 }
+
 
 /**
  *
@@ -68,10 +110,12 @@ function preventKey(event){
  * @param {HTMLAnchorElement} a
  */
 function registerNon3DSlink(a){
+    // Add event listener for when anchor is clicked.
     a.addEventListener("click", function (e){
+        // Alert that link is not supported.
         alert("The 3DS doesn't support that page. Please open \n\n" + a.href + "\n\non a external device (with a modern browser)");
+        // Prevent default action (navigating to link).
         e.preventDefault();
-
         return false;
     }, false);
 }
@@ -80,38 +124,14 @@ function registerNon3DSlink(a){
 
 
 /*
- * Things within this function will not pollute global scope
+ * Immediately invoked function.
  */
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        /**
-         * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
-         * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
-         * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-         */
-        // You can't access console logs on the 3DS, so it will show an alert when there's an error
-        if(is3DS()){
-            window.addEventListener("error", function(e) {
-                alert(e.filename + ":" + e.lineno + " " + e.message);
-                return false;
-            }, false);
-            // end of wolfyxon
-
-            // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
-            var anchors = this.querySelectorAll(".lowerScreenMenu a");
-            // For each anchor, add event listener.
-            for(var i = 0, l = anchors.length; i<l; i++){
-                if (anchors[i].getAttribute("3DS") === "1"){
-                    registerNon3DSlink(anchors[i]);
-                }
-            }
-            // Call center function every miliseconds.
-            setInterval(center, 1);
-        }
-        // If the user agent does not contain "Nintendo 3DS"
-        else {
+        // If the user agent does not contain "Nintendo 3DS
+        if(!is3DS()){
             // Set body style to grid display.
             document.body.style.display = 'grid';
             // Set content to center.
