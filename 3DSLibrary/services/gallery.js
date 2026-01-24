@@ -30,8 +30,7 @@
         inactive();
         // For each anchor, add event listener.
         for(var i = 0; i < slideLength; i++){
-            slides[i].tabindex = i;
-            console.log(slides[i].tabindex);
+            slides[i].setAttribute('tabindex', i);
             // When focused on, apply active function with "this" selected anchor.
             slides[i].addEventListener('focus', active, false);
             // When no slides are selected, revert to greeting heading and subtitle.
