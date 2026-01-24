@@ -6,6 +6,26 @@ const UP = 38;
 const DOWN = 40;
 const A = 65;
 
+
+const headerTemplate = `
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>3DS Free Library</title>
+<link rel="icon" href="../../assets/img/favicon/favicon-32x32.png" type="image/x-icon">
+<link rel="stylesheet" href="../../assets/styles/main.css">
+<script src="services/common.js"></script>
+`;
+
+
+const headerTemplateIndex = `
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<title>3DS Free Library</title>
+<link rel="icon" href="assets/img/favicon/favicon-32x32.png" type="image/x-icon">
+<link rel="stylesheet" href="assets/styles/main.css">
+<script src="services/common.js"></script>
+`;
+
 /* The center function scrolls the screen to the 40,215 coordinates.*/
 function center(){
     // Scroll to designated coordinates.
@@ -22,6 +42,17 @@ function scroll(element, amount) {
     console.log("Scrolling");
     element.scrollTop -= amount;
 };
+
+
+
+// Create header for menu HTML.
+function setHeader(content) {
+    const header = document.querySelector('head');
+    console.log(header); // Check if this logs a header element
+    if (header) {
+        header.innerHTML = content;
+    }
+}
 
 
 
@@ -80,13 +111,19 @@ function registerNon3DSlink(a){
 // end of wolfyxon
 
 
-
 /*
  * Things within this function will not pollute global scope
  */
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
+        if (document.querySelector("head").dataset.description === "index"){
+            setHeader(headerTemplateIndex);
+        }
+        else{
+            setHeader(headerTemplate);
+        }
 
         /**
          * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
