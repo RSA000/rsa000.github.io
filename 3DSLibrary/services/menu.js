@@ -9,7 +9,7 @@
 
     var index = 0;
     const anchors = document.getElementsByTagName("a");
-
+    const anchorLength = anchors.length;
 
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
@@ -44,15 +44,29 @@
         // Switch case for each button press code.
         switch(event.keyCode){
             case UP:
-                anchors[index].focus()
-                index -= 1;
-                console.log("up");
-                break;
+                if (index > 0){
+                    index -= 1;
+                    anchors[index].focus();
+                    console.log("up");
+                    break;
+                }
+                else{
+                    index = anchorlength - 1
+                    anchors[index].focus();
+                    break;
+                }
             case DOWN:
-                anchors[index].focus()
-                index += 1;
-                console.log("down");
-                break;
+                if (index <= anchorLength -1){
+                    index += 1;
+                    anchors[index].focus();
+                    console.log("down");
+                    break;
+                }
+                else{
+                    index = 0;
+                    anchors[index].focus();
+                }
+
             case RIGHT:
                 break;
             case LEFT:
