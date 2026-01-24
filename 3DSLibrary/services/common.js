@@ -52,6 +52,23 @@ function includes(container,search){
 }
 
 
+
+/**
+ * Register an <a> that isn't meant to be opened on the 3DS
+ * @param {HTMLAnchorElement} a
+ */
+function registerNon3DSlink(a){
+    // Add event listener for when anchor is clicked.
+    a.addEventListener("click", function (e){
+        // Alert that link is not supported.
+        alert("The 3DS doesn't support that page. Please open \n\n" + a.href + "\n\non a external device (with a modern browser)");
+        // Prevent default action (navigating to link).
+        e.preventDefault();
+        return false;
+    }, false);
+}
+
+
 /**
  *
  * Function returns if system is 3DS and false otherwise.
@@ -103,22 +120,6 @@ function preventKey(event){
     event.preventDefault();
     return false;
 };
-
-
-/**
- * Register an <a> that isn't meant to be opened on the 3DS
- * @param {HTMLAnchorElement} a
- */
-function registerNon3DSlink(a){
-    // Add event listener for when anchor is clicked.
-    a.addEventListener("click", function (e){
-        // Alert that link is not supported.
-        alert("The 3DS doesn't support that page. Please open \n\n" + a.href + "\n\non a external device (with a modern browser)");
-        // Prevent default action (navigating to link).
-        e.preventDefault();
-        return false;
-    }, false);
-}
 
 // end of wolfyxon
 
