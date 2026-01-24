@@ -100,12 +100,6 @@ function registerNon3DSlink(a){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        if (document.querySelector("head").dataset.description === "index"){
-            setHeader(headerTemplateIndex);
-        }
-        else{
-            setHeader(headerTemplate);
-        }
         /**
          * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
          * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
