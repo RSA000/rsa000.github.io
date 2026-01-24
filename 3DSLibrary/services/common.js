@@ -100,7 +100,7 @@ function registerNon3DSlink(a){
             }, false);
 
             // Call center function every miliseconds.
-            setInterval(center, 4);
+            setInterval(center, 0);
         }
         // end of wolfyxon
 
