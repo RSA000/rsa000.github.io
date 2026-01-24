@@ -164,6 +164,16 @@ body, html {
 }
 
 
+.mySlides{
+	/* Container */
+	border: 3px solid gray;
+	top: 12px;
+	left: 6px;
+	position: relative;
+	width: 45%;
+}
+
+
 #upperScreenRead{
 
 	/* Container */
