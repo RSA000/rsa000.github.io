@@ -46,6 +46,7 @@
         preventKey(event);
         // Switch case for each button press code.
         switch(event.keyCode){
+            // Case for up button.
             case UP:
                 // If index is above 0.
                 if (index > 0){
@@ -60,7 +61,7 @@
                 // Focus on current index.
                 anchors[index].focus();
                 break;
-
+            // Case for down button.
             case DOWN:
                 // If index is not above anchorLength.
                 if (index < anchorLength -1){
