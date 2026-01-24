@@ -7,6 +7,9 @@
  */
 (function(){
 
+    var index = 0;
+    const anchors = document.getElementsByTagName("a");
+
 
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
@@ -41,10 +44,14 @@
         // Switch case for each button press code.
         switch(event.keyCode){
             case UP:
-                document.getElementsByTagName("a")[0].focus()
+                anchors[index].focus()
+                index -= 1;
                 console.log("up");
                 break;
             case DOWN:
+                anchors[index].focus()
+                index += 1;
+                console.log("down");
                 break;
             case RIGHT:
                 break;
