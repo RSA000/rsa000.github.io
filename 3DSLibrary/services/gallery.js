@@ -13,10 +13,6 @@
 
     /* End of Simbas */
 
-
-
-
-
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 

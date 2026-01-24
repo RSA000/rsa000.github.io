@@ -47,29 +47,33 @@
         // Switch case for each button press code.
         switch(event.keyCode){
             case UP:
+                // If index is above 0.
                 if (index > 0){
+                    // Update index -1.
                     index -= 1;
-                    anchors[index].focus();
-                    console.log("up");
-                    break;
                 }
+                // If index is 0.
                 else{
+                    // Set index to last anchor.
                     index = anchorLength - 1
-                    anchors[index].focus();
-                    break;
                 }
+                // Focus on current index.
+                anchors[index].focus();
+                break;
+
             case DOWN:
+                // If index is not above anchorLength.
                 if (index < anchorLength -1){
+                    // Increment index.
                     index += 1;
-                    anchors[index].focus();
-                    console.log("down");
-                    break;
                 }
+                // If index is at last anchor.
                 else{
                     index = 0;
-                    anchors[index].focus();
-                    break;
                 }
+                // Focus on current anchor index.
+                anchors[index].focus();
+                break;
         }
     };
 
