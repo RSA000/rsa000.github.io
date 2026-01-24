@@ -6,6 +6,8 @@ const UP = 38;
 const DOWN = 40;
 const A = 65;
 
+// Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
+var anchors = document.querySelectorAll(".lowerScreenMenu a");
 
 /**
  *
@@ -80,8 +82,6 @@ function is3DS(){
         // Call center function every milisecond.
         setInterval(center, 1);
 
-        // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
-        var anchors = this.querySelectorAll(".lowerScreenMenu a");
         // For each anchor, add event listener.
         for(var i = 0, l = anchors.length; i<l; i++){
             // If 3DS attribute is equal to 1.
@@ -131,7 +131,7 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        // If the user agent does not contain "Nintendo 3DS
+        // If the user agent does not contain "Nintendo 3DS".
         if(!is3DS()){
             // Set body style to grid display.
             document.body.style.display = 'grid';
