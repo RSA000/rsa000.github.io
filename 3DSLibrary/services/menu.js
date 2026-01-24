@@ -11,6 +11,8 @@
     const anchors = document.getElementsByTagName("a");
     const anchorLength = anchors.length;
 
+    /* Simba's */
+
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
         // get top screen Heading and subtitles and store in variables.
@@ -33,6 +35,7 @@
         topSubtitle.innerHTML = topSubtitle.dataset.description;
     };
 
+    /* End of Simbas */
 
     /**
      * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
@@ -65,6 +68,7 @@
                 else{
                     index = 0;
                     anchors[index].focus();
+                    break;
                 }
         }
     };

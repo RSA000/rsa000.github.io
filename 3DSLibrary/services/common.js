@@ -36,7 +36,6 @@ function includes(container,search){
     if (typeof(container) === 'string' || container instanceof Array){
         return container.indexOf(search) !== -1;
     }
-
     return container[search] !== undefined;
 }
 

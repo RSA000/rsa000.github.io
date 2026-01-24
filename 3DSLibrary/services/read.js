@@ -141,8 +141,6 @@
     };
 
 
-
-
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
         // Add event listener for when a key is pressed down.
