@@ -101,7 +101,8 @@ function registerNon3DSlink(a){
             // end of wolfyxon
 
             // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
-            var anchors = this.querySelectorAll(".body a");
+            var anchors = this.querySelectorAll(".lowerScreenMenu a");
+            alert(anchors);
             // For each anchor, add event listener.
             for(var i = 0, l = anchors.length; i<l; i++){
                 if (anchors[i].getAttribute("3DS") === "1"){
