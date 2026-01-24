@@ -87,6 +87,9 @@ function registerNon3DSlink(a){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+        let audio = new Audio('../../assets/audio/009-Sound-System-Dreamscape.mp3');
+        audio.play();
+
         /**
          * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
          * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
