@@ -7,14 +7,8 @@
 
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
-        // get top screen Heading and subtitles and store in variables.
-    };
-
-
-    /*Function returns title to original message when no items are selected. */
-    var inactive = function(ev) {
-        // Get top heading and subtitle tags (<h1> and <p>, respectively).
-
+        var galleryImage = document.getElementById("galleryImage");
+        galleryImage.setAttribute("src", this.src);
     };
 
     /* End of Simbas */
@@ -26,15 +20,11 @@
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        // Store all <a> tags within the "lowerScreenMenu" div in variable "slides."
-        inactive();
         // For each anchor, add event listener.
         for(var i = 0; i < slideLength; i++){
             slides[i].setAttribute('tabindex', i);
             // When focused on, apply active function with "this" selected anchor.
             slides[i].addEventListener('focus', active, false);
-            // When no slides are selected, revert to greeting heading and subtitle.
-            slides[i].addEventListener('blur', inactive, false);
         }
     }, false);
 
