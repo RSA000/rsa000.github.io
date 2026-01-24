@@ -112,8 +112,6 @@ function registerNon3DSlink(a){
             // Call center function every miliseconds.
             setInterval(center, 1);
         }
-
-
         // If the user agent does not contain "Nintendo 3DS"
         else {
             // Set body style to grid display.
