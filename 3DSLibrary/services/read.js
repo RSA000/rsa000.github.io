@@ -10,19 +10,17 @@
 
     checkCookie();
 
-    // Set current book position to 0th character.
-    var currentPosition = getCookie("pageNum");
-    // Create variable for storing page number.
-    var pages = 0;
+    // Get current book name.
+    var bookName = getCookie("bookName");
+    // Get current book position cookie.
+    var pageNum = getCookie("pageNum");
+
     // Create list variable for storing sub-divided book text.
     var textChunks = [];
-
     // Store textContainerRead element.
     var textContainer = document.getElementById('textContainerRead');
     // Store first paragraph of textContainerRead in "containerParagraph."
     var containerParagraph = textContainer.getElementsByTagName("p")[0];
-
-    var bookName = getCookie("bookName");
 
 
 
@@ -74,7 +72,7 @@
         // Now, chunks is ready to use
         pages = textChunks.length;
         // Display first page
-        updatePage(currentPosition);
+        updatePage(pageNum);
     }
 
 
@@ -91,10 +89,10 @@
      */
     function updatePage(index){
 
-        currentPosition = index;
+        pageNum = index;
         containerParagraph.innerText = "";
         // Display previous page.
-        containerParagraph.innerText = textChunks[currentPosition];
+        containerParagraph.innerText = textChunks[pageNum];
         // Scroll to top of screen
         scroll(textContainer, 10000);
         return;
@@ -121,24 +119,24 @@
             case RIGHT:
                 // Update page to next text chunk.
                 // If direction is forwards.
-                if (currentPosition < pages - 1){
+                if (pageNum < pages - 1){
                     // Update position +1 and replace inner text with new chunk.
-                    currentPosition += 1;
+                    pageNum += 1;
                     containerParagraph.innerText = "";
-                    containerParagraph.innerText = textChunks[currentPosition];
-                    setCookie("pageNum", currentPosition, 364);
+                    containerParagraph.innerText = textChunks[pageNum];
+                    setCookie("pageNum", pageNum, 364);
                 }
-                updatePage(currentPosition);
+                updatePage(pageNum);
                 break;
             case LEFT:
                 // If current position is greater than 1 (not front page).
-                if (currentPosition > 0){
+                if (pageNum > 0){
                     // Update current position and store current portion.
-                    currentPosition -= 1;
+                    pageNum -= 1;
                     // Clear current paragraph
                     // Update page to previous text chunk.
                 }
-                updatePage(currentPosition);
+                updatePage(pageNum);
                 break;
         }
     };
