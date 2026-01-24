@@ -34,7 +34,7 @@ function scroll(element, amount) {
 // https://www.w3schools.com/js/js_cookies.asp
 
 
-function setCookie(cname, cvalue, exdays=364) {
+function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (364));
     var expires = "expires="+d.toUTCString();
@@ -69,8 +69,8 @@ function checkCookie() {
     }
     else {
             alert("setting bookName");
-            setCookie("bookName", "test");
-            alert("setting page number");
+            setCookie("bookName", "test", 364);
+            alert("setting page number", 364);
             setCookie("pageNum", "0");
         }
 }
