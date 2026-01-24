@@ -133,8 +133,7 @@
                 if (pageNum > 0){
                     // Update current position and store current portion.
                     pageNum -= 1;
-                    // Clear current paragraph
-                    // Update page to previous text chunk.
+                    setCookie("pageNum", pageNum, 364);
                 }
                 updatePage(pageNum);
                 break;
