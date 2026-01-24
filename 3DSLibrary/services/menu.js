@@ -66,11 +66,6 @@
                     index = 0;
                     anchors[index].focus();
                 }
-
-            case RIGHT:
-                break;
-            case LEFT:
-                break;
         }
     };
 
