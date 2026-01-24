@@ -8,8 +8,10 @@
 
 (function() {
 
+    checkCookie();
+
     // Set current book position to 0th character.
-    var currentPosition = 0;
+    var currentPosition = getCookie("pageNum");
     // Create variable for storing page number.
     var pages = 0;
     // Create list variable for storing sub-divided book text.
@@ -19,6 +21,8 @@
     var textContainer = document.getElementById('textContainerRead');
     // Store first paragraph of textContainerRead in "containerParagraph."
     var containerParagraph = textContainer.getElementsByTagName("p")[0];
+
+    var bookName = getCookie("bookName");
 
 
 
@@ -70,7 +74,7 @@
         // Now, chunks is ready to use
         pages = textChunks.length;
         // Display first page
-        updatePage(0);
+        updatePage(currentPosition);
     }
 
 
@@ -122,6 +126,7 @@
                     currentPosition += 1;
                     containerParagraph.innerText = "";
                     containerParagraph.innerText = textChunks[currentPosition];
+                    setCookie("pageNum", currentPosition, 364);
                 }
                 updatePage(currentPosition);
                 break;
@@ -138,7 +143,6 @@
         }
     };
 
-    checkCookie();
 
 
     // Add event listener for when content is loaded.

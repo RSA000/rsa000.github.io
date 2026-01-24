@@ -59,19 +59,14 @@ function getCookie(cname) {
 }
 
 
-
 function checkCookie() {
     var bookName = getCookie("bookName");
     var pageNum = getCookie("pageNum");
     if ((bookName != "") && (pageNum != "")) {
-        alert(bookName);
-        alert(pageNum);
     }
     else {
-            alert("setting bookName");
             setCookie("bookName", "test", 364);
-            alert("setting page number", 364);
-            setCookie("pageNum", "0");
+            setCookie("pageNum", 0, 364);
         }
 }
 
