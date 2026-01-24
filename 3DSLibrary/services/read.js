@@ -70,7 +70,7 @@
         // Now, chunks is ready to use
         pages = textChunks.length;
         // Display first page
-        updatePage(2);
+        updatePage(0);
     }
 
 
@@ -117,26 +117,23 @@
             case RIGHT:
                 // Update page to next text chunk.
                 // If direction is forwards.
-                if ((direction == 0) && (currentPosition < pages - 1)){
+                if (currentPosition < pages - 1){
                     // Update position +1 and replace inner text with new chunk.
                     currentPosition += 1;
                     containerParagraph.innerText = "";
                     containerParagraph.innerText = textChunks[currentPosition];
                 }
-                updatePage(index + 1);
+                updatePage(currentPosition);
                 break;
             case LEFT:
-                if (direction == 1){
-                    // If current position is greater than 1 (not front page).
-                    if (currentPosition > 0){
-                        // Update current position and store current portion.
-                        currentPosition -= 1;
-                        // Clear current paragraph
-
-                    }
+                // If current position is greater than 1 (not front page).
+                if (currentPosition > 0){
+                    // Update current position and store current portion.
+                    currentPosition -= 1;
+                    // Clear current paragraph
+                    // Update page to previous text chunk.
                 }
-                // Update page to previous text chunk.
-                updatePage(index - 1);
+                updatePage(currentPosition);
                 break;
         }
     };
