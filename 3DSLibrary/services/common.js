@@ -88,25 +88,6 @@ function registerNon3DSlink(a){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-
-        const audio = document.getElementById("au");
-        let bt = document.getElementById("bt");
-        console.log(audio);
-        bt.addEventListener("click", ()=>{
-            audio.play();
-        });
-        const startPlaying = ()=>{
-            audio.removeEventListener('playing', startPlaying);
-            bt.classList.add("hide");
-            audio.src = '../../assets/audio/009-Sound-System-Dreamscape.mp3';
-            audio.play();
-        }
-        audio.addEventListener('playing', startPlaying);
-        audio.addEventListener('error', ()=>{
-            console.log("error");
-        });
-
-
         /**
          * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
          * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
