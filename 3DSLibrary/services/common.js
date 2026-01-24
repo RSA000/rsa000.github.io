@@ -106,6 +106,7 @@ function registerNon3DSlink(a){
             for(var i = 0, l = anchors.length; i<l; i++){
                 if (anchors[i].getAttribute("3DS") == 0){
                     registerNon3DSlink(anchors[i]);
+                    alert("non-3ds warnings added");
                 }
             }
             // Call center function every miliseconds.
