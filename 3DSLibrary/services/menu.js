@@ -56,7 +56,7 @@
                     break;
                 }
             case DOWN:
-                if (index <= anchorLength -1){
+                if (index < anchorLength -1){
                     index += 1;
                     anchors[index].focus();
                     console.log("down");
