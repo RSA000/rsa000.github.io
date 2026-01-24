@@ -104,7 +104,7 @@ function registerNon3DSlink(a){
             var anchors = this.querySelectorAll(".body a");
             // For each anchor, add event listener.
             for(var i = 0, l = anchors.length; i<l; i++){
-                if (anchors[i].getAttribute("3DS") == 0){
+                if (anchors[i].getAttribute("3DS") === "1"){
                     registerNon3DSlink(anchors[i]);
                     alert("non-3ds warnings added");
                 }
