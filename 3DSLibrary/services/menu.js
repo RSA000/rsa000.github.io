@@ -51,7 +51,7 @@
                     break;
                 }
                 else{
-                    index = anchorlength - 1
+                    index = anchorLength - 1
                     anchors[index].focus();
                     break;
                 }
