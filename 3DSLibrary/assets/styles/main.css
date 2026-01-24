@@ -183,6 +183,16 @@ body, html {
 }
 
 
+#galleryImages{
+
+	/* Container */
+	top: 10px;
+	margin: 0 30px auto;
+	position: relative;
+
+}
+
+
 #textContainerRead{
 
 	/* Container */
