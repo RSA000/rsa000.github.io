@@ -31,6 +31,53 @@ function scroll(element, amount) {
 };
 
 
+// https://www.w3schools.com/js/js_cookies.asp
+
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (364));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+
+
+function checkCookie() {
+    var bookName = getCookie("bookName");
+    var pageNum = getCookie("pageNum");
+    alert(bookName);
+    alert(pageNum);
+    if ((bookName != "") && (pageNum != "")) {
+        alert(bookName);
+        alert(pageNum);
+    }
+    else {
+            alert("setting bookName");
+            setCookie("bookName", "test", 364);
+            alert("setting page number");
+            setCookie("pageNum", "1", 364);
+        }
+}
+
+
 /**
  * <<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////

@@ -85,33 +85,12 @@
      * @param {direction}
      *
      */
-    function updatePage(direction){
-        // If direction is forwards.
-        if ((direction == 0) && (currentPosition < pages - 1)){
-                // Update position +1 and replace inner text with new chunk.
-                currentPosition += 1;
-                containerParagraph.innerText = "";
-                containerParagraph.innerText = textChunks[currentPosition];
-        }
-        // If direction is backwards.
-        else if (direction == 1){
-            // If current position is greater than 1 (not front page).
-            if (currentPosition > 0){
-                // Update current position and store current portion.
-                currentPosition -= 1;
-                // Clear current paragraph
-                containerParagraph.innerText = "";
-                // Display previous page.
-                containerParagraph.innerText = textChunks[currentPosition];
-            }
-        }
-        // For first starting first page.
-        else if (direction == 2){
-            // Display first page.
-            currentPosition = 0;
-            containerParagraph.innerText = "";
-            containerParagraph.innerText = textChunks[0];
-        }
+    function updatePage(index){
+
+        currentPosition = index;
+        containerParagraph.innerText = "";
+        // Display previous page.
+        containerParagraph.innerText = textChunks[currentPosition];
         // Scroll to top of screen
         scroll(textContainer, 10000);
         return;
@@ -137,14 +116,32 @@
                 break;
             case RIGHT:
                 // Update page to next text chunk.
-                updatePage(0);
+                // If direction is forwards.
+                if ((direction == 0) && (currentPosition < pages - 1)){
+                    // Update position +1 and replace inner text with new chunk.
+                    currentPosition += 1;
+                    containerParagraph.innerText = "";
+                    containerParagraph.innerText = textChunks[currentPosition];
+                }
+                updatePage(index + 1);
                 break;
             case LEFT:
+                if (direction == 1){
+                    // If current position is greater than 1 (not front page).
+                    if (currentPosition > 0){
+                        // Update current position and store current portion.
+                        currentPosition -= 1;
+                        // Clear current paragraph
+
+                    }
+                }
                 // Update page to previous text chunk.
-                updatePage(1);
+                updatePage(index - 1);
                 break;
         }
     };
+
+    checkCookie();
 
 
     // Add event listener for when content is loaded.
