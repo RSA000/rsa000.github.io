@@ -80,12 +80,32 @@ function registerNon3DSlink(a){
 // end of wolfyxon
 
 
+
 /*
  * Things within this function will not pollute global scope
  */
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
+
+        const audio = document.getElementById("au");
+        let bt = document.getElementById("bt");
+        console.log(audio);
+        bt.addEventListener("click", ()=>{
+            audio.play();
+        });
+        const startPlaying = ()=>{
+            audio.removeEventListener('playing', startPlaying);
+            bt.classList.add("hide");
+            audio.src = '../../assets/audio/009-Sound-System-Dreamscape.mp3';
+            audio.play();
+        }
+        audio.addEventListener('playing', startPlaying);
+        audio.addEventListener('error', ()=>{
+            console.log("error");
+        });
+
 
         /**
          * <<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
@@ -120,9 +140,6 @@ function registerNon3DSlink(a){
             // Set content to center.
             document.body.style.justifyContent = 'center';
         }
-        // Otherwise,
-        let audio = new Audio('../../assets/audio/009-Sound-System-Dreamscape.mp3');
-        audio.play();
     }, false);
 
 })()
