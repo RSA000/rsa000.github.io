@@ -15,7 +15,17 @@ var anchors = document.querySelectorAll("a");
  *
  */
 function center(){
-    window.scrollTo(95, 240);
+    var backingDiv = document.getElementById('backingDiv'); // or another selector
+    if (!backingDiv) return;
+
+    var rect = backingDiv.getBoundingClientRect();
+    var elementCenterX = rect.left + rect.width / 2;
+    var elementCenterY = rect.top + rect.height / 2;
+
+    var scrollX = elementCenterX + window.pageXOffset - window.innerWidth / 2;
+    var scrollY = elementCenterY + window.pageYOffset - window.innerHeight / 2;
+
+    window.scrollTo({ left: scrollX, top: scrollY, behavior: 'smooth' });
 };
 
 
