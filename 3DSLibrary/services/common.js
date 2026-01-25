@@ -61,6 +61,7 @@ function getCookie(cname) {
 
 function checkCookie() {
     var bookName = getCookie("bookName");
+    console.log(bookName);
     var pageNum = getCookie("pageNum");
     if (bookName != "") {
         return;
