@@ -26,10 +26,10 @@ body, html {
 	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
 	background-size: 1200px;
-	height: 85%;
-	width: 85%;
+	height: 90%;
+	width:  90%;
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-bottom: 15px;
 }
 
