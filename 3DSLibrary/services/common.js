@@ -178,7 +178,7 @@ function preventKey(event){
             }
         }
         else{
-            document.getElementsByClassName("backDiv")[0].style.margin = "10px auto";
+            document.getElementsByClassName("backingDiv")[0].style.margin = "10px auto";
         }
     }, false);
 })()
