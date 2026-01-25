@@ -14,10 +14,11 @@ body, html {
 /* Main css for backing dividing.*/
 .backingDiv{
 
+	/* Container */
 	height: 600px;
 	width: 600px;
-	position: relative;
 	margin: 40px auto;
+	position: relative;
 
 }
 
@@ -93,6 +94,11 @@ body, html {
 /* Top Screen's images container. */
 .upperScreenImages{
 
+	/* Container */
+	margin: auto;
+	bottom: 20%;
+	position: relative;
+
 }
 
 /* Top screen lower left image. */
@@ -107,7 +113,6 @@ body, html {
 	height: 72px;
 	width: 60px;
 	left: auto;
-	top: -35px;
 }
 
 /* Top screen lower right image. */
@@ -121,7 +126,6 @@ body, html {
 	position: relative;
 	height: 72px;
 	width: 60px;
-	top: -35px;
 	left: 58%;
 }
 
