@@ -28,6 +28,8 @@ body, html {
 	border: 2px solid #9c9a9a;
 	height: 212px;
 	width: 396px;
+	left: 40px;
+	position: relative;
 }
 
 /* Container for upperScreen contents.*/
@@ -130,8 +132,9 @@ body, html {
 	border: 3px solid #9c9a9a;
 	height: 230px;
 	width: 313px;
-	/* Important for proper framing */
 	margin: 0 40px 28px;
+	left: 40px;
+	position: relative;
 }
 
 .lowerScreenMenu{
