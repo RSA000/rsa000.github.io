@@ -26,10 +26,11 @@ body, html {
 	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
 	background-size: 1200px;
-	height: 165px;
-	width: 375px;
+	height: 85%;
+	width: 85%;
 	margin: auto;
 	margin-top: 20px;
+	margin-bottom: 15px;
 }
 
 /* Container for upperScreen text.*/
@@ -107,8 +108,8 @@ body, html {
 	position: relative;
 	height: 72px;
 	width: 60px;
-	left: 240px;
 	top: -35px;
+	left: 58%;
 }
 
 /* Lower screen settings.*/
