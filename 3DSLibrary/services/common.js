@@ -121,24 +121,8 @@ function registerNon3DSlink(a){
 function is3DS(){
     // If userAgent string is equal to "Nintendo 3DS"
     if (includes(window.navigator.userAgent,"Nintendo 3DS")){
-        // Call center function every milisecond.
-        setInterval(center, 1);
 
-        // For each anchor, add event listener.
-        for(var i = 0, l = anchors.length; i<l; i++){
-            // If 3DS attribute is equal to 1.
-            if (anchors[i].getAttribute("3DS") === "1"){
-                // Add event listener to display message for non-compatible site link when selected.
-                registerNon3DSlink(anchors[i]);
-            }
-        }
-        // Add event listener for errors.
-        window.addEventListener("error", function(e) {
-            // Alert event.filename + line number where error occurred + error message.
-            alert(e.filename + ":" + e.lineno + " " + e.message);
-            // Return true.
-            return true;
-        }, false);
+
     }
     return false;
 }
@@ -174,8 +158,26 @@ is3DS();
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+        // If device is 3DS.
+        if (is3DS()){
 
+            // Call center function every milisecond.
+            setInterval(center, 1);
 
-    }, false);
+            // Add event listener for errors.
+            window.addEventListener("error", function(e) {
+                // Alert event.filename + line number where error occurred + error message.
+                alert(e.filename + ":" + e.lineno + " " + e.message);
+            }, false);
 
+            // Add non-3DS compatible warning to any relevant anchors.
+            for(var i = 0, l = anchors.length; i<l; i++){
+                // If 3DS attribute is equal to 1.
+                if (anchors[i].getAttribute("3DS") === "1"){
+                    // Add event listener to display message for non-compatible site link when selected.
+                    registerNon3DSlink(anchors[i]);
+                }
+            }
+        }
+    }
 })()
