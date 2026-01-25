@@ -29,6 +29,7 @@ body, html {
 	height: 212px;
 	width: 396px;
 	left: 40px;
+	top: 40px;
 	position: relative;
 }
 
@@ -134,6 +135,7 @@ body, html {
 	width: 313px;
 	margin: 0 40px 28px;
 	left: 40px;
+	top: 40px
 	position: relative;
 }
 
