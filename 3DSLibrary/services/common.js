@@ -16,7 +16,7 @@ var anchors = document.querySelectorAll("a");
  */
 function center(){
     // Scroll to designated coordinates.
-    window.scrollTo(80,215);
+    window.scrollTo(80,175);
 };
 
 
