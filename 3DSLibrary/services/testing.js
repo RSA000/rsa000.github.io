@@ -1,7 +1,6 @@
 (function(){
 
 var gamepad = navigator.webkitGetGamepads;
-alert(gamepad);
 
 
 window.addEventListener("gamepadconnected", (e) => {
@@ -12,7 +11,6 @@ window.addEventListener("gamepadconnected", (e) => {
         e.gamepad.buttons.length,
         e.gamepad.axes.length,
     );
-});
 
 document.addEventListener("keydown", function(event) {
     alert("Keycode: " + event.keyCode);
