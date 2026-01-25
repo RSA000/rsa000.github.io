@@ -65,7 +65,7 @@ function checkCookie() {
     if (bookName != "") {
         ;
     }
-    {
+    else{
         alert("No book found!");
         window.location.replace("../../index.html")
     }
