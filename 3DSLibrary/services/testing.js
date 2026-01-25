@@ -11,6 +11,7 @@ window.addEventListener("gamepadconnected", (e) => {
         e.gamepad.buttons.length,
         e.gamepad.axes.length,
     );
+}, false);
 
 document.addEventListener("keydown", function(event) {
     alert("Keycode: " + event.keyCode);
