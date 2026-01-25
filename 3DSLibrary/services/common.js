@@ -14,16 +14,9 @@ var anchors = document.querySelectorAll("a");
  * The center function scrolls the screen to the 40,215 coordinates.
  *
  */
-
-
-function center() {
-
-    const x = 140;
-    const y = 290;
-
-    if(window.scrollX === x && window.scrollY === y) return;
-    window.scrollTo(x,y);
-}
+function center(){
+    window.scrollTo(140, 290);
+};
 
 
 /**
