@@ -160,7 +160,7 @@ function preventKey(event){
         if (is3DS()){
 
             // Call center function every milisecond.
-            setInterval(center, 1);
+            setInterval(center);
 
             // Add event listener for errors.
             window.addEventListener("error", function(e) {
