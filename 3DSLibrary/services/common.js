@@ -63,8 +63,11 @@ function checkCookie() {
     var bookName = getCookie("bookName");
     var pageNum = getCookie("pageNum");
     if (bookName != "") {
+        ;
+    }
+    {
         alert("No book found!");
-        window.location.replace("../../index.html");
+        window.location.replace("../../index.html")
     }
 }
 
