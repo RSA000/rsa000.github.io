@@ -15,7 +15,7 @@ var anchors = document.querySelectorAll("a");
  *
  */
 function center(){
-    window.scrollTo(140, 236);
+    window.scrollTo(140, 266);
 };
 
 
@@ -121,7 +121,6 @@ function registerNon3DSlink(a){
 function is3DS(){
     // If userAgent string is equal to "Nintendo 3DS"
     if (includes(window.navigator.userAgent,"Nintendo 3DS")){
-
         return true;
     }
     return false;
