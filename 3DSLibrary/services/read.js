@@ -12,6 +12,7 @@
 
     // Get current book name.
     var bookName = getCookie("bookName");
+    console.log(bookName);
     // Get current book position cookie.
     var pageNum = parseInt(getCookie('pageNum'));
 
@@ -150,7 +151,7 @@
         });
 
         // Get book text and load into textContainerRead paragraph element in read.html.
-        getText("https://rsa000.github.io/3DSLibrary/assets/texts/nelly_bly.txt", loadBook);
+        getText("https://rsa000.github.io/3DSLibrary/assets/texts/" + bookName, loadBook);
 
     }, false);
 
