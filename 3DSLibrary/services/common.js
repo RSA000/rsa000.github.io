@@ -67,6 +67,7 @@ function checkCookie() {
     }
     else{
         alert("No book found!");
+        console.log(bookName);
         window.location.replace("../../index.html")
     }
 }
