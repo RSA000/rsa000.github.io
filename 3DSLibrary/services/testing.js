@@ -21,7 +21,7 @@
         log += ("Up (index 12): " + buttons[12]);
         log +=("Down (index 13): " + buttons[13]);
 
-        document.getElementById("log").innerHTML = log;
+        document.getElementById("topSubtitle").innerHTML = log;
     } else {
         alert("No gamepad connected");
     }
