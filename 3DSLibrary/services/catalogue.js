@@ -28,7 +28,6 @@
     /*Function returns title to original message when no items are selected. */
     var click = function(ev) {
         const bookName = this.getAttribute("bookName");
-        console.log("Setting bookName cookie:", bookName);
         setCookie("bookName", bookName, 364);
         setCookie("pageNum", 0, 364);
         window.location.href = "../read/read.html";

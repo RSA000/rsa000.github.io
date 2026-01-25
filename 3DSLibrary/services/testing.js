@@ -15,7 +15,7 @@
             console.assert(typeof value === "number", `Axis ${index} should be a number`);
             console.assert(value >= -1.0 && value <= 1.0, `Axis ${index} value ${value} out of range`);
         });
-        console.log("Axes test passed");
+        alert("Axes test passed");
     }
 
     // Function to test buttons array
@@ -43,7 +43,7 @@
             const value = gamepad.buttons[index];
             console.assert(value === 0 || value === 1, `${name} button value should be 0 or 1`);
         });
-        console.log("Buttons test passed");
+        alert("Buttons test passed");
     }
 
     // Function to simulate button press
@@ -60,7 +60,7 @@
         // Release A button
         setButtonState(mockGamepad, 1, false);
         console.assert(mockGamepad.buttons[1] === 0, "A button should be released (0)");
-        console.log("Button state change test passed");
+        alert("Button state change test passed");
     }
 
     // Function to simulate axis change
@@ -77,7 +77,7 @@
         // Set C-stick Y to maximum down
         setAxisValue(mockGamepad, 3, 1.0);
         console.assert(mockGamepad.axes[3] === 1.0, "C-stick Y should be 1.0");
-        console.log("Axis value change test passed");
+        alert("Axis value change test passed");
     }
 
     // Run tests

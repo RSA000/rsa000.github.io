@@ -12,7 +12,6 @@
 
     // Get current book name.
     var bookName = getCookie("bookName");
-    console.log(bookName);
     // Get current book position cookie.
     var pageNum = parseInt(getCookie('pageNum'));
 
