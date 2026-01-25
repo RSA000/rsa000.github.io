@@ -38,7 +38,7 @@ body, html {
 .upperScreenContents{
 
 	/* Container */
-	background-image: url("../../assets/img/backgrounds/stars.gif");
+	background-image: inherit;
 	background-size: 1200px;
 	height: 90%;
 	width:  90%;
