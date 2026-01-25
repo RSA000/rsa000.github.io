@@ -14,8 +14,8 @@ body, html {
 /* Main css for backing dividing.*/
 .backingDiv{
 
-	height: fit-content;
-	width: fit-content;
+	height: 600px;
+	width: 600px;
 	position: relative;
 	margin: 20px auto;
 
