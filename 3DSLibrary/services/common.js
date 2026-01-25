@@ -15,7 +15,7 @@ var anchors = document.querySelectorAll("a");
  *
  */
 function center(){
-    var backingDiv = document.body.backingDiv;
+    var backingDiv = document.getElementById("backingDiv");
     var offset = backingDiv.offset();
     var width = backingDiv.width();
     var height = backingDiv.height();
