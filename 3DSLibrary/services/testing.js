@@ -21,7 +21,7 @@
         log += ("Up (index 12): " + buttons[12]);
         log +=("Down (index 13): " + buttons[13]);
 
-        alert(log);
+        document.getElementById("log").innerHTML = log;
     } else {
         alert("No gamepad connected");
     }
@@ -29,5 +29,7 @@
 document.addEventListener("keydown", function(event) {
     alert("Keycode: " + event.keyCode);
 });
+
+setInterval(logGamepad);
 
 }());
