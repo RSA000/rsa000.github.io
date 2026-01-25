@@ -15,8 +15,15 @@ var anchors = document.querySelectorAll("a");
  *
  */
 function center(){
+    var backingDiv = document.body.backingDiv;
+    var offset = backingDiv.offset();
+    var width = backingDiv.width();
+    var height = backingDiv.height();
+
+    var centerX = offset.left + width / 2;
+    var centerY = offset.top + height / 2;
     // Scroll to designated coordinates.
-    window.scrollTo(80,175);
+    window.scrollTo(centerX,centerY);
 };
 
 
