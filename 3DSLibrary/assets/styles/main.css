@@ -10,14 +10,20 @@ body, html {
 	font-size: 16px;
 }
 
+
+/* Main css for backing dividing.*/
+.backingDiv{
+
+}
+
 /* Main container for upper screen.*/
 .upperScreen {
 
 	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
-	border: 3px solid #9c9a9a;
-	height: 210px;
-	width: 394px;
+	border: 2px solid #9c9a9a;
+	height: 212px;
+	width: 396px;
 }
 
 /* Container for upperScreen contents.*/
