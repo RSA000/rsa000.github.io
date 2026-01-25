@@ -165,6 +165,8 @@ function preventKey(event){
 
 // end of wolfyxon
 
+// Check if device is 3DS system and invoke correct settings if so.
+is3DS();
 
 /*
  * Immediately invoked function.
@@ -173,13 +175,7 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        // If the user agent does not contain "Nintendo 3DS".
-        if(!is3DS()){
-            // Set body style to grid display.
-            document.body.style.display = 'grid';
-            // Set content to center.
-            document.body.style.justifyContent = 'center';
-        }
+
     }, false);
 
 })()
