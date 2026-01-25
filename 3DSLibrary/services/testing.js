@@ -1,7 +1,7 @@
 (function(){
 
     // Get the array of gamepads
-    var gamepads = navigator.webkitGetGamepads;
+    var gamepads = navigator.webkitGetGamepads();
 
     if (gamepads && gamepads.length > 0 && gamepads[0]) {
         var gp = gamepads[0];
@@ -20,6 +20,8 @@
         log += ("Button B (index 0): " + buttons[0]);
         log += ("Up (index 12): " + buttons[12]);
         log +=("Down (index 13): " + buttons[13]);
+
+        alert(log);
     } else {
         alert("No gamepad connected");
     }
