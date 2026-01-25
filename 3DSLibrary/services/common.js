@@ -149,15 +149,14 @@ function preventKey(event){
 
 // end of wolfyxon
 
-// Check if device is 3DS system and invoke correct settings if so.
-is3DS();
 
 /*
- * Immediately invoked function.
+ * When DOM content is fully loaded, invoke function.
  */
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
         // If device is 3DS.
         if (is3DS()){
 
@@ -179,5 +178,5 @@ is3DS();
                 }
             }
         }
-    }
+    }, false);
 })()
