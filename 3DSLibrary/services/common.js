@@ -7,7 +7,7 @@ const DOWN = 40;
 const A = 13;
 
 const centerX = 115;
-const centerY = 316;
+const centerY = 284;
 
 // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
 var anchors = document.querySelectorAll("a");
