@@ -15,7 +15,7 @@ body, html {
 .backingDiv{
 
 	/* Container */
-	height: 475px;
+	height: 500px;
 	width: 500px;
 	margin: 40px auto;
 	position: relative;
