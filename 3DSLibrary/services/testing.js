@@ -14,11 +14,6 @@
                 // Access axes
                 var axes = gp.axes;
 
-                axes[0] = ZERO;
-                axes[1] = ZERO;
-                axes[2] = ZERO;
-                axes[3] = ZERO;
-
                 log += (" Circle pad X: " + axes[0]) + "\n";
                 log += (" Circle pad Y: " + axes[1]) + "\n";
                 log += (" C-stick X: " + axes[2]) + "\n";
@@ -53,7 +48,7 @@
                 var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
                 var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 
-                window.scrollTo(left - x * 10, top);
+                window.scrollTo(left - x * 10, top - y * 10);
 
             }
         }
