@@ -15,7 +15,7 @@ var anchors = document.querySelectorAll("a");
  *
  */
 function center(){
-    var doc = document.getElementById("backingDiv");
+    var doc = document.getElementsByClassName("backingDiv")[0];
     var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
     var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
     window.scrollTo(left, top);
