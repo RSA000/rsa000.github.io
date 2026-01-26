@@ -1,4 +1,6 @@
 (function(){
+
+    const ZERO = 0;
     if (is3DS()){
 
         function logGamepad(){
@@ -38,10 +40,10 @@
 
                 // Access axes
                 var axes = gp.axes;
-                axes[0] = 0;
-                axes[1] = 0;
-                axes[2] = 0;
-                axes[3] = 0;
+                axes[0] = ZERO;
+                axes[1] = ZERO;
+                axes[2] = ZERO;
+                axes[3] = ZERO;
             }
         }
 
