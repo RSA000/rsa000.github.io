@@ -52,6 +52,7 @@
                 }
                 break;
         }
+        // Focus on new slide index.
         slides[index].focus();
     };
 

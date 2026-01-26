@@ -60,6 +60,20 @@
             // log += ("Current Keycode: " + event.keyCode)  +"\n";
         });
 
+
+        // Create a new div element
+        var newDiv = document.createElement("div");
+
+        // Set some content or attributes
+        newDiv.innerHTML = "This is a test!";
+        newDiv.id = "myNewDiv";
+
+        // Find the parent element where you want to insert the new element
+        var parentElement = document.getElementById("testText");
+
+        // Insert the new element as a child
+        parentElement.appendChild(newDiv);
+
         setInterval(preventGamepad);
         setInterval(logGamepad);
 
