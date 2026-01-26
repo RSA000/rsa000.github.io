@@ -3,8 +3,11 @@ body, html {
 
 	/* Container */
 	background: black;
-	margin: 0px;
-
+	/* Container */
+	height: 500px;
+	width: 550px;
+	margin: 50px auto;
+	position: relative;
 	/* Text */
 	font-family: monospace;
 	font-size: 16px;
