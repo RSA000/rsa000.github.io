@@ -68,7 +68,6 @@
         });
 
         setInterval(preventGamepad);
-        setInterval(getGamepadState);
         setInterval(logGamepad);
 
 
