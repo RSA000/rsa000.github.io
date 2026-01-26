@@ -29,11 +29,28 @@
 
     }
 
+    function preventGamepad(){
+        var gamepads = navigator.webkitGetGamepads();
+
+        if (gamepads && gamepads.length > 0 && gamepads[0]) {
+            var gp = gamepads[0];
+
+;
+            // Access axes
+            var axes = gp.axes;
+            axes[0] = 0;
+            axes[1] = 0;
+            axes[2] = 0;
+            axes[3] = 0;
+        }
+    }
+
 
 document.addEventListener("keydown", function(event) {
     preventKey(event);
 });
 
+setInterval(preventGamepad);
 setInterval(logGamepad, 100);
 
 }());
