@@ -21,7 +21,6 @@
             log += ("Button B (index 0): " + buttons[0]);
             log += ("Up (index 12): " + buttons[12]);
             log +=("Down (index 13): " + buttons[13]);
-            alert(log);
             document.getElementsByClassName("topSubtitle")[0].innerText = log;
         } else {
             alert("No gamepad connected");
@@ -34,6 +33,6 @@ document.addEventListener("keydown", function(event) {
     alert("Keycode: " + event.keyCode);
 });
 
-setInterval(logGamepad, 5000);
+setInterval(logGamepad, 100);
 
 }());
