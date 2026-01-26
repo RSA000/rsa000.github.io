@@ -13,18 +13,6 @@ body{
 	font-size: 16px;
 }
 
-
-/* Main css for backing dividing.*/
-.backingDiv{
-
-	/* Container */
-	height: 500px;
-	width: 550px;
-	margin: 50px auto;
-	position: relative;
-
-}
-
 /* Main container for upper screen.*/
 .upperScreen {
 
