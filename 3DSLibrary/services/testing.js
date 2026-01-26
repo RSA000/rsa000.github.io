@@ -46,13 +46,30 @@
         }
 
 
+
+        function getGamepadState() {
+            var gamepads = navigator.getGamepads(); // Use the standard method
+            if (gamepads && gamepads.length > 0 && gamepads[0]) {
+                var gp = gamepads[0];
+                // Override axes values
+                var axes = [0, 0, 0, 0]; // force axes to zero
+                return {
+                    ...gp,
+                    axes: axes
+                };
+            }
+            return null;
+        }
+
+
         document.addEventListener("keydown", function(event) {
             preventKey(event);
             // log += ("Current Keycode: " + event.keyCode)  +"\n";
         });
 
         setInterval(preventGamepad);
-        setInterval(logGamepad, 100);
+        setInterval(getGamepadState);
+        setInterval(logGamepad);
 
 
     }
