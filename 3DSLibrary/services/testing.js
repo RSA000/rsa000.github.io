@@ -46,10 +46,15 @@
 
                 // Access axes
                 var axes = gp.axes;
-                axes[0] = ZERO;
-                axes[1] = ZERO;
-                axes[2] = ZERO;
-                axes[3] = ZERO;
+                var x = axes[0];
+                var y = axes[1];
+
+                var doc = document.body;
+                var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+                var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+
+                window.scrollTo(left - x * 10, top);
+
             }
         }
 
