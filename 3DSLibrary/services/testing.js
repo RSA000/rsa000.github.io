@@ -19,7 +19,7 @@
             var buttons = gp.buttons;
             log += ("Button A (index 1): " + buttons[1]) + "\n";
             log += ("Button B (index 0): " + buttons[0]) + "\n";
-            log += ("Up (index 12): " + buttons[12])" +\n";
+            log += ("Up (index 12): " + buttons[12]) +"\n";
             log +=("Down (index 13): " + buttons[13])" +\n";
             log += ("Current Keycode: " + event.keyCode) " +\n";
             document.getElementsByClassName("topSubtitle")[0].innerText = log;
