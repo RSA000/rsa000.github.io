@@ -17,7 +17,7 @@ var anchors = document.querySelectorAll("a");
  *
  */
 function center(){
-    window.scrollTo(70, 260);
+    window.scrollTo(65, 264);
 };
 
 
