@@ -13,6 +13,12 @@
                 var log = "";
                 // Access axes
                 var axes = gp.axes;
+
+                axes[0] = ZERO;
+                axes[1] = ZERO;
+                axes[2] = ZERO;
+                axes[3] = ZERO;
+
                 log += (" Circle pad X: " + axes[0]) + "\n";
                 log += (" Circle pad Y: " + axes[1]) + "\n";
                 log += (" C-stick X: " + axes[2]) + "\n";
