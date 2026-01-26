@@ -83,6 +83,8 @@
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+        inactive();
+
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
             menuHandleKeyDown(e, document.getElementById('lowerScreenMenu'));

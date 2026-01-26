@@ -13,9 +13,7 @@ const centerY = 266;
 var anchors = document.querySelectorAll("a");
 
 /**
- *
  * The center function scrolls the screen to the 40,215 coordinates.
- *
  */
 function center(){
     window.scrollTo(centerX, centerY);
@@ -69,7 +67,7 @@ function checkCookie() {
     else{
         alert("No book found!");
         alert(bookName);
-        window.location.replace("../../index.html")
+        window.location.replace("../index.html")
     }
 }
 
@@ -77,7 +75,8 @@ function checkCookie() {
 /**
  * <<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
- * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ */
 
 /**
  * includes takes a container and a search element and returns a boolean value
