@@ -135,7 +135,7 @@ body, html {
 
 	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
-	border: inherit;
+	border: 2px solid #9c9a9a;
 	height: 230px;
 	width: 313px;
 	margin: auto;
