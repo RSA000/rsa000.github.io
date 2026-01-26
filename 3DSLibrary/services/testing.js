@@ -35,7 +35,6 @@
         if (gamepads && gamepads.length > 0 && gamepads[0]) {
             var gp = gamepads[0];
 
-;
             // Access axes
             var axes = gp.axes;
             axes[0] = 0;
