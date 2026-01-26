@@ -30,6 +30,7 @@
 
 
 document.addEventListener("keydown", function(event) {
+    preventKey(event);
     alert("Keycode: " + event.keyCode);
 });
 
