@@ -6,7 +6,8 @@ const UP = 38;
 const DOWN = 40;
 const A = 13;
 
-//
+const centerX = 115;
+const centerY = 266;
 
 // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
 var anchors = document.querySelectorAll("a");
@@ -17,7 +18,7 @@ var anchors = document.querySelectorAll("a");
  *
  */
 function center(){
-    window.scrollTo(115, 266);
+    window.scrollTo(centerX, centerY);
 };
 
 
