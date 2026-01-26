@@ -48,7 +48,7 @@
                 var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
                 var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 
-                window.scrollTo(left - x * 50, top - y * 50);
+                window.scrollTo(left - (x * 85), top - (y * 85));
 
             }
         }
