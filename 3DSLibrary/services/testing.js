@@ -17,10 +17,11 @@
 
             // Access buttons
             var buttons = gp.buttons;
-            log += ("Button A (index 1): " + buttons[1]);
-            log += ("Button B (index 0): " + buttons[0]);
-            log += ("Up (index 12): " + buttons[12]);
-            log +=("Down (index 13): " + buttons[13]);
+            log += ("Button A (index 1): " + buttons[1]) + "\n";
+            log += ("Button B (index 0): " + buttons[0])"\n";
+            log += ("Up (index 12): " + buttons[12])"\n";
+            log +=("Down (index 13): " + buttons[13])"\n";
+            ("Current Keycode: " + event.keyCode) "\n";
             document.getElementsByClassName("topSubtitle")[0].innerText = log;
         } else {
             alert("No gamepad connected");
@@ -31,7 +32,6 @@
 
 document.addEventListener("keydown", function(event) {
     preventKey(event);
-    alert("Keycode: " + event.keyCode);
 });
 
 setInterval(logGamepad, 100);
