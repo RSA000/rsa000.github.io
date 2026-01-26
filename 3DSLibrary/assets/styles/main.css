@@ -17,8 +17,7 @@ body, html {
 	/* Container */
 	height: 500px;
 	width: 500px;
-	margin: 40px auto;
-	padding: 40px auto;
+	margin: 50px auto;
 	position: relative;
 
 }
