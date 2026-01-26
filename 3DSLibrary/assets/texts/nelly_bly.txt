@@ -1,17 +1,4 @@
-﻿
-The Project Gutenberg EBook of Ten Days in a Mad-House;, by Nellie Bly
-
-This eBook is for the use of anyone anywhere in the United States and
-most other parts of the world at no cost and with almost no restrictions
-whatsoever.  You may copy it, give it away or re-use it under the terms
-of the Project Gutenberg License included with this eBook or online at
-www.gutenberg.org.  If you are not located in the United States, you'll
-have to check the laws of the country where you are located before using
-this ebook.
-
-
-
-Title: Ten Days in a Mad-House;
+﻿Title: Ten Days in a Mad-House;
        or, Nellie Bly's Experience on Blackwell's Island. Feigning
               Insanity in Order to Reveal Asylum Horrors. The Trying
               Ordeal of the New York World's Girl Correspondent.
@@ -27,16 +14,10 @@ Character set encoding: UTF-8
 *** START OF THIS PROJECT GUTENBERG EBOOK TEN DAYS IN A MAD-HOUSE; ***
 
 
-
-
 Produced by Richard Tonsing, Tim Lindell, and the Online
 Distributed Proofreading Team at http://www.pgdp.net (This
 file was produced from images generously made available
 by The Internet Archive)
-
-
-
-
 
 
 TEN DAYS IN A MAD-HOUSE;
@@ -1514,18 +1495,11 @@ End of the Project Gutenberg EBook of Ten Days in a Mad-House;, by Nellie Bly
 
 *** END OF THIS PROJECT GUTENBERG EBOOK TEN DAYS IN A MAD-HOUSE; ***
 
-***** This file should be named 59899-h.htm or 59899-h.zip *****
-This and all associated files of various formats will be found in:
-        http://www.gutenberg.org/5/9/8/9/59899/
-
 Produced by Richard Tonsing, Tim Lindell, and the Online
 Distributed Proofreading Team at http://www.pgdp.net (This
 file was produced from images generously made available
 by The Internet Archive)
 
-
-Updated editions will replace the previous one--the old editions will
-be renamed.
 
 Creating the works from print editions not protected by U.S. copyright
 law means that no one owns a United States copyright in these works,
@@ -1873,6 +1847,3 @@ This Web site includes information about Project Gutenberg-tm,
 including how to make donations to the Project Gutenberg Literary
 Archive Foundation, how to help produce our new eBooks, and how to
 subscribe to our email newsletter to hear about new eBooks.
-
-
-

@@ -28,44 +28,31 @@
                 if (index > 1){
                     index -= 2;
                 }
-                slides[index].focus();
                 break;
             case DOWN:
                 if (index < slideLength -2){
                     index += 2;
                 }
-                slides[index].focus();
                 break;
-            // Case for up button.
             case LEFT:
-                // If index is above 0.
                 if (index > 0){
-                    // Update index -1.
                     index -= 1;
                 }
-                // If index is 0.
                 else{
-                    // Set index to last anchor.
                     index = slideLength - 1
                 }
-                // Focus on current index.
-                slides[index].focus();
                 break;
-                // Case for down button.
             case RIGHT:
-                // If index is not above anchorLength.
                 if (index < slideLength -1){
-                    // Increment index.
                     index += 1;
                 }
                 // If index is at last anchor.
                 else{
                     index = 0;
                 }
-                // Focus on current anchor index.
-                slides[index].focus();
                 break;
         }
+        slides[index].focus();
     };
 
 
