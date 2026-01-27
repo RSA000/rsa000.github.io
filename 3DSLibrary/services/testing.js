@@ -64,19 +64,19 @@
 
 
             document.addEventListener("DOMContentLoaded", function() {
+                // Create and insert element after DOM loads
+                var newDiv = document.createElement("div");
+                newDiv.innerHTML = "This is a test!";
+                newDiv.id = "myNewDiv";
+                newDiv.style.backgroundColor = "white";
 
-                    // Create and insert element after DOM loads
-                    var newDiv = document.createElement("div");
-                    newDiv.innerHTML = "This is a test!";
-                    newDiv.id = "myNewDiv";
-                    newDiv.style.backgroundColor = "white";
+                var parentElement = document.getElementById("testText");
+                if (parentElement) {
+                    parentElement.appendChild(newDiv);
+                } else {
+                    console.error("Parent element with ID 'testText' not found");
+                }
 
-                    var parentElement = document.getElementById("testText");
-                    if (parentElement) {
-                        parentElement.appendChild(newDiv);
-                    } else {
-                        console.error("Parent element with ID 'testText' not found");
-                    }
 
             });
 }());

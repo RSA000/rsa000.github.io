@@ -30,6 +30,21 @@ function scroll(element, amount) {
 };
 
 
+function createElement(childID, parentID, innerHTML){
+    var newDiv = document.createElement("div");
+    newDiv.innerHTML = innerHTML;
+    newDiv.id = childID;
+    newDiv.style.backgroundColor = "white";
+
+    var parentElement = document.getElementById(parentID);
+    if (parentElement) {
+        parentElement.appendChild(newDiv);
+    } else {
+        console.error("Parent element not found");
+    }
+}
+
+
 // https://www.w3schools.com/js/js_cookies.asp
 
 

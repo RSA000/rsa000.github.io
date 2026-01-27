@@ -19,8 +19,8 @@
     var textChunks = [];
     // Store textContainerRead element.
     var textContainer = document.getElementById('textContainerRead');
-    // Store first paragraph of textContainerRead in "containerParagraph."
-    var containerParagraph = textContainer.getElementsByTagName("p")[0];
+    // Store first paragraph of textContainerRead in "containerDiv."
+    var containerDiv = textContainer.getElementById("textContainerRead");
 
 
 
@@ -90,9 +90,9 @@
     function updatePage(index){
 
         pageNum = index;
-        containerParagraph.innerText = "";
+        containerDiv.innerHTML = "";
         // Display previous page.
-        containerParagraph.innerText = textChunks[pageNum];
+        containerDiv.innerText = textChunks[pageNum];
         // Scroll to top of screen
         scroll(textContainer, 10000);
         return;
@@ -122,8 +122,8 @@
                 if (pageNum < pages - 1){
                     // Update position +1 and replace inner text with new chunk.
                     pageNum += 1;
-                    containerParagraph.innerText = "";
-                    containerParagraph.innerText = textChunks[pageNum];
+                    containerDiv.innerText = "";
+                    containerDiv.innerText = textChunks[pageNum];
                     setCookie("pageNum", pageNum, 364);
                 }
                 updatePage(pageNum);
