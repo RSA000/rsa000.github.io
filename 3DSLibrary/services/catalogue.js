@@ -7,9 +7,81 @@
  */
 (function(){
 
+    function getCSV(callback){
+        // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
+        var xhr = new XMLHttpRequest();
+        // GET request using url, asychronous = true.
+        xhr.open('GET', "https://rsa000.github.io/3DSLibrary/assets/texts/catalog.csv", true);
+        // Configure what function to perform when a state change occurs.
+        xhr.onreadystatechange = function() {
+            // A readyState value of 4 means GET state is done (4).
+            if (xhr.readyState === 4) {
+                // If status code is not an error.
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Send response text of request to callback function.
+                    if (callback) callback(xhr.responseText);
+                }
+                // Otherwise, log status and alert user.
+                else{
+                    console.error('Error loading text file:', xhr.statusText);
+                    alert("Error loading text file:" + xhr.statusText);
+                }
+            }
+
+        };
+        // Send request.
+        xhr.send();
+    }
+
+
+    function parseCSV(text){
+        // Create list for csv entries.
+        var csvItems = [];
+        // Store each CSV line in variable.
+        var lines = text.trim().split("\n");
+
+        // For each line.
+        for (var i = 0; i < lines.length; i++) {
+            // List entries consists of each CSV entry per line
+            var entries = lines[i].match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+            // If there are any entries.
+            if (entries) {
+                // Remove surrounding quotes
+                entries = entries.map(function(entry) {
+                    return entry.replace(/^"|"$/g, '');
+                });
+                csvItems.push(entries);
+            }
+        }
+        // return formatted CSV [[header]...[entries]]
+        return csvItems;
+    }
+
+
+    function populateCatalogue(csvItems, element){
+        var catalogue = "";
+
+        // Start from 1 if first row is header
+        for (var i = 1; i < csvItems.length; i++){
+            var row = csvItems[i];
+            var name = row[0];
+            var description = row[1];
+            var url = row[2];
+
+            catalogue += '<a href="' + url + '" title="' + description + '">' + name + '</a><br>';
+        }
+
+        // Insert the generated HTML into the element with id 'elementId'
+        document.getElementById(element).innerHTML = catalogue;
+    }
+
+    var parsedCSV = getCSV(parseCSV);
+
+
+
     var index = 0;
-    const anchors = document.getElementsByTagName("a");
-    const anchorLength = anchors.length;
+    var anchors = document.getElementsByTagName("a");
+    var anchorLength = anchors.length;
 
     /* Simba's */
 
@@ -81,10 +153,15 @@
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+        // Get lowerScreenContents element.
+        var lowerScreenContents = document.getElementById("lowerScreenContents");
+
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
-            menuHandleKeyDown(e, document.getElementById('lowerScreenContents'));
+            menuHandleKeyDown(e, lowerScreenContents);
         });
+
+
 
         // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
         var anchors = this.querySelectorAll(".lowerScreenContents a");
