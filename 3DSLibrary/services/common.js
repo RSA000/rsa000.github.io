@@ -228,7 +228,7 @@ function preventKey(event){
             // Add non-3DS compatible warning to any relevant anchors.
             for(var i = 0, l = anchors.length; i<l; i++){
                 // If 3DS attribute exists, add warning to link.
-                if (anchors[i].getAttribute("3DS") registerNon3DSlink(anchors[i]);
+                if (anchors[i].getAttribute("3DS")) registerNon3DSlink(anchors[i]);
             }
         }
         // Otherwise, set screen for desktop computers.
