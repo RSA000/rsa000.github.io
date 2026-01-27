@@ -197,7 +197,7 @@ function preventKey(event){
             // Call center function every milisecond.
             setInterval(center);
 
-            // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
+            // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
             var anchors = document.querySelectorAll("a");
 
             // Add non-3DS compatible warning to any relevant anchors.

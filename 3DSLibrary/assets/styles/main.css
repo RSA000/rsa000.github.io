@@ -133,7 +133,7 @@ body{
 	position: relative;
 }
 
-.lowerScreenMenu{
+.lowerScreenContents{
 
 	/* Container */
 	height: 210px;
@@ -144,7 +144,7 @@ body{
 }
 
 /* Lower Screen div link CSS. */
-.lowerScreenMenu a {
+.lowerScreenContents a {
 
 	/* Container */
 	background-color: #333232;
@@ -158,7 +158,7 @@ body{
 }
 
 /* Lower Screen link CSS when hovering. */
-.lowerScreenMenu a:hover {
+.lowerScreenContents a:hover {
 
 	/* Container */
 	background-color: #777;
