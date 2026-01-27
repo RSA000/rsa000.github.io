@@ -87,7 +87,6 @@
      */
     function updatePage(pageNum){
 
-        textContainer.innerHTML = "";
         // Display previous page.
         textContainer.innerHTML = textChunks[pageNum];
         // Scroll to top of screen
