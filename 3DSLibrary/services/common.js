@@ -157,7 +157,7 @@ function is3DS(){
     alert(window.navigator.userAgent,"Nintendo 3DS");
     return includes(window.navigator.userAgent,"Nintendo 3DS");
 }
-/*
+
 
 /**
  * Register an <a> that isn't meant to be opened on the 3DS
@@ -172,7 +172,7 @@ function registerNon3DSlink(a){
         e.preventDefault();
         return false;
     }, false);
-}*/*/
+}
 
 
 
@@ -224,10 +224,10 @@ function preventKey(event){
             setInterval(center, 1);
 
             // Add non-3DS compatible warning to any relevant anchors.
-            // for(var i = 0, l = anchors.length; i<l; i++){
-            //     // If 3DS attribute exists, add warning to link.
-            //     if (anchors[i].getAttribute("3DS")) registerNon3DSlink(anchors[i]);
-            // }
+            for(var i = 0, l = anchors.length; i<l; i++){
+                // If 3DS attribute exists, add warning to link.
+                if (anchors[i].getAttribute("3DS")) registerNon3DSlink(anchors[i]);
+            }
         }
         // Otherwise, set screen for desktop computers.
         else{
