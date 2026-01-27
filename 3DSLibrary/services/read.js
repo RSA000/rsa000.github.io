@@ -46,6 +46,8 @@
                     if (callback) callback(xhr.responseText);
                     return;
                 }
+            }
+            else{
             // Otherwise, log status and alert user.
             console.error('Error loading text file:', xhr.statusText);
             alert("Error loading text file:" + xhr.statusText);
