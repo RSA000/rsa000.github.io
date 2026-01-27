@@ -6,10 +6,13 @@
  * this is a means of encapsulating data.
  */
 (function(){
-
+    // Set initial tab index to 0.
+    var index = 0;
+    // Set empty csvItems list
     var csvItems = [];
     // Get lowerScreenContents element.
     var lowerScreenContents = document.getElementById("catalogueOptions");
+
 
 
     /* Simba's */
@@ -24,9 +27,13 @@
         topHeading.innerHTML = this.innerHTML;
         topSubtitle.innerHTML = this.dataset.description;
     };
+    /* End of Simbas */
 
 
-    /*Function returns title to original message when no items are selected. */
+    /**
+     *Function returns title when no items are selected.
+     *
+     */
     var click = function(ev) {
         const bookName = this.dataset.bookname;
         setCookie("bookName", bookName, 364);
@@ -34,7 +41,7 @@
         window.location.href = "./read.html";
     };
 
-    /* End of Simbas */
+
 
     function getCSV(callback){
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
@@ -63,6 +70,24 @@
     }
 
 
+    function populateCatalogue(csvItems, element){
+        var catalogue = "";
+
+        // Start from 1 if first row is header
+        for (var i = 1; i < csvItems.length; i++){
+            var row = csvItems[i];
+            var name = row[0];
+            var description = row[1];
+            var url = row[2];
+
+            catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' data-bookname="' + url + '" data-description="' + description + '">' + name + '</a>';
+        }
+
+        // Insert the generated HTML into the element with id 'elementId'
+        element.innerHTML = catalogue;
+    }
+
+
     function parseCSV(text){
         // Create list for csv entries.
         csvItems = [];
@@ -82,44 +107,17 @@
                 csvItems.push(entries);
             }
         }
+        // Populate lowerScreenContents with anchor elements created from csv File.
         populateCatalogue(csvItems, lowerScreenContents);
-        // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
+        // Store all <a> tags in variable.
         var anchors = document.getElementsByTagName("a");
-        // For each anchor, add event listener.
+        // For each anchor, add event listener for focusing and clicking.
         for(var i = 0, l = anchors.length; i<l; i++){
-            // When focused on, apply active function with "this" selected anchor.
             anchors[i].addEventListener('focus', active, false);
-            // When no anchors are selected, revert to greeting heading and subtitle.
             anchors[i].addEventListener('click', click, false);
         }
+
     }
-
-
-    function populateCatalogue(csvItems, element){
-        var catalogue = "";
-
-        // Start from 1 if first row is header
-        for (var i = 1; i < csvItems.length; i++){
-            var row = csvItems[i];
-            var name = row[0];
-            var description = row[1];
-            var url = row[2];
-
-            catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' data-bookname="' + url + '" data-description="' + description + '">' + name + '</a>';
-        }
-
-        // Insert the generated HTML into the element with id 'elementId'
-        element.innerHTML = catalogue;
-    }
-
-    getCSV(parseCSV);
-
-
-    var index = 0;
-    var anchorLength = anchors.length;
-
-
-
 
 
     /**
@@ -127,7 +125,7 @@
      * @param {KeyboardEvent} event
      */
     function menuHandleKeyDown(event, element){
-        var anchors = document.getElementsByTagName("a");
+        var anchorLength = anchors.length;
 
         // Prevent default action when key is pressed down.
         preventKey(event);
@@ -163,20 +161,19 @@
                 anchors[index].focus();
                 break;
         }
-    };
+    }
 
 
+    // Get, parse, and populate catalogue.
+    getCSV(parseCSV);
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-
-
 
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
             menuHandleKeyDown(e, lowerScreenContents);
         });
-
     }, false);
 
 })()
