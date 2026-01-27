@@ -19,7 +19,7 @@ var centerY = 266;
  * The center function scrolls the screen to the 40,215 coordinates.
  */
 function center(){
-    window.scrollTo(centerX, centerY);
+    window.scrollTo(115, 266);
 };
 
 alert("center");
