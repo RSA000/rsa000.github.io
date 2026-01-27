@@ -7,6 +7,8 @@
  */
 (function(){
 
+    var csvItems = [];
+
     function getCSV(callback){
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
         var xhr = new XMLHttpRequest();
@@ -41,7 +43,7 @@
 
 
         // Create list for csv entries.
-        var csvItems = [];
+        csvItems = [];
         // Store each CSV line in variable.
         var lines = text.trim().split("\n");
 
@@ -80,9 +82,8 @@
         document.getElementById(element).innerHTML = catalogue;
     }
 
-    var parsedCSV = getCSV(parseCSV);
-    alert(parsedCSV);
-
+    getCSV(parseCSV);
+    alert(csvData);
 
 
     var index = 0;
