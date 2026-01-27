@@ -69,6 +69,7 @@
                     var newDiv = document.createElement("div");
                     newDiv.innerHTML = "This is a test!";
                     newDiv.id = "myNewDiv";
+                    newDiv.style.backgroundColor = "white";
 
                     var parentElement = document.getElementById("testText");
                     if (parentElement) {
