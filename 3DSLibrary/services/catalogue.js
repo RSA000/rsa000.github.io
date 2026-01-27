@@ -60,7 +60,7 @@
         populateCatalogue(csvItems, lowerScreenContents);
         // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
         var anchors = document.getElementsByTagName("a");
-
+        alert(anchors);
         // For each anchor, add event listener.
         for(var i = 0, l = anchors.length; i<l; i++){
             // When focused on, apply active function with "this" selected anchor.
