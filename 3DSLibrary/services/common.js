@@ -65,79 +65,79 @@ function insertElement(childID, parentID, innerHTML){
 }
 
 
-// //
-// /**
-//  * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
-//  * //////  https://www.w3schools.com/js/js_cookies.asp          ///////
-//  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//  */
 //
-//
-// /**
-//  *
-//  * setCookie creates a cookie (cname) with a value (cvalue)
-//  * that expires in a set amount of days (exdays).
-//  *
-//  * @param {cname} - String
-//  * @param {cvalue} - String
-//  * @param {exdays} - Int.
-//  *
-//  */
-//
-//
-//
-// function setCookie(cname, cvalue, exdays) {
-//     const d = new Date();
-//     d.setTime(d.getTime() + (exdays*24*60*60*1000));
-//     var expires = "expires="+d.toUTCString();
-//     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-// }
-//
-//
-// function getCookie(cname) {
-//     var name = cname + "=";
-//     var decodedCookie = decodeURIComponent(document.cookie);
-//     var ca = decodedCookie.split(';');
-//     for(var i = 0; i <ca.length; i++) {
-//         var c = ca[i];
-//         while (c.charAt(0) == ' ') {
-//             c = c.substring(1);
-//         }
-//         if (c.indexOf(name) == 0) {
-//             return c.substring(name.length, c.length);
-//         }
-//     }
-//     return "";
-// }
-//
-//
-// function checkCookie() {
-//     var bookName = getCookie("bookName");
-//     var pageNum = getCookie("pageNum");
-//     if (bookName != "") {
-//         return;
-//     }
-//     else{
-//         alert("No book found!");
-//         window.location.replace("../index.html")
-//     }
-// }
-//
-// // End of w3schools.com
-//
-// /**
-//  * <<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
-//  * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
-//  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//  */
-//
-// /**
-//  * includes takes a container and a search element and returns a boolean value
-//  * indicating if it exists within the container.
-//  *
-//  * @param {container}
-//  * @param {search}
-//  */
+/**
+ * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * //////  https://www.w3schools.com/js/js_cookies.asp          ///////
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ */
+
+
+/**
+ *
+ * setCookie creates a cookie (cname) with a value (cvalue)
+ * that expires in a set amount of days (exdays).
+ *
+ * @param {cname} - String
+ * @param {cvalue} - String
+ * @param {exdays} - Int.
+ *
+ */
+
+
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+
+function checkCookie() {
+    var bookName = getCookie("bookName");
+    var pageNum = getCookie("pageNum");
+    if (bookName != "") {
+        return;
+    }
+    else{
+        alert("No book found!");
+        window.location.replace("../index.html")
+    }
+}
+
+// End of w3schools.com
+
+/**
+ * <<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ */
+
+/**
+ * includes takes a container and a search element and returns a boolean value
+ * indicating if it exists within the container.
+ *
+ * @param {container}
+ * @param {search}
+ */
 // function includes(container,search){
 //     // If container is a string or an array.
 //     if (typeof(container) === 'string' || container instanceof Array){
