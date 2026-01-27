@@ -83,7 +83,7 @@
     }
 
     getCSV(parseCSV);
-    alert(csvData);
+    alert(csvItems);
 
 
     var index = 0;
