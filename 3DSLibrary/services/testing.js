@@ -61,23 +61,25 @@
         });
 
 
-        // Create a new div element
-        var newDiv = document.createElement("div");
 
-        // Set some content or attributes
-        newDiv.innerHTML = "This is a test!";
-        newDiv.id = "myNewDiv";
+            document.addEventListener("DOMContentLoaded", function() {
+                if (is3DS()) {
+                    // Create and insert element after DOM loads
+                    var newDiv = document.createElement("div");
+                    newDiv.innerHTML = "This is a test!";
+                    newDiv.id = "myNewDiv";
 
-        // Find the parent element where you want to insert the new element
-        var parentElement = document.getElementById("testText");
+                    var parentElement = document.getElementById("testText");
+                    if (parentElement) {
+                        parentElement.appendChild(newDiv);
+                    } else {
+                        console.error("Parent element with ID 'testText' not found");
+                    }
 
-        // Insert the new element as a child
-        parentElement.appendChild(newDiv);
-
-        setInterval(preventGamepad);
-        setInterval(logGamepad);
-
-
+                    // Your existing code...
+                    setInterval(preventGamepad);
+                    setInterval(logGamepad);
+                }
+            });
     }
-
 }());
