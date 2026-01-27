@@ -22,8 +22,7 @@
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Send response text of request to callback function.
                     if (callback){
-                        var textParsed = callback(xhr.responseText);
-                        return textParsed;
+                        callback(xhr.responseText);
                     }
                 }
                 // Otherwise, log status and alert user.
