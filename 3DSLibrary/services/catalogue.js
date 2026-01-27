@@ -78,6 +78,7 @@
     }
 
     getCSV(parseCSV);
+    alert("Second csvItems check");
     alert(csvItems);
 
 
