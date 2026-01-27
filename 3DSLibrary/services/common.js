@@ -1,29 +1,29 @@
 alert("center");
 
 // Declare constant values for button input values.
-// var LEFT = 37;
-// var RIGHT = 39;
-// var UP = 38;
-// var DOWN = 40;
-// var A = 13;
-//
-// var BACKSPACE = 8;
-// var F5 = 116;
-// var ENTER = 13;
-//
-// var centerX = 115;
-// var centerY = 266;
-//
-//
-//
-// /**
-//  * The center function scrolls the screen to the 40,215 coordinates.
-//  */
-// function center(){
-//     window.scrollTo(115, 266);
-// }
-//
-//
+var LEFT = 37;
+var RIGHT = 39;
+var UP = 38;
+var DOWN = 40;
+var A = 13;
+
+var BACKSPACE = 8;
+var F5 = 116;
+var ENTER = 13;
+
+var centerX = 115;
+var centerY = 266;
+
+
+
+/**
+ * The center function scrolls the screen to the 40,215 coordinates.
+ */
+function center(){
+    window.scrollTo(115, 266);
+}
+
+
 // /**
 //  * The scrollUp function scrolls a selected element an certain amount up/down (+/-).
 //  * @param {element} - DOM element (ex. document.body)
