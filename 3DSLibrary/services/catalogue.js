@@ -11,6 +11,31 @@
     // Get lowerScreenContents element.
     var lowerScreenContents = document.getElementById("catalogueOptions");
 
+
+    /* Simba's */
+
+    /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
+    var active = function(ev) {
+        // get top screen Heading and subtitles and store in variables.
+        var topHeading = document.getElementsByClassName("topHeading")[0];
+        var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
+        // Get innerHTML and description attributes of current element.
+        // Update innerHTML of top heading and subtitle to heading and subtitle values.
+        topHeading.innerHTML = this.innerHTML;
+        topSubtitle.innerHTML = this.dataset.description;
+    };
+
+
+    /*Function returns title to original message when no items are selected. */
+    var click = function(ev) {
+        const bookName = this.dataset.bookname;
+        setCookie("bookName", bookName, 364);
+        setCookie("pageNum", 0, 364);
+        window.location.href = "./read.html";
+    };
+
+    /* End of Simbas */
+
     function getCSV(callback){
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
         var xhr = new XMLHttpRequest();
@@ -60,7 +85,6 @@
         populateCatalogue(csvItems, lowerScreenContents);
         // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
         var anchors = document.getElementsByTagName("a");
-        alert(anchors.length);
         // For each anchor, add event listener.
         for(var i = 0, l = anchors.length; i<l; i++){
             // When focused on, apply active function with "this" selected anchor.
@@ -96,29 +120,7 @@
 
 
 
-    /* Simba's */
 
-    /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
-    var active = function(ev) {
-        // get top screen Heading and subtitles and store in variables.
-        var topHeading = document.getElementsByClassName("topHeading")[0];
-        var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
-        // Get innerHTML and description attributes of current element.
-        // Update innerHTML of top heading and subtitle to heading and subtitle values.
-        topHeading.innerHTML = this.innerHTML;
-        topSubtitle.innerHTML = this.dataset.description;
-    };
-
-
-    /*Function returns title to original message when no items are selected. */
-    var click = function(ev) {
-        const bookName = this.dataset.bookname;
-        setCookie("bookName", bookName, 364);
-        setCookie("pageNum", 0, 364);
-        window.location.href = "./read.html";
-    };
-
-    /* End of Simbas */
 
     /**
      * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
