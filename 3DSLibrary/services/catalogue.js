@@ -125,6 +125,7 @@
      * @param {KeyboardEvent} event
      */
     function menuHandleKeyDown(event, element){
+        var anchors = document.getElementsByTagName("a");
         var anchorLength = anchors.length;
 
         // Prevent default action when key is pressed down.
