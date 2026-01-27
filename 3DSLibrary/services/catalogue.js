@@ -76,6 +76,7 @@
     }
 
     var parsedCSV = getCSV(parseCSV);
+    alert(parsedCSV);
 
 
 
