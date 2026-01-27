@@ -9,7 +9,7 @@
 
     var csvItems = [];
     // Get lowerScreenContents element.
-    var lowerScreenContents = document.getElementById("lowerScreenContents");
+    var lowerScreenContents = document.getElementById("catalogueOptions");
 
     function getCSV(callback){
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
