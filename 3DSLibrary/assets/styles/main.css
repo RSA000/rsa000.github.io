@@ -186,6 +186,8 @@ body{
 
 #catalogOptions a{
 	border-radius: 10%;
+
+	font-size: 8px;
 }
 
 #upperScreenRead{
