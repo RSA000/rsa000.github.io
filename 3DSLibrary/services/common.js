@@ -1,19 +1,17 @@
 
 // Declare constant values for button input values.
-const LEFT = 37;
-const RIGHT = 39;
-const UP = 38;
-const DOWN = 40;
-const A = 13;
+var LEFT = 37;
+var RIGHT = 39;
+var UP = 38;
+var DOWN = 40;
+var A = 13;
 
-// Declare character input values.
-const BACKSPACE = 8;
-const F5 = 116;
-const ENTER = 13;
+var BACKSPACE = 8;
+var F5 = 116;
+var ENTER = 13;
 
-// Declare 3DS screen center values.
-const centerX = 115;
-const centerY = 266;
+var centerX = 115;
+var centerY = 266;
 
 
 
