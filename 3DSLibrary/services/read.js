@@ -126,7 +126,7 @@
         // Display previous page.
         textContainer.innerHTML = textChunks[pageNum];
         // Scroll to top of screen
-        scroll(textContainer, 100);
+        scroll(textContainer, 5000);
         return;
     }
 
@@ -180,7 +180,7 @@
             readHandleKeyDown(e, document.getElementById('textContainerRead'));
         });
         window.addEventListener("keyUp", function(e){
-           e.preventDefault();
+           preventKey(e);
         });
 
         // Get book text and load into textContainerRead paragraph element in read.html.
