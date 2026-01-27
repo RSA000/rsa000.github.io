@@ -4,18 +4,18 @@ const RIGHT = 39;
 const UP = 38;
 const DOWN = 40;
 const A = 13;
-
+// Declare constant value for special keys.
 const BACKSPACE = 8;
 const F5 = 116;
 const ENTER = 13;
-
+// Declare constant value for centering screen.
 const centerX = 115;
 const centerY = 266;
 
 
 
 /**
- * The center function scrolls the screen to the 40,215 coordinates.
+ * The center function scrolls the screen to the 115,266 coordinates.
  */
 function center(){
     window.scrollTo(centerX, centerY);
@@ -50,14 +50,15 @@ function insertElement(childID, parentID, innerHTML){
     var parentElement = document.getElementById(parentID);
     // If parent element exists.
     if (parentElement) {
-        // Create new div element and set inner html (<div>innerHTML</div>).
+        // Create new div element and set inner html and id (<div id="childID">innerHTML</div>).
         var newDiv = document.createElement("div");
         newDiv.innerHTML = innerHTML;
-        // Set new div's ID and append new div.
         newDiv.id = childID;
         parentElement.appendChild(newDiv);
-        // Otherwise, log error.
-    } else {
+    }
+    // Otherwise, log error.
+    else {
+        alert("Parent element not found");
         console.error("Parent element not found");
     }
 }
