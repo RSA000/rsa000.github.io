@@ -61,10 +61,40 @@
     function loadBook(text){
         // Reset textChunks contents
         textChunks = [];
-        // Loop through text in segments of 1000 characters push to list variable textChunks.
-        for (var i = 0; i < text.length; i+=1000){
-            textChunks.push(text.substring(i, i+1000));
+        // Start variables for tracking position
+        var position = 0;
+        // Get length of text.
+        var textLength = text.length;
+
+
+        while (position < textLength) {
+            // Search for the next closing tag
+            var closeTagStart = text.indexOf("</", position);
+            if (closeTagStart === -1) {
+                // No more closing tags; add remaining text
+                textChunks.push(text.substring(position));
+                break;
+            }
+
+            // Find the end of the closing tag, i.e., the next '>' after the start
+            var closeTagEnd = text.indexOf(">", closeTagStart);
+            if (closeTagEnd === -1) {
+                // Malformed tag; add remaining text and break
+                textChunks.push(text.substring(position));
+                break;
+            }
+
+            // Extract the segment up to the end of the closing tag
+            var segmentEnd = closeTagEnd + 1; // inclusive
+            var chunk = text.substring(position, segmentEnd);
+            textChunks.push(chunk);
+
+            // Update position past this closing tag
+            position = segmentEnd;
         }
+
+        pages = textChunks.length;
+        updatePage(pageNum);
         // Now, chunks is ready to use
         pages = textChunks.length;
         // Display first page

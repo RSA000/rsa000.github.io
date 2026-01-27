@@ -12,8 +12,6 @@ const ENTER = 13;
 const centerX = 115;
 const centerY = 266;
 
-
-
 /**
  * The center function scrolls the screen to the 115,266 coordinates.
  */
