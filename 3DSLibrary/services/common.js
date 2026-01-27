@@ -21,9 +21,9 @@ var centerY = 266;
  */
 function center(){
     window.scrollTo(115, 266);
-};
+}
 
-alert("center");
+
 /**
  * The scrollUp function scrolls a selected element an certain amount up/down (+/-).
  * @param {element} - DOM element (ex. document.body)
@@ -31,9 +31,9 @@ alert("center");
  */
 function scroll(element, amount) {
     element.scrollTop -= amount;
-};
+}
 
-alert("scroll");
+
 
 /**
  *
@@ -63,7 +63,6 @@ function insertElement(childID, parentID, innerHTML){
         console.error("Parent element not found");
     }
 }
-alert("isnert");
 
 
 //
@@ -176,7 +175,6 @@ function is3DS(){
     // If userAgent string is equal to "Nintendo 3DS"
     return includes(window.navigator.userAgent,"Nintendo 3DS");
 }
-alert("center");
 
 
 /**
@@ -201,7 +199,6 @@ function preventKey(event){
 }
 // end of wolfyxon
 
-alert("prevent key");
 
 /*
  * Function prepares and 3DS/Desktop-specific configurations when document is loaded.
