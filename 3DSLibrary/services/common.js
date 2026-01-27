@@ -1,18 +1,18 @@
 alert("center");
 
 // Declare constant values for button input values.
-var LEFT = 37;
-var RIGHT = 39;
-var UP = 38;
-var DOWN = 40;
-var A = 13;
+const LEFT = 37;
+const RIGHT = 39;
+const UP = 38;
+const DOWN = 40;
+const A = 13;
 
-var BACKSPACE = 8;
-var F5 = 116;
-var ENTER = 13;
+const BACKSPACE = 8;
+const F5 = 116;
+const ENTER = 13;
 
-var centerX = 115;
-var centerY = 266;
+const centerX = 115;
+const centerY = 266;
 
 
 
@@ -20,7 +20,7 @@ var centerY = 266;
  * The center function scrolls the screen to the 40,215 coordinates.
  */
 function center(){
-    window.scrollTo(115, 266);
+    window.scrollTo(centerX, centerY);
 }
 
 
