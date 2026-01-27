@@ -54,11 +54,12 @@
         }
 
 
+        setInterval(preventGamepad);
+        setInterval(logGamepad);
 
-        document.addEventListener("keydown", function(event) {
-            preventKey(event);
-            // log += ("Current Keycode: " + event.keyCode)  +"\n";
-        });
+
+    }
+
 
 
 
@@ -76,10 +77,5 @@
                         console.error("Parent element with ID 'testText' not found");
                     }
 
-                    // Your existing code...
-                    setInterval(preventGamepad);
-                    setInterval(logGamepad);
-
             });
-    }
 }());
