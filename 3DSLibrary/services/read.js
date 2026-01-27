@@ -108,11 +108,11 @@
         switch(event.keyCode){
             case UP:
                 // Scroll up 15 pixels.
-                scroll(element,15);
+                element.scrollTop(15);
                 break;
             case DOWN:
                 // Scroll down 15 pixels.
-                scroll(element, -15);
+                element.scrollTop(-15);
                 break;
             case RIGHT:
                 // Update page to next text chunk.
@@ -120,8 +120,6 @@
                 if (pageNum < pages - 1){
                     // Update position +1 and replace inner text with new chunk.
                     pageNum += 1;
-                    textContainer.innerHTML = "";
-                    textContainer.innerHTML = textChunks[pageNum];
                     setCookie("pageNum", pageNum, 364);
                 }
                 updatePage(pageNum);

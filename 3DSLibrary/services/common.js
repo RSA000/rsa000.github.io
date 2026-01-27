@@ -22,16 +22,6 @@ function center(){
 }
 
 
-/**
- * The scrollUp function scrolls a selected element an certain amount up/down (+/-).
- * @param {element} - DOM element (ex. document.body)
- * @param {amount} - Integer
- */
-function scroll(element, amount){
-    element.scrollTop -= amount;
-}
-
-
 
 /**
  *
