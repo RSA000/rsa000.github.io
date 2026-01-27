@@ -76,7 +76,7 @@
         }
 
         // Insert the generated HTML into the element with id 'elementId'
-        document.getElementById(element).innerHTML = catalogue;
+        element.innerHTML = catalogue;
     }
 
     getCSV(parseCSV);
