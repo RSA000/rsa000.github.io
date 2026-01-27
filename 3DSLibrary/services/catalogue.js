@@ -56,6 +56,7 @@
                 csvItems.push(entries);
             }
         }
+        alert(csvItems);
     }
 
 
@@ -77,7 +78,6 @@
     }
 
     getCSV(parseCSV);
-    alert(csvItems);
 
 
     var index = 0;
