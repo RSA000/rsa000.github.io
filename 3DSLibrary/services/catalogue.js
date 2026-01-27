@@ -60,8 +60,6 @@
                 csvItems.push(entries);
             }
         }
-        // return formatted CSV [[header]...[entries]]
-        return csvItems;
     }
 
 
