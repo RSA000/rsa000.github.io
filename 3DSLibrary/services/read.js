@@ -92,7 +92,7 @@
         // Display previous page.
         textContainer.innerHTML = textChunks[pageNum];
         // Scroll to top of screen
-        scroll(textContainer, 10000);
+        scroll(textContainer, 100);
         return;
     }
 
