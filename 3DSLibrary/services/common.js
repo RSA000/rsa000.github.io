@@ -186,8 +186,8 @@ alert("center");
  */
 function preventKey(event){
     // Allow backspace, F5 (refresh), and ENTER.
-    var keycode = event.keycode;
-    if ((keycode === BACKSPACE) || (keycode === F5) || (keycode === ENTER)){
+    var keyCode = event.keyCode;
+    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode === ENTER)){
         return true;
     }
     // Allow character input.
