@@ -138,36 +138,36 @@ function checkCookie() {
  * @param {container}
  * @param {search}
  */
-// function includes(container,search){
-//     // If container is a string or an array.
-//     if (typeof(container) === 'string' || container instanceof Array){
-//         // Return true if indexo of container search is not -1 (string case).
-//         return container.indexOf(search) !== -1;
-//     }
-//     // Return true if container index is not undefined (array case).
-//     return container[search] !== undefined;
-// }
-//
-//
-//
-// /**
-//  * Register an <a> that isn't meant to be opened on the 3DS
-//  * @param {HTMLAnchorElement} a
-//  */
-// function registerNon3DSlink(a){
-//     // Add event listener for when anchor is clicked.
-//     a.addEventListener("click", function (e){
-//         // Alert that link is not supported.
-//         alert(`The 3DS doesn't support that page.
-//                Please open \n\n" + a.href + "\n\non a
-//                external device (with a modern browser)`);
-//         // Prevent default action (navigating to link).
-//         e.preventDefault();
-//         return false;
-//     }, false);
-// }
-//
-//
+function includes(container,search){
+    // If container is a string or an array.
+    if (typeof(container) === 'string' || container instanceof Array){
+        // Return true if indexo of container search is not -1 (string case).
+        return container.indexOf(search) !== -1;
+    }
+    // Return true if container index is not undefined (array case).
+    return container[search] !== undefined;
+}
+
+
+
+/**
+ * Register an <a> that isn't meant to be opened on the 3DS
+ * @param {HTMLAnchorElement} a
+ */
+function registerNon3DSlink(a){
+    // Add event listener for when anchor is clicked.
+    a.addEventListener("click", function (e){
+        // Alert that link is not supported.
+        alert(`The 3DS doesn't support that page.
+               Please open \n\n" + a.href + "\n\non a
+               external device (with a modern browser)`);
+        // Prevent default action (navigating to link).
+        e.preventDefault();
+        return false;
+    }, false);
+}
+
+
 // /**
 //  * Function returns if system is 3DS and false otherwise.
 //  */
