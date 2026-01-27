@@ -6,11 +6,16 @@ const UP = 38;
 const DOWN = 40;
 const A = 13;
 
+// Declare character input values.
+const BACKSPACE = 8;
+const F5 = 116;
+const ENTER = 13;
+
+// Declare 3DS screen center values.
 const centerX = 115;
 const centerY = 266;
 
-// Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
-var anchors = document.querySelectorAll("a");
+
 
 /**
  * The center function scrolls the screen to the 40,215 coordinates.
@@ -21,31 +26,64 @@ function center(){
 
 
 /**
- * The scrollUp function scrolls the selected element upwards.
- * @param {element}
- * @param {Int}
+ * The scrollUp function scrolls a selected element an certain amount up/down (+/-).
+ * @param {element} - DOM element (ex. document.body)
+ * @param {amount} - Integer
  */
 function scroll(element, amount) {
     element.scrollTop -= amount;
 };
 
 
-function createElement(childID, parentID, innerHTML){
-    var newDiv = document.createElement("div");
-    newDiv.innerHTML = innerHTML;
-    newDiv.id = childID;
-    newDiv.style.backgroundColor = "white";
+/**
+ *
+ * Create and insert a div in a parent element for DOM
+ *
+ * Example: loading site elements and templating.
+ *
+ * @param {childID} - new element's identification
+ * @param {parantID} - element to insert new div into.
+ * @param {innerHTMl} - HTML to insert into new div
+ *
+ */
+function insertElement(childID, parentID, innerHTML){
 
+    // Get parent element by id
     var parentElement = document.getElementById(parentID);
+    // If parent element exists.
     if (parentElement) {
+        // Create new div element and set inner html (<div>innerHTML</div>).
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML = innerHTML;
+        // Set new div's ID and append new div.
+        newDiv.id = childID;
         parentElement.appendChild(newDiv);
+        // Otherwise, log error.
     } else {
         console.error("Parent element not found");
     }
 }
 
 
-// https://www.w3schools.com/js/js_cookies.asp
+//
+/**
+ * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * //////  https://www.w3schools.com/js/js_cookies.asp          ///////
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ */
+
+
+/**
+ *
+ * setCookie creates a cookie (cname) with a value (cvalue)
+ * that expires in a set amount of days (exdays).
+ *
+ * @param {cname} - String
+ * @param {cvalue} - String
+ * @param {exdays} - Int.
+ *
+ */
+
 
 
 function setCookie(cname, cvalue, exdays) {
@@ -81,11 +119,11 @@ function checkCookie() {
     }
     else{
         alert("No book found!");
-        alert(bookName);
         window.location.replace("../index.html")
     }
 }
 
+// End of w3schools.com
 
 /**
  * <<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
@@ -120,7 +158,9 @@ function registerNon3DSlink(a){
     // Add event listener for when anchor is clicked.
     a.addEventListener("click", function (e){
         // Alert that link is not supported.
-        alert("The 3DS doesn't support that page. Please open \n\n" + a.href + "\n\non a external device (with a modern browser)");
+        alert(`The 3DS doesn't support that page.
+               Please open \n\n" + a.href + "\n\non a
+               external device (with a modern browser)`);
         // Prevent default action (navigating to link).
         e.preventDefault();
         return false;
@@ -129,9 +169,7 @@ function registerNon3DSlink(a){
 
 
 /**
- *
  * Function returns if system is 3DS and false otherwise.
- *
  */
 function is3DS(){
     // If userAgent string is equal to "Nintendo 3DS"
@@ -148,54 +186,51 @@ function is3DS(){
  * @param {keyboardEvent} event
  */
 function preventKey(event){
-    if(event.keyCode === 8) return true; //backspace
-    if(event.keyCode === 116) return true; //f5
-    if(event.keyCode === 13) return true; //enter
-
-    // If event.charCode is not null or event key is not null and length is equal to 1.
+    // Allow backspace, F5 (refresh), and ENTER.
+    var keycode = event.keycode;
+    if (keyCode === BACKSPACE) || (keyCode === F5) || (keycode === ENTER){
+        return true;
+    }
+    // Allow character input.
     if(event.charCode || (event.key && event.key.length === 1 ))
-        // allow character keys and return true.
         return true;
     // Otherwise, prevent default action for event and return false.
-    event.preventDefault();
-    return false;
+    else{
+        event.preventDefault();
+        return false;
+    }
 };
-
 // end of wolfyxon
 
 
 /*
- * When DOM content is fully loaded, invoke function.
+ * Function prepares and 3DS/Desktop-specific configurations when document is loaded.
  */
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+        // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
+        var anchors = document.querySelectorAll("a");
+
         // If device is 3DS.
         if (is3DS()){
-
             // Call center function every milisecond.
             setInterval(center);
-
-            // Add event listener for errors.
+            // Add event listener alert error events (necessary to see errors on 3DS system)..
             window.addEventListener("error", function(e) {
-                // Alert event.filename + line number where error occurred + error message.
                 alert(e.filename + ":" + e.lineno + " " + e.message);
             }, false);
 
             // Add non-3DS compatible warning to any relevant anchors.
             for(var i = 0, l = anchors.length; i<l; i++){
-                // If 3DS attribute is equal to 1.
-                if (anchors[i].getAttribute("3DS") === "1"){
-                    // Add event listener to display message for non-compatible site link when selected.
-                    registerNon3DSlink(anchors[i]);
-                }
+                // If 3DS attribute exists, add warning to link.
+                if (anchors[i].getAttribute("3DS") registerNon3DSlink(anchors[i]);
             }
         }
+        // Otherwise, set screen for desktop computers.
         else{
-            // Otherwise, set screen for desktop computers.
             document.body.style.margin = "10px auto";
-
         }
     }, false);
 })()
