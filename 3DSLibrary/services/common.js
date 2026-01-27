@@ -1,3 +1,4 @@
+alert("center");
 
 // Declare constant values for button input values.
 var LEFT = 37;
