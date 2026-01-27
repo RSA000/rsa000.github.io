@@ -66,7 +66,7 @@
             document.addEventListener("DOMContentLoaded", function() {
                 // Create and insert element after DOM loads
                 var newDiv = document.createElement("div");
-                newDiv.innerHTML = "<p style=\"background-color=\"black\"\"">This is a test!</p>";
+                newDiv.innerHTML = "<p>This is a test!</p>";
                 newDiv.id = "myNewDiv";
 
                 var parentElement = document.getElementById("testText");
