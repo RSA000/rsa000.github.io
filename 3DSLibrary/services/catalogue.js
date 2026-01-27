@@ -50,7 +50,6 @@
             var entries = lines[i].match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
             // If there are any entries.
             if (entries) {
-                alert("entries found");
                 // Remove surrounding quotes
                 entries = entries.map(function(entry) {
                     return entry.replace(/^"|"$/g, '');
@@ -81,8 +80,6 @@
     }
 
     getCSV(parseCSV);
-    alert("Second csvItems check");
-    alert(csvItems);
 
 
     var index = 0;
