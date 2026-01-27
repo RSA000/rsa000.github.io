@@ -185,21 +185,21 @@ function is3DS(){
  * This prevents the browser from moving the page using the arrow keys
  * @param {keyboardEvent} event
  */
-function preventKey(event){
-    // Allow backspace, F5 (refresh), and ENTER.
-    var keycode = event.keycode;
-    if ((keycode === BACKSPACE) || (keycode === F5) || (keycode === ENTER)){
-        return true;
-    }
-    // Allow character input.
-    if(event.charCode || (event.key && event.key.length === 1 ))
-        return true;
-    // Otherwise, prevent default action for event and return false.
-    else{
-        event.preventDefault();
-        return false;
-    }
-};
+// function preventKey(event){
+//     // Allow backspace, F5 (refresh), and ENTER.
+//     var keycode = event.keycode;
+//     if ((keycode === BACKSPACE) || (keycode === F5) || (keycode === ENTER)){
+//         return true;
+//     }
+//     // Allow character input.
+//     if(event.charCode || (event.key && event.key.length === 1 ))
+//         return true;
+//     // Otherwise, prevent default action for event and return false.
+//     else{
+//         event.preventDefault();
+//         return false;
+//     }
+// };
 // end of wolfyxon
 
 
