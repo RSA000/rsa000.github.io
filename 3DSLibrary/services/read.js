@@ -90,7 +90,7 @@
         pageNum = index;
         textContainer.innerHTML = "";
         // Display previous page.
-        textContainer.innerText = textChunks[pageNum];
+        textContainer.innerHTML = textChunks[pageNum];
         // Scroll to top of screen
         scroll(textContainer, 10000);
         return;
@@ -120,8 +120,8 @@
                 if (pageNum < pages - 1){
                     // Update position +1 and replace inner text with new chunk.
                     pageNum += 1;
-                    textContainer.innerText = "";
-                    textContainer.innerText = textChunks[pageNum];
+                    textContainer.innerHTML = "";
+                    textContainer.innerHTML = textChunks[pageNum];
                     setCookie("pageNum", pageNum, 364);
                 }
                 updatePage(pageNum);
