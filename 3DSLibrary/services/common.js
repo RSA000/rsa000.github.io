@@ -131,109 +131,109 @@ function checkCookie() {
  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  */
 
-/**
- * includes takes a container and a search element and returns a boolean value
- * indicating if it exists within the container.
- *
- * @param {container}
- * @param {search}
- */
-function includes(container,search){
-    // If container is a string or an array.
-    if (typeof(container) === 'string' || container instanceof Array){
-        // Return true if indexo of container search is not -1 (string case).
-        return container.indexOf(search) !== -1;
-    }
-    // Return true if container index is not undefined (array case).
-    return container[search] !== undefined;
-}
-
-
-/**
- * Function returns if system is 3DS and false otherwise.
- */
-function is3DS(){
-    // If userAgent string is equal to "Nintendo 3DS"
-    alert(window.navigator.userAgent,"Nintendo 3DS");
-    return includes(window.navigator.userAgent,"Nintendo 3DS");
-}
-
-/*
-/**
- * Register an <a> that isn't meant to be opened on the 3DS
- * @param {HTMLAnchorElement} a
- */
-function registerNon3DSlink(a){
-    // Add event listener for when anchor is clicked.
-    a.addEventListener("click", function (e){
-        // Alert that link is not supported.
-        alert(`The 3DS doesn't support that page.
-               Please open \n\n" + a.href + "\n\non a
-               external device (with a modern browser)`);
-        // Prevent default action (navigating to link).
-        e.preventDefault();
-        return false;
-    }, false);
-}*/
-
-
-
-
-
-/**
- *
- * This prevents the browser from moving the page using the arrow keys
- * @param {keyboardEvent} event
- */
-function preventKey(event){
-    // Allow backspace, F5 (refresh), and ENTER.
-    var keyCode = event.keyCode;
-    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode === ENTER)){
-        return true;
-    }
-    // Allow character input.
-    if(event.charCode || (event.key && event.key.length === 1 ))
-        return true;
-    // Otherwise, prevent default action for event and return false.
-    else{
-        event.preventDefault();
-        return false;
-    }
-}
-// end of wolfyxon
-
-
-/*
- * Function prepares and 3DS/Desktop-specific configurations when document is loaded.
- */
-(function(){
-    /* When content is loaded. */
-    document.addEventListener('DOMContentLoaded', function(ev) {
-
-
-
-        // If device is 3DS.
-        if (is3DS()){
-            alert("this is a 3ds1");
-            // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
-            var anchors = document.querySelectorAll("a");
-
-            // Add event listener alert error events (necessary to see errors on 3DS system)..
-            window.addEventListener("error", function(e) {
-                alert(e.filename + ":" + e.lineno + " " + e.message);
-            }, false);
-            // Call center function every milisecond.
-            setInterval(center, 1);
-
-            // Add non-3DS compatible warning to any relevant anchors.
-            for(var i = 0, l = anchors.length; i<l; i++){
-                // If 3DS attribute exists, add warning to link.
-                if (anchors[i].getAttribute("3DS")) registerNon3DSlink(anchors[i]);
-            }
-        }
-        // Otherwise, set screen for desktop computers.
-        else{
-            document.body.style.margin = "10px auto";
-        }
-    }, false);
-})()
+// /**
+//  * includes takes a container and a search element and returns a boolean value
+//  * indicating if it exists within the container.
+//  *
+//  * @param {container}
+//  * @param {search}
+//  */
+// function includes(container,search){
+//     // If container is a string or an array.
+//     if (typeof(container) === 'string' || container instanceof Array){
+//         // Return true if indexo of container search is not -1 (string case).
+//         return container.indexOf(search) !== -1;
+//     }
+//     // Return true if container index is not undefined (array case).
+//     return container[search] !== undefined;
+// }
+//
+//
+// /**
+//  * Function returns if system is 3DS and false otherwise.
+//  */
+// function is3DS(){
+//     // If userAgent string is equal to "Nintendo 3DS"
+//     alert(window.navigator.userAgent,"Nintendo 3DS");
+//     return includes(window.navigator.userAgent,"Nintendo 3DS");
+// }
+//
+// /*
+// /**
+//  * Register an <a> that isn't meant to be opened on the 3DS
+//  * @param {HTMLAnchorElement} a
+//  */
+// function registerNon3DSlink(a){
+//     // Add event listener for when anchor is clicked.
+//     a.addEventListener("click", function (e){
+//         // Alert that link is not supported.
+//         alert(`The 3DS doesn't support that page.
+//                Please open \n\n" + a.href + "\n\non a
+//                external device (with a modern browser)`);
+//         // Prevent default action (navigating to link).
+//         e.preventDefault();
+//         return false;
+//     }, false);
+// }*/
+//
+//
+//
+//
+//
+// /**
+//  *
+//  * This prevents the browser from moving the page using the arrow keys
+//  * @param {keyboardEvent} event
+//  */
+// function preventKey(event){
+//     // Allow backspace, F5 (refresh), and ENTER.
+//     var keyCode = event.keyCode;
+//     if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode === ENTER)){
+//         return true;
+//     }
+//     // Allow character input.
+//     if(event.charCode || (event.key && event.key.length === 1 ))
+//         return true;
+//     // Otherwise, prevent default action for event and return false.
+//     else{
+//         event.preventDefault();
+//         return false;
+//     }
+// }
+// // end of wolfyxon
+//
+//
+// /*
+//  * Function prepares and 3DS/Desktop-specific configurations when document is loaded.
+//  */
+// (function(){
+//     /* When content is loaded. */
+//     document.addEventListener('DOMContentLoaded', function(ev) {
+//
+//
+//
+//         // If device is 3DS.
+//         if (is3DS()){
+//             alert("this is a 3ds1");
+//             // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
+//             var anchors = document.querySelectorAll("a");
+//
+//             // Add event listener alert error events (necessary to see errors on 3DS system)..
+//             window.addEventListener("error", function(e) {
+//                 alert(e.filename + ":" + e.lineno + " " + e.message);
+//             }, false);
+//             // Call center function every milisecond.
+//             setInterval(center, 1);
+//
+//             // Add non-3DS compatible warning to any relevant anchors.
+//             for(var i = 0, l = anchors.length; i<l; i++){
+//                 // If 3DS attribute exists, add warning to link.
+//                 if (anchors[i].getAttribute("3DS")) registerNon3DSlink(anchors[i]);
+//             }
+//         }
+//         // Otherwise, set screen for desktop computers.
+//         else{
+//             document.body.style.margin = "10px auto";
+//         }
+//     }, false);
+// })()
