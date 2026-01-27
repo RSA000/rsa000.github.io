@@ -188,7 +188,7 @@ function is3DS(){
 function preventKey(event){
     // Allow backspace, F5 (refresh), and ENTER.
     var keycode = event.keycode;
-    if (keyCode === BACKSPACE) || (keyCode === F5) || (keycode === ENTER){
+    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keycode === ENTER)){
         return true;
     }
     // Allow character input.
