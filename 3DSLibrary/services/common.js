@@ -207,6 +207,10 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+        window.addEventListener("error", function(e) {
+            alert(e.filename + ":" + e.lineno + " " + e.message);
+        }, false);
+
 
 
         // If device is 3DS.
