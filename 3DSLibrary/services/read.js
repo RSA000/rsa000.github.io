@@ -85,10 +85,8 @@
      * @param {direction}
      *
      */
-    function updatePage(index){
+    function updatePage(pageNum){
 
-        pageNum = index;
-        textContainer.innerHTML = "";
         // Display previous page.
         textContainer.innerHTML = textChunks[pageNum];
         // Scroll to top of screen
