@@ -1,19 +1,19 @@
 alert("center");
 
 // Declare constant values for button input values.
-var LEFT = 37;
-var RIGHT = 39;
-var UP = 38;
-var DOWN = 40;
-var A = 13;
-
-var BACKSPACE = 8;
-var F5 = 116;
-var ENTER = 13;
-
-var centerX = 115;
-var centerY = 266;
-
+// var LEFT = 37;
+// var RIGHT = 39;
+// var UP = 38;
+// var DOWN = 40;
+// var A = 13;
+//
+// var BACKSPACE = 8;
+// var F5 = 116;
+// var ENTER = 13;
+//
+// var centerX = 115;
+// var centerY = 266;
+//
 
 
 /**
