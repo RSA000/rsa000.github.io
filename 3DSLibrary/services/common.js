@@ -162,7 +162,7 @@ function registerNon3DSlink(a){
     // Add event listener for when anchor is clicked.
     a.addEventListener("click", function (e){
         // Alert that link is not supported.
-        alert("The 3DS doesn't support that page. Please open \n\n" + a.href + "\n\n on a external device (with a modern browser)");
+        alert("The 3DS doesn't support this page. Please open \n" + a.href + "\n on a modern browser)");
         // Prevent default action (navigating to link).
         e.preventDefault();
         return false;
@@ -201,15 +201,17 @@ function preventKey(event){
     document.addEventListener('DOMContentLoaded', function(ev) {
         // If device is 3DS.
         if (is3DS()){
-            // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
-            var anchors = document.querySelectorAll("a");
 
             // Add event listener alert error events (necessary to see errors on 3DS system)..
             window.addEventListener("error", function(e) {
                 alert(e.filename + ":" + e.lineno + " " + e.message);
             }, false);
+
             // Call center function every milisecond.
             setInterval(center);
+
+            // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
+            var anchors = document.querySelectorAll("a");
 
             // Add non-3DS compatible warning to any relevant anchors.
             for(var i = 0, l = anchors.length; i<l; i++){
