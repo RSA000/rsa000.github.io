@@ -40,7 +40,7 @@
 
     function parseCSV(text){
 
-
+        alert(text);
         // Create list for csv entries.
         csvItems = [];
         // Store each CSV line in variable.
@@ -52,6 +52,7 @@
             var entries = lines[i].match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
             // If there are any entries.
             if (entries) {
+                alert("entries found");
                 // Remove surrounding quotes
                 entries = entries.map(function(entry) {
                     return entry.replace(/^"|"$/g, '');
