@@ -108,11 +108,11 @@
         switch(event.keyCode){
             case UP:
                 // Scroll up 15 pixels.
-                element.scrollTop(15);
+                element.scrollTop += 15);
                 break;
             case DOWN:
                 // Scroll down 15 pixels.
-                element.scrollTop(-15);
+                element.scrollTop -= 15;
                 break;
             case RIGHT:
                 // Update page to next text chunk.
