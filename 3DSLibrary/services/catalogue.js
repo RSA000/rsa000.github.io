@@ -71,7 +71,7 @@
             var description = row[1];
             var url = row[2];
 
-            catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' bookName="' + url + '" data-description="' + description + '">' + name + '</a>';
+            catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' data-bookname="' + url + '" data-description="' + description + '">' + name + '</a>';
         }
 
         // Insert the generated HTML into the element with id 'elementId'
@@ -101,7 +101,7 @@
 
     /*Function returns title to original message when no items are selected. */
     var click = function(ev) {
-        const bookName = this.getAttribute("bookname");
+        const bookName = this.dataset.bookname;
         setCookie("bookName", bookName, 364);
         setCookie("pageNum", 0, 364);
         window.location.href = "./read.html";
