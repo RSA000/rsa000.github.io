@@ -58,51 +58,55 @@
     }
 
 
-    function loadBook(text){
-        // Reset textChunks contents
+    function loadBook(text) {
+        // Reset textChunks
         textChunks = [];
         var chunk = "";
-        // Start variables for tracking position
         var position = 0;
-        // Get length of text.
         var textLength = text.length;
 
-
         while (position < textLength) {
-            chunk ="";
-            // Search for the next closing tag
+            // Find next closing tag
             var closeTagStart = text.indexOf("</", position);
             if (closeTagStart === -1) {
-                // No more closing tags; add remaining text
-                textChunks.push(text.substring(position));
+                // No more closing tags, add remaining text
+                chunk += text.substring(position);
+                if (chunk.length > 0) {
+                    textChunks.push(chunk);
+                }
                 break;
             }
 
-            // Find the end of the closing tag, i.e., the next '>' after the start
+            // Find end of the closing tag
             var closeTagEnd = text.indexOf(">", closeTagStart);
             if (closeTagEnd === -1) {
-                // Malformed tag; add remaining text and break
-                textChunks.push(text.substring(position));
+                // Malformed tag, add remaining text
+                chunk += text.substring(position);
+                if (chunk.length > 0) {
+                    textChunks.push(chunk);
+                }
                 break;
             }
 
-            // Extract the segment up to the end of the closing tag
-            var segmentEnd = closeTagEnd + 1; // inclusive
-            var chunk += text.substring(position, segmentEnd);
+            // Add text up to and including the closing tag
+            var segmentEnd = closeTagEnd + 1; // include '>'
+            chunk += text.substring(position, segmentEnd);
+            position = segmentEnd; // move past this tag
 
-            if(chunk.length < 1750){
-                continue;
+            // If chunk is large enough, save and reset
+            if (chunk.length >= 1750) {
+                textChunks.push(chunk);
+                chunk = "";
             }
-
-            textChunks.push(chunk);
-
-            // Update position past this closing tag
-            position = segmentEnd;
         }
 
-        // Now, chunks is ready to use
+        // Add any remaining text in chunk
+        if (chunk.length > 0) {
+            textChunks.push(chunk);
+        }
+
+        // Now, chunks are ready
         pages = textChunks.length;
-        // Display first page
         updatePage(pageNum);
     }
 
