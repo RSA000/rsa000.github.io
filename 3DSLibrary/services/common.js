@@ -167,17 +167,15 @@ function registerNon3DSlink(a){
     // Add event listener for when anchor is clicked.
     a.addEventListener("click", function (e){
         // Alert that link is not supported.
-        alert(`The 3DS doesn't support that page.
-               Please open \n\n" + a.href + "\n\non a
-               external device (with a modern browser)`);
+        alert("The 3DS doesn't support that page. Please open \n\n" + a.href + "\n\non a external device (with a modern browser)");
         // Prevent default action (navigating to link).
         e.preventDefault();
         return false;
     }, false);
-}
+}*/
 
 
-/*
+
 
 
 /**
@@ -236,4 +234,4 @@ function preventKey(event){
             document.body.style.margin = "10px auto";
         }
     }, false);
-})()*/
+})()
