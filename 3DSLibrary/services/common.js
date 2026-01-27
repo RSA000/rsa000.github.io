@@ -149,15 +149,15 @@ function includes(container,search){
 }
 
 
-// /**
-//  * Function returns if system is 3DS and false otherwise.
-//  */
-// function is3DS(){
-//     // If userAgent string is equal to "Nintendo 3DS"
-//     alert(window.navigator.userAgent,"Nintendo 3DS");
-//     return includes(window.navigator.userAgent,"Nintendo 3DS");
-// }
-//
+/**
+ * Function returns if system is 3DS and false otherwise.
+ */
+function is3DS(){
+    // If userAgent string is equal to "Nintendo 3DS"
+    alert(window.navigator.userAgent,"Nintendo 3DS");
+    return includes(window.navigator.userAgent,"Nintendo 3DS");
+}
+
 // /*
 // /**
 //  * Register an <a> that isn't meant to be opened on the 3DS
