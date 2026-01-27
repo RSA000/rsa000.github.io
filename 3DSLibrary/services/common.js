@@ -20,7 +20,7 @@ const centerY = 266;
 /**
  * The center function scrolls the screen to the 40,215 coordinates.
  */
-function center(){
+function center(centerX, centerY){
     window.scrollTo(centerX, centerY);
 };
 
@@ -210,17 +210,20 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
-        var anchors = document.querySelectorAll("a");
+
 
         // If device is 3DS.
         if (is3DS()){
-            // Call center function every milisecond.
-            setInterval(center);
+
+            // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
+            var anchors = document.querySelectorAll("a");
+
             // Add event listener alert error events (necessary to see errors on 3DS system)..
             window.addEventListener("error", function(e) {
                 alert(e.filename + ":" + e.lineno + " " + e.message);
             }, false);
+            // Call center function every milisecond.
+            setInterval(center(centerX, centerY);
 
             // Add non-3DS compatible warning to any relevant anchors.
             for(var i = 0, l = anchors.length; i<l; i++){
