@@ -131,24 +131,24 @@ function checkCookie() {
  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  */
 
-// /**
-//  * includes takes a container and a search element and returns a boolean value
-//  * indicating if it exists within the container.
-//  *
-//  * @param {container}
-//  * @param {search}
-//  */
-// function includes(container,search){
-//     // If container is a string or an array.
-//     if (typeof(container) === 'string' || container instanceof Array){
-//         // Return true if indexo of container search is not -1 (string case).
-//         return container.indexOf(search) !== -1;
-//     }
-//     // Return true if container index is not undefined (array case).
-//     return container[search] !== undefined;
-// }
-//
-//
+/**
+ * includes takes a container and a search element and returns a boolean value
+ * indicating if it exists within the container.
+ *
+ * @param {container}
+ * @param {search}
+ */
+function includes(container,search){
+    // If container is a string or an array.
+    if (typeof(container) === 'string' || container instanceof Array){
+        // Return true if indexo of container search is not -1 (string case).
+        return container.indexOf(search) !== -1;
+    }
+    // Return true if container index is not undefined (array case).
+    return container[search] !== undefined;
+}
+
+
 // /**
 //  * Function returns if system is 3DS and false otherwise.
 //  */
