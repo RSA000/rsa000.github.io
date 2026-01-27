@@ -63,7 +63,7 @@
 
 
             document.addEventListener("DOMContentLoaded", function() {
-                if (is3DS()) {
+
                     // Create and insert element after DOM loads
                     var newDiv = document.createElement("div");
                     newDiv.innerHTML = "This is a test!";
@@ -79,7 +79,7 @@
                     // Your existing code...
                     setInterval(preventGamepad);
                     setInterval(logGamepad);
-                }
+
             });
     }
 }());
