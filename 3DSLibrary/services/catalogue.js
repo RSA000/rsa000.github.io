@@ -101,7 +101,7 @@
 
     /*Function returns title to original message when no items are selected. */
     var click = function(ev) {
-        const bookName = this.getAttribute("bookName");
+        const bookName = this.getAttribute("bookname");
         setCookie("bookName", bookName, 364);
         setCookie("pageNum", 0, 364);
         window.location.href = "./read.html";
