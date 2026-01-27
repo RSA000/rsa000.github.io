@@ -71,7 +71,7 @@
             var description = row[1];
             var url = row[2];
 
-            catalogue += '<a' + '"href=' + url + '"' + ' bookName="' + name + '"' + '</a>';
+            catalogue += '<a href="' + url + '" bookName="' + name + '">' + name + '</a>';
         }
 
         // Insert the generated HTML into the element with id 'elementId'
