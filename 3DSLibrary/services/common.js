@@ -1,4 +1,3 @@
-alert("center");
 
 // Declare constant values for button input values.
 const LEFT = 37;
