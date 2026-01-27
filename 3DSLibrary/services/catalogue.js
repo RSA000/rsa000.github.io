@@ -8,6 +8,8 @@
 (function(){
 
     var csvItems = [];
+    // Get lowerScreenContents element.
+    var lowerScreenContents = document.getElementById("lowerScreenContents");
 
     function getCSV(callback){
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
@@ -56,6 +58,7 @@
                 csvItems.push(entries);
             }
         }
+        populateCatalogue(csvItems, lowerScreenContents);
         alert(csvItems);
     }
 
@@ -156,8 +159,7 @@
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        // Get lowerScreenContents element.
-        var lowerScreenContents = document.getElementById("lowerScreenContents");
+
 
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
