@@ -41,17 +41,14 @@
             if (xhr.readyState === 4) {
                 // If status code is not an error.
                 if (xhr.status >= 200 && xhr.status < 300) {
-                    // Create variable text, and store response text within.
-                    var text = xhr.responseText;
-                    // Call the callback with the chunks
-                    if (callback) callback(text);
+                    // Send response text of request to callback function.
+                    if (callback) callback(xhr.responseText);
                 }
                 // Otherwise display error messages.
                 else {
                     // Otherwise, log status and alert user.
                     console.error('Error loading text file:', xhr.statusText);
-                    // Needed to see on 3DS.
-                    alert("uh oh :/ " + xhr.statusText);
+                    alert("Error loading text file:" + xhr.statusText);
                 }
             }
         };
@@ -72,9 +69,6 @@
         // Display first page
         updatePage(pageNum);
     }
-
-
-
 
 
     /**
