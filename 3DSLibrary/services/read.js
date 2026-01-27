@@ -176,8 +176,11 @@
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
         // Add event listener for when a key is pressed down.
-        window.addEventListener("keyup", function(e) {
+        window.addEventListener("keydown", function(e) {
             readHandleKeyDown(e, document.getElementById('textContainerRead'));
+        });
+        window.addEventListener("keyUp", function(e){
+           e.preventDefault();
         });
 
         // Get book text and load into textContainerRead paragraph element in read.html.
