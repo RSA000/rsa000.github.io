@@ -18,7 +18,7 @@ var centerY = 266;
 /**
  * The center function scrolls the screen to the 40,215 coordinates.
  */
-function center(centerX, centerY){
+function center(){
     window.scrollTo(centerX, centerY);
 };
 
@@ -182,10 +182,10 @@ function is3DS(){
  */
 function preventKey(event){
     // Allow backspace, F5 (refresh), and ENTER.
-    // var keycode = event.keycode;
-    // if ((keycode === BACKSPACE) || (keycode === F5) || (keycode === ENTER)){
-    //     return true;
-    // }
+    var keycode = event.keycode;
+    if ((keycode === BACKSPACE) || (keycode === F5) || (keycode === ENTER)){
+        return true;
+    }
     // Allow character input.
     if(event.charCode || (event.key && event.key.length === 1 ))
         return true;
@@ -222,7 +222,7 @@ function preventKey(event){
                 alert(e.filename + ":" + e.lineno + " " + e.message);
             }, false);
             // Call center function every milisecond.
-            setInterval(center(centerX, centerY));
+            setInterval(center);
 
             // Add non-3DS compatible warning to any relevant anchors.
             for(var i = 0, l = anchors.length; i<l; i++){
