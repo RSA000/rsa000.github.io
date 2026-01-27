@@ -61,6 +61,7 @@
     function loadBook(text){
         // Reset textChunks contents
         textChunks = [];
+        var chunk = "";
         // Start variables for tracking position
         var position = 0;
         // Get length of text.
@@ -68,6 +69,7 @@
 
 
         while (position < textLength) {
+            chunk ="";
             // Search for the next closing tag
             var closeTagStart = text.indexOf("</", position);
             if (closeTagStart === -1) {
@@ -86,15 +88,18 @@
 
             // Extract the segment up to the end of the closing tag
             var segmentEnd = closeTagEnd + 1; // inclusive
-            var chunk = text.substring(position, segmentEnd);
+            var chunk += text.substring(position, segmentEnd);
+
+            if(chunk.length < 1750){
+                continue;
+            }
+
             textChunks.push(chunk);
 
             // Update position past this closing tag
             position = segmentEnd;
         }
 
-        pages = textChunks.length;
-        updatePage(pageNum);
         // Now, chunks is ready to use
         pages = textChunks.length;
         // Display first page
