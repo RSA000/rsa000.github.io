@@ -61,6 +61,7 @@
     function loadBook(text) {
         // Reset textChunks
         textChunks = [];
+        // Insantiate chunk string, position, and text length.
         var chunk = "";
         var position = 0;
         var textLength = text.length;
@@ -68,8 +69,9 @@
         while (position < textLength) {
             // Find next closing tag
             var closeTagStart = text.indexOf("</", position);
+            // If not closing tags found.
             if (closeTagStart === -1) {
-                // No more closing tags, add remaining text
+                // Add remaining text
                 chunk += text.substring(position);
                 if (chunk.length > 0) {
                     textChunks.push(chunk);
@@ -79,8 +81,9 @@
 
             // Find end of the closing tag
             var closeTagEnd = text.indexOf(">", closeTagStart);
+            // If no closing tag found.
             if (closeTagEnd === -1) {
-                // Malformed tag, add remaining text
+                // Bad tag end,  add remaining text
                 chunk += text.substring(position);
                 if (chunk.length > 0) {
                     textChunks.push(chunk);
@@ -99,13 +102,12 @@
                 chunk = "";
             }
         }
-
         // Add any remaining text in chunk
         if (chunk.length > 0) {
             textChunks.push(chunk);
         }
 
-        // Now, chunks are ready
+        // Get length of pages and update page.
         pages = textChunks.length;
         updatePage(pageNum);
     }
