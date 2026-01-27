@@ -30,7 +30,7 @@
         const bookName = this.getAttribute("bookName");
         setCookie("bookName", bookName, 364);
         setCookie("pageNum", 0, 364);
-        window.location.href = "../read/read.html";
+        window.location.href = "./read.html";
     };
 
     /* End of Simbas */
