@@ -182,10 +182,10 @@ function is3DS(){
  */
 function preventKey(event){
     // Allow backspace, F5 (refresh), and ENTER.
-    var keycode = event.keycode;
-    if ((keycode === BACKSPACE) || (keycode === F5) || (keycode === ENTER)){
-        return true;
-    }
+    // var keycode = event.keycode;
+    // if ((keycode === BACKSPACE) || (keycode === F5) || (keycode === ENTER)){
+    //     return true;
+    // }
     // Allow character input.
     if(event.charCode || (event.key && event.key.length === 1 ))
         return true;
