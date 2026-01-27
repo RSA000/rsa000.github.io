@@ -94,7 +94,7 @@
         // Scroll to top of screen
         scroll(textContainer, 10000);
         return;
-    };
+    }
 
 
     /**
@@ -134,7 +134,7 @@
                 updatePage(pageNum);
                 break;
         }
-    };
+    }
 
 
 
