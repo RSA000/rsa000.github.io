@@ -58,7 +58,6 @@
             }
         }
         populateCatalogue(csvItems, lowerScreenContents);
-        alert(csvItems);
     }
 
 
