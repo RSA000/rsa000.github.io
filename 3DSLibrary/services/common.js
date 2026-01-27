@@ -214,7 +214,7 @@ function preventKey(event){
 
 
         // If device is 3DS.
-        if (is3DS()){
+        if (true){
             alert("this is a 3ds1");
             // Store all <a> tags within the "lowerScreenMenu" div in variable "anchors."
             var anchors = document.querySelectorAll("a");
