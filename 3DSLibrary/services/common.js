@@ -22,7 +22,6 @@ function center(){
 }
 
 
-
 /**
  *
  * Create and insert a div in a parent element for DOM
