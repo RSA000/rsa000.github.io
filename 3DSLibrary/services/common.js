@@ -196,7 +196,7 @@ function preventKey(event){
         event.preventDefault();
         return false;
     }
-};
+}
 // end of wolfyxon
 
 
