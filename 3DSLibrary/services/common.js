@@ -24,47 +24,47 @@ function center(){
 }
 
 
-// /**
-//  * The scrollUp function scrolls a selected element an certain amount up/down (+/-).
-//  * @param {element} - DOM element (ex. document.body)
-//  * @param {amount} - Integer
-//  */
-// function scroll(element, amount){
-//     element.scrollTop -= amount;
-// }
-//
-//
-//
-// /**
-//  *
-//  * Create and insert a div in a parent element for DOM
-//  *
-//  * Example: loading site elements and templating.
-//  *
-//  * @param {childID} - new element's identification
-//  * @param {parantID} - element to insert new div into.
-//  * @param {innerHTMl} - HTML to insert into new div
-//  *
-//  */
-// function insertElement(childID, parentID, innerHTML){
-//
-//     // Get parent element by id
-//     var parentElement = document.getElementById(parentID);
-//     // If parent element exists.
-//     if (parentElement) {
-//         // Create new div element and set inner html (<div>innerHTML</div>).
-//         var newDiv = document.createElement("div");
-//         newDiv.innerHTML = innerHTML;
-//         // Set new div's ID and append new div.
-//         newDiv.id = childID;
-//         parentElement.appendChild(newDiv);
-//         // Otherwise, log error.
-//     } else {
-//         console.error("Parent element not found");
-//     }
-// }
-//
-//
+/**
+ * The scrollUp function scrolls a selected element an certain amount up/down (+/-).
+ * @param {element} - DOM element (ex. document.body)
+ * @param {amount} - Integer
+ */
+function scroll(element, amount){
+    element.scrollTop -= amount;
+}
+
+
+
+/**
+ *
+ * Create and insert a div in a parent element for DOM
+ *
+ * Example: loading site elements and templating.
+ *
+ * @param {childID} - new element's identification
+ * @param {parantID} - element to insert new div into.
+ * @param {innerHTMl} - HTML to insert into new div
+ *
+ */
+function insertElement(childID, parentID, innerHTML){
+
+    // Get parent element by id
+    var parentElement = document.getElementById(parentID);
+    // If parent element exists.
+    if (parentElement) {
+        // Create new div element and set inner html (<div>innerHTML</div>).
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML = innerHTML;
+        // Set new div's ID and append new div.
+        newDiv.id = childID;
+        parentElement.appendChild(newDiv);
+        // Otherwise, log error.
+    } else {
+        console.error("Parent element not found");
+    }
+}
+
+
 // //
 // /**
 //  * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
