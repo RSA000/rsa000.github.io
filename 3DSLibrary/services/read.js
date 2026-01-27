@@ -8,6 +8,7 @@
 
 (function() {
 
+    // If no book exists, redirect.
     checkCookie();
 
     // Get current book name.
@@ -27,8 +28,8 @@
     * getText(url) returns a list of strings subdivided from a string acquired through an
     * XMLHttpRequest to a passed url.
     *
-    * @param {url}
-    *
+    * @param {String} url
+    * @param {Function} callback
     */
     function getText(url, callback){
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
@@ -76,7 +77,7 @@
      * This function takes a number (0 or 1) that indicates the page direction and updates
      * the textContainerReader
      *
-     * @param {direction}
+     * @param {Int} Int.
      *
      */
     function updatePage(pageNum){
@@ -91,7 +92,9 @@
 
     /**
      * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
-     * @param {KeyboardEvent} event
+     *
+     * @param {event} keyBoardEvent.
+     * @param {element} element.
      */
     function readHandleKeyDown(event, element){
         // Prevent default action when key is pressed down.
@@ -108,7 +111,6 @@
                 break;
             case RIGHT:
                 // Update page to next text chunk.
-                // If direction is forwards.
                 if (pageNum < pages - 1){
                     // Update position +1 and replace inner text with new chunk.
                     pageNum += 1;
