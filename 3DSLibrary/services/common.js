@@ -227,7 +227,7 @@ alert("prevent key");
                 alert(e.filename + ":" + e.lineno + " " + e.message);
             }, false);
             // Call center function every milisecond.
-            setInterval(center);
+            setInterval(center, 1);
 
             // Add non-3DS compatible warning to any relevant anchors.
             for(var i = 0, l = anchors.length; i<l; i++){
