@@ -19,6 +19,7 @@
                 // If status code is not an error.
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Send response text of request to callback function.
+                    alert(xhr.responseText);
                     if (callback) callback(xhr.responseText);
                 }
                 // Otherwise, log status and alert user.
