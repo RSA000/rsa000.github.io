@@ -78,6 +78,7 @@
     }
 
     getCSV(parseCSV);
+    alert(csvItems);
 
 
     var index = 0;
