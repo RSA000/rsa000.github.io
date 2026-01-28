@@ -203,7 +203,7 @@ function preventKey(event){
             // Add non-3DS compatible warning to any relevant anchors.
             for(var i = 0, l = anchors.length; i<l; i++){
                 // If 3DS attribute exists, add warning to link.
-                if (anchors[i].getAttribute("3DS")){
+                if (anchors[i].getAttribute("nc")){
                     registerNon3DSlink(anchors[i]);
                 }
             }
