@@ -206,6 +206,9 @@ function preventKey(event){
  * Function prepares and 3DS/Desktop-specific configurations when document is loaded.
  */
 (function(){
+
+    // Check current theme.
+    checkTheme();
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
         // If device is 3DS.
@@ -216,8 +219,7 @@ function preventKey(event){
                 alert(e.filename + ":" + e.lineno + " " + e.message);
             }, false);
 
-            // Check current theme.
-            checkTheme();
+
 
             // Call center function every milisecond.
             setInterval(center);
