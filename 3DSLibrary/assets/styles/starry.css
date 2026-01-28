@@ -1,14 +1,10 @@
 /* HTML general body settings */
-body{
-
-	/* Container */
-	background: black;
-	/* Container */
-	height: 600px;
-	width: 600px;
-	margin: 50px auto;
-	position: relative;
-	/* Text */
+body {
+	background-color: darkcyan;
+	height: 500px;
+	width: 550px;
+	margin: auto;
+	position: static;
 	font-family: monospace;
 	font-size: 16px;
 }

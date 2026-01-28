@@ -1,14 +1,12 @@
 /* HTML general body settings */
-body{
 
-	/* Container */
+body {
 	background-color: darkcyan;
 	height: 600px;
 	width: 600px;
-	margin: 50px auto;
-	position: relative;
-	/* Text */
-	font-family: monospace;
+	margin: auto;
+	position: static;
+	font-family: "Comic Sans MS, Comic Sans, cursive";
 	font-size: 16px;
 }
 
