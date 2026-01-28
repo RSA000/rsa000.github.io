@@ -8,17 +8,16 @@
  */
 (function(){
 
-    var index = 0;
     const anchors = document.getElementsByTagName("a");
     const anchorLength = anchors.length;
+    var index = 0;
+    var topHeading = document.getElementsByClassName("topHeading")[0];
+    var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
 
     /* Simba's */
 
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
-        // get top screen Heading and subtitles and store in variables.
-        var topHeading = document.getElementsByClassName("topHeading")[0];
-        var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
         // Get innerHTML and description attributes of current element.
         // Update innerHTML of top heading and subtitle to heading and subtitle values.
         topHeading.innerHTML = this.innerHTML;
@@ -28,9 +27,6 @@
 
     /*Function returns title to original message when no items are selected. */
     var inactive = function(ev) {
-        // Get top heading and subtitle tags (<h1> and <p>, respectively).
-        var topHeading = document.getElementsByClassName("topHeading")[0];
-        var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
         // Update heading and subtitle.
         topHeading.innerHTML = topHeading.dataset.description;
         topSubtitle.innerHTML = topSubtitle.dataset.description;
@@ -39,7 +35,6 @@
 
     var click = function(ev){
         changeTheme(this.dataset.name);
-        console.log("click");
     }
 
     /* End of Simbas */
