@@ -112,12 +112,12 @@ function checkTheme(){
     // Set theme if cookie exists.
     if (themeCookie != "") {
 
-        if (themeTag){
+        if (themeTag != null){
             themeTag.getAttribute('href') == '../assets/styles/' + themeCookie;
             setCookie("theme", themeCookie, 364);
             return;
         }
-        else if (indexThemeTag){
+        else if (indexThemeTag != null){
             indexThemeTag.getAttribute('href') == 'assets/styles' + themeCookie;
             setCookie("theme", themeCookie, 364);
             return;
