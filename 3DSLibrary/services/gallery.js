@@ -2,14 +2,13 @@
 
     const slides = document.getElementsByClassName("mySlides");
     const slideLength = slides.length;
-
+    var galleryImage = document.getElementById("galleryImage");
     var index = 0;
 
     /* Simba's */
 
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
-        var galleryImage = document.getElementById("galleryImage");
         galleryImage.setAttribute("src", this.src);
     };
 
