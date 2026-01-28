@@ -10,7 +10,7 @@ const F5 = 116;
 const ENTER = 13;
 // Declare constant value for centering screen.
 const centerX = 147;
-const centerY = 266;
+const centerY = 245;
 
 /**
  * The center function scrolls the screen to the 115,266 coordinates.
