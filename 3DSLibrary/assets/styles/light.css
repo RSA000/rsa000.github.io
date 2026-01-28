@@ -7,7 +7,7 @@ body{
 	height: 500px;
 	width: 550px;
 	margin: 50px auto;
-	margin-left: 451px;
+	margin-left: 45px;
 	position: relative;
 	/* Text */
 	font-family: monospace;
@@ -78,7 +78,6 @@ body{
 	border: 2px dashed darkcyan;
 	border-radius:10%;
 	height:20px;
-	width: 200px;
 	margin: auto;
 	margin-top: 15px;
 	padding: 3px;
