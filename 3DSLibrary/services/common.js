@@ -119,7 +119,7 @@ function checkTheme(){
         }
         else if (indexThemeTag){
             currentTheme.getAttribute('href') == 'assets/styles' + theme;
-            setCookie("themeindex", theme, 364);
+            setCookie("theme", theme, 364);
             return;
         }
     }
@@ -128,7 +128,6 @@ function checkTheme(){
         setCookie("theme", "main.css", 364);
         return;
     }
-
 }
 
 // End of w3schools.com
