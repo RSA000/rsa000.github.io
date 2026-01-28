@@ -195,7 +195,7 @@ function preventKey(event){
             }, false);
 
             // Call center function every milisecond.
-            setInterval(center(centerX, centeryY));
+            setInterval(center(centerX, centerY));
 
             // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
             var anchors = document.querySelectorAll("a");
