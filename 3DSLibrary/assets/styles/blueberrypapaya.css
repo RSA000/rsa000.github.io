@@ -2,6 +2,7 @@
 
 body {
 	background-color: darkcyan;
+	border: 4px dashed papayawhip;
 	height: 600px;
 	width: 600px;
 	margin: 50px auto;
