@@ -3,9 +3,8 @@
 body {
 	background-color: darkcyan;
 	border: 4px dashed papayawhip;
-	height: 600px;
 	width: 600px;
-	margin: 75px auto;
+	margin: 50px auto;
 	position: static;
 	font-family: "Comic Sans MS", "Comic Sans", cursive;
 	font-size: 16px;
