@@ -48,7 +48,7 @@
                 // Otherwise, log status and alert user.
                 else{
                     console.error('Error loading text file:', xhr.statusText);
-                    alert("Error loading text file:" + xhr.statusText);
+                    alert("Error loading text file:" + xhr.statusText + url);
                 }
             }
 
