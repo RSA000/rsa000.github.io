@@ -30,10 +30,10 @@ body {
 	background-size: 1200px;
 	border-radius: 8%;
 	height: 90%;
-	width:  90%;
+	width: 90%;
 	margin: auto;
-	margin-top: 10px;
-	margin-bottom: 15px;
+	position: relative;
+	top: 4%;
 }
 
 /* Container for upperScreen text.*/
