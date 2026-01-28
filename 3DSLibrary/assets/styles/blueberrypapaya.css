@@ -288,15 +288,10 @@ margin-left: 115px;
 }
 
 .button {
-	background-color: darkcyan;
-	border: 2px dashed papayawhip;
-	color: papayawhip;
-	padding: 3px 3px;
-	text-align: center;
-	text-decoration: bold;
-	display: inline-block;
-	font-size: inherit;
-	cursor: pointer;
+	background: blanchedalmond;
+	padding: 4px;
+	margin: auto;
+	display: inline;
 }
 
 
