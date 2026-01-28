@@ -125,6 +125,7 @@ function checkTheme(){
     }
     else{
         alert("no theme set");
+        themeTag.getAttribute('href') == '../assets/styles/light.css';
         setCookie("theme", "light.css", 364);
         return;
     }
