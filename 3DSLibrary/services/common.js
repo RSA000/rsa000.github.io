@@ -112,14 +112,18 @@ function checkTheme(){
     // Set theme if cookie exists.
     if (themeCookie != "") {
         currentTheme.getAttribute('href') == '../assets/styles/' + theme;
+        setCookie("theme", theme, 364);
         return;
     }
     if (indexCookie){
         currentTheme.getAttribute('href') == 'assets/styles' + theme;
+        setCookie("themeindex", theme, 364);
+        return;
     }
     else{
         alert("no theme set");
         setCookie("theme", "main.css", 364);
+        return;
     }
 
 }
