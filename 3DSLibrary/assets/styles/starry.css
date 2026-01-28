@@ -132,11 +132,12 @@ body {
 .lowerScreenContents{
 
 	/* Container */
-	height: 210px;
-	width: 290px;
+	border-radius: 10%;
+	height: 200px;
+	width: 230px;
 	margin: 5px auto;
-	margin-left: 10px;
 	overflow-y: scroll;
+}
 }
 
 /* Lower Screen div link CSS. */
