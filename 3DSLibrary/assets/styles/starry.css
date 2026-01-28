@@ -164,6 +164,10 @@ body{
 	background-color: #777;
 }
 
+#lowerScreenSettings{
+	width: 255px;
+}
+
 .lowerScreenFeedback{
 
 	/* Container */
@@ -289,3 +293,15 @@ body{
 
 }
 
+
+.button {
+	background-color: gray;
+	border: 2px dashed white;
+	color: black;
+	padding: 3px 3px;
+	text-align: center;
+	text-decoration: bold;
+	display: inline-block;
+	font-size: inherit;
+	cursor: pointer;
+}
