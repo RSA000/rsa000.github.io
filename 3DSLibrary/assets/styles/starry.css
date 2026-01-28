@@ -133,6 +133,7 @@ body {
 .lowerScreenContents{
 
 	/* Container */
+	border: 1px dashed white;
 	border-radius: 10%;
 	height: 210px;
 	width: 235px;
