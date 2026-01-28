@@ -128,6 +128,7 @@ function checkTheme(){
         if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/main.css"));
         if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/main.css"));
         setCookie("theme", "main.css", 364);
+        checkTheme();
         return;
     }
 }
