@@ -125,8 +125,8 @@ function checkTheme(){
     }
     else{
         alert("no theme set");
-        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/light.css"));
-        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/light.css"));
+        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/main.css"));
+        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/main.css"));
         setCookie("theme", "light.css", 364);
         return;
     }
