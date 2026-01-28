@@ -169,7 +169,7 @@
         }
         updatePage(pageNum);
         // Prevent excessive page turning.
-        setTimeout(30);
+        setTimeout(300);
     }
 
 
