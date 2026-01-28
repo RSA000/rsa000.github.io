@@ -36,8 +36,8 @@
      */
     var click = function(ev) {
         const bookName = this.dataset.bookname;
-        setCookie("bookName", bookName, 364);
-        setCookie("pageNum", 0, 364);
+        setCookie("bookname", bookName, 364);
+        setCookie("pagenum", 0, 364);
         window.location.href = "./read.html";
     };
 
