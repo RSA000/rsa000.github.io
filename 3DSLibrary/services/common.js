@@ -107,18 +107,21 @@ function checkBookName() {
 
 function checkTheme(){
     var themeCookie = getCookie("theme");
-    var indexCookie = getCookie("indextheme");
-    var currentTheme = document.getElementById("theme");
+    var themeTag = document.getElementById("theme");
+    var indexThemeTag = document.getElementById("themeindex");
     // Set theme if cookie exists.
     if (themeCookie != "") {
-        currentTheme.getAttribute('href') == '../assets/styles/' + theme;
-        setCookie("theme", theme, 364);
-        return;
-    }
-    if (indexCookie){
-        currentTheme.getAttribute('href') == 'assets/styles' + theme;
-        setCookie("themeindex", theme, 364);
-        return;
+
+        if (themeTag){
+            currentTheme.getAttribute('href') == '../assets/styles/' + theme;
+            setCookie("theme", theme, 364);
+            return;
+        }
+        else if (indexThemeTag){
+            currentTheme.getAttribute('href') == 'assets/styles' + theme;
+            setCookie("themeindex", theme, 364);
+            return;
+        }
     }
     else{
         alert("no theme set");
