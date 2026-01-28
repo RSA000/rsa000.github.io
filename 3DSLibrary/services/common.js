@@ -12,6 +12,7 @@ const ENTER = 13;
 const centerX = 147;
 const centerY = 245;
 
+
 /**
  * The center function scrolls the screen to the 115,266 coordinates.
  */
@@ -99,35 +100,39 @@ function checkBookName() {
         return;
     }
     else{
-        alert("No book found!");
+        alert("No book found!\nPlease select a book from the catalogue first.");
         window.location.replace("../index.html")
     }
 }
 
 
 function checkTheme(){
+    // Get value of theme cookie.
     var themeCookie = getCookie("theme");
+    // Get document CSS link elements (index and other pages).
     var themeTag = document.getElementById("theme");
     var indexThemeTag = document.getElementById("themeindex");
     // Set theme if cookie exists.
     if (themeCookie != "") {
-
+        // Case for pages in views folder.
         if (themeTag != null){
             themeTag.setAttribute('href', ('../assets/styles/' + themeCookie));
             setCookie("theme", themeCookie, 364);
             return;
         }
+        // Case for index.html page.
         else if (indexThemeTag != null){
             indexThemeTag.setAttribute('href', ('assets/styles/' + themeCookie));
             setCookie("theme", themeCookie, 364);
             return;
         }
     }
+    // Case for no theme set.
     else{
         alert("no theme set");
-        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/main.css"));
-        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/main.css"));
-        setCookie("theme", "main.css", 364);
+        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/starry.css"));
+        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/starry.css"));
+        setCookie("theme", "starry.css", 364);
         checkTheme();
         return;
     }
@@ -241,7 +246,6 @@ function preventKey(event){
 
             // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
             var anchors = document.querySelectorAll("a");
-
             // Add non-3DS compatible warning to any relevant anchors.
             for(var i = 0, l = anchors.length; i<l; i++){
                 // If 3DS attribute exists, add warning to link.

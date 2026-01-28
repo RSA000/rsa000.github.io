@@ -173,6 +173,17 @@ body{
 	overflow-y: scroll;
 }
 
+#lowerScreenGallery{
+
+	/* Container */
+	height: 210px;
+	width: 290px;
+	margin: 5px auto;
+	margin-left: 10px;
+	overflow-y: scroll;
+
+}
+
 
 .mySlides{
 	/* Container */
@@ -235,7 +246,6 @@ body{
 #textContainerRead p{
 	font-size: 12px
 }
-
 
 #FeedbackForm{
 	/* Container */
