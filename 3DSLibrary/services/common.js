@@ -114,12 +114,12 @@ function checkTheme(){
 
         if (themeTag){
             themeTag.getAttribute('href') == '../assets/styles/' + themeCookie;
-            setCookie("theme", theme, 364);
+            setCookie("theme", themeCookie, 364);
             return;
         }
         else if (indexThemeTag){
             indexThemeTag.getAttribute('href') == 'assets/styles' + themeCookie;
-            setCookie("theme", theme, 364);
+            setCookie("theme", themeCookie, 364);
             return;
         }
     }
