@@ -230,7 +230,6 @@ body{
 
 #textContainerRead h1{
 	font-size: 16px;
-
 }
 
 #textContainerRead p{
@@ -279,4 +278,74 @@ body{
 	margin-left: 115px;
 
 }
+
+
+#textContainerRead p {text-indent: 4% }
+
+#textContainerRead p.noindent {text-indent: 0% }
+
+#textContainerRead p.t1 {text-indent: 0% ;
+font-size: 200%;
+text-align: center }
+
+#textContainerRead p.t2 {text-indent: 0% ;
+font-size: 150%;
+text-align: center }
+
+#textContainerRead p.t3 {text-indent: 0% ;
+font-size: 100%;
+text-align: center }
+
+#textContainerRead p.t3b {text-indent: 0% ;
+font-size: 100%;
+font-weight: bold;
+text-align: center }
+
+#textContainerRead p.t4 {text-indent: 0% ;
+font-size: 80%;
+text-align: center }
+
+#textContainerRead p.t4b {text-indent: 0% ;
+font-size: 80%;
+font-weight: bold;
+text-align: center }
+
+#textContainerRead p.t5 {text-indent: 0% ;
+	font-size: 60%;
+	text-align: center }
+
+	h1 { text-align: center }
+	h2 { text-align: center }
+	h3 { text-align: center; border-bottom: double; padding-bottom: 1%; }
+	h4 { text-align: center; border-top:    double; padding-top: 1%; }
+	h5 { text-align: center }
+
+#textContainerRead p.poem {text-indent: 0%;
+margin-left: 10%; }
+
+#textContainerRead p.contents {text-indent: -3%;
+margin-left: 5% }
+
+#textContainerRead p.thought {text-indent: 0% ;
+letter-spacing: 4em ;
+text-align: center }
+
+#textContainerRead p.letter {text-indent: 0%;
+margin-left: 10% ;
+margin-right: 10% }
+
+#textContainerRead p.footnote {text-indent: 0% ;
+font-size: 80%;
+margin-left: 10% ;
+margin-right: 10% }
+
+#textContainerRead p.quote {text-indent: 4% ;
+margin-left: 0% ;
+margin-right: 0% }
+
+#textContainerRead p.finis { font-size: larger ;
+	text-align: center ;
+	text-indent: 0% ;
+	margin-left: 0% ;
+	margin-right: 0% }
 
