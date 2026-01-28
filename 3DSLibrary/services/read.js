@@ -168,8 +168,6 @@
                 break;
         }
         updatePage(pageNum);
-        // Prevent excessive page turning.
-        setTimeout(300);
     }
 
 

@@ -15,7 +15,7 @@ const centerY = 266;
 /**
  * The center function scrolls the screen to the 115,266 coordinates.
  */
-function center(){
+function center(centerX, centerY){
     window.scrollTo(centerX, centerY);
 }
 
@@ -195,7 +195,7 @@ function preventKey(event){
             }, false);
 
             // Call center function every milisecond.
-            setInterval(center);
+            setInterval(center(centerX, centeryY);
 
             // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
             var anchors = document.querySelectorAll("a");
