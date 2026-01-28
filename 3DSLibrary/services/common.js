@@ -113,20 +113,20 @@ function checkTheme(){
     if (themeCookie != "") {
 
         if (themeTag != null){
-            themeTag.getAttribute('href') = '../assets/styles/' + themeCookie;
+            themeTag.setAttribute('href', ('../assets/styles/' + themeCookie));
             setCookie("theme", themeCookie, 364);
             return;
         }
         else if (indexThemeTag != null){
-            indexThemeTag.getAttribute('href') = 'assets/styles' + themeCookie;
+            indexThemeTag.setAttribute('href', ('assets/styles/' + themeCookie));
             setCookie("theme", themeCookie, 364);
             return;
         }
     }
     else{
         alert("no theme set");
-        if (themeTag != null) themeTag.getAttribute('href') == '../assets/styles/light.css';
-        if (indexThemeTag != null) indexThemeTag.getAttribute("href") == "assets/styles/light.css";
+        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/light.css"));
+        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/light.css"));
         setCookie("theme", "light.css", 364);
         return;
     }
