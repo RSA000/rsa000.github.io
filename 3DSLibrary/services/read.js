@@ -97,7 +97,7 @@
             position = segmentEnd; // move past this tag
 
             // If chunk is large enough, save and reset
-            if (chunk.length >= 1750) {
+            if (chunk.length >= 3000) {
                 textChunks.push(chunk);
                 chunk = "";
             }
