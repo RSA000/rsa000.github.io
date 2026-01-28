@@ -94,16 +94,34 @@ function getCookie(cname) {
 }
 
 
-function checkCookie() {
-    var bookName = getCookie("bookName");
-    var pageNum = getCookie("pageNum");
-    if (bookName != "") {
+function checkBookName() {
+    if (getCookie("bookname") != "") {
         return;
     }
     else{
         alert("No book found!");
         window.location.replace("../index.html")
     }
+}
+
+
+function checkTheme(){
+    var themeCookie = getCookie("theme");
+    var indexCookie = getCookie("indextheme");
+    var currentTheme = document.getElementById("theme");
+    // Set theme if cookie exists.
+    if (themeCookie != "") {
+        currentTheme.getAttribute('href') == '../assets/styles/' + theme;
+        return;
+    }
+    if (indexCookie){
+        currentTheme.getAttribute('href') == 'assets/styles' + theme;
+    }
+    else{
+        alert("no theme set");
+        setCookie("theme", "main.css", 364);
+    }
+
 }
 
 // End of w3schools.com
@@ -193,6 +211,9 @@ function preventKey(event){
             window.addEventListener("error", function(e) {
                 alert(e.filename + ":" + e.lineno + " " + e.message);
             }, false);
+
+            // Check current theme.
+            checkTheme();
 
             // Call center function every milisecond.
             setInterval(center);
