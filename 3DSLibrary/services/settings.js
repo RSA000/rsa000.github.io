@@ -36,6 +36,11 @@
         topSubtitle.innerHTML = topSubtitle.dataset.description;
     };
 
+
+    var click = function(ev){
+        changeTheme(ev.dataset.name);
+    }
+
     /* End of Simbas */
 
     /**
@@ -94,13 +99,14 @@
         });
 
         // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
-        var anchors = this.querySelectorAll(".lowerScreenContents a");
+        var buttons = this.querySelectorAll(".themeSettings buttons");
         // For each anchor, add event listener.
-        for(var i = 0, l = anchors.length; i<l; i++){
+        for(var i = 0, l = buttons.length; i<l; i++){
             // When focused on, apply active function with "this" selected anchor.
-            anchors[i].addEventListener('focus', active, false);
+            buttons[i].addEventListener('focus', active, false);
             // When no anchors are selected, revert to greeting heading and subtitle.
-            anchors[i].addEventListener('blur', inactive, false);
+            buttons[i].addEventListener('blur', inactive, false);
+            buttons[i].addEventListener("click", click, false);
         }
     }, false);
 
