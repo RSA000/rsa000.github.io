@@ -12,9 +12,9 @@
     checkBookName();
 
     // Get current book name.
-    var bookName = getCookie("bookName");
+    var bookName = getCookie("bookname");
     // Get current book position cookie.
-    var pageNum = parseInt(getCookie('pageNum'));
+    var pageNum = parseInt(getCookie('pagenum'));
 
     // Create list variable for storing sub-divided book text.
     var textChunks = [];
@@ -155,7 +155,7 @@
                 if (pageNum < pages - 1){
                     // Update position +1 and replace inner text with new chunk.
                     pageNum += 1;
-                    setCookie("pageNum", pageNum, 364);
+                    setCookie("pagenum", pageNum, 364);
                 }
                 break;
             case LEFT:
@@ -163,7 +163,7 @@
                 if (pageNum > 0){
                     // Update current position and store current portion.
                     pageNum -= 1;
-                    setCookie("pageNum", pageNum, 364);
+                    setCookie("pagenum", pageNum, 364);
                 }
                 break;
         }
