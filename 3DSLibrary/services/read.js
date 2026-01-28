@@ -157,7 +157,6 @@
                     pageNum += 1;
                     setCookie("pageNum", pageNum, 364);
                 }
-                updatePage(pageNum);
                 break;
             case LEFT:
                 // If current position is greater than 1 (not front page).
@@ -166,9 +165,11 @@
                     pageNum -= 1;
                     setCookie("pageNum", pageNum, 364);
                 }
-                updatePage(pageNum);
                 break;
         }
+        updatePage(pageNum);
+        // Prevent excessive page turning.
+        setTimeout(30);
     }
 
 
@@ -187,6 +188,4 @@
         getText("https://rsa000.github.io/3DSLibrary/assets/texts/" + bookName, loadBook);
 
     }, false);
-
-
 })();
