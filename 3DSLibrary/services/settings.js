@@ -38,7 +38,7 @@
 
 
     var click = function(ev){
-        changeTheme(ev.dataset.name);
+        changeTheme(this.dataset.name);
         console.log("click");
     }
 
