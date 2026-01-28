@@ -2,11 +2,10 @@
 body{
 
 	/* Container */
-	background-color: aquamarine;
+	background-color: darkcyan;
 	height: 500px;
 	width: 550px;
 	margin: 50px auto;
-	margin-left: 31px;
 	position: relative;
 	/* Text */
 	font-family: monospace;
