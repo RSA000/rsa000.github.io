@@ -2,7 +2,7 @@
 body{
 
 	/* Container */
-	background: papayawhip;
+	background: ##cebc9f;
 	/* Container */
 	height: 500px;
 	width: 550px;
@@ -17,7 +17,7 @@ body{
 .upperScreen {
 
 	/* Container */
-	background-color: papayawhip ;
+	background-color: papayawhip;
 	border: 4px dashed darkcyan;
 	border-radius: 10%;
 	height: 210px;
@@ -77,7 +77,6 @@ body{
 	border: 2px dashed darkcyan;
 	border-radius:10%;
 	height:20px;
-	width: fit-content;
 	margin: auto;
 	margin-top: 15px;
 	padding: 3px;
@@ -108,7 +107,7 @@ body{
 	position: relative;
 	height: 72px;
 	width: 60px;
-	left: auto;
+	left: 1%;
 }
 
 /* Top screen lower right image. */
@@ -122,7 +121,7 @@ body{
 	position: relative;
 	height: 72px;
 	width: 60px;
-	left: 61%;
+	left: 60.8%;
 }
 
 /* Lower screen settings.*/
@@ -141,10 +140,12 @@ body{
 .lowerScreenContents{
 
 	/* Container */
+	background-color: papayawhip;
+	border: 3px dashed darkcyan;
+	border-radius: 10%;
 	height: 210px;
-	width: 290px;
+	width: 230px;
 	margin: 5px auto;
-	margin-left: 10px;
 	overflow-y: scroll;
 }
 
@@ -280,6 +281,10 @@ margin: 5px auto;
 margin-left: 115px;
 
 }
+
+
+
+
 
 
 
