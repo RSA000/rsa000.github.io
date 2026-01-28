@@ -180,35 +180,40 @@ function preventKey(event){
 // end of wolfyxon
 
 
+
 /*
  * Function prepares and 3DS/Desktop-specific configurations when document is loaded.
  */
 (function(){
-    /* When content is loaded. */
-    document.addEventListener('DOMContentLoaded', function(ev) {
-        // If device is 3DS.
-        if (is3DS()){
 
-            // Add event listener alert error events (necessary to see errors on 3DS system)..
-            window.addEventListener("error", function(e) {
-                alert(e.filename + ":" + e.lineno + " " + e.message);
-            }, false);
+    // If device is 3DS.
+    if (is3DS()){
 
-            // Call center function every milisecond.
-            setInterval(center(centerX, centeryY));
+        // Add event listener alert error events (necessary to see errors on 3DS system)..
+        window.addEventListener("error", function(e) {
+            alert(e.filename + ":" + e.lineno + " " + e.message);
+        }, false);
 
-            // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
-            var anchors = document.querySelectorAll("a");
+        // Call center function every milisecond.
+        setInterval(center(centerX, centeryY));
 
-            // Add non-3DS compatible warning to any relevant anchors.
-            for(var i = 0, l = anchors.length; i<l; i++){
-                // If 3DS attribute exists, add warning to link.
-                if (anchors[i].getAttribute("3DS")) registerNon3DSlink(anchors[i]);
+        // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
+        var anchors = document.querySelectorAll("a");
+
+        // Add non-3DS compatible warning to any relevant anchors.
+        for(var i = 0, l = anchors.length; i<l; i++){
+            // If 3DS attribute exists, add warning to link.
+            if (anchors[i].getAttribute("3DS")){
+                registerNon3DSlink(anchors[i]);
             }
         }
-        // Otherwise, set screen for desktop computers.
-        else{
-            document.body.style.margin = "10px auto";
-        }
+    }
+    // Otherwise, set screen for desktop computers.
+    else{
+        document.body.style.margin = "10px auto";
+    }
+    /* When content is loaded. */
+    document.addEventListener('DOMContentLoaded', function(ev) {
+
     }, false);
 })()
