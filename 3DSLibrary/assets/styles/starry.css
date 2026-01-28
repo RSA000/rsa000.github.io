@@ -1,8 +1,8 @@
 /* HTML general body settings */
 body {
 	background-color: darkcyan;
-	height: 500px;
-	width: 550px;
+	height: 600px;
+	width: 600px;
 	margin: auto;
 	position: static;
 	font-family: monospace;
