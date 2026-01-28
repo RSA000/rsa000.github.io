@@ -100,7 +100,7 @@
         });
 
         // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
-        var buttons = this.querySelectorAll(".themeSettings btn");
+        var buttons = document.querySelectorAll("#themeSettings button");
         // For each anchor, add event listener.
         for(var i = 0, l = buttons.length; i<l; i++){
             // When focused on, apply active function with "this" selected anchor.
