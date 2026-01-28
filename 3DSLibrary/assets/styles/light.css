@@ -77,7 +77,7 @@ body{
 	border: 2px dashed darkcyan;
 	border-radius:10%;
 	height:20px;
-	width: 40px;
+	width: fit-content;
 	margin: auto;
 	margin-top: 15px;
 	padding: 3px;
@@ -98,7 +98,7 @@ body{
 }
 
 /* Top screen lower left image. */
-.lowerLeft{
+.indexScreenUpperLeftPhoto{
 
 	/* Container */
 	background: papayawhip;
@@ -112,7 +112,7 @@ body{
 }
 
 /* Top screen lower right image. */
-.lowerRight{
+.indexScreenUpperRightPhoto{
 
 	/* Container */
 	background: papayawhip;

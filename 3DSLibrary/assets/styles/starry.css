@@ -94,7 +94,7 @@ body{
 }
 
 /* Top screen lower left image. */
-.lowerLeft{
+.indexScreenUpperLeftPhoto{
 
 	/* Container */
 	background: #000;
@@ -108,7 +108,7 @@ body{
 }
 
 /* Top screen lower right image. */
-.lowerRight{
+.indexScreenUpperRightPhoto{
 
 	/* Container */
 	background: #000;
@@ -278,161 +278,4 @@ body{
 	margin-left: 115px;
 
 }
-
-
-#textContainerRead p {text-indent: 4% }
-
-#textContainerRead p.noindent {text-indent: 0% }
-
-#textContainerRead p.t1 {text-indent: 0% ;
-font-size: 200%;
-text-align: center }
-
-#textContainerRead p.t2 {text-indent: 0% ;
-font-size: 150%;
-text-align: center }
-
-#textContainerRead p.t3 {text-indent: 0% ;
-font-size: 100%;
-text-align: center }
-
-#textContainerRead p.t3b {text-indent: 0% ;
-font-size: 100%;
-font-weight: bold;
-text-align: center }
-
-#textContainerRead p.t4 {text-indent: 0% ;
-font-size: 80%;
-text-align: center }
-
-#textContainerRead p.t4b {text-indent: 0% ;
-font-size: 80%;
-font-weight: bold;
-text-align: center }
-
-#textContainerRead p.t5 {text-indent: 0% ;
-	font-size: 60%;
-	text-align: center }
-
-	h1 { text-align: center }
-	h2 { text-align: center }
-	h3 { text-align: center; border-bottom: double; padding-bottom: 1%; }
-	h4 { text-align: center; border-top:    double; padding-top: 1%; }
-	h5 { text-align: center }
-
-#textContainerRead p.poem {text-indent: 0%;
-margin-left: 10%; }
-
-#textContainerRead p.contents {text-indent: -3%;
-margin-left: 5% }
-
-#textContainerRead p.thought {text-indent: 0% ;
-letter-spacing: 4em ;
-text-align: center }
-
-#textContainerRead p.letter {text-indent: 0%;
-margin-left: 10% ;
-margin-right: 10% }
-
-#textContainerRead p.footnote {text-indent: 0% ;
-font-size: 80%;
-margin-left: 10% ;
-margin-right: 10% }
-
-#textContainerRead p.quote {text-indent: 4% ;
-margin-left: 0% ;
-margin-right: 0% }
-
-#textContainerRead p.finis { font-size: larger ;
-	text-align: center ;
-	text-indent: 0% ;
-	margin-left: 0% ;
-	margin-right: 0% }
-
-
-p {  margin-top: .75em;
-text-align: justify;
-text-indent: 1.25em;
-margin-bottom: .75em;
-}
-
-h4 { text-align: center; clear: both; }
-
-h1 { text-align: center;
-margin-top: 3em;
-margin-bottom: 2em;
-clear: both;
-page-break-before: always; }
-
-h2  {text-align: center;
-margin-top: 3em;
-margin-bottom: 2em;
-clear: both;
-}
-
-h3  {text-align: center;
-margin-top: 2em;
-margin-bottom: 2em;
-clear: both;
-}
-
-hr { width: 33%;
-margin-top: 2em;
-margin-bottom: 2em;
-margin-left: auto;
-margin-right: auto;
-clear: both;
-}
-
-div.trans-note {border-style: solid; border-width: 1px;
-margin: 3em 15%; padding: 1em; text-align: center;
-background: #def;
-}
-
-table {margin-left: auto; margin-right: auto;}
-
-body{margin-left: 10%;
-margin-right: 10%;
-}
-
-ul {     position: relative;
-width: 70%;
-margin-left: 10%;
-list-style-type:none;}
-
-li {     margin-top: 0.25em;
-text-indent: -3em;
-margin-left: 3em;
-line-height: 1.2em; }
-
-.pagenum  { position: absolute;
-left: 1%;
-font-size: 70%;
-text-align: right;
-} /* page numbers */
-
-.blockquot{margin-left: 5%; margin-right: 10%;}
-
-.block    {margin-left: 25%; margin-right: 25%;}
-
-.note     {margin-left: 2%; margin-right: 2%;}
-
-.center   {text-align: center;}
-
-.smcap    {font-variant: small-caps;}
-
-.totoc    {position: absolute; right: 2%; font-size: 75%; text-align: right;}
-
-.totoi    {position: relative; left: 2%; font-size: 75%; text-align: right;}
-
-.caption  {font-weight: bold; font-size: 90%;}
-
-.figcenter   {margin: auto; text-align: center;}
-
-img {padding: 5px; border: thin solid #485045;}
-
-.poem             {margin-left:10%; margin-right:10%; text-align: left;}
-.poem br          {display: none;}
-.poem .stanza     {margin: 1em 0em 1em 0em;}
-.poem span.i0     {display: block; margin-left: 0em; padding-left: 3em; text-indent: -3em;}
 
