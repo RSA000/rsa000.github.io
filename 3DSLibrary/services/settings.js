@@ -39,6 +39,7 @@
 
     var click = function(ev){
         changeTheme(ev.dataset.name);
+        console.log("click");
     }
 
     /* End of Simbas */
