@@ -2,7 +2,7 @@
 body{
 
 	/* Container */
-	background: black;
+	background: papayawhip;
 	/* Container */
 	height: 500px;
 	width: 550px;
@@ -17,10 +17,11 @@ body{
 .upperScreen {
 
 	/* Container */
-	background-image: url("../../assets/img/backgrounds/lightbackground.jpg");
-	border: 2px solid #9c9a9a;
-	height: 212px;
-	width: 396px;
+	background-color: papayawhip ;
+	border: 4px dashed darkcyan;
+	border-radius: 10%;
+	height: 210px;
+	width: 394px;
 	margin: auto;
 	position: relative;
 }
@@ -29,8 +30,9 @@ body{
 .upperScreenContents{
 
 	/* Container */
-	background-image: inherit;
-	background-size: 1200px;
+	background-color: darkcyan;
+	background-size: 400px;
+	border: 2px solid darkcyan;
 	border-radius: 10%;
 	height: 90%;
 	width:  90%;
@@ -55,8 +57,8 @@ body{
 .topHeading{
 
 	/* Container */
-	background: black;
-	border: 2px solid white;
+	background: papayawhip;
+	border: 2px dashed darkcyan;
 	height: 90x;
 	width: 290px;
 	margin: auto;
@@ -64,14 +66,16 @@ body{
 	/* Text */
 	font-size: 27px;
 	text-align: center;
-	color: white;
+	color: ;
 }
 
 /* Top Subtitle settings.*/
 .topSubtitle{
 
 	/* Container */
-	background: black;
+	background: papayawhip;
+	border: 2px dashed darkcyan;
+	border-radius:10%;
 	height:20px;
 	width: fit-content;
 	margin: auto;
@@ -80,7 +84,7 @@ body{
 
 	/* Text */
 	text-align: center;
-	color: white;
+	color: darkcyan;
 }
 
 /* Top Screen's images container. */
@@ -97,7 +101,7 @@ body{
 .lowerLeft{
 
 	/* Container */
-	background: #000;
+	background: papayawhip;
 	background-blend-mode: hard-light;
 	border: 2px solid white;
 	border-radius: 70%;
@@ -111,7 +115,7 @@ body{
 .lowerRight{
 
 	/* Container */
-	background: #000;
+	background: papayawhip;
 	background-blend-mode: hard-light;
 	border: 2px solid white;
 	border-radius: 70%;
@@ -125,10 +129,10 @@ body{
 .lowerScreen{
 
 	/* Container */
-	background-image: url("../../assets/img/backgrounds/lightbackground.jpg");
-	border: 2px solid #9c9a9a;
-	height: 230px;
-	width: 314px;
+	background-color: papayawhip;
+	border: 4px solid darkcyan;
+	height: 226px;
+	width: 310px;
 	margin: auto;
 	position: relative;
 }
@@ -147,9 +151,12 @@ body{
 .lowerScreenContents a {
 
 	/* Container */
-	background-color: #333232;
+	width: 220px;
+	background-color: darkcyan;
+	border: 2px dashed papayawhip;
+	border-radius: 20%;
 	display: block;
-	margin: 6px 4px;
+	margin: 4px auto;
 
 	/* Text */
 	font-size: 30px;
@@ -185,91 +192,93 @@ body{
 }
 
 #catalogueOptions a{
-	border-radius: 10%;
+border-radius: 10%;
 
-	font-size: 12px;
+font-size: 12px;
 }
 
 
 #upperScreenRead{
 
-	/* Container */
-	height: 480px;
-	width: 394px;
+/* Container */
+height: 480px;
+width: 394px;
 
 }
 
 
 #galleryImages{
 
-	/* Container */
-	top: 10px;
-	margin: 0 30px auto;
-	position: relative;
+/* Container */
+top: 10px;
+margin: 0 30px auto;
+position: relative;
 
 }
 
 #galleryImage{
-	/* Container */
-	width: 300px;
-	height: 150px;
+/* Container */
+width: 300px;
+height: 150px;
 }
 
 
 #textContainerRead{
 
-	/* Container */
-	background: papayawhip;
-	height: 460px;
-	width: 295px;
-	margin: 2px auto;
-	overflow-y: scroll;
-	padding: 4px;
+/* Container */
+background: papayawhip;
+height: 460px;
+width: 295px;
+margin: 2px auto;
+overflow-y: scroll;
+padding: 4px;
 
-	/* Text */
-	font-size: 13px;
+/* Text */
+font-size: 13px;
 }
 
 
 #FeedbackForm{
-	/* Container */
-	margin: 5px 7px auto;
+/* Container */
+margin: 5px 7px auto;
 }
 
 #feedbackFormName{
 
-	/* Container */
-	height: 30px;
-	width: 280px;
-	margin-bottom: 3px;
-	padding: 2px;
+/* Container */
+height: 30px;
+width: 280px;
+margin-bottom: 3px;
+padding: 2px;
 }
 
 #feedbackFormEmail{
 
-	/* Container */
-	height: 30px;
-	width: 280px;
-	margin-bottom: 3px;
-	padding: 2px;
+/* Container */
+height: 30px;
+width: 280px;
+margin-bottom: 3px;
+padding: 2px;
 
 }
 
 #feedbackFormMessage{
 
-	/* Container */
-	height: 80px;
-	width: 280px;
-	margin: audto;
-	padding: 2px;
+/* Container */
+height: 80px;
+width: 280px;
+margin: audto;
+padding: 2px;
 
 }
 
 #feedbackFormButton{
 
-	/* Container */
-	margin: 5px auto;
-	margin-left: 115px;
+/* Container */
+margin: 5px auto;
+margin-left: 115px;
 
 }
+
+
 
