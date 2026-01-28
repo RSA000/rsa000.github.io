@@ -125,7 +125,7 @@ function checkTheme(){
     }
     else{
         alert("no theme set");
-        setCookie("theme", "main.css", 364);
+        setCookie("theme", "light.css", 364);
         return;
     }
 }
