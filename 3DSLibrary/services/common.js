@@ -113,12 +113,12 @@ function checkTheme(){
     if (themeCookie != "") {
 
         if (themeTag != null){
-            themeTag.getAttribute('href') == '../assets/styles/' + themeCookie;
+            themeTag.getAttribute('href') = '../assets/styles/' + themeCookie;
             setCookie("theme", themeCookie, 364);
             return;
         }
         else if (indexThemeTag != null){
-            indexThemeTag.getAttribute('href') == 'assets/styles' + themeCookie;
+            indexThemeTag.getAttribute('href') = 'assets/styles' + themeCookie;
             setCookie("theme", themeCookie, 364);
             return;
         }
