@@ -16,8 +16,8 @@ body {
 	/* Container */
 	background-color: papayawhip;
 	border-radius: 10%;
-	height: 210px;
-	width: 394px;
+	height: 215px;
+	width: 400px;
 	margin: auto;
 	position: relative;
 }
@@ -125,10 +125,9 @@ body {
 
 	/* Container */
 	background-color: papayawhip;
-	border: 4px dashed darkcyan;
 	border-radius: 10%;
-	height: 226px;
-	width: 310px;
+	height: 212px;
+	width: 320px;
 	margin: auto;
 	position: relative;
 }
@@ -137,7 +136,7 @@ body {
 
 	/* Container */
 	background-color: papayawhip;
-	border: 3px dashed darkcyan;
+	border: 4px dashed darkcyan;
 	border-radius: 10%;
 	height: 210px;
 	width: 230px;
