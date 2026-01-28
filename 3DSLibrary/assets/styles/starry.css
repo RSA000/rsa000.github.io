@@ -15,8 +15,8 @@ body {
 
 	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
-	height: 212px;
-	width: 396px;
+	height: 215px;
+	width: 400px;
 	margin: auto;
 	position: relative;
 }
@@ -27,7 +27,7 @@ body {
 	/* Container */
 	background-image: inherit;
 	background-size: 1200px;
-	border-radius: 10%;
+	border-radius: 8%;
 	height: 90%;
 	width:  90%;
 	margin: auto;
@@ -122,9 +122,8 @@ body {
 
 	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
-	border: 2px solid #9c9a9a;
-	height: 230px;
-	width: 314px;
+	height: 240px;
+	width: 320px;
 	margin: auto;
 	position: relative;
 }
