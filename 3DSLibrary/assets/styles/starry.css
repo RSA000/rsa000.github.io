@@ -15,7 +15,6 @@ body {
 
 	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
-	border: 1px dashed white;
 	height: 215px;
 	width: 400px;
 	margin: auto;
@@ -29,6 +28,7 @@ body {
 	/* Container */
 	background-image: inherit;
 	background-size: 300%;
+	border: 1px dashed white;
 	border-radius: 8%;
 	height: 90%;
 	width: 90%;
