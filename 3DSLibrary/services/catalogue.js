@@ -12,6 +12,9 @@
     var csvItems = [];
     // Get lowerScreenContents element.
     var lowerScreenContents = document.getElementById("catalogueOptions");
+    // get top screen Heading and subtitles and store in variables.
+    var topHeading = document.getElementsByClassName("topHeading")[0];
+    var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
 
 
 
@@ -19,9 +22,6 @@
 
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
-        // get top screen Heading and subtitles and store in variables.
-        var topHeading = document.getElementsByClassName("topHeading")[0];
-        var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
         // Get innerHTML and description attributes of current element.
         // Update innerHTML of top heading and subtitle to heading and subtitle values.
         topHeading.innerHTML = this.innerHTML;
@@ -82,7 +82,6 @@
 
             catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' data-bookname="' + url + '" data-description="' + description + '">' + name + '</a>';
         }
-
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
     }
@@ -165,12 +164,12 @@
     }
 
 
-    // Get, parse, and populate catalogue.
-    getCSV(parseCSV);
+
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-
+        // Get, parse, and populate catalogue.
+        getCSV(parseCSV);
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
             menuHandleKeyDown(e, lowerScreenContents);
