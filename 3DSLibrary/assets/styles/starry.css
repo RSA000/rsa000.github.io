@@ -1,8 +1,11 @@
 /* HTML general body settings */
 body {
+	/* Container */
 	background-color: black;
 	width: 600px;
-	margin: auto;
+	margin: 50px auto;
+
+	/* Text */
 	font-family: monospace;
 	font-size: 16px;
 }
