@@ -72,7 +72,7 @@ body {
 	/* Container */
 	background: black;
 	height:20px;
-	width: 270px;
+	width: min-content;
 	margin: auto;
 	margin-top: 15px;
 	padding: 3px;

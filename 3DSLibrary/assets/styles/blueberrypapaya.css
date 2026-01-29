@@ -72,7 +72,7 @@ background: papayawhip;
 border: 2px dashed darkcyan;
 border-radius:10%;
 height:20px;
-width: fit-content;
+width: min-content;
 margin: auto;
 margin-top: 15px;
 padding: 3px;
