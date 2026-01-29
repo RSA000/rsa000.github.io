@@ -80,7 +80,7 @@
             }
 
             // Find end of the closing tag
-            var closeTagEnd = text.indexOf("p>", closeTagStart);
+            var closeTagEnd = text.indexOf(">", closeTagStart);
             // If no closing tag found.
             if (closeTagEnd === -1) {
                 // Bad tag end,  add remaining text
