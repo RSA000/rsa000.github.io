@@ -3,8 +3,8 @@ body {
 	/* Container */
 	background-color: black;
 	border: 4px dashed white;
-	width: 600px;
-	padding:60px;
+	width: 500px;
+	padding:50px;
 
 	/* Text */
 	font-family: monospace;
