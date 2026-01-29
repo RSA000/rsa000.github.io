@@ -54,14 +54,14 @@ body {
 .topHeading{
 
 	/* Container */
-	background: black;
+	background: #4d3100;
 	border: 2px solid white;
 	height: 90x;
 	width: 290px;
 	margin: auto;
 
 	/* Text */
-	font-size: 27px;
+	font-size: 18px;
 	text-align: center;
 	color: white;
 }
@@ -70,15 +70,14 @@ body {
 .topSubtitle{
 
 	/* Container */
-	background: black;
-	height:20px;
+	background: #4d3100;
 	width: 200px;
 	margin: auto;
 	margin-top: 15px;
 	padding: 3px;
 
 	/* Text */
-	font-size:14px;
+	font-size:12px;
 	text-align: center;
 	color: white;
 }
@@ -148,7 +147,9 @@ body {
 .lowerScreenContents a {
 
 	/* Container */
-	background-color: #333232;
+	background-color: #4d3100;
+	border: 2px solid black;
+	width: 95%;
 	display: block;
 	margin: 6px 4px;
 
@@ -162,7 +163,6 @@ body {
 .lowerScreenContents a:hover {
 
 	/* Container */
-	background-color: #777;
 }
 
 #lowerScreenSettings{
