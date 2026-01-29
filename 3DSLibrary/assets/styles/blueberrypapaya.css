@@ -15,7 +15,7 @@ body {
 	/* Container */
 	background-color: papayawhip;
 	border-radius: 15%;
-	height: 215px;
+	height: 213px;
 	width: 400px;
 	margin: auto;
 	position: relative;
@@ -28,11 +28,12 @@ body {
 	background-color: darkcyan;
 	border: 3px dashed papayawhip;
 	border-radius: 8%;
-	height: 85%;
-	width: 90%;
+	height: fit-content;
+	width: fit-content;
 	margin: auto;
 	position: relative;
-	top: 4%;
+	top: 15%
+
 }
 
 /* Container for upperScreen text.*/
@@ -207,11 +208,6 @@ font-size: 12px;
 }
 
 
-#themeSettings{
-	margin: 10px auto;
-	text-align: center;
-}
-
 #upperScreenRead{
 
 /* Container */
@@ -294,12 +290,18 @@ margin-left: 115px;
 
 }
 
-#themeSettings .button {
+.button {
 	background: blanchedalmond;
 	padding: 4px;
 	margin: 5px auto;
 	display: block;
 }
+
+
+
+
+
+
 
 
 
