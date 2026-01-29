@@ -8,7 +8,7 @@ body {
 
 	/* Text */
 	font-family: monospace;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 /* Main container for upper screen.*/
@@ -28,10 +28,10 @@ body {
 
 	/* Container */
 	background-image: inherit;
-	background-size: 300%;
-	border: 1px dashed white;
-	border-radius: 8%;
-	height: 90%;
+	background-size: 15%;
+	border: 2px dashed black;
+	border-radius: 2%;
+	height: 85%;
 	width: 90%;
 	margin: auto;
 	position: relative;
@@ -42,11 +42,9 @@ body {
 .upperScreenText{
 
 	/* Container */
-	border-radius:8%;
-	height: 140px;
-	width: 335px;
-	margin: auto;
-	padding-top: 20px;
+	width: 290px;
+	margin: 25px auto;
+	padding: 15px;
 }
 
 
@@ -71,6 +69,7 @@ body {
 
 	/* Container */
 	background: black;
+  border: 2px solid white;
 	width: 190px;
 	margin: auto;
 	margin-top: 15px;
@@ -138,10 +137,11 @@ body {
 .lowerScreenContents{
 
 	/* Container */
-	border: 1px dashed white;
-	border-radius: 10%;
+	/*! background: #502626; */
+	border: 2px dashed black;
+	border-radius: 2%;
 	height: 230px;
-	width: 280px;
+	/*! width: 280px; */
 	margin: 5px auto;
 	overflow-y: scroll;
 }
@@ -160,11 +160,20 @@ body {
 	color: white;
 }
 
+.lowerScreenContents button{
+	background: darkgray;
+	color:black;
+	font-size: 15px; 
+	
+	width: 180px;
+	margin: 5px auto;
+}
+
 /* Lower Screen link CSS when hovering. */
 .lowerScreenContents a:hover {
 
 	/* Container */
-	background-color: #777;
+	background: #555;
 }
 
 #lowerScreenSettings{
@@ -256,12 +265,11 @@ body {
 #themeSettings{
 	margin: 10px auto;
 	text-align: center;
+	/*! background: ; */
 }
 
 
 #themeSettings button{
-	width: 180px;
-	margin:5px auto;
 
 }
 
