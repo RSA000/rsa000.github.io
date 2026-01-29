@@ -206,6 +206,11 @@ body {
 }
 
 
+#themeSettings{
+margin: 10px auto;
+text-align: center;
+}
+
 #upperScreenRead{
 
 	/* Container */
@@ -294,7 +299,7 @@ body {
 }
 
 
-.button {
+#themeSettings .button {
 	background-color: gray;
 	border: 2px dashed white;
 	color: black;
