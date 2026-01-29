@@ -117,7 +117,7 @@ function checkTheme(){
     if (themeCookie != "") {
         // Case for pages in views folder.
         if (themeTag != null){
-            themeTag.setAttribute('href', ('../assets/styles/' + themeCookie));
+            themeTag.setAttribute('href', ('../assets/styles/' + themeCookie + ".css"));
             setCookie("theme", themeCookie, 364);
             return;
         }
@@ -125,9 +125,9 @@ function checkTheme(){
         else if (indexThemeTag != null){
             // Store all upper screen image elements in variable.
             var images = document.querySelectorAll("img");
-            indexThemeTag.setAttribute('href', ('assets/styles/' + themeCookie));
+            indexThemeTag.setAttribute('href', ('assets/styles/' + themeCookie + ".css"));
             for (var i = 0; i < images.length; i++){
-                images[i].setAttribute('href', ("https://rsa000.github.io/3dslibrary/assets/img/index" + themeCookie));
+                images[i].setAttribute('href', ("https://rsa000.github.io/3dslibrary/assets/img/index" + themeCookie + ".gif"));
             }
             setCookie("theme", themeCookie, 364);
             return;
@@ -136,9 +136,9 @@ function checkTheme(){
     // Case for no theme set.
     else{
         alert("no theme set");
-        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/starry.css"));
-        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/starry.css"));
-        setCookie("theme", "starry.css", 364);
+        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/starry"));
+        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/starry"));
+        setCookie("theme", "starry", 364);
         checkTheme();
         return;
     }
