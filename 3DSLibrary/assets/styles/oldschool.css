@@ -71,8 +71,7 @@ body {
 
 	/* Container */
 	background: black;
-	height:20px;
-	width: 200px;
+	width: 190px;
 	margin: auto;
 	margin-top: 15px;
 	padding: 3px;
@@ -81,6 +80,9 @@ body {
 	font-size:14px;
 	text-align: center;
 	color: white;
+
+
+
 }
 
 /* Top Screen's images container. */
