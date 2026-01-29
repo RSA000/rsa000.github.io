@@ -126,6 +126,7 @@ body {
 
 	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
+	border: 4px dashed white;
 	height: 240px;
 	width: 320px;
 	margin: auto;
