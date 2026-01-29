@@ -125,9 +125,9 @@ function checkTheme(){
         else if (indexThemeTag != null){
             // Store all upper screen image elements in variable.
             var images = document.querySelectorAll("img");
-            indexThemeTag.setAttribute('href', ('assets/styles/' + themeCookie));
+            indexThemeTag.setAttribute('href', ('https://rsa000.github.io/3dslibrary/assets/styles/' + themeCookie));
             for (var i = 0; i < images.length; i++){
-                images[i].setAttribute('href', ("assets/imgs/index/" + themeCookie));
+                images[i].setAttribute('href', ("https://rsa000.github.io/3dslibrary/assets/styles/" + themeCookie));
             }
             setCookie("theme", themeCookie, 364);
             return;
