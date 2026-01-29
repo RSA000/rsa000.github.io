@@ -43,7 +43,7 @@ body {
 
 	/* Container */
 	width: 290px;
-	margin: 25px auto;
+	margin: 12px auto;
 	padding: 15px;
 }
 
@@ -89,7 +89,7 @@ body {
 
 	/* Container */
 	margin: auto;
-	bottom: 25%;
+	bottom: 34%;
 	position: relative;
 
 	left: 3%;
@@ -104,8 +104,8 @@ body {
 	border: 2px solid white;
 	border-radius: 70%;
 	position: relative;
-	height: 72px;
-	width: 60px;
+	height: 60px;
+	width: 47px;
 	left: auto;
 }
 
@@ -113,14 +113,14 @@ body {
 .indexScreenUpperRightPhoto{
 
 	/* Container */
-	background: #000;
-	background-blend-mode: hard-light;
-	border: 2px solid white;
-	border-radius: 70%;
-	position: relative;
-	height: 72px;
-	width: 60px;
-	left: 56%;
+  background: #000;
+  background-blend-mode: hard-light;
+  border: 2px solid white;
+  border-radius: 70%;
+  position: relative;
+  height: 60px;
+  width: 47px;
+  left: 66%;
 }
 
 /* Lower screen settings.*/
