@@ -127,7 +127,7 @@ function checkTheme(){
             var images = document.querySelectorAll("img");
             indexThemeTag.setAttribute("href", ("assets/styles/" + themeCookie + ".css"));
             for (var i = 0; i < images.length; i++){
-                images[i].setAttribute('href', ("https://rsa000.github.io/3dslibrary/assets/img/index" + themeCookie + ".gif"));
+                images[i].setAttribute('src', ("https://rsa000.github.io/3dslibrary/assets/img/index" + themeCookie + ".gif"));
             }
             setCookie("theme", themeCookie, 364);
             return;
