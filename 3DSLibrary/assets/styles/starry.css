@@ -2,8 +2,8 @@
 body {
 	/* Container */
 	background-color: black;
+	border: 4px dashed white;
 	width: 600px;
-	margin: 50px auto;
 	padding:25px;
 
 	/* Text */
