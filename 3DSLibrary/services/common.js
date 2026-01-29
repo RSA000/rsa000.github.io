@@ -9,8 +9,8 @@ const BACKSPACE = 8;
 const F5 = 116;
 const ENTER = 13;
 // Declare constant value for centering screen.
-const centerX = 200;
-const centerY = 285;
+const centerX = 150;
+const centerY = 280;
 
 
 /**
