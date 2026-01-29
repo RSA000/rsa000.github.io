@@ -155,6 +155,7 @@
                     // Update position +1 and replace inner text with new chunk.
                     pageNum += 1;
                     setCookie("pagenum", pageNum, 364);
+                    updatePage(pageNum);
                 }
                 break;
             case LEFT:
@@ -163,10 +164,11 @@
                     // Update current position and store current portion.
                     pageNum -= 1;
                     setCookie("pagenum", pageNum, 364);
+                    updatePage(pageNum);
                 }
                 break;
         }
-        updatePage(pageNum);
+
     }
 
 
