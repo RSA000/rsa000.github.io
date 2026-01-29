@@ -28,11 +28,11 @@ body {
 	background-color: darkcyan;
 	border: 3px dashed papayawhip;
 	border-radius: 8%;
-	height: 86%;
+	height: 70%;
 	width: 95%;
 	margin: auto;
 	position: relative;
-	top: 7%;
+	top: 15%;
 
 }
 
@@ -87,7 +87,7 @@ body {
 
 	/* Container */
 	margin: auto;
-	bottom: 25%;
+	bottom: 20%;
 	position: relative;
 
 }
@@ -141,7 +141,7 @@ body {
 	margin: auto;
 	overflow-y: scroll;
 	position: relative;
-	top: 6px;
+	top: 10px;
 
 }
 
@@ -294,8 +294,6 @@ margin-left: 115px;
 	padding: 4px;
 	margin: 5px auto;
 	display: block;
-
-	text-align: center;
 }
 
 
