@@ -231,11 +231,13 @@ function preventKey(event){
  */
 (function(){
 
-    // Check current theme.
-    checkTheme();
+
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
+        // Check current theme.
+        checkTheme();
 
         // If device is 3DS.
         if (is3DS()){
