@@ -136,8 +136,8 @@ function checkTheme(){
     // Case for no theme set.
     else{
         alert("no theme set");
-        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/starry"));
-        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/starry"));
+        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/starry.css"));
+        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/starry.css"));
         setCookie("theme", "starry", 364);
         checkTheme();
         return;
