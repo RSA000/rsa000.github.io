@@ -147,7 +147,7 @@ function checkTheme(){
 
 function changeTheme(themeName){
     // Update cookie them to new theme name.
-    setCookie("theme", themeName + ".css", 364);
+    setCookie("theme", themeName, 364);
     // Update theme.
     checkTheme();
 }
