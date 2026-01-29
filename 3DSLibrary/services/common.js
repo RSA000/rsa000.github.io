@@ -10,7 +10,7 @@ const F5 = 116;
 const ENTER = 13;
 // Declare constant value for centering screen.
 const centerX = 175;
-const centerY = 300;
+const centerY = 250;
 
 
 /**
