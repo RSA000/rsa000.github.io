@@ -98,10 +98,10 @@
         var buttons = document.querySelectorAll("#themeSettings button");
         // For each anchor, add event listener.
         for(var i = 0, l = buttons.length; i<l; i++){
-            // When focused on, apply active function with "this" selected anchor.
-            buttons[i].addEventListener('focus', active, false);
-            // When no anchors are selected, revert to greeting heading and subtitle.
-            buttons[i].addEventListener('blur', inactive, false);
+            // // // When focused on, apply active function with "this" selected anchor.
+            // // buttons[i].addEventListener('focus', active, false);
+            // // // When no anchors are selected, revert to greeting heading and subtitle.
+            // // buttons[i].addEventListener('blur', inactive, false);
             buttons[i].addEventListener("click", click, false);
         }
     }, false);
