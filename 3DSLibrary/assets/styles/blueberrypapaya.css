@@ -215,14 +215,12 @@ width: 394px;
 }
 
 
-#galleryImages{
-
-/* Container */
-top: 10px;
-margin: 0 30px auto;
-position: relative;
-
+#galleryImages {
+margin: 20px auto;
+position: static;
+text-align: center;
 }
+
 
 #galleryImage{
 /* Container */
