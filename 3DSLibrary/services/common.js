@@ -112,6 +112,7 @@ function checkTheme(){
     // Get document CSS link elements (index and other pages).
     var themeTag = document.getElementById("theme");
     var indexThemeTag = document.getElementById("themeindex");
+
     // Set theme if cookie exists.
     if (themeCookie != "") {
         // Case for pages in views folder.
@@ -122,7 +123,12 @@ function checkTheme(){
         }
         // Case for index.html page.
         else if (indexThemeTag != null){
+            // Store all upper screen image elements in variable.
+            var images = document.querySelectorAll("img");
             indexThemeTag.setAttribute('href', ('assets/styles/' + themeCookie));
+            for (var i = 0; i < images.length; i++){
+                images[i].setAttribute('href', ("assets/imgs/index/" + themeCookie));
+            }
             setCookie("theme", themeCookie, 364);
             return;
         }
