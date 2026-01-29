@@ -28,7 +28,7 @@ body {
 	background-color: darkcyan;
 	border: 3px dashed papayawhip;
 	border-radius: 8%;
-	height: 90%;
+	height: 85%;
 	width: 90%;
 	margin: auto;
 	position: relative;
@@ -131,16 +131,17 @@ body {
 	position: relative;
 }
 
-.lowerScreenContents{
-
-	/* Container */
+.lowerScreenContents {
 	background-color: papayawhip;
 	border: 4px dashed darkcyan;
 	border-radius: 10%;
-	height: 220px;
+	height: 190px;
 	width: 225px;
-	margin: 5px auto;
+	margin: auto;
 	overflow-y: scroll;
+	position: relative;
+	top: 6px;
+
 }
 
 /* Lower Screen div link CSS. */
