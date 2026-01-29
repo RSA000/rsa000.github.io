@@ -98,10 +98,6 @@ position: relative;
 .indexScreenUpperLeftPhoto{
 
 /* Container */
-background: papayawhip;
-background-blend-mode: hard-light;
-border: 2px dashed darkcyan;
-border-radius: 70%;
 position: relative;
 height: 72px;
 width: 60px;
@@ -113,9 +109,6 @@ left: 1%;
 
 /* Container */
 background: papayawhip;
-background-blend-mode: hard-light;
-border: 2px dashed darkcyan;
-border-radius: 70%;
 position: relative;
 height: 72px;
 width: 60px;
@@ -126,7 +119,7 @@ left: 60.8%;
 .lowerScreen{
 
 /* Container */
-border: 4px dashed darkcyan;
+border: 4px dashed #28cece;
 border-radius: 10%;
 height: 240px;
 width: 320px;
@@ -136,7 +129,7 @@ position: relative;
 
 .lowerScreenContents {
 background-color: papayawhip;
-border: 4px dashed darkcyan;
+border: 4px dashed #28cece;
 border-radius: 10%;
 height: 200px;
 width: 280px;
@@ -151,7 +144,7 @@ top: 10px;
 
 /* Container */
 width: 220px;
-background-color: darkcyan;
+background-color: #28cece;
 border: 2px dashed papayawhip;
 border-radius: 20%;
 display: block;
