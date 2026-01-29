@@ -291,8 +291,8 @@ margin-left: 115px;
 .button {
 	background: blanchedalmond;
 	padding: 4px;
-	margin: auto;
-	display: inline;
+	margin: 5px auto;
+	display: block;
 }
 
 
