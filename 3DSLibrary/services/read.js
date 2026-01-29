@@ -80,7 +80,7 @@
             }
 
             // Find end of the closing tag
-            var closeTagEnd = text.indexOf("p>", closeTagStart);
+            var closeTagEnd = text.indexOf("p>", closeTagStart) + 1;
             // If no closing tag found.
             if (closeTagEnd === -1) {
                 // Bad tag end,  add remaining text
@@ -97,7 +97,7 @@
             position = segmentEnd; // move past this tag
 
             // If chunk is large enough, save and reset
-            if (chunk.length >= 1900) {
+            if (chunk.length >= 1800) {
                 textChunks.push(chunk);
                 chunk = "";
             }
