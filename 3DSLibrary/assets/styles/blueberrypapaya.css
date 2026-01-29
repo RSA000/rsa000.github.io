@@ -208,6 +208,7 @@ font-size: 12px;
 #upperScreenRead{
 
 /* Container */
+background-color: #c0a883;
 height: 445px;
 width: 394px;
 
@@ -231,7 +232,7 @@ height: 150px;
 #textContainerRead{
 
 /* Container */
-background: papayawhip;
+background-color: #c0a883;
 height: 396px;
 width: 295px;
 margin: 2px auto;
