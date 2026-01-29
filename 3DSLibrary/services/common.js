@@ -117,7 +117,7 @@ function checkTheme(){
     if (themeCookie != "") {
         // Case for pages in views folder.
         if (themeTag != null){
-            themeTag.setAttribute('href', ('../assets/styles/' + themeCookie + ".css"));
+            themeTag.setAttribute("href", ("../assets/styles/" + themeCookie + ".css"));
             setCookie("theme", themeCookie, 364);
             return;
         }
@@ -125,7 +125,7 @@ function checkTheme(){
         else if (indexThemeTag != null){
             // Store all upper screen image elements in variable.
             var images = document.querySelectorAll("img");
-            indexThemeTag.setAttribute('href', ('assets/styles/' + themeCookie + ".css"));
+            indexThemeTag.setAttribute("href", ("assets/styles/" + themeCookie + ".css"));
             for (var i = 0; i < images.length; i++){
                 images[i].setAttribute('href', ("https://rsa000.github.io/3dslibrary/assets/img/index" + themeCookie + ".gif"));
             }
