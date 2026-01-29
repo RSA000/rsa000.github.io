@@ -127,10 +127,10 @@ body {
 
 	/* Container */
 	background-image: url("../../assets/img/backgrounds/stars.gif");
-	height: 240px;
-	width: 320px;
-	margin: auto;
-	position: relative;
+	height: 212px;
+  width: 320px;
+  margin: auto;
+  position: relative;
 }
 
 .lowerScreenContents{
@@ -184,7 +184,7 @@ body {
 	height: 210px;
 	width: 290px;
 	margin: 5px auto;
-	margin-left: 10px;
+	/*! margin-left: 10px; */
 	overflow-y: scroll;
 
 }
