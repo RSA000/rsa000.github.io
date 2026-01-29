@@ -241,6 +241,12 @@ position: relative;
 #themeSettings{
 margin: 10px auto;
 text-align: center;
+display: inline-block;
+width: 260px;
+height: 175px;
+background: #28cece;
+left: 10px;
+position: relative;
 }
 
 #feedbackForm{
