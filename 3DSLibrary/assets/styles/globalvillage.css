@@ -1,5 +1,8 @@
 /* HTML general body settings */
-
+html{
+	
+	background: #84712c;
+}
 body {
 background-color: #723824; 
 border: 4px dashed #dca165;
@@ -41,11 +44,10 @@ top: 10%;
 
 /* Container */
 
-border-radius:8%;
 height: 140px;
-width: 300px;
+width: 329px;
 margin: auto;
-padding-top: 5px;
+padding-top: 6px;
 }
 
 
@@ -55,13 +57,13 @@ padding-top: 5px;
 /* Container */
 background: #723824;
 border: 3px dashed #dca165;
-border-radius: 35%;
+border-radius: 14%;
 height: 90x;
-width: 290px;
+width: 320px;
 margin: auto;
 
 /* Text */
-font-size: 27px;
+font-size: 29px;
 text-align: center;
 color: #dca165;
 
@@ -98,10 +100,12 @@ position: relative;
 .indexScreenUpperLeftPhoto{
 
 /* Container */
-position: relative;
-height: 72px;
-width: 60px;
-left: 1%;
+background: #84712c;
+  position: relative;
+  height: 72px;
+  width: 60px;
+  left: 3%;
+  border-radius: 32%;
 }
 
 /* Top screen lower right image. */
@@ -112,7 +116,8 @@ background: #84712c;
 position: relative;
 height: 72px;
 width: 60px;
-left: 60.8%;
+left: 62.5%;
+border-radius: 32%;
 }
 
 /* Lower screen settings.*/
