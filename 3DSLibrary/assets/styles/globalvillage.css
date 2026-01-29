@@ -1,106 +1,106 @@
 /* HTML general body settings */
 html{
-	
-	background: #84712c;
+  background-color: #723824;
+
 }
 body {
-background-color: #723824; 
-border: 4px dashed #dca165;
-width: 500px;
-padding:50px;
-font-family: "Comic Sans MS", "Comic Sans", cursive;
-font-size: 16px;
+  background-color: #84712c;
+  border: 4px dashed #dca165;
+  width: 500px;
+  padding:50px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 16px;
 }
 
 /* Main container for upper screen.*/
 .upperScreen {
 
-/* Container */
-background-color: #dca165;
-border-radius: 15%;
-height: 213px;
-width: 400px;
-margin: auto;
-position: relative;
+  /* Container */
+  background-color: #dca165;
+  border-radius: 15%;
+  height: 213px;
+  width: 400px;
+  margin: auto;
+  position: relative;
 }
 
 /* Container for upperScreen contents.*/
 .upperScreenContents{
 
-/* Container */
-background-color: #513985;
-border: 3px dashed #d88543;
-border-radius: 8%;
-height: 80%;
-width: 90%;
-margin: auto;
-position: relative;
-top: 10%;
+  /* Container */
+  background-color: #513985;
+  border: 3px dashed #d88543;
+  border-radius: 8%;
+  height: 80%;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  top: 10%;
 
 }
 
 /* Container for upperScreen text.*/
 .upperScreenText{
 
-/* Container */
+  /* Container */
 
-height: 140px;
-width: 329px;
-margin: auto;
-padding-top: 6px;
+  height: 140px;
+  width: 329px;
+  margin: auto;
+  padding-top: 6px;
 }
 
 
 /* Top Heading settings.*/
 .topHeading{
 
-/* Container */
-background: #723824;
-border: 3px dashed #dca165;
-border-radius: 14%;
-height: 90x;
-width: 320px;
-margin: auto;
+  /* Container */
+  background: #723824;
+  border: 3px dashed #dca165;
+  border-radius: 14%;
+  height: 90x;
+  width: 320px;
+  margin: auto;
 
-/* Text */
-font-size: 29px;
-text-align: center;
-color: #dca165;
+  /* Text */
+  font-size: 29px;
+  text-align: center;
+  color: #dca165;
 
 }
 
 /* Top Subtitle settings.*/
 .topSubtitle{
 
-/* Container */
-background: #723824;
-border: 2px dashed #dca165;
-border-radius:10%;
-width: 190px;
-margin: auto;
-margin-top: 15px;
-padding: 3px;
+  /* Container */
+  background: #723824;
+  border: 2px dashed #dca165;
+  border-radius:10%;
+  width: 190px;
+  margin: auto;
+  margin-top: 15px;
+  padding: 3px;
 
-/* Text */
-text-align: center;
-color: #dca165;
+  /* Text */
+  text-align: center;
+  color: #dca165;
 }
 
 /* Top Screen's images container. */
 .upperScreenImages{
 
-/* Container */
-margin: auto;
-bottom: 32%;
-position: relative;
+  /* Container */
+  margin: auto;
+  bottom: 32%;
+  position: relative;
 
 }
 
 /* Top screen lower left image. */
 .indexScreenUpperLeftPhoto{
 
-/* Container */
-background: #84712c;
+  /* Container */
+  background: #84712c;
   position: relative;
   height: 72px;
   width: 60px;
@@ -111,70 +111,70 @@ background: #84712c;
 /* Top screen lower right image. */
 .indexScreenUpperRightPhoto{
 
-/* Container */
-background: #84712c;
-position: relative;
-height: 72px;
-width: 60px;
-left: 62.5%;
-border-radius: 32%;
+  /* Container */
+  background: #84712c;
+  position: relative;
+  height: 72px;
+  width: 60px;
+  left: 62.5%;
+  border-radius: 32%;
 }
 
 /* Lower screen settings.*/
 .lowerScreen{
 
-/* Container */
-border: 4px dashed #dca165;
-border-radius: 10%;
-height: 240px;
-width: 320px;
-margin: auto;
-position: relative;
+  /* Container */
+  border: 4px dashed #dca165;
+  border-radius: 10%;
+  height: 240px;
+  width: 320px;
+  margin: auto;
+  position: relative;
 }
 
 .lowerScreenContents {
-background-color: #dca165;
-border: 4px dashed #dca165;
-border-radius: 10%;
-height: 200px;
-width: 280px;
-margin: auto;
-overflow-y: scroll;
-position: relative;
-top: 10px;
+  background-color: #dca165;
+  border: 4px dashed #dca165;
+  border-radius: 10%;
+  height: 200px;
+  width: 280px;
+  margin: auto;
+  overflow-y: scroll;
+  position: relative;
+  top: 10px;
 }
 
 /* Lower Screen div link CSS. */
 .lowerScreenContents a {
 
-/* Container */
-width: 220px;
-background-color: #513985;
-border: 2px dashed #dca165;
-border-radius: 20%;
-display: block;
-margin: 4px auto;
+  /* Container */
+  width: 220px;
+  background-color: #513985;
+  border: 2px dashed #dca165;
+  border-radius: 20%;
+  display: block;
+  margin: 4px auto;
 
-/* Text */
-font-size: 30px;
-text-align: center;
-color: white;
+  /* Text */
+  font-size: 30px;
+  text-align: center;
+  color: white;
 }
 
 /* Lower Screen link CSS when hovering. */
 .lowerScreenContents a:hover {
 
-/* Container */
-background-color: #777;
+  /* Container */
+  background-color: #777;
 }
 
 .lowerScreenFeedback{
 
-/* Container */
-height: 200px;
-width: 300px;
-margin: 5px auto;
-overflow-y: scroll;
+  /* Container */
+  height: 200px;
+  width: 300px;
+  margin: 5px auto;
+  overflow-y: scroll;
 }
 
 
@@ -189,13 +189,13 @@ overflow-y: scroll;
 }
 
 .mySlides{
-/* Container */
-border: 3px dashed gray;
-top: 12px;
-left: 6px;
-position: relative;
-width: 125px;
-height: 60px;
+  /* Container */
+  border: 3px dashed gray;
+  top: 12px;
+  left: 6px;
+  position: relative;
+  width: 125px;
+  height: 60px;
 }
 
 #catalogueOptions a{
@@ -258,10 +258,10 @@ position: relative;
 
 
 #themeSettings button{
-	background:#723824;
-	color: #dca165;
-	width: 180px;
-	margin:5px auto;
+background:#723824;
+color: #dca165;
+width: 180px;
+margin:5px auto;
 
 }
 
