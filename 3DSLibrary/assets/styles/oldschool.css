@@ -8,14 +8,14 @@ body {
 
 	/* Text */
 	font-family: monospace;
-	font-size: 15px;
+	font-size: 16px;
 }
 
 /* Main container for upper screen.*/
 .upperScreen {
 
 	/* Container */
-	background-image: url("../../assets/img/backgrounds/oldschool.png");
+	background-image: url("../../assets/img/backgrounds/oldschool.gif");
 	height: 215px;
 	width: 400px;
 	margin: auto;
@@ -28,10 +28,10 @@ body {
 
 	/* Container */
 	background-image: inherit;
-	background-size: 15%;
-	border: 2px dashed black;
-	border-radius: 2%;
-	height: 85%;
+	background-size: 300%;
+	border: 1px dashed white;
+	border-radius: 8%;
+	height: 90%;
 	width: 90%;
 	margin: auto;
 	position: relative;
@@ -42,9 +42,11 @@ body {
 .upperScreenText{
 
 	/* Container */
-	width: 290px;
-	margin: 12px auto;
-	padding: 15px;
+	border-radius:8%;
+	height: 140px;
+	width: 350px;
+	margin: auto;
+	padding-top: 5px;
 }
 
 
@@ -69,8 +71,8 @@ body {
 
 	/* Container */
 	background: black;
-	border: 2px solid white;
-	width: 190px;
+	height:20px;
+	width: min-content;
 	margin: auto;
 	margin-top: 15px;
 	padding: 3px;
@@ -79,9 +81,6 @@ body {
 	font-size:14px;
 	text-align: center;
 	color: white;
-
-
-
 }
 
 /* Top Screen's images container. */
@@ -89,43 +88,45 @@ body {
 
 	/* Container */
 	margin: auto;
-	bottom: 52px;
+	bottom: 20%;
 	position: relative;
 
-	left: 6%;
+	left: 4%;
 }
 
 /* Top screen lower left image. */
 .indexScreenUpperLeftPhoto{
 
 	/* Container */
+	background: #000;
+	background-blend-mode: hard-light;
+	border: 2px solid white;
+	border-radius: 70%;
 	position: relative;
-	height: 50px;
-	width: 50px;
-	left: 77.8%;
-	background: #37240e;
-	border-radius: 50%;
-	border: 2px dashed bisque;
+	height: 72px;
+	width: 60px;
+	left: auto;
 }
 
 /* Top screen lower right image. */
 .indexScreenUpperRightPhoto{
 
 	/* Container */
+	background: #000;
+	background-blend-mode: hard-light;
+	border: 2px solid white;
+	border-radius: 70%;
 	position: relative;
-	height: 50px;
-	width: 50px;
-	left: -20.2%;
-	background: #37240e;
-	border-radius: 50%;
-	border: 2px dashed bisque;
+	height: 72px;
+	width: 60px;
+	left: 56%;
 }
 
 /* Lower screen settings.*/
 .lowerScreen{
 
 	/* Container */
-	background-image: url("../../assets/img/backgrounds/oldschool.png");
+	background-image: url("../../assets/img/backgrounds/oldschool.gif");
 	height: 240px;
 	width: 320px;
 	margin: auto;
@@ -135,11 +136,10 @@ body {
 .lowerScreenContents{
 
 	/* Container */
-	/*! background: #502626; */
-	border: 2px dashed black;
-	border-radius: 2%;
+	border: 1px dashed white;
+	border-radius: 10%;
 	height: 230px;
-	/*! width: 280px; */
+	width: 280px;
 	margin: 5px auto;
 	overflow-y: scroll;
 }
@@ -148,30 +148,21 @@ body {
 .lowerScreenContents a {
 
 	/* Container */
-	background-color: #453112;
+	background-color: #333232;
 	display: block;
 	margin: 6px 4px;
 
 	/* Text */
-	font-size: 25px;
+	font-size: 30px;
 	text-align: center;
 	color: white;
-}
-
-.lowerScreenContents button{
-	background: darkgray;
-	color:black;
-	font-size: 15px;
-
-	width: 180px;
-	margin: 5px auto;
 }
 
 /* Lower Screen link CSS when hovering. */
 .lowerScreenContents a:hover {
 
 	/* Container */
-	background: #555;
+	background-color: #777;
 }
 
 #lowerScreenSettings{
@@ -261,16 +252,16 @@ font-size: 12px
 }
 
 #themeSettings{
+width: 200px;
 margin: 10px auto;
 text-align: center;
-/*! background: ; */
 }
-
 
 #themeSettings button{
+width: 175px;
+margin:5px auto;
 
 }
-
 
 #feedbackForm{
 /* Container */
