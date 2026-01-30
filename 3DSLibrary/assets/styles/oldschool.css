@@ -252,14 +252,21 @@ font-size: 12px
 }
 
 #themeSettings{
+background: url(../../assets/img/backgrounds/oldschool.png);
+border: 5px solid gray;
+height: 80%;
 width: 200px;
 margin: 10px auto;
 text-align: center;
 }
 
 #themeSettings button{
+	
+background-color: gray;
+color: white;
 width: 175px;
 margin:5px auto;
+
 
 }
 
