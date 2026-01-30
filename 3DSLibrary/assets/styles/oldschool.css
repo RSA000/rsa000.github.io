@@ -15,7 +15,7 @@ body {
 .upperScreen {
 
 	/* Container */
-	background-image: url("../../assets/img/backgrounds/oldschool.gif");
+	background-image: url("../../assets/img/backgrounds/oldschool.png");
 	height: 215px;
 	width: 400px;
 	margin: auto;
@@ -126,7 +126,7 @@ body {
 .lowerScreen{
 
 	/* Container */
-	background-image: url("../../assets/img/backgrounds/oldschool.gif");
+	background-image: url("../../assets/img/backgrounds/oldschool.png");
 	height: 240px;
 	width: 320px;
 	margin: auto;
