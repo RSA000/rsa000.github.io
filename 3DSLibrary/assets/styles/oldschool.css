@@ -29,8 +29,7 @@ body {
 	/* Container */
 	background-image: inherit;
 	background-size: 15%;
-	border: 1px dashed white;
-	border-radius: 8%;
+	border: 4px solid gray;
 	height: 90%;
 	width: 90%;
 	margin: auto;
@@ -51,33 +50,20 @@ body {
 
 
 /* Top Heading settings.*/
-.topHeading{
-
-	/* Container */
-	background: black;
-	border: 2px solid white;
-	height: 90x;
-	width: 290px;
-	margin: auto;
-
-	/* Text */
-	font-size: 27px;
-	text-align: center;
-	color: white;
-}
+.topHeading{background: gray; border: 2px solid white; width: 290px; margin: auto; font-size: 27px; text-align: center; color: white;}
 
 /* Top Subtitle settings.*/
 .topSubtitle{
 
 	/* Container */
-	background: black;
+	background: gray;
 	border: 2px solid white;
 	margin: 10px auto;
 
 	/* Text */
 	font-size:14px;
 	text-align: center;
-	color: white;
+	color: #ffebeb;
 	width: 200px;
 }
 
@@ -133,8 +119,7 @@ body {
 .lowerScreenContents{
 
 	/* Container */
-	border: 1px dashed white;
-	border-radius: 10%;
+	border: 4px solid gray;
 	height: 230px;
 	width: 280px;
 	margin: 5px auto;
