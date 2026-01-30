@@ -28,7 +28,7 @@ body {
 
 	/* Container */
 	background-image: inherit;
-	background-size: 300%;
+	background-size: 15%;
 	border: 1px dashed white;
 	border-radius: 8%;
 	height: 90%;
@@ -71,16 +71,16 @@ body {
 
 	/* Container */
 	background: black;
-	height:20px;
-	width: min-content;
-	margin: auto;
-	margin-top: 15px;
-	padding: 3px;
+	border: 2px solid white;
+	height: 90x;
+	width: 290px;
+	margin: 10px auto;
 
 	/* Text */
 	font-size:14px;
 	text-align: center;
 	color: white;
+	width: 200px;
 }
 
 /* Top Screen's images container. */
@@ -91,7 +91,6 @@ body {
 	bottom: 20%;
 	position: relative;
 
-	left: 4%;
 }
 
 /* Top screen lower left image. */
@@ -105,7 +104,7 @@ body {
 	position: relative;
 	height: 72px;
 	width: 60px;
-	left: auto;
+	left: 5px;
 }
 
 /* Top screen lower right image. */
@@ -119,7 +118,7 @@ body {
 	position: relative;
 	height: 72px;
 	width: 60px;
-	left: 56%;
+	left: 220px;
 }
 
 /* Lower screen settings.*/
