@@ -72,8 +72,6 @@ body {
 	/* Container */
 	background: black;
 	border: 2px solid white;
-	height: 90x;
-	width: 290px;
 	margin: 10px auto;
 
 	/* Text */
@@ -147,9 +145,12 @@ body {
 .lowerScreenContents a {
 
 	/* Container */
-	background-color: #333232;
+	background-color: #2109;
+	border-radius:10%;
 	display: block;
-	margin: 6px 4px;
+	margin: 5px auto;
+	width: 90%;
+	padding:3px;
 
 	/* Text */
 	font-size: 30px;
