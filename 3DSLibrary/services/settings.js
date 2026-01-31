@@ -47,37 +47,37 @@
         // Prevent default action when key is pressed down.
         preventKey(event);
         // Switch case for each button press code.
-        // switch(event.keyCode){
-        //     // Case for up button.
-        //     case UP:
-        //         // If index is above 0.
-        //         if (index > 0){
-        //             // Update index -1.
-        //             index -= 1;
-        //         }
-        //         // If index is 0.
-        //         else{
-        //             // Set index to last anchor.
-        //             index = anchorLength - 1
-        //         }
-        //         // Focus on current index.
-        //         anchors[index].focus();
-        //         break;
-        //         // Case for down button.
-        //     case DOWN:
-        //         // If index is not above anchorLength.
-        //         if (index < anchorLength -1){
-        //             // Increment index.
-        //             index += 1;
-        //         }
-        //         // If index is at last anchor.
-        //         else{
-        //             index = 0;
-        //         }
-        //         // Focus on current anchor index.
-        //         anchors[index].focus();
-        //         break;
-        // }
+        switch(event.keyCode){
+             // Case for up button.
+             case UP:
+                 // If index is above 0.
+                 if (index > 0){
+                     // Update index -1.
+                     index -= 1;
+                 }
+                 // If index is 0.
+                 else{
+                     // Set index to last anchor.
+                     index = anchorLength - 1
+                 }
+                 // Focus on current index.
+                 anchors[index].focus();
+                 break;
+                 // Case for down button.
+             case DOWN:
+                 // If index is not above anchorLength.
+                 if (index < anchorLength -1){
+                     // Increment index.
+                     index += 1;
+                 }
+                 // If index is at last anchor.
+                 else{
+                     index = 0;
+                 }
+                 // Focus on current anchor index.
+                 anchors[index].focus();
+                 break;
+         }
     };
 
 
@@ -98,11 +98,13 @@
         var buttons = document.querySelectorAll("#themeSettings button");
         // For each anchor, add event listener.
         for(var i = 0, l = buttons.length; i<l; i++){
-            // // // When focused on, apply active function with "this" selected anchor.
-            // // buttons[i].addEventListener('focus', active, false);
-            // // // When no anchors are selected, revert to greeting heading and subtitle.
-            // // buttons[i].addEventListener('blur', inactive, false);
-            buttons[i].addEventListener("click", click, false);
+            // For each anchor, add event listener.
+
+            buttons[i].setAttribute('tabindex', i);
+            // When focused on, apply active function with "this" selected anchor.
+            buttons[i].addEventListener('focus', active, false);
+            // When no anchors are selected, revert to greeting heading and subtitle.
+            buttons[i].addEventListener('blur', inactive, false);
         }
     }, false);
 
