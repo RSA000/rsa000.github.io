@@ -80,7 +80,7 @@
                   break;
               case A:
                   // click element
-                  buttons.[index].click();
+                  buttons[index].click();
           }
      }
 
