@@ -79,6 +79,7 @@
                   buttons[index].focus();
                   break;
               case A:
+                  alert("A");
                   // click element
                   buttons[index].click();
           }
