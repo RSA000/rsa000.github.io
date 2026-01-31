@@ -8,7 +8,8 @@
  */
 (function(){
 
-    const buttons = document.getElementsByTagName("buttons");
+    // Store all <a> tags within the "lowerScreenContents" div in variable "buttons."
+    var buttons = document.querySelectorAll("#themeSettings buttons");
     const buttonsLength = buttons.length;
     var index = 0;
     var topHeading = document.getElementsByClassName("topHeading")[0];
@@ -94,8 +95,7 @@
             menuHandleKeyDown(e, document.getElementById('themeSettings'));
         });
 
-        // Store all <a> tags within the "lowerScreenContents" div in variable "buttons."
-        var buttons = document.querySelectorAll("#themeSettings buttons");
+
         // For each anchor, add event listener.
         for(var i = 0, l = buttons.length; i<l; i++){
             // For each anchor, add event listener.
