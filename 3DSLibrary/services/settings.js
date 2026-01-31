@@ -9,7 +9,7 @@
 (function(){
 
     // Store all <a> tags within the "lowerScreenContents" div in variable "buttons."
-    var buttons = document.querySelectorAll("#themeSettings buttons");
+    var buttons = document.querySelectorAll("#themeSettings button");
     const buttonsLength = buttons.length;
     var index = 0;
     var topHeading = document.getElementsByClassName("topHeading")[0];
