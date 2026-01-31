@@ -82,6 +82,11 @@
                   alert("A");
                   // click element
                   buttons[index].click();
+                  break;
+              case 65:
+                  alert("A character");
+                  buttons[index].click();
+                  break;
           }
      }
 
