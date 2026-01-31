@@ -8,8 +8,8 @@
  */
 (function(){
 
-    const buttonss = document.getElementsByTagName("buttons");
-    const buttonssLength = buttons.length;
+    const buttons = document.getElementsByTagName("buttons");
+    const buttonsLength = buttons.length;
     var index = 0;
     var topHeading = document.getElementsByClassName("topHeading")[0];
     var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
@@ -58,15 +58,15 @@
                   // If index is 0.
                   else{
                       // Set index to last anchor.
-                      index = buttonssLength - 1
+                      index = buttonsLength - 1
                   }
               // Focus on current index.
                   buttons[index].focus();
                   break;
                   // Case for down buttons.
               case DOWN:
-                  // If index is not above buttonssLength.
-                  if (index < buttonssLength -1){
+                  // If index is not above buttonsLength.
+                  if (index < buttonsLength -1){
                       // Increment index.
                       index += 1;
                   }
@@ -95,17 +95,17 @@
         });
 
         // Store all <a> tags within the "lowerScreenContents" div in variable "buttons."
-        var buttonss = document.querySelectorAll("#themeSettings buttons");
+        var buttons = document.querySelectorAll("#themeSettings buttons");
         // For each anchor, add event listener.
-        for(var i = 0, l = buttonss.length; i<l; i++){
+        for(var i = 0, l = buttons.length; i<l; i++){
             // For each anchor, add event listener.
 
-            buttonss[i].setAttribute('tabindex', i);
+            buttons[i].setAttribute('tabindex', i);
             // When focused on, apply active function with "this" selected anchor.
-            buttonss[i].addEventListener('focus', active, false);
+            buttons[i].addEventListener('focus', active, false);
             // When no buttons are selected, revert to greeting heading and subtitle.
-            buttonss[i].addEventListener('blur', inactive, false);
-            buttonss[i].addEventListener("click", click, false);
+            buttons[i].addEventListener('blur', inactive, false);
+            buttons[i].addEventListener("click", click, false);
         }
     }, false);
 
