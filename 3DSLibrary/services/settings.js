@@ -46,11 +46,12 @@
      */
      function menuHandleKeyDown(event, element){
          // Prevent default action when key is pressed down.
-         preventKey(event);
          // Switch case for each buttons press code.
          switch(event.keyCode){
               // Case for up buttons.
               case UP:
+                  preventKey(event);
+
                   // If index is above 0.
                   if (index > 0){
                       // Update index -1.
@@ -66,6 +67,8 @@
                   break;
                   // Case for down buttons.
               case DOWN:
+                  preventKey(event);
+
                   // If index is not above buttonsLength.
                   if (index < buttonsLength -1){
                       // Increment index.
