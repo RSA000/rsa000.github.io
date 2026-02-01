@@ -78,6 +78,8 @@
                   // Focus on current anchor index.
                   buttons[index].focus();
                   break;
+              case A:
+                  click(buttons[index]);
           }
      }
 
