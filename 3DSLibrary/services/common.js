@@ -20,38 +20,6 @@ function center(){
     window.scrollTo(centerX, centerY);
 }
 
-
-/**
- *
- * Create and insert a div in a parent element for DOM
- *
- * Example: loading site elements and templating.
- *
- * @param {childID} - new element's identification
- * @param {parantID} - element to insert new div into.
- * @param {innerHTMl} - HTML to insert into new div
- *
- */
-function insertElement(childID, parentID, innerHTML){
-
-    // Get parent element by id
-    var parentElement = document.getElementById(parentID);
-    // If parent element exists.
-    if (parentElement) {
-        // Create new div element and set inner html and id (<div id="childID">innerHTML</div>).
-        var newDiv = document.createElement("div");
-        newDiv.innerHTML = innerHTML;
-        newDiv.id = childID;
-        parentElement.appendChild(newDiv);
-    }
-    // Otherwise, log error.
-    else {
-        alert("Parent element not found");
-        console.error("Parent element not found");
-    }
-}
-
-
 //
 /**
  * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
@@ -136,9 +104,9 @@ function checkTheme(){
     // Case for no theme set.
     else{
         alert("no theme set");
-        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/starry.css"));
-        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/starry.css"));
-        setCookie("theme", "starry", 364);
+        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/globalvillage.css"));
+        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/globalvillage.css"));
+        setCookie("theme", "globalvillage", 364);
         checkTheme();
         return;
     }
