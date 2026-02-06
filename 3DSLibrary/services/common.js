@@ -94,6 +94,7 @@ function checkTheme(){
             // Store all upper screen image elements in variable.
             var images = document.querySelectorAll("img");
             indexThemeTag.setAttribute("href", ("assets/styles/" + themeCookie + ".css"));
+            // Set Home page upper screen photos.
             for (var i = 0; i < images.length; i++){
                 images[i].setAttribute('src', ("https://rsa000.github.io/3DSLibrary/assets/img/index/" + themeCookie + ".gif"));
             }

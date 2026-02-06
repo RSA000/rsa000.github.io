@@ -1,10 +1,5 @@
 
-/*
- * This is an immediately invoked function expression.
- * This means that after this function is created it will immediately run.
- * All variables are within the functions scope and not the main programs global scope;
- * this is a means of encapsulating data.
- */
+// Call function
 (function(){
     // Set initial tab index to 0.
     var index = 0;
@@ -31,7 +26,7 @@
 
 
     /**
-     *Function returns title when no items are selected.
+     * Function returns title when no items are selected.
      *
      */
     var click = function(ev) {
@@ -59,8 +54,8 @@
                 }
                 // Otherwise, log status and alert user.
                 else{
-                    console.error('Error loading text file:', xhr.statusText);
-                    alert("Error loading text file:" + xhr.statusText);
+                    console.error('Error loading CSV file:', xhr.statusText);
+                    alert("Error loading CSV file:" + xhr.statusText);
                 }
             }
 
@@ -95,12 +90,13 @@
 
         // For each line.
         for (var i = 0; i < lines.length; i++) {
-            // List entries consists of each CSV entry per line
-            var entries = lines[i].match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+            // Entries are anything between two quoates that ends with a comma (g = global = all matches)
+            var entries = lines[i].match(/(".*?|[^,"]+)/g);
             // If there are any entries.
             if (entries) {
-                // Remove surrounding quotes
+                // Remove surrounding quotes and add entry.
                 entries = entries.map(function(entry) {
+                    // Replace quote characters with empty string.
                     return entry.replace(/^"|"$/g, '');
                 });
                 csvItems.push(entries);
