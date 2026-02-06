@@ -91,7 +91,7 @@
         // For each line.
         for (var i = 0; i < lines.length; i++) {
             // Entries are anything between two quoates that ends with a comma (g = global = all matches)
-            var entries = lines[i].match(/(".*?|[^,"]+)/g);
+            var entries = lines[i].match(/(".*?[^ ,]+")/g);
             // If there are any entries.
             if (entries) {
                 // Remove surrounding quotes and add entry.
