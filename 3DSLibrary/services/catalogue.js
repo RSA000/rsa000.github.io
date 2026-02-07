@@ -5,9 +5,8 @@
     var index = 0;
     // Set empty csvItems list
     var csvItems = [];
-    // Get lowerScreenContents element.
+    // Get catalogueOptions, topHeading, and topSubtitle elements.
     var lowerScreenContents = document.getElementById("catalogueOptions");
-    // get top screen Heading and subtitles and store in variables.
     var topHeading = document.getElementsByClassName("topHeading")[0];
     var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
 
@@ -15,10 +14,14 @@
 
     /* Simba's */
 
-    /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
+    /**
+     * The active function changes the upper screen heading and subtitle the the selected elemements inner HTML
+     * and description attribute
+     *
+     * @param {ev}
+     */
     var active = function(ev) {
-        // Get innerHTML and description attributes of current element.
-        // Update innerHTML of top heading and subtitle to heading and subtitle values.
+        // Set heading and subtitle to element values.
         topHeading.innerHTML = this.innerHTML;
         topSubtitle.innerHTML = this.dataset.description;
     };
@@ -26,8 +29,9 @@
 
 
     /**
-     * Function returns title when no items are selected.
+     * Function updates bookname and pagenum cookie values before redirecting page.
      *
+     * @param {event}
      */
     var click = function(ev) {
         const bookName = this.dataset.bookname;
@@ -37,11 +41,15 @@
     };
 
 
-
+    /**
+     * Function makes XMLHttpRequest and calls passed callback function on the request's response text
+     *
+     * @param {function} callback fucntion
+     */
     function getCSV(callback){
         // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
         var xhr = new XMLHttpRequest();
-        // GET request using url, asychronous = true.
+        // GET request using url to csv file, asychronous = true.
         xhr.open('GET', "https://rsa000.github.io/3DSLibrary/assets/texts/catalog.csv", true);
         // Configure what function to perform when a state change occurs.
         xhr.onreadystatechange = function() {
@@ -65,6 +73,12 @@
     }
 
 
+    /**
+     * Function creates string that represents lower menu catalogue of library from parsed CSV entries.
+     *
+     * @param {list} csvItems are a list of CSV entries (book name, book description, and url to book).
+     * @param {element} DOM element to update inner HTML code.
+     */
     function populateCatalogue(csvItems, element){
         var catalogue = "";
 
@@ -82,6 +96,11 @@
     }
 
 
+    /**
+     * Function takes raw text from CSV file and returns entries as list items.
+     *
+     * @param {string} text - Raw text from CSV.
+     */
     function parseCSV(text){
         // Create list for csv entries.
         csvItems = [];
@@ -90,7 +109,7 @@
 
         // For each line.
         for (var i = 0; i < lines.length; i++) {
-            // Entries are anything between two quoates that ends with a comma (g = global = all matches)
+            // Entries are anything between two quoates and ignore spacing and commas in between; match multiple items.
             var entries = lines[i].match(/(".*?[^ ,]+")/g);
             // If there are any entries.
             if (entries) {
@@ -111,15 +130,15 @@
             anchors[i].addEventListener('focus', active, false);
             anchors[i].addEventListener('click', click, false);
         }
-
     }
 
 
     /**
      * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
+     *
      * @param {KeyboardEvent} event
      */
-    function menuHandleKeyDown(event, element){
+    function menuHandleKeyDown(event){
         var anchors = document.getElementsByTagName("a");
         var anchorLength = anchors.length;
 
