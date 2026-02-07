@@ -1,17 +1,12 @@
 
-/*
- * This is an immediately invoked function expression.
- * This means that after this function is created it will immediately run.
- * All variables are within the functions scope and not the main programs global scope;
- * this is a means of encapsulating data.
- */
 (function(){
 
+    // Set index and get anchor tags.
     var index = 0;
     const anchors = document.getElementsByTagName("a");
     const anchorLength = anchors.length;
 
-    /* Simba's */
+    /* Simba's (modified) stuff*/
 
     /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
     var active = function(ev) {
@@ -76,13 +71,13 @@
                 anchors[index].focus();
                 break;
         }
-    };
+    }
 
 
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-
+        // Set heading and subtitle to default value.
         inactive();
 
         // Add event listener for when a key is pressed down.
