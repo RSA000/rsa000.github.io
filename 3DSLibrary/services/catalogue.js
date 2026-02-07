@@ -83,7 +83,7 @@
         var catalogue = "";
 
         // Start from 1 if first row is header
-        for (var i = 1; i < csvItems.length; i++){
+        for (var i = 0; i < csvItems.length; i++){
             var row = csvItems[i];
             var name = row[0];
             var description = row[1];
