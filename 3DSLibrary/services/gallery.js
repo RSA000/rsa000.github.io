@@ -1,5 +1,7 @@
+
 (function(){
 
+    // Store document elements for images, number of images, and set index.
     const slides = document.getElementsByClassName("mySlides");
     const slideLength = slides.length;
     var galleryImage = document.getElementById("galleryImage");
@@ -54,7 +56,6 @@
         // Focus on new slide index.
         slides[index].focus();
     };
-
 
 
     /* When content is loaded. */
