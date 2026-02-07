@@ -57,7 +57,11 @@
         xhr.send();
     }
 
-
+    /**
+     * Function parses and returns list of HTML chunks.
+     *
+     * @param {String} - Text from literature in HTML format.
+     */
     function loadBook(text) {
         // Reset textChunks
         textChunks = [];
@@ -114,7 +118,6 @@
 
 
     /**
-     *
      * This function takes a number (0 or 1) that indicates the page direction and updates
      * the textContainerReader
      *
