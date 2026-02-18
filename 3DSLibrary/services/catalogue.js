@@ -79,7 +79,7 @@
     function parseCSV(text){
         // Create list for csv entries.
         csvItems = [];
-        var lowerScreenContents = document.getElementById("lowerScreenContents");
+        var lowerScreenContents = document.getElementById("catalogueOptions");
         // Store each CSV line in variable.
         var lines = text.trim().split("\n");
 
