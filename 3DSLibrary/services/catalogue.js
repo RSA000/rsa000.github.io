@@ -106,10 +106,7 @@
     document.addEventListener('DOMContentLoaded', function(ev) {
         // Get, parse, and populate catalogue.
         getCSV(parseCSV);
-        // Add event listener for when a key is pressed down.
-        window.addEventListener("keydown", function(e) {
-            menuHandleKeyDown(e, lowerScreenContents);
-        });
+
     }, false);
 
 })()
