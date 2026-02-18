@@ -305,8 +305,6 @@ function preventKey(event){
             menuHandleKeyDown(e, document.getElementById('lowerScreenContents'));
         });
 
-        // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
-        var anchors = this.querySelectorAll(".lowerScreenContents a");
         // For each anchor, add event listener.
         for(var i = 0, l = anchors.length; i<l; i++){
             // When focused on, apply active function with "this" selected anchor.
