@@ -329,8 +329,6 @@ function preventKey(event){
             // Call center function every milisecond.
             setInterval(center);
 
-            // Store all <a> tags within the "lowerScreenContents" div in variable "anchors."
-            var anchors = document.querySelectorAll("a");
             // Add non-3DS compatible warning to any relevant anchors.
             for(var i = 0, l = anchors.length; i<l; i++){
                 // If 3DS attribute exists, add warning to link.
