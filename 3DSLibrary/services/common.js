@@ -177,7 +177,7 @@ var inactive = function(ev) {
  * @param {KeyboardEvent} event
  */
 function menuHandleKeyDown(event, element){
-    anchorLength = anchors.length;
+    var anchorLength = anchors.length;
     // Prevent default action when key is pressed down.
     preventKey(event);
     // Switch case for each button press code.
