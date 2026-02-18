@@ -10,24 +10,6 @@
     var topHeading = document.getElementsByClassName("topHeading")[0];
     var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
 
-
-
-    /* Simba's */
-
-    /**
-     * The active function changes the upper screen heading and subtitle the the selected elemements inner HTML
-     * and description attribute
-     *
-     * @param {ev}
-     */
-    var active = function(ev) {
-        // Set heading and subtitle to element values.
-        topHeading.innerHTML = this.innerHTML;
-        topSubtitle.innerHTML = this.dataset.description;
-    };
-    /* End of Simbas */
-
-
     /**
      * Function updates bookname and pagenum cookie values before redirecting page.
      *
@@ -132,51 +114,6 @@
         }
     }
 
-
-    /**
-     * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
-     *
-     * @param {KeyboardEvent} event
-     */
-    function menuHandleKeyDown(event){
-        var anchors = document.getElementsByTagName("a");
-        var anchorLength = anchors.length;
-
-        // Prevent default action when key is pressed down.
-        preventKey(event);
-        // Switch case for each button press code.
-        switch(event.keyCode){
-            // Case for up button.
-            case UP:
-                // If index is above 0.
-                if (index > 0){
-                    // Update index -1.
-                    index -= 1;
-                }
-                // If index is 0.
-                else{
-                    // Set index to last anchor.
-                    index = anchorLength - 1
-                }
-                // Focus on current index.
-                anchors[index].focus();
-                break;
-                // Case for down button.
-            case DOWN:
-                // If index is not above anchorLength.
-                if (index < anchorLength -1){
-                    // Increment index.
-                    index += 1;
-                }
-                // If index is at last anchor.
-                else{
-                    index = 0;
-                }
-                // Focus on current anchor index.
-                anchors[index].focus();
-                break;
-        }
-    }
 
 
 

@@ -17,74 +17,11 @@
 
     /* Simba's */
 
-    /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
-    var active = function(ev) {
-        // Get innerHTML and description attributes of current element.
-        // Update innerHTML of top heading and subtitle to heading and subtitle values.
-        topHeading.innerHTML = this.innerHTML;
-        topSubtitle.innerHTML = this.dataset.description;
-    };
-
-
-    /*Function returns title to original message when no items are selected. */
-    var inactive = function(ev) {
-        // Update heading and subtitle.
-        topHeading.innerHTML = topHeading.dataset.description;
-        topSubtitle.innerHTML = topSubtitle.dataset.description;
-    };
-
-
     var click = function(ev){
         changeTheme(this.dataset.name);
     }
 
     /* End of Simbas */
-
-    /**
-     * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
-     * @param {KeyboardEvent} event
-     */
-     function menuHandleKeyDown(event, element){
-         // Prevent default action when key is pressed down.
-         // Switch case for each buttons press code.
-         switch(event.keyCode){
-              // Case for up buttons.
-              case UP:
-                  preventKey(event);
-
-                  // If index is above 0.
-                  if (index > 0){
-                      // Update index -1.
-                      index -= 1;
-                  }
-                  // If index is 0.
-                  else{
-                      // Set index to last anchor.
-                      index = buttonsLength - 1
-                  }
-              // Focus on current index.
-                  buttons[index].focus();
-                  break;
-                  // Case for down buttons.
-              case DOWN:
-                  preventKey(event);
-
-                  // If index is not above buttonsLength.
-                  if (index < buttonsLength -1){
-                      // Increment index.
-                      index += 1;
-                  }
-                  // If index is at last anchor.
-                  else{
-                      index = 0;
-                  }
-                  // Focus on current anchor index.
-                  buttons[index].focus();
-                  break;
-              case A:
-                  click(buttons[index]);
-          }
-     }
 
 
 
