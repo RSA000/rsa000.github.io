@@ -307,7 +307,7 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
         var anchors = document.getElementsByTagName("a");
-        var anchorLength = anchors.length;
+        var catalogueAnchors = document.getElementsByClassName("cat");
 
 
 
@@ -329,12 +329,10 @@ function preventKey(event){
             anchors[i].addEventListener('focus', active, false);
             // When no anchors are selected, revert to greeting heading and subtitle.
             anchors[i].addEventListener('blur', inactive, false);
+        }
 
-            // If catalogue link.
-            if (anchors[i].getAttribute("id") === "cat"){
-                console.log(anchors[i].id);
-                anchors[i].addEventListener('click', catClick, false);
-            }
+        for (var i = 0, l = catalogueAnchors.length; i<l; i++){
+            catalogueAnchors[i].addEventListener("click", catClick, false);
         }
 
         // Check current theme.
