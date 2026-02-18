@@ -296,7 +296,7 @@ function preventKey(event){
     document.addEventListener('DOMContentLoaded', function(ev) {
 
         // If heading and subtitle exist:
-        if (window.getElementById("topHeading"){
+        if (window.getElementById("topHeading")){
             // Set heading and subtitle to default value.
             inactive();
         }
