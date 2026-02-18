@@ -99,14 +99,6 @@
     }
 
 
-
-
-
-    /* When content is loaded. */
-    document.addEventListener('DOMContentLoaded', function(ev) {
-        // Get, parse, and populate catalogue.
-        getCSV(parseCSV);
-
-    }, false);
+    getCSV(parseCSV);
 
 })()
