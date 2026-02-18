@@ -173,6 +173,20 @@ var inactive = function(ev) {
 
 
 /**
+ * Function updates bookname and pagenum cookie values before redirecting page.
+ *
+ * @param {event}
+ */
+var catClick = function(ev) {
+    const bookName = this.dataset.bookname;
+    setCookie("bookname", bookName, 364);
+    setCookie("pagenum", 0, 364);
+    window.location.href = "./read.html";
+};
+
+
+
+/**
  * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
  * @param {KeyboardEvent} event
  */
@@ -311,6 +325,11 @@ function preventKey(event){
             anchors[i].addEventListener('focus', active, false);
             // When no anchors are selected, revert to greeting heading and subtitle.
             anchors[i].addEventListener('blur', inactive, false);
+
+            // If catalogue link.
+            if (anchors[i].id === "cat"){
+                anchors[i].addEventListener('click', catClick, false);
+            }
         }
 
         // Check current theme.

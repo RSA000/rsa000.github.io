@@ -10,17 +10,7 @@
     var topHeading = document.getElementsByClassName("topHeading")[0];
     var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
 
-    /**
-     * Function updates bookname and pagenum cookie values before redirecting page.
-     *
-     * @param {event}
-     */
-    var catClick = function(ev) {
-        const bookName = this.dataset.bookname;
-        setCookie("bookname", bookName, 364);
-        setCookie("pagenum", 0, 364);
-        window.location.href = "./read.html";
-    };
+
 
 
     /**
