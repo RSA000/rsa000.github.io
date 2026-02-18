@@ -306,8 +306,7 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
         var anchors = document.getElementsByTagName("a");
-        var catalogueAnchors = document.getElementsByClassName("cat");
-        console.log(catalogueAnchors);
+        var catalogueAnchors =
 
 
         // If heading and subtitle exist:
@@ -328,10 +327,7 @@ function preventKey(event){
             anchors[i].addEventListener('blur', inactive, false);
         }
 
-        for (var i = 0, l = catalogueAnchors.length; i<l; i++){
-            catalogueAnchors[i].addEventListener("click", catClick, false);
-            console.log("added catalogue event");
-        }
+
 
         // Check current theme.
         checkTheme();

@@ -65,6 +65,14 @@
         }
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
+
+        document.getElementsByClassName("cat");
+        console.log(catalogueAnchors);
+
+        for (var i = 0, l = catalogueAnchors.length; i<l; i++){
+            catalogueAnchors[i].addEventListener("click", catClick, false);
+            console.log("added catalogue event");
+        }
     }
 
 
