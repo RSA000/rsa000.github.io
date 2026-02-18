@@ -14,8 +14,6 @@ const centerY = 277;
 
 // Set index and get anchor tags.
 var index = 0;
-var anchorLength = 0;
-
 
 
 /**
