@@ -178,7 +178,7 @@ var inactive = function(ev) {
  * @param {event}
  */
 var catClick = function(ev) {
-    const bookName = this.dataset.bookname;
+    var bookName = this.dataset.bookname;
     setCookie("bookname", bookName, 364);
     setCookie("pagenum", 0, 364);
     window.location.href = "./read.html";
@@ -191,7 +191,6 @@ var catClick = function(ev) {
  * @param {KeyboardEvent} event
  */
 function menuHandleKeyDown(event, element, anchors){
-    var anchorLength = anchors.length;
     // Prevent default action when key is pressed down.
     preventKey(event);
     // Switch case for each button press code.
@@ -206,7 +205,7 @@ function menuHandleKeyDown(event, element, anchors){
             // If index is 0.
             else{
                 // Set index to last anchor.
-                index = anchorLength - 1
+                index = anchors.length - 1
             }
             // Focus on current index.
             anchors[index].focus();
@@ -214,7 +213,7 @@ function menuHandleKeyDown(event, element, anchors){
             // Case for down button.
         case DOWN:
             // If index is not above anchorLength.
-            if (index < anchorLength -1){
+            if (index < anchors.length -1){
                 // Increment index.
                 index += 1;
             }
@@ -331,6 +330,7 @@ function preventKey(event){
 
         for (var i = 0, l = catalogueAnchors.length; i<l; i++){
             catalogueAnchors[i].addEventListener("click", catClick, false);
+            console.log("added catalogue event");
         }
 
         // Check current theme.
