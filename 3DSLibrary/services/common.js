@@ -24,6 +24,42 @@ function center(){
 }
 
 
+
+/**
+ *
+ * getText(url) returns a list of strings subdivided from a string acquired through an
+ * XMLHttpRequest to a passed url.
+ *
+ * @param {String} url
+ * @param {Function} callback
+ */
+function getText(url, callback){
+    // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
+    var xhr = new XMLHttpRequest();
+    // GET request using url, asychronous = true.
+    xhr.open('GET', url, true);
+    // Configure what function to perform when a state change occurs.
+    xhr.onreadystatechange = function() {
+        // A readyState value of 4 means GET state is done (4).
+        if (xhr.readyState === 4) {
+            // If status code is not an error.
+            if (xhr.status >= 200 && xhr.status < 300) {
+                // Send response text of request to callback function.
+                if (callback) callback(xhr.responseText);
+            }
+            // Otherwise, log status and alert user.
+            else{
+                console.error('Error loading text file:', xhr.statusText);
+                alert("Error loading text file:" + xhr.statusText + url);
+            }
+        }
+
+    };
+    // Send request.
+    xhr.send();
+}
+
+
 /**
  * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////  https://www.w3schools.com/js/js_cookies.asp          ///////

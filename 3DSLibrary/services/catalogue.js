@@ -5,39 +5,8 @@
     index = 0;
     // Set empty csvItems list
     var csvItems = [];
+    var url = "https://rsa000.github.io/3DSLibrary/assets/texts/catalog.csv";
 
-
-
-
-    /**
-     * Function makes XMLHttpRequest and calls passed callback function on the request's response text
-     *
-     * @param {function} callback fucntion
-     */
-    function getCSV(callback){
-        // Create a new XMLHttpRequest object and initialize a GET request to the passed url.
-        var xhr = new XMLHttpRequest();
-        // GET request using url to csv file, asychronous = true.
-        xhr.open('GET', "https://rsa000.github.io/3DSLibrary/assets/texts/catalog.csv", true);
-        // Configure what function to perform when a state change occurs.
-        xhr.onreadystatechange = function() {
-            // A readyState value of 4 means GET state is done (4).
-            if (xhr.readyState === 4) {
-                // If status code is not an error.
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    // Send response text of request to callback function.
-                    if (callback) callback(xhr.responseText);
-                }
-                // Otherwise, log status and alert user.
-                else{
-                    console.error('Error loading CSV file:', xhr.statusText);
-                    alert("Error loading CSV file:" + xhr.statusText);
-                }
-            }
-        };
-        // Send request.
-        xhr.send();
-    }
 
 
     /**
@@ -102,6 +71,6 @@
     }
 
 
-    getCSV(parseCSV);
+    getText(url, parseCSV);
 
 })()
