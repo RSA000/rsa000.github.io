@@ -14,6 +14,8 @@ const centerY = 277;
 
 // Set index and get anchor tags.
 var index = 0;
+var anchorLength = 0;
+
 
 
 /**
@@ -177,6 +179,7 @@ var inactive = function(ev) {
  * @param {KeyboardEvent} event
  */
 function menuHandleKeyDown(event, element){
+    anchorLength = anchors.length;
     // Prevent default action when key is pressed down.
     preventKey(event);
     // Switch case for each button press code.
@@ -293,7 +296,6 @@ function preventKey(event){
     document.addEventListener('DOMContentLoaded', function(ev) {
 
         const anchors = document.getElementsByTagName("a");
-        const anchorLength = anchors.length;
 
         // If heading and subtitle exist:
         if (document.getElementById("topHeading") != null){
