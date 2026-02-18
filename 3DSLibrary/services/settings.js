@@ -17,7 +17,7 @@
 
     /* Simba's */
 
-    var click = function(ev){
+    var bttnClick = function(ev){
         changeTheme(this.dataset.name);
     }
 
@@ -45,7 +45,7 @@
             buttons[i].addEventListener('focus', active, false);
             // When no buttons are selected, revert to greeting heading and subtitle.
             buttons[i].addEventListener('blur', inactive, false);
-            buttons[i].addEventListener("click", click, false);
+            buttons[i].addEventListener("click", bttnClick, false);
         }
     }, false);
 

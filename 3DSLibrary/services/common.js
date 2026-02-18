@@ -330,6 +330,7 @@ function preventKey(event){
 
             // If catalogue link.
             if (anchors[i].id === "cat"){
+                console.log(anchors[i].id);
                 anchors[i].addEventListener('click', catClick, false);
             }
         }
