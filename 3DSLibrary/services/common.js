@@ -307,7 +307,7 @@ function preventKey(event){
     document.addEventListener('DOMContentLoaded', function(ev) {
         var anchors = document.getElementsByTagName("a");
         var catalogueAnchors = document.getElementsByClassName("cat");
-
+        console.log(catalogueAnchors);
 
 
         // If heading and subtitle exist:
