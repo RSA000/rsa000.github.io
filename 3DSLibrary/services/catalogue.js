@@ -2,13 +2,9 @@
 // Call function
 (function(){
     // Set initial tab index to 0.
-    var index = 0;
+    index = 0;
     // Set empty csvItems list
     var csvItems = [];
-    // Get catalogueOptions, topHeading, and topSubtitle elements.
-    var lowerScreenContents = document.getElementById("catalogueOptions");
-    var topHeading = document.getElementsByClassName("topHeading")[0];
-    var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
 
 
 
@@ -38,7 +34,6 @@
                     alert("Error loading CSV file:" + xhr.statusText);
                 }
             }
-
         };
         // Send request.
         xhr.send();
@@ -103,7 +98,6 @@
         }
         // Populate lowerScreenContents with anchor elements created from csv File.
         populateCatalogue(csvItems, lowerScreenContents);
-
     }
 
 
