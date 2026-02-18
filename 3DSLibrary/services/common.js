@@ -14,6 +14,9 @@ const centerY = 277;
 
 // Set index and get anchor tags.
 var index = 0;
+// Store all <a> tags within the "lowerScreenContents" div in variable "buttons."
+var buttons = document.querySelectorAll("#themeSettings button");
+const buttonsLength = buttons.length;
 
 
 /**
@@ -208,6 +211,13 @@ var inactive = function(ev) {
 /* End of Simbas */
 
 
+
+
+var bttnClick = function(ev){
+    changeTheme(this.dataset.name);
+}
+
+
 /**
  * Function updates bookname and pagenum cookie values before redirecting page.
  *
@@ -342,6 +352,19 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
         var anchors = document.getElementsByTagName("a");
+
+
+        // For each anchor, add event listener.
+        for(var i = 0, l = buttons.length; i<l; i++){
+            // For each anchor, add event listener.
+
+            buttons[i].setAttribute('tabindex', i);
+            // When focused on, apply active function with "this" selected anchor.
+            buttons[i].addEventListener('focus', active, false);
+            // When no buttons are selected, revert to greeting heading and subtitle.
+            buttons[i].addEventListener('blur', inactive, false);
+            buttons[i].addEventListener("click", bttnClick, false);
+        }
 
 
         // If heading and subtitle exist:
