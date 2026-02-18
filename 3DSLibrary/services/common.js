@@ -295,9 +295,11 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        // Set heading and subtitle to default value.
-        inactive();
-
+        // If heading and subtitle exist:
+        if (window.getElementById("topHeading"){
+            // Set heading and subtitle to default value.
+            inactive();
+        }
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
             menuHandleKeyDown(e, document.getElementById('lowerScreenContents'));
