@@ -12,9 +12,6 @@ const ENTER = 13;
 const centerX = 152;
 const centerY = 277;
 
-const anchors = document.getElementsByTagName("a");
-const anchorLength = anchors.length;
-
 // Set index and get anchor tags.
 var index = 0;
 
@@ -294,6 +291,9 @@ function preventKey(event){
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
+        const anchors = document.getElementsByTagName("a");
+        const anchorLength = anchors.length;
 
         // If heading and subtitle exist:
         if (document.getElementById("topHeading") != null){
