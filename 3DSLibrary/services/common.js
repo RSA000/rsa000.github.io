@@ -323,8 +323,6 @@ function preventKey(event){
 
         // For each anchor, add event listener.
         for(var i = 0, l = anchors.length; i<l; i++){
-            console.log(anchors[i].getAttribute("id"));
-
             // When focused on, apply active function with "this" selected anchor.
             anchors[i].addEventListener('focus', active, false);
             // When no anchors are selected, revert to greeting heading and subtitle.
