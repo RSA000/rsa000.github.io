@@ -15,7 +15,7 @@
      *
      * @param {event}
      */
-    var click = function(ev) {
+    var catClick = function(ev) {
         const bookName = this.dataset.bookname;
         setCookie("bookname", bookName, 364);
         setCookie("pagenum", 0, 364);
@@ -71,7 +71,7 @@
             var description = row[1];
             var url = row[2];
 
-            catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' data-bookname="' + url + '" data-description="' + description + '">' + name + '</a>';
+            catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' data-bookname="' + url + '" data-description="' + description + '">' + name + " id='cat' " + '</a>';
         }
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
