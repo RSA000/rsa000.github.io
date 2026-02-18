@@ -105,13 +105,7 @@
         }
         // Populate lowerScreenContents with anchor elements created from csv File.
         populateCatalogue(csvItems, lowerScreenContents);
-        // Store all <a> tags in variable.
-        var anchors = document.getElementsByTagName("a");
-        // For each anchor, add event listener for focusing and clicking.
-        for(var i = 0, l = anchors.length; i<l; i++){
-            anchors[i].addEventListener('focus', active, false);
-            anchors[i].addEventListener('click', click, false);
-        }
+
     }
 
 
