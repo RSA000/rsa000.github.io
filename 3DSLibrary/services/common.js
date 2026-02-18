@@ -176,8 +176,7 @@ var inactive = function(ev) {
  * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
  * @param {KeyboardEvent} event
  */
-function menuHandleKeyDown(event, element){
-    var anchors = document.getElementsByTagName("a");
+function menuHandleKeyDown(event, element, anchors){
     var anchorLength = anchors.length;
     // Prevent default action when key is pressed down.
     preventKey(event);
@@ -293,6 +292,8 @@ function preventKey(event){
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+        var anchors = document.getElementsByTagName("a");
+
 
         // If heading and subtitle exist:
         if (document.getElementById("topHeading") != null){
@@ -301,7 +302,7 @@ function preventKey(event){
         }
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
-            menuHandleKeyDown(e, document.getElementById('lowerScreenContents'));
+            menuHandleKeyDown(e, document.getElementById('lowerScreenContents'), anchors);
         });
 
         // For each anchor, add event listener.
