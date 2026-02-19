@@ -14,8 +14,6 @@ const centerY = 277;
 
 // Set index and get elements tags.
 var index = 0;
-// Store all <a> tags within the "lowerScreenContents" div in variable "elements."
-
 
 
 /**
@@ -355,7 +353,7 @@ function preventKey(event){
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-        var elements = document.querySelectorAll('a, button');
+        var elements = document.querySelectorAll('a, button, form');
         index = 0;
 
         // Call center function every milisecond.
