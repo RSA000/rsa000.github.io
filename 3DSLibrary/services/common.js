@@ -232,7 +232,6 @@ function menuHandleKeyDown(event, element){
     // Prevent default action when key is pressed down.
     preventKey(event);
 
-    alert(event.keyCode);
     var elements = document.querySelectorAll('a, button');
 
     if (elements.length > 0){
@@ -333,7 +332,7 @@ function registerNon3DSlink(a){
 function preventKey(event){
     // Allow backspace, F5 (refresh), and ENTER.
     var keyCode = event.keyCode;
-    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode === ENTER)){
+    if ((keyCode === BACKSPACE) || (keyCode === F5)){
         return true;
     }
     // Allow character input.
