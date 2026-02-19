@@ -147,7 +147,7 @@ function checkTheme(){
         // Case for index.html page.
         else if (indexThemeTag != null){
             // Store all upper screen image elements in variable.
-            var images = document.querySelectorAll("img");
+            var images = document.getElementsByClassName("upperScreenImages")[0].querySelectorAll("img");
             indexThemeTag.setAttribute("href", ("assets/styles/" + themeCookie + ".css"));
             // Set Home page upper screen photos.
             for (var i = 0; i < images.length; i++){
@@ -210,8 +210,6 @@ var inactive = function(ev) {
 /* End of Simbas */
 
 
-
-
 var bttnClick = function(ev){
     changeTheme(this.dataset.name);
 };
@@ -228,7 +226,6 @@ var catClick = function(ev) {
     setCookie("pagenum", 0, 364);
     window.location.href = "./read.html";
 };
-
 
 
 /**
