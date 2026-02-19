@@ -380,6 +380,7 @@ function preventKey(event){
             elements[i].addEventListener('blur', inactive, false);
 
             if (elements[i].dataset.type === 'btn') {
+                console.log("button found");
                 elements[i].addEventListener("click", bttnClick, false);
             }
 
