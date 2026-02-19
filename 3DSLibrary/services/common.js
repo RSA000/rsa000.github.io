@@ -361,6 +361,7 @@ function preventKey(event){
         var elements = document.querySelectorAll('a, button');
         index = 0;
 
+        inactive();
         // Call center function every milisecond.
         setInterval(center);
         // Check current theme.
