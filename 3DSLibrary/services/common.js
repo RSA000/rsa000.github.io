@@ -254,6 +254,7 @@ function menuHandleKeyDown(event, element, anchors){
             }
             // Focus on current index.
             anchors[index].focus();
+            buttons[index].focus();
             break;
             // Case for down button.
         case DOWN:
@@ -268,6 +269,7 @@ function menuHandleKeyDown(event, element, anchors){
             }
             // Focus on current anchor index.
             anchors[index].focus();
+            buttons[index].focus();
             break;
     }
 }
@@ -351,7 +353,7 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
         var anchors = document.getElementsByTagName("a");
-        var buttons = document.querySelectorAll("#themeSettings button");
+        var buttons = document.getElementsByTagName("button");
 
 
         // For each anchor, add event listener.
@@ -365,8 +367,6 @@ function preventKey(event){
             buttons[i].addEventListener('blur', inactive, false);
             buttons[i].addEventListener("click", bttnClick, false);
         }
-
-        anchors.push.apply(buttons);
 
 
         // If heading and subtitle exist:
