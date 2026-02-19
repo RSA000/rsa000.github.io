@@ -236,7 +236,6 @@ var  bttnClickMouse = function(ev){
 
 
 var  bttnfClick = function(ev){
-    checkFontSize();
     var currentFont = parseInt(getCookie("fontSize"));
     console.log(currentFont);
     // If keydown is A key
@@ -253,7 +252,6 @@ var  bttnfClick = function(ev){
 
 var  bttnfClickMouse = function(ev){
     // If keydown is A key
-    checkFontSize();
     var currentFont = parseInt(getCookie("fontSize"));
 
     if (this.dataset.name === "up"){
