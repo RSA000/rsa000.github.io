@@ -30,10 +30,13 @@
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
 
+
+
         var elements = document.getElementsByClassName('cat');
 
 
         for (var i = 0, l = elements.length; i<l; i++){
+            elements[i].removeEventListener("keydown", menuHandleKeyDown);
             elements[i].setAttribute('tabindex', i);
             // When focused on, apply active function with "this" selected elements.
             elements[i].addEventListener('focus', active, false);
@@ -73,6 +76,9 @@
         // Populate lowerScreenContents with anchor elements created from csv File.
         populateCatalogue(csvItems, lowerScreenContents);
     }
+
+
+
 
 
 
