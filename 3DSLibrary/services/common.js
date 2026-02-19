@@ -214,7 +214,7 @@ var inactive = function(ev) {
 
 var bttnClick = function(ev){
     changeTheme(this.dataset.name);
-}
+};
 
 
 /**
@@ -254,7 +254,6 @@ function menuHandleKeyDown(event, element, elements){
             }
             // Focus on current index.
             elements[index].focus();
-            elements[index].focus();
             break;
             // Case for down button.
         case DOWN:
@@ -268,7 +267,6 @@ function menuHandleKeyDown(event, element, elements){
                 index = 0;
             }
             // Focus on current elements index.
-            elements[index].focus();
             elements[index].focus();
             break;
     }
@@ -354,6 +352,9 @@ function preventKey(event){
     document.addEventListener('DOMContentLoaded', function(ev) {
         var elements = document.querySelectorAll('a, button');
 
+        // Check current theme.
+        checkTheme();
+
         // For each elements, add event listener.
         for(var i = 0, l = elements.length; i<l; i++){
             // For each elements, add event listener.
@@ -372,23 +373,13 @@ function preventKey(event){
             // Set heading and subtitle to default value.
             inactive();
         }
+
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
             menuHandleKeyDown(e, document.getElementById('lowerScreenContents'), elements);
         });
 
-        // For each elements, add event listener.
-        for(var i = 0, l = elements.length; i<l; i++){
-            // When focused on, apply active function with "this" selected elements.
-            elements[i].addEventListener('focus', active, false);
-            // When no elements are selected, revert to greeting heading and subtitle.
-            elements[i].addEventListener('blur', inactive, false);
-        }
 
-
-
-        // Check current theme.
-        checkTheme();
 
         // If device is 3DS.
         if (is3DS()){
