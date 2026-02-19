@@ -332,7 +332,7 @@ function registerNon3DSlink(a){
 function preventKey(event){
     // Allow backspace, F5 (refresh), and ENTER.
     var keyCode = event.keyCode;
-    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode === ENTER) || (keyCode === A)){
+    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode === ENTER)){
         return true;
     }
     // Allow character input.
