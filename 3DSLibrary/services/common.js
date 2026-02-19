@@ -232,7 +232,7 @@ function menuHandleKeyDown(event, element){
     // Prevent default action when key is pressed down.
     preventKey(event);
 
-
+    alert(event.keyCode);
     var elements = document.querySelectorAll('a, button');
 
     if (elements.length > 0){
@@ -266,10 +266,6 @@ function menuHandleKeyDown(event, element){
                 }
                 // Focus on current elements index.
                 elements[index].focus();
-                break;
-            case ENTER:
-                alert("A");
-                elements[index].click();
                 break;
         }
     }
