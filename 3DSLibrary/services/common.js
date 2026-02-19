@@ -359,6 +359,8 @@ function preventKey(event){
         var elements = document.querySelectorAll('a, button');
         index = 0;
 
+        // Call center function every milisecond.
+        setInterval(center);
         // Check current theme.
         checkTheme();
 
@@ -399,11 +401,6 @@ function preventKey(event){
             window.addEventListener("error", function(e) {
                 alert(e.filename + ":" + e.lineno + " " + e.message);
             }, false);
-
-
-
-            // Call center function every milisecond.
-            setInterval(center);
 
             // Add non-3DS compatible warning to any relevant elements.
             for(var i = 0, l = elements.length; i<l; i++){

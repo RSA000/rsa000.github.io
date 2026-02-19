@@ -8,7 +8,6 @@
     var url = "https://rsa000.github.io/3DSLibrary/assets/texts/catalog.csv";
 
 
-
     /**
      * Function creates string that represents lower menu catalogue of library from parsed CSV entries.
      *
@@ -30,10 +29,7 @@
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
 
-
-
         var elements = document.getElementsByClassName('cat');
-
 
         for (var i = 0, l = elements.length; i<l; i++){
             elements[i].removeEventListener("keydown", menuHandleKeyDown);
@@ -77,13 +73,5 @@
         populateCatalogue(csvItems, lowerScreenContents);
     }
 
-
-
-
-
-
     getText(url, parseCSV);
-
-
-
 })()
