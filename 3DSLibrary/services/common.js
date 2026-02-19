@@ -206,6 +206,7 @@ var inactive = function(ev) {
 
 
 var bttnClick = function(ev){
+    alert("button clicked");
     changeTheme(this.dataset.name);
 };
 
@@ -266,10 +267,6 @@ function menuHandleKeyDown(event, element){
                 // Focus on current elements index.
                 elements[index].focus();
                 break;
-            case ENTER:
-                alert("enter");
-                alert(elements[index]);
-                elements[index].click();
         }
 
     }
