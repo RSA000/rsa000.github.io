@@ -40,6 +40,11 @@
             elements[i].addEventListener('blur', inactive, false);
             elements[i].addEventListener("click", catClick, false);
             console.log("added catalogue event");
+
+            // Add event listener for when a key is pressed down.
+            window.addEventListener("keydown", function(e) {
+                menuHandleKeyDown(e, document.getElementById('lowerScreenContents'), elements);
+            });
         }
     }
 
@@ -73,6 +78,7 @@
         // Populate lowerScreenContents with anchor elements created from csv File.
         populateCatalogue(csvItems, lowerScreenContents);
     }
+
 
 
     getText(url, parseCSV);
