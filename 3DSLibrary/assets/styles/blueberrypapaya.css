@@ -94,7 +94,7 @@ position: relative;
 }
 
 /* Top screen lower left image. */
-.indexScreenUpperLeftPhoto{
+#indexScreenUpperLeftPhoto{
 
 /* Container */
 position: relative;
@@ -104,7 +104,7 @@ left: 1%;
 }
 
 /* Top screen lower right image. */
-.indexScreenUpperRightPhoto{
+#indexScreenUpperRightPhoto{
 
 /* Container */
 background: papayawhip;
