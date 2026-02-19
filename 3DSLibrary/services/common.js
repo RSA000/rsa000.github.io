@@ -367,9 +367,7 @@ function preventKey(event){
             if (elements[i].tagName.toLowerCase() === 'button') {
                 elements[i].addEventListener("click", bttnClick, false);
             }
-            if (elements[i].id === "cat"){
-                elements[i].addEventListener("click", catClick, false);
-            }
+
         }
 
 

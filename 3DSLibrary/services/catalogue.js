@@ -30,10 +30,15 @@
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
 
-        var catalogueAnchors = document.getElementsByClassName("cat");
+        var elements = document.getElementsByClassName("cat");
 
-        for (var i = 0, l = catalogueAnchors.length; i<l; i++){
-            catalogueAnchors[i].addEventListener("click", catClick, false);
+        for (var i = 0, l = elements.length; i<l; i++){
+            elements[i].setAttribute('tabindex', i);
+            // When focused on, apply active function with "this" selected elements.
+            elements[i].addEventListener('focus', active, false);
+            // When no elements are selected, revert to greeting heading and subtitle.
+            elements[i].addEventListener('blur', inactive, false);
+            elements[i].addEventListener("click", catClick, false);
             console.log("added catalogue event");
         }
     }
