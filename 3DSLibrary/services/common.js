@@ -364,7 +364,10 @@ checkTheme();
             elements[i].addEventListener('focus', active, false);
             // When no elements are selected, revert to greeting heading and subtitle.
             elements[i].addEventListener('blur', inactive, false);
-            elements[i].addEventListener("click", bttnClick, false);
+
+            if (elements[i].tagName.toLowerCase() === 'button') {
+                elements[i].addEventListener("click", bttnClick, false);
+            }
         }
 
 
