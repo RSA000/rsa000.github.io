@@ -206,6 +206,7 @@ var inactive = function(ev) {
 
 
 var bttnClick = function(ev){
+    // If keydown is A key
     if (ev.keyCode === 13){
         changeTheme(this.dataset.name);
     }
