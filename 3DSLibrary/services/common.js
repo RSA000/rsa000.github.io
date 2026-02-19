@@ -206,7 +206,10 @@ var inactive = function(ev) {
 
 
 var bttnClick = function(ev){
-    changeTheme(this.dataset.name);
+    if ev.keyCode === 13{
+
+        changeTheme(this.dataset.name);
+    }
 };
 
 
@@ -379,8 +382,7 @@ function registerNon3DSlink(a){
             elements[i].addEventListener('blur', inactive, false);
 
             if (elements[i].dataset.type === 'btn') {
-                console.log("button found");
-                elements[i].addEventListener("click", bttnClick, false);
+                elements[i].addEventListener("keydown", bttnClick, false);
             }
 
         }
