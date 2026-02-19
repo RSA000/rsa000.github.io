@@ -206,7 +206,6 @@ var inactive = function(ev) {
 
 
 var bttnClick = function(ev){
-    alert("button clicked");
     changeTheme(this.dataset.name);
 };
 
@@ -265,9 +264,6 @@ function menuHandleKeyDown(event, element){
                 }
                 // Focus on current elements index.
                 elements[index].focus();
-                break;
-            case ENTER:
-                elements[index].click();
                 break;
         }
     }
@@ -380,7 +376,7 @@ function preventKey(event){
 
             if (elements[i].dataset.type === 'btn') {
                 console.log("button found");
-                elements[i].addEventListener("click", bttnClick, false);
+                elements[i].addEventListener("keydown", bttnClick, false);
             }
 
         }
