@@ -205,9 +205,10 @@ var inactive = function(ev) {
 /* End of Simbas */
 
 
-var bttnClick = function(ev){
+var  bttnClick = function(ev){
+    alert(ev.keyCode);
     // If keydown is A key
-    if (ev.keyCode === 13){
+    if (ev.keyCode === A){
         changeTheme(this.dataset.name);
     }
 };
@@ -292,8 +293,6 @@ function menuHandleKeyDown(event, element){
                 // Focus on current elements index.
                 elements[index].focus();
                 break;
-            case A:
-                document.activeElement.click();
         }
     }
 }
