@@ -366,7 +366,7 @@ function preventKey(event){
             buttons[i].addEventListener("click", bttnClick, false);
         }
 
-        anchors.push(buttons);
+        anchors.push.apply(buttons);
 
 
         // If heading and subtitle exist:
