@@ -26,7 +26,6 @@ function center(){
 }
 
 
-
 /**
  *
  * getText(url) returns a list of strings subdivided from a string acquired through an
@@ -55,7 +54,6 @@ function getText(url, callback){
                 alert("Error loading text file:" + xhr.statusText + url);
             }
         }
-
     };
     // Send request.
     xhr.send();
@@ -180,7 +178,6 @@ function changeTheme(themeName){
     // Update theme.
     checkTheme();
 }
-
 
 
 /* Simba's (modified) stuff*/
@@ -334,7 +331,7 @@ function registerNon3DSlink(a){
 function preventKey(event){
     // Allow backspace, F5 (refresh), and ENTER.
     var keyCode = event.keyCode;
-    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode === ENTER)){
+    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode === ENTER) || (keyCode === A)){
         return true;
     }
     // Allow character input.
