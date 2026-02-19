@@ -15,8 +15,7 @@ const centerY = 277;
 // Set index and get anchor tags.
 var index = 0;
 // Store all <a> tags within the "lowerScreenContents" div in variable "buttons."
-var buttons = document.querySelectorAll("#themeSettings button");
-const buttonsLength = buttons.length;
+
 
 
 /**
@@ -352,6 +351,7 @@ function preventKey(event){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
         var anchors = document.getElementsByTagName("a");
+        var buttons = document.querySelectorAll("#themeSettings button");
 
 
         // For each anchor, add event listener.
