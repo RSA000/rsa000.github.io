@@ -30,23 +30,6 @@
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
 
-        var elements = document.querySelectorAll('a');
-
-
-        for (var i = 0, l = elements.length; i<l; i++){
-            elements[i].setAttribute('tabindex', i);
-            // When focused on, apply active function with "this" selected elements.
-            elements[i].addEventListener('focus', active, false);
-            // When no elements are selected, revert to greeting heading and subtitle.
-            elements[i].addEventListener('blur', inactive, false);
-            elements[i].addEventListener("click", catClick, false);
-        }
-
-        window.addEventListener("keydown", function(e) {
-            // Always re-query current focusable elements
-            var currentElements = document.querySelectorAll('a');
-            menuHandleKeyDown(e, currentElements, currentElements);
-        });
     }
 
 
