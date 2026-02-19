@@ -363,7 +363,7 @@ function preventKey(event){
 
 
         // If heading and subtitle exist:
-        if (document.getElementById("topHeading") != null){
+        if (document.getElementsByClassName("topHeading") != null){
             // Set heading and subtitle to default value.
             inactive();
 
