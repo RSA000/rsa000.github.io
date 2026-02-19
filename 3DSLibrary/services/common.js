@@ -213,6 +213,12 @@ var  bttnClick = function(ev){
 };
 
 
+var  bttnClickMouse = function(ev){
+    // If keydown is A key
+    changeTheme(this.dataset.name);
+};
+
+
 /**
  * Function updates bookname and pagenum cookie values before redirecting page.
  *
@@ -381,7 +387,7 @@ function registerNon3DSlink(a){
 
             if (elements[i].dataset.type === 'btn') {
                 elements[i].addEventListener("keydown", bttnClick, false);
-                elements[i].addEventListener("click", bttnClick, false);
+                elements[i].addEventListener("click", bttnClickMouse, false);
             }
 
         }
