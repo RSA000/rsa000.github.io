@@ -232,9 +232,21 @@ var catClick = function(ev) {
  * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
  * @param {KeyboardEvent} event
  */
-function menuHandleKeyDown(event, element, elements){
+function menuHandleKeyDown(event, element){
     // Prevent default action when key is pressed down.
     preventKey(event);
+
+
+        var elements = document.querySelectorAll('a, button');
+
+        // Make sure index is within bounds
+        if (index >= focusableElements.length) {
+            index = focusableElements.length - 1;
+        }
+        if (index < 0) {
+            index = 0;
+        }
+
 
     // Switch case for each button press code.
     switch(event.keyCode){
