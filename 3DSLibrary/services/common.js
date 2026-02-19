@@ -122,6 +122,22 @@ function checkBookName() {
 }
 
 
+
+function checkFontSize(){
+    var fontSize = getCookie("fontsize");
+    if (fontSize != ""){
+        document.getElementById("textContainerRead").style.fontSize = parseInt(fontSize);
+        return;
+    }
+    else{
+        alert("No font size found\nDefault set (13px)")
+        setCookie("fontsize", "13", 364);
+        checkFontSize();
+        return;
+    }
+}
+
+
 /**
  * Function checks if a theme is set. If a theme is not set, default theme is set
  */
