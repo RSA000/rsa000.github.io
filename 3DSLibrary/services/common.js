@@ -208,7 +208,7 @@ var inactive = function(ev) {
 var  bttnClick = function(ev){
     alert(ev.keyCode);
     // If keydown is A key
-    if (ev.keyCode === A){
+    if (ev.keyCode === 32){
         changeTheme(this.dataset.name);
     }
 };
