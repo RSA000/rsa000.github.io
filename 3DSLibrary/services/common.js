@@ -382,6 +382,7 @@ function preventKey(event){
             elements[i].addEventListener('blur', inactive, false);
 
             if (elements[i].tagName.toLowerCase() === 'button') {
+                console.log("button found");
                 elements[i].addEventListener("click", bttnClick, false);
             }
 
