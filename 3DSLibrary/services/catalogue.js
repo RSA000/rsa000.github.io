@@ -24,7 +24,7 @@
             var description = row[1];
             var url = row[2];
 
-            catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' data-bookname="' + url + "\"" + ' class="cat" ' + ' data-description="' + description + '">' + name + '</a>';
+            catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' data-bookname="' + url + "\"" + ' class="cat" ' + ' data-text="' + description + '">' + name + '</a>';
         }
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;

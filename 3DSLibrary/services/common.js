@@ -193,7 +193,7 @@ var active = function(ev) {
     // Get innerHTML and description attributes of current element.
     // Update innerHTML of top heading and subtitle to heading and subtitle values.
     topHeading.innerHTML = this.innerHTML;
-    topSubtitle.innerHTML = this.dataset.description;
+    topSubtitle.innerHTML = this.dataset.text;
 };
 
 
@@ -203,8 +203,8 @@ var inactive = function(ev) {
     var topHeading = document.getElementsByClassName("topHeading")[0];
     var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
     // Update heading and subtitle.
-    topHeading.innerHTML = topHeading.dataset.description;
-    topSubtitle.innerHTML = topSubtitle.dataset.description;
+    topHeading.innerHTML = topHeading.dataset.text;
+    topSubtitle.innerHTML = topSubtitle.dataset.text;
 };
 
 /* End of Simbas */
