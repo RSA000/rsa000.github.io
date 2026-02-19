@@ -239,7 +239,7 @@ function menuHandleKeyDown(event, element){
 
     var elements = document.querySelectorAll('a, button');
 
-    if (elements != null){
+    if (elements.length > 0){
         // Switch case for each button press code.
         switch(event.keyCode){
             // Case for up button.
