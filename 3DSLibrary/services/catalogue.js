@@ -42,7 +42,6 @@
             elements[i].addEventListener("click", catClick, false);
         }
 
-        window.removeEventListender("keydown", menuHandleKeyDown);
 
         window.addEventListener("keydown", function(e) {
             // Always re-query current focusable elements
