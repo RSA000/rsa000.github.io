@@ -30,7 +30,8 @@
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
 
-        var elements = document.getElementsByClassName("cat");
+        var elements = document.querySelectorAll('a, button');
+
 
         for (var i = 0, l = elements.length; i<l; i++){
             elements[i].setAttribute('tabindex', i);
