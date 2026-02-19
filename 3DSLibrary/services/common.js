@@ -235,6 +235,29 @@ var  bttnClickMouse = function(ev){
 };
 
 
+var  bttnfClick = function(ev){
+    checkFontSize();
+    var currentFont = parseInt(getCookie("fontSize"));
+    // If keydown is A key
+    if ((ev.keyCode === 32) || (ev.keyCode == 13)){
+        if (this.dataset.name === "up"){
+            setCookie("fontsize", currentFont + 1, 364);
+        }
+        else if (this.dataset.name === "down"){
+            setCookie("fontsize", currentFont - 1, 364);
+        }
+    }
+};
+
+
+var  bttnfClickMouse = function(ev){
+    // If keydown is A key
+    checkFontSize();
+    var currentFont = parseInt(getCookie("fontSize"));
+
+};
+
+
 /**
  * Function updates bookname and pagenum cookie values before redirecting page.
  *
@@ -404,6 +427,12 @@ function registerNon3DSlink(a){
             if (elements[i].dataset.type === 'btn') {
                 elements[i].addEventListener("keydown", bttnClick, false);
                 elements[i].addEventListener("click", bttnClickMouse, false);
+            }
+
+
+            if (elements[i].dataset.type === 'btn') {
+                elements[i].addEventListener("keydown", bttnfClick, false);
+                elements[i].addEventListener("click", bttnfClickMouse, false);
             }
 
         }
