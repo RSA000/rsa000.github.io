@@ -124,9 +124,9 @@ function checkBookName() {
 
 
 function checkFontSize(){
-    var fontSize = getCookie("fontsize");
+    var fontSize = parseInt(getCookie("fontsize"));
     if (fontSize != ""){
-        document.getElementById("textContainerRead").style.fontSize = parseInt(fontSize);
+        document.getElementById("textContainerRead").style.fontSize = fontSize;
         return;
     }
     else{
@@ -238,6 +238,7 @@ var  bttnClickMouse = function(ev){
 var  bttnfClick = function(ev){
     checkFontSize();
     var currentFont = parseInt(getCookie("fontSize"));
+    console.log(currentFont);
     // If keydown is A key
     if ((ev.keyCode === 32) || (ev.keyCode == 13)){
         if (this.dataset.name === "up"){
@@ -254,6 +255,13 @@ var  bttnfClickMouse = function(ev){
     // If keydown is A key
     checkFontSize();
     var currentFont = parseInt(getCookie("fontSize"));
+
+    if (this.dataset.name === "up"){
+        setCookie("fontsize", currentFont + 1, 364);
+    }
+    else if (this.dataset.name === "down"){
+        setCookie("fontsize", currentFont - 1, 364);
+    }
 
 };
 
