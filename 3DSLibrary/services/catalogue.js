@@ -30,7 +30,7 @@
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
 
-        var elements = document.querySelectorAll('a');
+        var elements = document.getElementsByClassName('cat');
 
 
         for (var i = 0, l = elements.length; i<l; i++){
@@ -44,8 +44,7 @@
 
         window.addEventListener("keydown", function(e) {
             // Always re-query current focusable elements
-            var currentElements = document.querySelectorAll('a');
-            menuHandleKeyDown(e, currentElements, currentElements);
+            menuHandleKeyDown(e, elements, elements);
         });
     }
 
