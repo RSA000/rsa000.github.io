@@ -41,12 +41,6 @@
             elements[i].addEventListener('blur', inactive, false);
             elements[i].addEventListener("click", catClick, false);
         }
-
-
-        // window.addEventListener("keydown", function(e) {
-        //     // Always re-query current focusable elements
-        //     menuHandleKeyDown(e, elements);
-        // });
     }
 
 
