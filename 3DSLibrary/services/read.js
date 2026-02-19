@@ -15,7 +15,6 @@
     var bookName = getCookie("bookname");
     // Get current book position cookie.
     var pageNum = parseInt(getCookie('pagenum'));
-
     // Create list variable for storing sub-divided book text.
     var textChunks = [];
     // Store textContainerRead element.
@@ -48,7 +47,6 @@
                 }
                 break;
             }
-
             // Find end position index of the closing tag
             var closeTagEnd = text.indexOf("p>", closeTagStart);
             // If no closing tag found.
@@ -60,7 +58,6 @@
                 }
                 break;
             }
-
             // Add text up to and including the closing tag
             var segmentEnd = closeTagEnd + 2; // include 'p>'
             chunk += text.substring(position, segmentEnd);
@@ -76,7 +73,6 @@
         if (chunk.length > 0) {
             textChunks.push(chunk);
         }
-
         // Get length of pages and update page.
         pages = textChunks.length;
         updatePage(pageNum);
@@ -146,10 +142,7 @@
     document.addEventListener('DOMContentLoaded', function(ev) {
 
 
-
-
-
-        window.removeEventListener("keydown", menuHandleKeyDown);
+        // window.removeEventListener("keydown", menuHandleKeyDown);
 
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
