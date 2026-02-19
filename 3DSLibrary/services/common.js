@@ -207,7 +207,6 @@ var inactive = function(ev) {
 
 var bttnClick = function(ev){
     if (ev.keyCode === 13){
-
         changeTheme(this.dataset.name);
     }
 };
