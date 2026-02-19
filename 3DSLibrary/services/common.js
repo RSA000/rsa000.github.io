@@ -14,7 +14,7 @@ const centerY = 277;
 
 // Set index and get anchor tags.
 var index = 0;
-// Store all <a> tags within the "lowerScreenContents" div in variable "buttons."
+// Store all <a> tags within the "lowerScreenContents" div in variable "elements."
 
 
 
@@ -254,7 +254,7 @@ function menuHandleKeyDown(event, element, anchors){
             }
             // Focus on current index.
             anchors[index].focus();
-            buttons[index].focus();
+            elements[index].focus();
             break;
             // Case for down button.
         case DOWN:
@@ -269,7 +269,7 @@ function menuHandleKeyDown(event, element, anchors){
             }
             // Focus on current anchor index.
             anchors[index].focus();
-            buttons[index].focus();
+            elements[index].focus();
             break;
     }
 }
@@ -352,20 +352,18 @@ function preventKey(event){
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-        var anchors = document.getElementsByTagName("a");
-        var buttons = document.getElementsByTagName("button");
-
+        var elements = document.querySelectorAll('a, button');
 
         // For each anchor, add event listener.
-        for(var i = 0, l = buttons.length; i<l; i++){
+        for(var i = 0, l = elements.length; i<l; i++){
             // For each anchor, add event listener.
 
-            buttons[i].setAttribute('tabindex', i);
+            elements[i].setAttribute('tabindex', i);
             // When focused on, apply active function with "this" selected anchor.
-            buttons[i].addEventListener('focus', active, false);
-            // When no buttons are selected, revert to greeting heading and subtitle.
-            buttons[i].addEventListener('blur', inactive, false);
-            buttons[i].addEventListener("click", bttnClick, false);
+            elements[i].addEventListener('focus', active, false);
+            // When no elements are selected, revert to greeting heading and subtitle.
+            elements[i].addEventListener('blur', inactive, false);
+            elements[i].addEventListener("click", bttnClick, false);
         }
 
 
