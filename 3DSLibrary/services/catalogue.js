@@ -73,4 +73,14 @@
 
     getText(url, parseCSV);
 
+    var anchors = document.getElementsByTagName("a");
+
+    // For each anchor, add event listener.
+    for(var i = 0, l = anchors.length; i<l; i++){
+        // When focused on, apply active function with "this" selected anchor.
+        anchors[i].addEventListener('focus', active, false);
+        // When no anchors are selected, revert to greeting heading and subtitle.
+        anchors[i].addEventListener('blur', inactive, false);
+    }
+
 })()
