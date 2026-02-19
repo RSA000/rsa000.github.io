@@ -239,39 +239,42 @@ function menuHandleKeyDown(event, element){
 
     var elements = document.querySelectorAll('a, button');
 
+    if (elements != null){
+        // Switch case for each button press code.
+        switch(event.keyCode){
+            // Case for up button.
+            case UP:
+                // If index is above 0.
+                if (index > 0){
+                    // Update index -1.
+                    index -= 1;
+                }
+                // If index is 0.
+                else{
+                    // Set index to last elements.
+                    index = elements.length - 1
+                }
+                // Focus on current index.
+                elements[index].focus();
+                break;
+                // Case for down button.
+            case DOWN:
+                // If index is not above elementsLength.
+                if (index < elements.length -1){
+                    // Increment index.
+                    index += 1;
+                }
+                // If index is at last elements.
+                else{
+                    index = 0;
+                }
+                // Focus on current elements index.
+                elements[index].focus();
+                break;
+        }
+
     }
-    // Switch case for each button press code.
-    switch(event.keyCode){
-        // Case for up button.
-        case UP:
-            // If index is above 0.
-            if (index > 0){
-                // Update index -1.
-                index -= 1;
-            }
-            // If index is 0.
-            else{
-                // Set index to last elements.
-                index = elements.length - 1
-            }
-            // Focus on current index.
-            elements[index].focus();
-            break;
-            // Case for down button.
-        case DOWN:
-            // If index is not above elementsLength.
-            if (index < elements.length -1){
-                // Increment index.
-                index += 1;
-            }
-            // If index is at last elements.
-            else{
-                index = 0;
-            }
-            // Focus on current elements index.
-            elements[index].focus();
-            break;
-    }
+
 }
 
 /**
