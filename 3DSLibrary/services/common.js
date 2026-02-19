@@ -223,6 +223,30 @@ var catClick = function(ev) {
 };
 
 
+
+/**
+ *
+ * This prevents the browser from moving the page using the arrow keys
+ * @param {keyboardEvent} event
+ */
+function preventKey(event){
+    // Allow backspace, F5 (refresh), and ENTER.
+    var keyCode = event.keyCode;
+    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode == ENTER)){
+        return true;
+    }
+    // Allow character input.
+    if(event.charCode || (event.key && event.key.length === 1 ))
+        return true;
+    // Otherwise, prevent default action for event and return false.
+    else{
+        event.preventDefault();
+        return false;
+    }
+}
+// end of wolfyxon
+
+
 /**
  * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
  * @param {KeyboardEvent} event
@@ -266,7 +290,7 @@ function menuHandleKeyDown(event, element){
                 elements[index].focus();
                 break;
             case A:
-                elements[index].click();
+                document.activeElement.click();
         }
     }
 }
@@ -325,28 +349,6 @@ function registerNon3DSlink(a){
 }
 
 
-/**
- *
- * This prevents the browser from moving the page using the arrow keys
- * @param {keyboardEvent} event
- */
-function preventKey(event){
-    // Allow backspace, F5 (refresh), and ENTER.
-    var keyCode = event.keyCode;
-    if ((keyCode === BACKSPACE) || (keyCode === F5)){
-        return true;
-    }
-    // Allow character input.
-    if(event.charCode || (event.key && event.key.length === 1 ))
-        return true;
-    // Otherwise, prevent default action for event and return false.
-    else{
-        event.preventDefault();
-        return false;
-    }
-}
-// end of wolfyxon
-
 
 
 /*
@@ -378,7 +380,7 @@ function preventKey(event){
 
             if (elements[i].dataset.type === 'btn') {
                 console.log("button found");
-                elements[i].addEventListener("keydown", bttnClick, false);
+                elements[i].addEventListener("click", bttnClick, false);
             }
 
         }
