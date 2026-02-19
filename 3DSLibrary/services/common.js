@@ -206,7 +206,6 @@ var inactive = function(ev) {
 
 
 var bttnClick = function(ev){
-    alert("button clicked");
     changeTheme(this.dataset.name);
 };
 
