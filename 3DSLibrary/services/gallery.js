@@ -1,6 +1,10 @@
 
 (function(){
-
+    // Store document elements for images, number of images, and set index.
+    var slides = document.getElementsByClassName("mySlides");
+    var slideLength = slides.length;
+    var galleryImage = document.getElementById("galleryImage");
+    var index = 0;
 
     /* Simba's */
 
@@ -58,11 +62,7 @@
         window.removeEventListener("keydown", handleKeyDown);
 
 
-        // Store document elements for images, number of images, and set index.
-        var slides = document.getElementsByClassName("mySlides");
-        var slideLength = slides.length;
-        var galleryImage = document.getElementById("galleryImage");
-        var index = 0;
+
 
 
         // Add event listener for when a key is pressed down.
