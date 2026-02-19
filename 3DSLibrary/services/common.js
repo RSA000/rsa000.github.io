@@ -271,8 +271,6 @@ function menuHandleKeyDown(event, element){
                 // Focus on current elements index.
                 elements[index].focus();
                 break;
-            case A:
-                element[index].click();
         }
 
     }
