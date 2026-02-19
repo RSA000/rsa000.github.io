@@ -21,6 +21,19 @@
     var textContainer = document.getElementById('textContainerRead');
 
 
+    function checkFontSize(){
+        var fontSize = parseInt(getCookie("fontsize"));
+        if (fontSize != ""){
+            document.getElementById("textContainerRead").style.fontSize = fontSize;
+            return;
+        }
+        else{
+            alert("No font size found\nDefault set (13px)")
+            setCookie("fontsize", "13", 364);
+            checkFontSize();
+            return;
+        }
+    }
 
     /**
      * Function parses and returns list of HTML chunks.
