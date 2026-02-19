@@ -81,6 +81,7 @@ body {
   padding: 3px;
 
   /* Text */
+  font-size: 12px;
   text-align: center;
   color: #dca165;
 }
