@@ -267,6 +267,8 @@ function menuHandleKeyDown(event, element){
                 elements[index].focus();
                 break;
             case ENTER:
+                alert("enter");
+                alert(elements[index];
                 elements[index].click();
         }
 
