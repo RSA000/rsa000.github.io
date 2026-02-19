@@ -371,7 +371,7 @@ function preventKey(event){
             // When no elements are selected, revert to greeting heading and subtitle.
             elements[i].addEventListener('blur', inactive, false);
 
-            if (elements[i].tagName.toLowerCase() === 'button') {
+            if (elements[i].dataset.type === 'btn') {
                 console.log("button found");
                 elements[i].addEventListener("click", bttnClick, false);
             }
