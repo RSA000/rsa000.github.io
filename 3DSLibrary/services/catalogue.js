@@ -40,8 +40,6 @@
             // When no elements are selected, revert to greeting heading and subtitle.
             elements[i].addEventListener('blur', inactive, false);
             elements[i].addEventListener("click", catClick, false);
-            console.log(elements);
-
         }
 
         window.addEventListener("keydown", function(e) {
