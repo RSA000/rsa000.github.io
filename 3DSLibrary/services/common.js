@@ -224,6 +224,7 @@ var catClick = function(ev) {
 };
 
 
+
 /**
  * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
  * @param {KeyboardEvent} event
@@ -382,9 +383,7 @@ function preventKey(event){
 
 
         // Add event listener for when a key is pressed down.
-        window.addEventListener("keydown", function(e) {
-            menuHandleKeyDown(e, document.getElementById('lowerScreenContents'));
-        });
+        window.addEventListener("keydown",  menuHandleKeyDown(e, document.getElementById('lowerScreenContents')))
 
 
 
