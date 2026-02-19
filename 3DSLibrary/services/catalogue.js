@@ -43,7 +43,7 @@
         }
 
         window.addEventListener("keydown", function(e) {
-            // Re-query the elements list each time a key is pressed
+            // Always re-query current focusable elements
             var currentElements = document.querySelectorAll('a');
             menuHandleKeyDown(e, currentElements, currentElements);
         });
