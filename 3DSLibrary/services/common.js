@@ -12,7 +12,7 @@ const ENTER = 13;
 const centerX = 152;
 const centerY = 277;
 
-// Set index and get anchor tags.
+// Set index and get elements tags.
 var index = 0;
 // Store all <a> tags within the "lowerScreenContents" div in variable "elements."
 
@@ -235,7 +235,7 @@ var catClick = function(ev) {
  * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
  * @param {KeyboardEvent} event
  */
-function menuHandleKeyDown(event, element, anchors){
+function menuHandleKeyDown(event, element, elements){
     // Prevent default action when key is pressed down.
     preventKey(event);
     // Switch case for each button press code.
@@ -249,26 +249,26 @@ function menuHandleKeyDown(event, element, anchors){
             }
             // If index is 0.
             else{
-                // Set index to last anchor.
-                index = anchors.length - 1
+                // Set index to last elements.
+                index = elements.length - 1
             }
             // Focus on current index.
-            anchors[index].focus();
+            elements[index].focus();
             elements[index].focus();
             break;
             // Case for down button.
         case DOWN:
-            // If index is not above anchorLength.
-            if (index < anchors.length -1){
+            // If index is not above elementsLength.
+            if (index < elements.length -1){
                 // Increment index.
                 index += 1;
             }
-            // If index is at last anchor.
+            // If index is at last elements.
             else{
                 index = 0;
             }
-            // Focus on current anchor index.
-            anchors[index].focus();
+            // Focus on current elements index.
+            elements[index].focus();
             elements[index].focus();
             break;
     }
@@ -309,10 +309,10 @@ function is3DS(){
 
 /**
  * Register an <a> that isn't meant to be opened on the 3DS
- * @param {HTMLAnchorElement} a
+ * @param {HTMLelementsElement} a
  */
 function registerNon3DSlink(a){
-    // Add event listener for when anchor is clicked.
+    // Add event listener for when elements is clicked.
     a.addEventListener("click", function (e){
         // Alert that link is not supported.
         alert("The 3DS doesn't support this page. Please open \n" + a.href + "\n on a modern browser)");
@@ -354,12 +354,12 @@ function preventKey(event){
     document.addEventListener('DOMContentLoaded', function(ev) {
         var elements = document.querySelectorAll('a, button');
 
-        // For each anchor, add event listener.
+        // For each elements, add event listener.
         for(var i = 0, l = elements.length; i<l; i++){
-            // For each anchor, add event listener.
+            // For each elements, add event listener.
 
             elements[i].setAttribute('tabindex', i);
-            // When focused on, apply active function with "this" selected anchor.
+            // When focused on, apply active function with "this" selected elements.
             elements[i].addEventListener('focus', active, false);
             // When no elements are selected, revert to greeting heading and subtitle.
             elements[i].addEventListener('blur', inactive, false);
@@ -374,15 +374,15 @@ function preventKey(event){
         }
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
-            menuHandleKeyDown(e, document.getElementById('lowerScreenContents'), anchors);
+            menuHandleKeyDown(e, document.getElementById('lowerScreenContents'), elements);
         });
 
-        // For each anchor, add event listener.
-        for(var i = 0, l = anchors.length; i<l; i++){
-            // When focused on, apply active function with "this" selected anchor.
-            anchors[i].addEventListener('focus', active, false);
-            // When no anchors are selected, revert to greeting heading and subtitle.
-            anchors[i].addEventListener('blur', inactive, false);
+        // For each elements, add event listener.
+        for(var i = 0, l = elements.length; i<l; i++){
+            // When focused on, apply active function with "this" selected elements.
+            elements[i].addEventListener('focus', active, false);
+            // When no elements are selected, revert to greeting heading and subtitle.
+            elements[i].addEventListener('blur', inactive, false);
         }
 
 
@@ -403,11 +403,11 @@ function preventKey(event){
             // Call center function every milisecond.
             setInterval(center);
 
-            // Add non-3DS compatible warning to any relevant anchors.
-            for(var i = 0, l = anchors.length; i<l; i++){
+            // Add non-3DS compatible warning to any relevant elements.
+            for(var i = 0, l = elements.length; i<l; i++){
                 // If 3DS attribute exists, add warning to link.
-                if (anchors[i].getAttribute("nc")){
-                    registerNon3DSlink(anchors[i]);
+                if (elements[i].getAttribute("nc")){
+                    registerNon3DSlink(elements[i]);
                 }
             }
         }
