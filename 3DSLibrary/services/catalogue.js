@@ -40,7 +40,7 @@
             // When no elements are selected, revert to greeting heading and subtitle.
             elements[i].addEventListener('blur', inactive, false);
             elements[i].addEventListener("click", catClick, false);
-            console.log("added catalogue event");
+            console.log(elements);
 
             // Add event listener for when a key is pressed down.
             window.addEventListener("keydown", function(e) {
