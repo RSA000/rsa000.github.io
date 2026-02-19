@@ -240,8 +240,8 @@ function menuHandleKeyDown(event, element){
         var elements = document.querySelectorAll('a, button');
 
         // Make sure index is within bounds
-        if (index >= focusableElements.length) {
-            index = focusableElements.length - 1;
+        if (index >= elements.length) {
+            index = elements.length - 1;
         }
         if (index < 0) {
             index = 0;
