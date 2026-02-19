@@ -355,7 +355,7 @@ function preventKey(event){
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-        var elements = document.querySelectorAll('a, button, form');
+        var elements = document.querySelectorAll('a, button');
         index = 0;
 
         // Call center function every milisecond.
