@@ -1,11 +1,6 @@
 
 (function(){
 
-    // Store document elements for images, number of images, and set index.
-    const slides = document.getElementsByClassName("mySlides");
-    const slideLength = slides.length;
-    var galleryImage = document.getElementById("galleryImage");
-    var index = 0;
 
     /* Simba's */
 
@@ -60,6 +55,13 @@
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
+        // Store document elements for images, number of images, and set index.
+        var slides = document.getElementsByClassName("mySlides");
+        var slideLength = slides.length;
+        var galleryImage = document.getElementById("galleryImage");
+        var index = 0;
+
 
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
