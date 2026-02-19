@@ -30,7 +30,7 @@
         // Insert the generated HTML into the element with id 'elementId'
         element.innerHTML = catalogue;
 
-        var elements = document.querySelectorAll('a, button');
+        var elements = document.querySelectorAll('a');
 
 
         for (var i = 0, l = elements.length; i<l; i++){
@@ -46,7 +46,7 @@
 
         window.addEventListener("keydown", function(e) {
             // Re-query the elements list each time a key is pressed
-            var currentElements = document.querySelectorAll('a, button');
+            var currentElements = document.querySelectorAll('a');
             menuHandleKeyDown(e, currentElements, currentElements);
         });
     }
