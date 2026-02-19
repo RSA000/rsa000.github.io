@@ -363,14 +363,6 @@ function preventKey(event){
         // Check current theme.
         checkTheme();
 
-
-        // If heading and subtitle exist:
-        if (document.getElementsByClassName("topHeading") != null){
-            // Set heading and subtitle to default value.
-            inactive();
-
-        }
-
         // For each elements, add event listener.
         for(var i = 0, l = elements.length; i<l; i++){
             // For each elements, add event listener.
