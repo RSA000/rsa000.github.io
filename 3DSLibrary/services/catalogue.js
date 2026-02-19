@@ -43,10 +43,10 @@
         }
 
 
-        window.addEventListener("keydown", function(e) {
-            // Always re-query current focusable elements
-            menuHandleKeyDown(e, elements);
-        });
+        // window.addEventListener("keydown", function(e) {
+        //     // Always re-query current focusable elements
+        //     menuHandleKeyDown(e, elements);
+        // });
     }
 
 
