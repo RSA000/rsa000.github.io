@@ -42,10 +42,6 @@
             elements[i].addEventListener("click", catClick, false);
             console.log(elements);
 
-            // Add event listener for when a key is pressed down.
-            window.addEventListener("keydown", function(e) {
-                menuHandleKeyDown(e, elements, elements);
-            });
         }
     }
 
@@ -83,5 +79,13 @@
 
 
     getText(url, parseCSV);
+
+    var elements = document.querySelectorAll('a, button');
+
+
+    // Add event listener for when a key is pressed down.
+    window.addEventListener("keydown", function(e) {
+        menuHandleKeyDown(e, elements, elements);
+    });
 
 })()
