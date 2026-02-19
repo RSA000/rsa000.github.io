@@ -88,4 +88,10 @@
         menuHandleKeyDown(e, elements, elements);
     });
 
+    window.addEventListener("keydown", function(e) {
+        // Re-query the elements list each time a key is pressed
+        var currentElements = document.querySelectorAll('a, button');
+        menuHandleKeyDown(e, currentElements, currentElements);
+    });
+
 })()
