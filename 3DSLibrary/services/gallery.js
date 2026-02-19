@@ -55,6 +55,8 @@
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+        window.removeEventListener("keydown", handleKeyDown);
+
 
         // Store document elements for images, number of images, and set index.
         var slides = document.getElementsByClassName("mySlides");
