@@ -31,7 +31,6 @@
         element.innerHTML = catalogue;
 
         var catalogueAnchors = document.getElementsByClassName("cat");
-        console.log(catalogueAnchors);
 
         for (var i = 0, l = catalogueAnchors.length; i<l; i++){
             catalogueAnchors[i].addEventListener("click", catClick, false);
