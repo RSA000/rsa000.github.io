@@ -342,8 +342,7 @@ function preventKey(event){
     }
 }
 // end of wolfyxon
-// Check current theme.
-checkTheme();
+
 
 
 /*
@@ -353,6 +352,9 @@ checkTheme();
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
         var elements = document.querySelectorAll('a, button');
+
+        // Check current theme.
+        checkTheme();
 
 
         // For each elements, add event listener.
