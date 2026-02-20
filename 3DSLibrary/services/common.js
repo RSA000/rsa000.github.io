@@ -431,6 +431,8 @@ function registerNon3DSlink(a){
         setInterval(center);
         // Check current theme.
         checkTheme();
+        checkFontSize();
+
 
 
         window.addEventListener("keydown", handleKeyDown);
