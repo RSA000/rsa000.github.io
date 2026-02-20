@@ -150,7 +150,7 @@
 
          document.getElementById("viewToggle").addEventListener("click", function(ev){
              if (currentView === 0){
-                 textContainer.style.height = "180px";
+                 textContainer.style.height = "190px";
                  textContainer.style.width = "95%";
                  currentView = 1;
              }
