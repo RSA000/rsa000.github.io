@@ -66,7 +66,6 @@ function getText(url, callback){
 }
 
 
-
 /**
  * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////  https://www.w3schools.com/js/js_cookies.asp          ///////
@@ -90,25 +89,19 @@ function setCookie(cname, cvalue, exdays) {
  * Function checks cookie, "fontsize," value and updates elements accordingly.
  * If no font is set, medium (13) is set.
  */
-function checkFontSize(){
+function checkFontSize() {
     var fontSize = parseInt(getCookie("fontsize"));
-    if (fontSize){
-        var divs = document.getElementsByTagName("div");
-        for (var i = 0; i < divs.length; i++){
-            divs[i].style.fontSize = (fontSize + 3) + "px";
-        }
-        var paragraphs = document.getElementsByTagName("p");
-        for (var i = 0; i < paragraphs.length; i++) {
-            paragraphs[i].style.fontSize = fontSize + "px";
-        }
-        var spans = document.getElementsByTagName("span");
-        for (var i = 0; i < spans.length; i++){
-            spans[i].style.fontSize = (fontSize + 1) + "px";
-        }
+    // If fontSize is truethy (a number, 0 will register as false).
+    if (fontSize) {
+        // Get and apply font settings with JQueary
+        $("div").css("font-size", (fontSize + 3) + "px");
+        $("p").css("font-size", fontSize + "px");
+        $("span").css("font-size", (fontSize + 1) + "px");
         return;
     }
-    else{
-        alert("No font size found\nDefault set (13px)")
+    // Otherwise, updated font to default size.
+    else {
+        alert("No font size found\nDefault set (13px)");
         setCookie("fontsize", "13", 364);
         checkFontSize();
         return;
