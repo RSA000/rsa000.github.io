@@ -158,6 +158,7 @@
                  currentView = 1;
              }
              else if (currentView === 1){
+                 textContainer.style.height = "175px";
                  textContainer.style.width = "310px";
                  textContainer.style.top = "225px";
                  currentView = 2;
