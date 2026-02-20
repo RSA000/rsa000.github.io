@@ -235,33 +235,10 @@ var  bttnClick = function(ev){
     }
 };
 
-
-/**
- * Function updates font according to elements name (up or down) if events keyCode is valid.
- */
-var  bttnfClick = function(ev){
-    var currentFont = parseInt(getCookie("fontsize"));
-    var currentSubtitle = document.getElementsByClassName("topSubtitle")[0];
-    // If keydown is A key
-    if ((ev.keyCode === 32) || (ev.keyCode == 13)){
-        if ((this.dataset.name === "up") && (currentFont < 18)){
-            setCookie("fontsize", currentFont + 1, 364);
-            currentSubtitle.innerHTML = "Current Size: " + (currentFont + 1);
-            currentSubtitle.style.fontSize = (currentFont + 1) + "px";
-        }
-       else if ((this.dataset.name === "down") && (currentFont > 10)){
-            setCookie("fontsize", currentFont - 1, 364);
-            currentSubtitle.innerHTML = "Current Size: " + (currentFont - 1);
-            currentSubtitle.style.fontSize = (currentFont - 1) + "px";
-        }
-    }
-};
-
-
 /**
  * Function updates font according to elements name (up or down)
  */
-var  bttnfClickMouse = function(ev){
+var  bttnfClick = function(ev){
     // If keydown is A key
     var currentFont = parseInt(getCookie("fontsize"));
     var currentSubtitle = document.getElementsByClassName("topSubtitle")[0];
@@ -442,11 +419,12 @@ function registerNon3DSlink(a){
 
 
             if (elements[i].dataset.type === 'btnf') {
-                elements[i].addEventListener("keydown", bttnfClick, false);
-                elements[i].addEventListener("click", function(ev){
-                    // If keydown is A key
-                    changeTheme(this.dataset.name);
-                });
+                elements[i].addEventListener("keydown", function(ev){
+                    if ((ev.keyCode == 32) || (ev.keyCode == 13)){
+                        bttnfClick(ev)
+                    }
+                }, false);
+                elements[i].addEventListener("click", bttnfClick, false);
             }
 
         }
