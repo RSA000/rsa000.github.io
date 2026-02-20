@@ -144,7 +144,7 @@
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        var pageindex = window.getElementById("pageindex");
+        var pageindex = document.getElementById("pageindex");
 
         window.removeEventListener("keydown", handleKeyDown);
 
