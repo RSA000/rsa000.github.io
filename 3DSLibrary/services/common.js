@@ -239,10 +239,10 @@ var  bttnfClickMouse = function(ev){
     var currentFont = parseInt(getCookie("fontsize"));
     console.log(currentFont);
 
-    if (this.dataset.name === "up"){
+    if ((this.dataset.name === "up") && (currentFont < 17)){
         setCookie("fontsize", currentFont + 1, 364);
     }
-    else if (this.dataset.name === "down"){
+    else if ((this.dataset.name === "down") && (currentFont > 10)){
         setCookie("fontsize", currentFont - 1, 364);
     }
 
