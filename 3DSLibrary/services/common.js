@@ -248,17 +248,18 @@ var  bttnClickMouse = function(ev){
 
 var  bttnfClick = function(ev){
     var currentFont = parseInt(getCookie("fontsize"));
+    var currentSubtitle = document.getElementsByClassName("topSubtitle")[0];
     // If keydown is A key
     if ((ev.keyCode === 32) || (ev.keyCode == 13)){
         if ((this.dataset.name === "up") && (currentFont < 18)){
             setCookie("fontsize", currentFont + 1, 364);
-            document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont + 1);
-            document.getElementsByClassName("topSubtitle")[0].style.fontSize = (currentFont + 1) + "px";
+            currentSubtitle.innerHTML = "Current Size: " + (currentFont + 1);
+            currentSubtitle.style.fontSize = (currentFont + 1) + "px";
         }
        else if ((this.dataset.name === "down") && (currentFont > 10)){
             setCookie("fontsize", currentFont - 1, 364);
-            document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont - 1);
-            document.getElementsByClassName("topSubtitle")[0].style.fontSize = (currentFont - 1) + "px";
+            currentSubtitle.innerHTML = "Current Size: " + (currentFont - 1);
+            currentSubtitle.style.fontSize = (currentFont - 1) + "px";
 
 
         }
