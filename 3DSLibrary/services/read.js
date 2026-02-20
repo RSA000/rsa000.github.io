@@ -159,7 +159,6 @@
                  textContainer.style.top = "225px";
                  pageIndex.style.top = "220px";
                  viewToggle.style.top = "220px";
-
                  currentView = 2;
              }
              else if (currentView === 2){
@@ -169,8 +168,6 @@
                  pageIndex.style.top = "0px";
                  viewToggle.style.top = "0px";
                  currentView = 0;
-
-
              }
 
          });
