@@ -161,7 +161,7 @@
                  textContainer.style.width = "310px";
                  textContainer.style.top = "225px";
                  pageIndex.style.top = "220px";
-                 viewToggle.style.marginTop = "0px";
+                 viewToggle.style.top = "220px";
                  currentView = 2;
              }
              else if (currentView === 2){
