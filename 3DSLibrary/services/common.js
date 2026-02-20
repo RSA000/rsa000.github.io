@@ -84,6 +84,10 @@ function setCookie(cname, cvalue, exdays) {
 function checkFontSize(){
     var fontSize = parseInt(getCookie("fontsize"));
     if (fontSize){
+        var divs = document.getElementsByTagName("div");
+        for (var i = 0; i < divs.length; i++){
+            divs[i].style.fontSize = (fontSize + 3) + "px";
+        }
         var paragraphs = document.getElementsByTagName("p");
         for (var i = 0; i < paragraphs.length; i++) {
             paragraphs[i].style.fontSize = fontSize + "px";
