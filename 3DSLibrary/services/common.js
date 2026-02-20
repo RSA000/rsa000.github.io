@@ -299,7 +299,6 @@ var  bttnfClickMouse = function(ev){
 };
 
 
-
 /**
  * Function updates bookname and pagenum cookie values before redirecting page.
  *
@@ -311,7 +310,6 @@ var catClick = function(ev) {
     setCookie("pagenum", 0, 364);
     window.location.href = "./read.html";
 };
-
 
 
 /**
