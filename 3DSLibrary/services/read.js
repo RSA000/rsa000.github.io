@@ -155,13 +155,15 @@
                  currentView = 1;
              }
              else if (currentView === 1){
-                 textContainer.style.top = "190px";
+                 textContainer.style.top = "225px";
+                 pageIndex.style.top = "225px";
                  currentView = 2;
              }
              else if (currentView === 2){
                  textContainer.style.height = "400px";
                  textContainer.style.width = "294px";
                  textContainer.style.top = "0px";
+                 pageIndex.style.top = "0px";
                  currentView = 0;
 
 
