@@ -230,8 +230,8 @@ var inactive = function() {
     var topHeading = $(".topHeading");
     var topSubtitle = $(".topSubtitle");
     // Set heading and subtitle to default value.
-    topHeading.html($topHeading.data("text"));
-    topSubtitle.html($topSubtitle.data("text"));
+    topHeading.html(topHeading.data("text"));
+    topSubtitle.html(topSubtitle.data("text"));
 };
 
 
