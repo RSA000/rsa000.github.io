@@ -413,7 +413,11 @@ function registerNon3DSlink(a){
             elements[i].addEventListener('blur', inactive, false);
 
             if (elements[i].dataset.type === 'btn') {
-                elements[i].addEventListener("keydown", bttnClick, false);
+                elements[i].addEventListener("keydown", function(ev){
+                    if ((ev.keyCode == 32) || (ev.keyCode == 13)){
+                    bttnClick(ev)
+                }
+            }, false);
                 elements[i].addEventListener("click", bttnClick, false);
             }
 
