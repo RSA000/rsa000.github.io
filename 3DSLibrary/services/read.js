@@ -11,33 +11,34 @@
     // If no book exists, redirect.
     checkBookName();
 
-    // Get current book name.
+    // Get current book name and page number cookie values and store in variables (string, int).
     var bookName = getCookie("bookname");
-    var pages = 0;
-    // Get current book position cookie.
     var pageNum = parseInt(getCookie('pagenum'));
-    // Create list variable for storing sub-divided book text.
+
+    // Instantiate variables pages, currentView, and textChunks (int, int, list).
+    var pages = 0;
+    var currentView = 0;
     var textChunks = [];
-    // Store textContainerRead element.
+
+    // Store textContainer, pageIndex, and viewToggle page elements as variables (JQueary objects).
     var textContainer = $('#textContainerRead');
     var pageIndex = $("#pageindex");
     var viewToggle = $("#viewToggle");
-    var currentView = 0;
 
 
     /**
      * This function takes a number (0 or 1) that indicates the page direction and updates
      * the textContainerReader
      *
-     * @param {Int} Int.
-     *
+     * @param {Int} Page number to update to.
      */
     function updatePage(pageNum){
 
-        // Display previous page.
+        // Update inner HTML to pageNum index and scroll to top.
         textContainer.html(textChunks[pageNum]);
         textContainer.animate({scrollTop: "0px"}, 50);
         pageIndex.val(pageNum);
+        // Update font size.
         checkFontSize();
         return;
     }
@@ -49,26 +50,27 @@
      * @param {String} - Text from literature in HTML format.
      */
     function loadBook(text) {
-        // Reset textChunks
+        // Reset textChunks contents
         textChunks = [];
-        // Insantiate chunk string, position, and text length.
+        // Insantiate chunk string, position.
         var chunk = "";
         var position = 0;
-        var textLength = text.length;
 
-        while (position < textLength) {
+        // While position is less than length of literature text.
+        while (position < text.length) {
             // Find next closing tag
             var closeTagStart = text.indexOf("</", position);
             // If not closing tags found.
             if (closeTagStart === -1) {
                 // Add remaining text
                 chunk += text.substring(position);
+                // Add current chunk to chunks if current chunk is not empty (ending of text).
                 if (chunk.length > 0) {
                     textChunks.push(chunk);
                 }
                 break;
             }
-            // Find end position index of the closing tag
+            // Otherwise, find end position index of the next closing </p> tag.
             var closeTagEnd = text.indexOf("p>", closeTagStart);
             // If no closing tag found.
             if (closeTagEnd === -1) {
@@ -79,12 +81,13 @@
                 }
                 break;
             }
-            // Add text up to and including the closing tag
-            var segmentEnd = closeTagEnd + 2; // include 'p>'
+            // Add text up to and include the closing tag
+            var segmentEnd = closeTagEnd + 2;
             chunk += text.substring(position, segmentEnd);
-            position = segmentEnd; // move past this tag
+            // Update position to end of last segment.
+            position = segmentEnd;
 
-            // If chunk is large enough, save and reset
+            // If chunk is large enough, push current chunk to textChunks and reset
             if (chunk.length >= 1800) {
                 textChunks.push(chunk);
                 chunk = "";
@@ -94,7 +97,7 @@
         if (chunk.length > 0) {
             textChunks.push(chunk);
         }
-        // Get length of pages and update page.
+        // Get length of pages and update page to first page.
         pages = textChunks.length;
         updatePage(pageNum);
     }
@@ -104,7 +107,7 @@
      * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
      *
      * @param {event} keyBoardEvent.
-     * @param {element} element.
+     * @param {element} Javascript DOM element.
      */
     function readHandleKeyDown(event, element){
         // Prevent default action when key is pressed down.
@@ -138,7 +141,6 @@
                 }
                 break;
         }
-
     }
 
 
