@@ -226,9 +226,12 @@ var  bttnfClick = function(ev){
     if ((ev.keyCode === 32) || (ev.keyCode == 13)){
         if (this.dataset.name === "up"){
             setCookie("fontsize", currentFont + 1, 364);
+            document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + currentFont + 1;
         }
         else if (this.dataset.name === "down"){
             setCookie("fontsize", currentFont - 1, 364);
+            document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + currentFont - 1;
+
         }
     }
 };
@@ -241,11 +244,11 @@ var  bttnfClickMouse = function(ev){
 
     if ((this.dataset.name === "up") && (currentFont < 17)){
         setCookie("fontsize", currentFont + 1, 364);
-        document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + currentFont + 1
+        document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + currentFont + 1;
     }
     else if ((this.dataset.name === "down") && (currentFont > 10)){
         setCookie("fontsize", currentFont - 1, 364);
-        document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + currentFont + 1
+        document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + currentFont - 1;
 
     }
 
