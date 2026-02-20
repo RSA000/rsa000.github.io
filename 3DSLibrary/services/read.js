@@ -162,12 +162,14 @@
                  textContainer.style.width = "310px";
                  textContainer.style.top = "225px";
                  viewToggle.style.marginTop = "0px";
+                 pageIndex.style.top = "0px";
+                 viewToggle.style.top = "0px";
                  currentView = 2;
              }
              else if (currentView === 2){
                  textContainer.style.height = "400px";
                  textContainer.style.width = "294px";
-                 textContainer.style.top = "0px";
+                 textContainer.style.top = "5px";
                  pageIndex.style.top = "0px";
                  viewToggle.style.top = "0px";
                  currentView = 0;
