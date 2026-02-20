@@ -257,6 +257,11 @@ position: relative;
 }
 
 #fontSettings{
+	position: fixed;
+}
+
+
+#fontSettings button{
 
 }
 
