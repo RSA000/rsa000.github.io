@@ -148,17 +148,30 @@
 
          viewToggle.addEventListener("click", function(ev){
              if (currentView === 0){
-                 textContainer.css({"height", "185px"})
-                 viewToggle.style.marginTop = "100px";
+                 textContainer.css({
+                     "height": "185px"
+                })
+                 viewToggle.css({
+                     "marginTop": "100px"
+                });
                  currentView = 1;
              }
              else if (currentView === 1){
-                 textContainer.style.height = "175px";
-                 textContainer.style.width = "310px";
-                 textContainer.style.top = "215px";
-                 viewToggle.style.marginTop = "0px";
-                 pageIndex.css('top', '220px');
-                 viewToggle.style.top = "220px";
+                 textContainer.css({
+                     "height": "175px",
+                     "width": "294px",
+                     "top": "5px"
+                });
+
+                 viewToggle.css({
+                     "marginTop": "0px",
+                     "top": "220px"
+                });
+
+                 pageIndex.css({
+                     'top': '220px'
+
+                });
                  currentView = 2;
              }
              else if (currentView === 2){
