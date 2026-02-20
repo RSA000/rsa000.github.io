@@ -29,7 +29,7 @@
                 paragraphs[i].style.fontSize = fontSize + "px";
             }
             var spans = document.getElementsByTagName("span");
-            for (var i = 0; i < paragraphs.length; i++){
+            for (var i = 0; i < spans.length; i++){
                 spans[i].style.fontSize = fontSize + "px";
             }
             return;
