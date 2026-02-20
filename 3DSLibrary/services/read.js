@@ -37,7 +37,7 @@
         // Display previous page.
         textContainer.innerHTML = textChunks[pageNum];
         textContainer.scrollTop = 0;
-        pageIndex.value = pageNum;
+        pageIndex.val(pageNum);
         checkFontSize();
         return;
     }
@@ -157,16 +157,19 @@
                  textContainer.style.width = "310px";
                  textContainer.style.top = "215px";
                  viewToggle.style.marginTop = "0px";
-                 pageIndex.style.top = "220px";
+                 pageIndex.css('top', '220px');
                  viewToggle.style.top = "220px";
                  currentView = 2;
              }
              else if (currentView === 2){
-                 textContainer.style.height = "400px";
-                 textContainer.style.width = "294px";
-                 textContainer.style.top = "5px";
-                 pageIndex.style.top = "0px";
-                 viewToggle.style.top = "0px";
+                 textContainer.css({
+                     'height': '400px',
+                     'width': '294px',
+                     'top': '5px'
+                 });
+
+                 pageIndex.css("top", "0px");
+                 viewToggle.css("top", "0px");
                  currentView = 0;
              }
 
