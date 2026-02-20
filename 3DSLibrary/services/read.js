@@ -21,6 +21,7 @@
     // Store textContainerRead element.
     var textContainer = document.getElementById('textContainerRead');
     var pageIndex = document.getElementById("pageindex");
+    var viewToggle = document.getElementById("viewToggle");
     var currentView = 0;
 
 
@@ -148,7 +149,7 @@
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-         document.getElementById("viewToggle").addEventListener("click", function(ev){
+         viewToggle.addEventListener("click", function(ev){
              if (currentView === 0){
                  textContainer.style.height = "190px";
                  textContainer.style.width = "95%";
