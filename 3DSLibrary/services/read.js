@@ -144,7 +144,17 @@
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+        var pageindex = window.getElementById("pageindex");
+
         window.removeEventListener("keydown", handleKeyDown);
+
+
+        // Add event listener for when a key is pressed down.
+        pageIndex.addEventListener("keypress", function(e) {
+            if (e.keyCode === ENTER){
+                updatePage(pageIndex.value);
+            }
+        });
 
 
         // Add event listener for when a key is pressed down.
