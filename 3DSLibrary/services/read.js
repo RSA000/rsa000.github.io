@@ -176,9 +176,9 @@
 
 
         // Add event listener for when a key is pressed down.
-        pageIndex.addEventListener("keypress", function(e) {
+        pageIndex.on("keypress", function(e) {
             if (e.keyCode === ENTER){
-                updatePage(pageIndex.value);
+                updatePage(parseInt(pageIndex.val()));
             }
         });
 
