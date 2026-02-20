@@ -220,6 +220,8 @@ var active = function() {
     topSubtitle.html($(this).data("text"));
 };
 
+
+
 var inactive = function() {
     // Get topHeading and subTitle element.
     var topHeading = $(".topHeading");
