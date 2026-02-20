@@ -44,6 +44,7 @@ function getText(url, callback) {
     $.ajax({
         url: url,
         method: 'GET',
+        // On success, perform callback function with returned data.
         success: function(data) {
             if (callback) callback(data);
         },
