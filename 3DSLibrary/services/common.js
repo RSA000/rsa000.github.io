@@ -12,12 +12,12 @@ const ENTER = 13;
 const centerX = 152;
 const centerY = 277;
 
-// Set index and get elements tags.
+// Instantiate and set variable, index, to 0.
 var index = 0;
 
 
 /**
- * The center function scrolls the screen to the 152,277 coordinates.
+ * The center function scrolls the screen to the centerX and centerY coordinates.
  */
 function center(){
     window.scrollTo(centerX, centerY);
@@ -25,9 +25,8 @@ function center(){
 
 
 /**
- *
- * getText(url) returns a list of strings subdivided from a string acquired through an
- * XMLHttpRequest to a passed url.
+ * getText sends an XMLHttpRequest GET request with a given url
+ * and performs a function (callback) with that text.
  *
  * @param {String} url
  * @param {Function} callback
