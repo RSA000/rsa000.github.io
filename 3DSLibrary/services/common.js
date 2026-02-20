@@ -433,7 +433,6 @@ function registerNon3DSlink(a){
 (function(){
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
-        var elements = document.querySelectorAll('a, button');
         index = 0;
 
         // Set interval to center screen every 33 milliseconds (30fps).
@@ -443,6 +442,8 @@ function registerNon3DSlink(a){
         checkFontSize();
         // Set function for keydown events.
         window.addEventListener("keydown", menuHandleKeyDown);
+
+        var elements = document.querySelectorAll('a, button');
 
         // For each elements, add event listener.
         for(var i = 0, l = elements.length; i<l; i++){
