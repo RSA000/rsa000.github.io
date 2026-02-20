@@ -330,7 +330,9 @@ top: 2px;
 
 }
 
-
+#viewToggle{
+position: relative;
+}
 
 
 

@@ -320,3 +320,7 @@ left: 43%;
 top: 2px;
 
 }
+
+#viewToggle{
+position: relative;
+}
