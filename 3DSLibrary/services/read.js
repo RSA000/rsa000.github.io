@@ -149,8 +149,7 @@
 
          document.getElementById("viewToggle").addEventListener("click", function(ev){
              textContainer.style.height = "200px";
-         }
-         ));
+         });
 
         window.removeEventListener("keydown", handleKeyDown);
 
