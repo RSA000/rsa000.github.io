@@ -30,7 +30,7 @@
             }
             var spans = document.getElementsByTagName("span");
             for (var i = 0; i < spans.length; i++){
-                spans[i].style.fontSize = fontSize + "px";
+                spans[i].style.fontSize = (fontSize + 1) + "px";
             }
             return;
         }
