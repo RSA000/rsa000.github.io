@@ -237,6 +237,7 @@ var  bttnfClick = function(ev){
 var  bttnfClickMouse = function(ev){
     // If keydown is A key
     var currentFont = parseInt(getCookie("fontsize"));
+    console.log(currentFont);
 
     if (this.dataset.name === "up"){
         setCookie("fontsize", currentFont + 1, 364);
