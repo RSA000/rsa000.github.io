@@ -210,31 +210,24 @@ function changeTheme(themeName){
 }
 
 
-/* Simba's (modified) stuff*/
 
-/* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
-var active = function(ev) {
-    // get top screen Heading and subtitles and store in variables.
-    var topHeading = document.getElementsByClassName("topHeading")[0];
-    var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
-    // Get innerHTML and description attributes of current element.
-    // Update innerHTML of top heading and subtitle to heading and subtitle values.
-    topHeading.innerHTML = this.innerHTML;
-    topSubtitle.innerHTML = this.dataset.text;
+var active = function() {
+    // Get topHeading and subTitle element.
+    var topHeading = $(".topHeading");
+    var topSubtitle = $(".topSubtitle");
+    // Update to current elements innerHTML and "text" data attribute.
+    topHeading.html(this.innerHTML);
+    topSubtitle.html($(this).data("text"));
 };
 
-
-/*Function returns title to original message when no items are selected. */
-var inactive = function(ev) {
-    // Get top heading and subtitle tags (<h1> and <p>, respectively).
-    var topHeading = document.getElementsByClassName("topHeading")[0];
-    var topSubtitle = document.getElementsByClassName("topSubtitle")[0];
-    // Update heading and subtitle.
-    topHeading.innerHTML = topHeading.dataset.text;
-    topSubtitle.innerHTML = topSubtitle.dataset.text;
+var inactive = function() {
+    // Get topHeading and subTitle element.
+    var topHeading = $(".topHeading");
+    var topSubtitle = $(".topSubtitle");
+    // Set heading and subtitle to default value.
+    topHeading.html($topHeading.data("text"));
+    topSubtitle.html($topSubtitle.data("text"));
 };
-
-/* End of Simbas */
 
 
 
@@ -268,8 +261,6 @@ var  bttnfClick = function(ev){
             setCookie("fontsize", currentFont - 1, 364);
             currentSubtitle.innerHTML = "Current Size: " + (currentFont - 1);
             currentSubtitle.style.fontSize = (currentFont - 1) + "px";
-
-
         }
     }
 };
