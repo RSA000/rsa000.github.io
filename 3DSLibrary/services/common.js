@@ -164,13 +164,13 @@ function checkTheme() {
     // If cookie value is not empty.
     if (themeCookie !== "") {
         // If themeTag is truethy.
-        if (themeTag) {
+        if (themeTag.length) {
             themeTag.attr("href", "../assets/styles/" + themeCookie + ".css");
             setCookie("theme", themeCookie, 364);
             return;
         }
         // Otherwise, if indexThemeTag is truethy.
-        else if (indexThemeTag) {
+        else if (indexThemeTag.length) {
             var images = $(".upperScreenImages img");
             indexThemeTag.attr("href", "assets/styles/" + themeCookie + ".css");
             images.each(function() {
