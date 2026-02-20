@@ -221,16 +221,18 @@ var  bttnClickMouse = function(ev){
 
 var  bttnfClick = function(ev){
     var currentFont = parseInt(getCookie("fontSize"));
-    console.log(currentFont);
     // If keydown is A key
     if ((ev.keyCode === 32) || (ev.keyCode == 13)){
         if (this.dataset.name === "up"){
             setCookie("fontsize", currentFont + 1, 364);
             document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont + 1);
+            document.getElementsByClassName("topSubtitle")[0].fontSize = (currentFont + 1) + "px";
         }
         else if (this.dataset.name === "down"){
             setCookie("fontsize", currentFont - 1, 364);
             document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont - 1);
+            document.getElementsByClassName("topSubtitle")[0].fontSize = (currentFont - 1) + "px";
+
 
         }
     }
@@ -240,18 +242,17 @@ var  bttnfClick = function(ev){
 var  bttnfClickMouse = function(ev){
     // If keydown is A key
     var currentFont = parseInt(getCookie("fontsize"));
-    console.log(currentFont);
 
     if ((this.dataset.name === "up") && (currentFont < 17)){
         setCookie("fontsize", currentFont + 1, 364);
         document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont + 1);
+        document.getElementsByClassName("topSubtitle")[0].fontSize = (currentFont + 1) + "px";
     }
     else if ((this.dataset.name === "down") && (currentFont > 10)){
         setCookie("fontsize", currentFont - 1, 364);
         document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont - 1);
-
+        document.getElementsByClassName("topSubtitle")[0].fontSize = (currentFont - 1) + "px";
     }
-
 };
 
 
