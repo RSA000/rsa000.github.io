@@ -228,25 +228,25 @@ var inactive = function() {
 /**
  * Function updates theme to element name value if event keycode is valid.
  */
-var  bttnClick = function(ev){
+var  bttnClick = function(ev, element){
     // If keydown is A key
-    changeTheme(this.dataset.name);
+    changeTheme(element.dataset.name);
 };
 
 /**
  * Function updates font according to elements name (up or down)
  */
-var  bttnfClick = function(ev){
+var  bttnfClick = function(ev, element){
     // If keydown is A key
     var currentFont = parseInt(getCookie("fontsize"));
     var currentSubtitle = document.getElementsByClassName("topSubtitle")[0];
 
-    if ((this.dataset.name === "up") && (currentFont < 18)){
+    if ((element.dataset.name === "up") && (currentFont < 18)){
         setCookie("fontsize", currentFont + 1, 364);
         currentSubtitle.innerHTML = "Current Size: " + (currentFont + 1);
         currentSubtitle.style.fontSize = (currentFont + 1) + "px";
     }
-    else if ((this.dataset.name === "down") && (currentFont > 10)){
+    else if ((element.dataset.name === "down") && (currentFont > 10)){
         setCookie("fontsize", currentFont - 1, 364);
         currentSubtitle.innerHTML = "Current Size: " + (currentFont - 1);
         currentSubtitle.style.fontSize = (currentFont - 1) + "px";
@@ -413,7 +413,7 @@ function registerNon3DSlink(a){
             if (elements[i].dataset.type === 'btn') {
                 elements[i].addEventListener("keydown", function(ev){
                     if ((ev.keyCode == 32) || (ev.keyCode == 13)){
-                    bttnClick(ev)
+                    bttnClick(ev, elements[i])
                 }
             }, false);
                 elements[i].addEventListener("click", bttnClick, false);
@@ -423,7 +423,7 @@ function registerNon3DSlink(a){
             if (elements[i].dataset.type === 'btnf') {
                 elements[i].addEventListener("keydown", function(ev){
                     if ((ev.keyCode == 32) || (ev.keyCode == 13)){
-                        bttnfClick(ev)
+                        bttnfClick(ev, elements[i])
                     }
                 }, false);
                 elements[i].addEventListener("click", bttnfClick, false);
