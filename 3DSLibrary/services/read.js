@@ -24,7 +24,7 @@
     function checkFontSize(){
         var fontSize = parseInt(getCookie("fontsize"));
         if (fontSize){
-            document.getElementById("textContainerRead").style.fontSize = fontSize + "px";
+            document.getElementByTagName("p").style.fontSize = fontSize + "px";
             return;
         }
         else{
