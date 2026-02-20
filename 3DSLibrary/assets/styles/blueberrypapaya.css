@@ -262,7 +262,7 @@ position: relative;
 
 
 #fontSettings button{
-
+	width: 80px;
 }
 
 #feedbackForm{
