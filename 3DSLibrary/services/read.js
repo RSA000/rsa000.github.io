@@ -28,6 +28,10 @@
             for (var i = 0; i < paragraphs.length; i++) {
                 paragraphs[i].style.fontSize = fontSize + "px";
             }
+            var spans = document.getElementsByTagName("span");
+            for (var i = 0; i < paragraphs.length; i++){
+                spans[i].style.fontSize = fontSize + "px";
+            }
             return;
         }
         else{
