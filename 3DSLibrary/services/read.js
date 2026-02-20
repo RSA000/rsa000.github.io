@@ -21,6 +21,7 @@
     // Store textContainerRead element.
     var textContainer = document.getElementById('textContainerRead');
     var pageIndex = document.getElementById("pageindex");
+    var currentView = 0;
 
 
 
@@ -148,7 +149,22 @@
     document.addEventListener('DOMContentLoaded', function(ev) {
 
          document.getElementById("viewToggle").addEventListener("click", function(ev){
-             textContainer.style.height = "200px";
+             if (currentView === 0){
+                 textContainer.style.height = "180px";
+                 textContainer.style.height = "95%";
+                 currentView = 1;
+             }
+             else if (currentView === 1){
+                 currentView = 2;
+             }
+             else if (currentView === 2){
+                 textContainer.style.height = "400px";
+                 textContainer.style.height = "294px";
+                 currentView = 0;
+
+
+             }
+
          });
 
         window.removeEventListener("keydown", handleKeyDown);
