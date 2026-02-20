@@ -158,8 +158,10 @@
                  currentView = 1;
              }
              else if (currentView === 1){
+                 textContainer.style.width = "315px";
                  textContainer.style.top = "225px";
                  pageIndex.style.top = "220px";
+                 viewToggle.style.marginTop = "0px";
                  currentView = 2;
              }
              else if (currentView === 2){
