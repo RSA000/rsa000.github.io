@@ -59,11 +59,8 @@
 
     /* When content is loaded. */
     document.addEventListener('DOMContentLoaded', function(ev) {
+
         window.removeEventListener("keydown", handleKeyDown);
-
-
-
-
 
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {

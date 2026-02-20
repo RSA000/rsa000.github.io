@@ -80,7 +80,10 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 
-
+/**
+ * Function checks cookie, "fontsize," value and updates elements accordingly.
+ * If no font is set, medium (13) is set.
+ */
 function checkFontSize(){
     var fontSize = parseInt(getCookie("fontsize"));
     if (fontSize){
@@ -270,16 +273,17 @@ var  bttnfClick = function(ev){
 var  bttnfClickMouse = function(ev){
     // If keydown is A key
     var currentFont = parseInt(getCookie("fontsize"));
+    var currentSubtitle = document.getElementsByClassName("topSubtitle")[0];
 
     if ((this.dataset.name === "up") && (currentFont < 18)){
         setCookie("fontsize", currentFont + 1, 364);
-        document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont + 1);
-        document.getElementsByClassName("topSubtitle")[0].style.fontSize = (currentFont + 1) + "px";
+        currentSubtitle.innerHTML = "Current Size: " + (currentFont + 1);
+        currentSubtitle.style.fontSize = (currentFont + 1) + "px";
     }
     else if ((this.dataset.name === "down") && (currentFont > 10)){
         setCookie("fontsize", currentFont - 1, 364);
-        document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont - 1);
-        document.getElementsByClassName("topSubtitle")[0].style.fontSize = (currentFont - 1) + "px";
+        currentSubtitle.innerHTML = "Current Size: " + (currentFont - 1);
+        currentSubtitle.style.fontSize = (currentFont - 1) + "px";
     }
 };
 
