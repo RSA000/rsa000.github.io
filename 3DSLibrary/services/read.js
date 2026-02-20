@@ -13,13 +13,14 @@
 
     // Get current book name.
     var bookName = getCookie("bookname");
+    var pages = 0;
     // Get current book position cookie.
     var pageNum = parseInt(getCookie('pagenum'));
     // Create list variable for storing sub-divided book text.
-    var totalPages = 0;
     var textChunks = [];
     // Store textContainerRead element.
     var textContainer = document.getElementById('textContainerRead');
+
 
 
 
@@ -93,7 +94,6 @@
         }
         // Get length of pages and update page.
         pages = textChunks.length;
-        totalPages = textChunks.length;
         updatePage(pageNum);
     }
 
