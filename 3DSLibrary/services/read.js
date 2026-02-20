@@ -147,6 +147,7 @@
     document.addEventListener('DOMContentLoaded', function(ev) {
 
          viewToggle.on("click", function(ev){
+             // Case for full screen changing to top screen only.
              if (currentView === 0){
                  textContainer.css({
                      "height": "185px"
@@ -156,39 +157,41 @@
                 });
                  currentView = 1;
              }
+             // Case for top screen only changing to bottom screen only.
              else if (currentView === 1){
                  textContainer.css({
                      "height": "175px",
                      "width": "294px",
                      "top": "5px"
                 });
-
                  viewToggle.css({
                      "marginTop": "0px",
                      "top": "220px"
                 });
-
                  pageIndex.css({
                      'top': '220px'
-
                 });
                  currentView = 2;
              }
+             // Case for lower screen only to full screen view.
              else if (currentView === 2){
                  textContainer.css({
                      'height': '400px',
                      'width': '294px',
                      'top': '5px'
                  });
-
                  pageIndex.css("top", "0px");
                  viewToggle.css("top", "0px");
                  currentView = 0;
              }
-
          });
 
         window.removeEventListener("keydown", handleKeyDown);
+
+        // Add event listener for when a key is pressed down.
+        window.addEventListener("keydown", function(e) {
+            readHandleKeyDown(e, document.getElementById('textContainerRead'));
+        });
 
 
         // Add event listener for when a key is pressed down.
@@ -196,12 +199,6 @@
             if (e.keyCode === ENTER){
                 updatePage(parseInt(pageIndex.val()));
             }
-        });
-
-
-        // Add event listener for when a key is pressed down.
-        window.addEventListener("keydown", function(e) {
-            readHandleKeyDown(e, document.getElementById('textContainerRead'));
         });
 
         // Get book text and load into textContainerRead paragraph element in read.html.
