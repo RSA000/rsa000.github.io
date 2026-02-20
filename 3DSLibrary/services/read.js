@@ -151,7 +151,7 @@
 
          viewToggle.addEventListener("click", function(ev){
              if (currentView === 0){
-                 textContainer.style.top = "5px";
+                 textContainer.style.height = "185px";
                  viewToggle.style.marginTop = "100px";
                  currentView = 1;
              }
