@@ -153,7 +153,7 @@
              if (currentView === 0){
                  textContainer.style.height = "185px";
                  textContainer.style.width = "400px";
-                 viewToggle.style.paddingBottom = "100px";
+                 viewToggle.style.marginTop = "100px";
                  currentView = 1;
              }
              else if (currentView === 1){
