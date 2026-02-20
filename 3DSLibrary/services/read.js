@@ -152,13 +152,13 @@
          viewToggle.addEventListener("click", function(ev){
              if (currentView === 0){
                  textContainer.style.height = "185px";
-                 textContainer.style.width = "395px";
+                 textContainer.style.width = "360px";
                  textContainer.style.top = "0px";
                  viewToggle.style.marginTop = "100px";
                  currentView = 1;
              }
              else if (currentView === 1){
-                 textContainer.style.width = "315px";
+                 textContainer.style.width = "310px";
                  textContainer.style.top = "225px";
                  pageIndex.style.top = "220px";
                  viewToggle.style.marginTop = "0px";
