@@ -151,7 +151,7 @@
          document.getElementById("viewToggle").addEventListener("click", function(ev){
              if (currentView === 0){
                  textContainer.style.height = "180px";
-                 textContainer.style.height = "95%";
+                 textContainer.style.width = "95%";
                  currentView = 1;
              }
              else if (currentView === 1){
@@ -159,7 +159,7 @@
              }
              else if (currentView === 2){
                  textContainer.style.height = "400px";
-                 textContainer.style.height = "294px";
+                 textContainer.style.width = "294px";
                  currentView = 0;
 
 
