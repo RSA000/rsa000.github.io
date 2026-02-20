@@ -147,6 +147,10 @@
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
 
+        document.getElementById("viewToggle").addEventListener("click", function(ev){
+            textContainer.style.height = "200px";
+        }
+        ));
 
         window.removeEventListener("keydown", handleKeyDown);
 
