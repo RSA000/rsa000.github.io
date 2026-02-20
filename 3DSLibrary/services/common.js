@@ -436,8 +436,8 @@ function registerNon3DSlink(a){
         var elements = document.querySelectorAll('a, button');
         index = 0;
 
-        // Call center function every milisecond.
-        setInterval(center);
+        // Set interval to center screen every 33 milliseconds (30fps).
+        setInterval(center, 33);
         // Check current theme.
         checkTheme();
         checkFontSize();
