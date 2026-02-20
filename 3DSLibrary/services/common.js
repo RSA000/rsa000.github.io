@@ -25,6 +25,15 @@ function center(){
 
 
 /**
+ * Function returns if system is 3DS and false otherwise.
+ */
+function is3DS(){
+    // If userAgent string is equal to "Nintendo 3DS"
+    return includes(window.navigator.userAgent,"Nintendo 3DS");
+}
+
+
+/**
  * getText sends an XMLHttpRequest GET request with a given url
  * and performs a function (callback) with that text.
  *
@@ -57,13 +66,11 @@ function getText(url, callback){
 }
 
 
+
 /**
  * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////  https://www.w3schools.com/js/js_cookies.asp          ///////
  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- */
-
-/**
  * setCookie creates a cookie (cname) with a value (cvalue)
  * that expires in a set amount of days (exdays).
  *
@@ -110,6 +117,9 @@ function checkFontSize(){
 
 
 /**
+ * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * //////  https://www.w3schools.com/js/js_cookies.asp          ///////
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  * Function returns value of a cookie if cname value is valid cookie name.
  *
  * @param {cname} - String
@@ -234,6 +244,7 @@ var inactive = function(ev) {
 /* End of Simbas */
 
 
+
 var  bttnClick = function(ev){
     // If keydown is A key
     if ((ev.keyCode === 32) || (ev.keyCode == 13)){
@@ -242,10 +253,12 @@ var  bttnClick = function(ev){
 };
 
 
+
 var  bttnClickMouse = function(ev){
     // If keydown is A key
     changeTheme(this.dataset.name);
 };
+
 
 
 var  bttnfClick = function(ev){
@@ -269,6 +282,7 @@ var  bttnfClick = function(ev){
 };
 
 
+
 var  bttnfClickMouse = function(ev){
     // If keydown is A key
     var currentFont = parseInt(getCookie("fontsize"));
@@ -287,6 +301,7 @@ var  bttnfClickMouse = function(ev){
 };
 
 
+
 /**
  * Function updates bookname and pagenum cookie values before redirecting page.
  *
@@ -302,6 +317,9 @@ var catClick = function(ev) {
 
 
 /**
+ * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  *
  * This prevents the browser from moving the page using the arrow keys
  * @param {keyboardEvent} event
@@ -321,7 +339,6 @@ function preventKey(event){
         return false;
     }
 }
-// end of wolfyxon
 
 
 /**
@@ -375,13 +392,11 @@ function handleKeyDown(e) {
 }
 
 
-/**
- * <<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
- * //////  https://github.com/Wolfyxon/3ds-web-stuff*  ///////
- * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- */
 
 /**
+ * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  * includes takes a container and a search element and returns a boolean value
  * indicating if it exists within the container.
  *
@@ -400,17 +415,11 @@ function includes(container,search){
 
 
 /**
- * Function returns if system is 3DS and false otherwise.
- */
-function is3DS(){
-    // If userAgent string is equal to "Nintendo 3DS"
-    return includes(window.navigator.userAgent,"Nintendo 3DS");
-}
-
-
-/**
+ * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  * Register an <a> that isn't meant to be opened on the 3DS
- * @param {HTMLelementsElement} a
+ * @param {element} a
  */
 function registerNon3DSlink(a){
     // Add event listener for when elements is clicked.
@@ -422,7 +431,6 @@ function registerNon3DSlink(a){
         return false;
     }, false);
 }
-
 
 
 
