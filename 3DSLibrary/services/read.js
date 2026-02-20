@@ -161,6 +161,7 @@
                  textContainer.style.height = "175px";
                  textContainer.style.width = "310px";
                  textContainer.style.top = "225px";
+                 viewToggle.style.marginTop = "0px";
                  currentView = 2;
              }
              else if (currentView === 2){
