@@ -16,9 +16,29 @@
     // Get current book position cookie.
     var pageNum = parseInt(getCookie('pagenum'));
     // Create list variable for storing sub-divided book text.
+    var totalPages = 0;
     var textChunks = [];
     // Store textContainerRead element.
     var textContainer = document.getElementById('textContainerRead');
+
+
+
+    /**
+     * This function takes a number (0 or 1) that indicates the page direction and updates
+     * the textContainerReader
+     *
+     * @param {Int} Int.
+     *
+     */
+    function updatePage(pageNum){
+
+        // Display previous page.
+        textContainer.innerHTML = textChunks[pageNum];
+        textContainer.scrollTop = 0;
+        checkFontSize();
+        return;
+    }
+
 
     /**
      * Function parses and returns list of HTML chunks.
@@ -72,25 +92,8 @@
             textChunks.push(chunk);
         }
         // Get length of pages and update page.
-        pages = textChunks.length;
+        totalPages = textChunks.length;
         updatePage(pageNum);
-    }
-
-
-    /**
-     * This function takes a number (0 or 1) that indicates the page direction and updates
-     * the textContainerReader
-     *
-     * @param {Int} Int.
-     *
-     */
-    function updatePage(pageNum){
-
-        // Display previous page.
-        textContainer.innerHTML = textChunks[pageNum];
-        textContainer.scrollTop = 0;
-        checkFontSize();
-        return;
     }
 
 
