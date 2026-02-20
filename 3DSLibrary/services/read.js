@@ -107,6 +107,7 @@
         // Display previous page.
         textContainer.innerHTML = textChunks[pageNum];
         textContainer.scrollTop = 0;
+        checkFontSize();
         return;
     }
 
