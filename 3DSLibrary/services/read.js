@@ -24,7 +24,10 @@
     function checkFontSize(){
         var fontSize = parseInt(getCookie("fontsize"));
         if (fontSize){
-            document.getElementByTagName("p").style.fontSize = fontSize + "px";
+            var paragraphs = document.getElementsByTagName("p");
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.fontSize = fontSize + "px";
+            }
             return;
         }
         else{
