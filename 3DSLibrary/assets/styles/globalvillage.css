@@ -332,6 +332,7 @@ top: 2px;
 
 #viewToggle{
 position: relative;
+background: inherit;
 }
 
 
