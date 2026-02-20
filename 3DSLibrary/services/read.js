@@ -92,6 +92,7 @@
             textChunks.push(chunk);
         }
         // Get length of pages and update page.
+        pages = textChunks.length;
         totalPages = textChunks.length;
         updatePage(pageNum);
     }
