@@ -137,8 +137,6 @@ function getCookie(cname) {
     }
     return "";
 }
-// End of w3schools.com
-
 
 /**
  * Function alerts user if no bookname value is set to cookie and redirects to home page.
@@ -157,39 +155,40 @@ function checkBookName() {
 /**
  * Function checks if a theme is set. If a theme is not set, default theme is set
  */
-function checkTheme(){
-    // Get value of theme cookie.
+function checkTheme() {
+    // Get theme cookie, and theme attributes from page and store in variables.
     var themeCookie = getCookie("theme");
-    // Get document CSS link elements (index and other pages).
-    var themeTag = document.getElementById("theme");
-    var indexThemeTag = document.getElementById("themeindex");
+    var themeTag = $("#theme");
+    var indexThemeTag = $("#themeindex");
 
-    // Set theme if cookie exists.
-    if (themeCookie != "") {
-        // Case for pages in views folder.
-        if (themeTag != null){
-            themeTag.setAttribute("href", ("../assets/styles/" + themeCookie + ".css"));
+    // If cookie value is not empty.
+    if (themeCookie !== "") {
+        // If themeTag is truethy.
+        if (themeTag) {
+            themeTag.attr("href", "../assets/styles/" + themeCookie + ".css");
             setCookie("theme", themeCookie, 364);
             return;
         }
-        // Case for index.html page.
-        else if (indexThemeTag != null){
-            // Store all upper screen image elements in variable.
-            var images = document.getElementsByClassName("upperScreenImages")[0].querySelectorAll("img");
-            indexThemeTag.setAttribute("href", ("assets/styles/" + themeCookie + ".css"));
-            // Set Home page upper screen photos.
-            for (var i = 0; i < images.length; i++){
-                images[i].setAttribute('src', ("https://rsa000.github.io/3DSLibrary/assets/img/index/" + themeCookie + ".gif"));
-            }
+        // Otherwise, if indexThemeTag is truethy.
+        else if (indexThemeTag) {
+            var images = $(".upperScreenImages img");
+            indexThemeTag.attr("href", "assets/styles/" + themeCookie + ".css");
+            images.each(function() {
+                $(this).attr("src", "https://rsa000.github.io/3DSLibrary/assets/img/index/" + themeCookie + ".gif");
+            });
             setCookie("theme", themeCookie, 364);
             return;
         }
     }
-    // Case for no theme set.
-    else{
+    // Otherwise, set default theme.
+    else {
         alert("no theme set");
-        if (themeTag != null) themeTag.setAttribute('href', ("../assets/styles/globalvillage.css"));
-        if (indexThemeTag != null) indexThemeTag.setAttribute('href', ("../assets/styles/globalvillage.css"));
+        if (themeTag.length) {
+            themeTag.attr("href", "../assets/styles/globalvillage.css");
+        }
+        if (indexThemeTag.length) {
+            indexThemeTag.attr("href", "../assets/styles/globalvillage.css");
+        }
         setCookie("theme", "globalvillage", 364);
         checkTheme();
         return;
