@@ -438,12 +438,10 @@ function registerNon3DSlink(a){
 
         // Set interval to center screen every 33 milliseconds (30fps).
         setInterval(center, 33);
-        // Check current theme.
+        // Check current theme and font size.
         checkTheme();
         checkFontSize();
-
-
-
+        // Set function for keydown events.
         window.addEventListener("keydown", menuHandleKeyDown);
 
         // For each elements, add event listener.
@@ -468,10 +466,6 @@ function registerNon3DSlink(a){
             }
 
         }
-
-
-
-
 
         // If device is 3DS.
         if (is3DS()){
