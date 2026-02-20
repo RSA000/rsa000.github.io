@@ -244,7 +244,7 @@ var  bttnfClickMouse = function(ev){
 
     if ((this.dataset.name === "up") && (currentFont < 17)){
         setCookie("fontsize", currentFont + 1, 364);
-        document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont - 1);
+        document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont + 1);
     }
     else if ((this.dataset.name === "down") && (currentFont > 10)){
         setCookie("fontsize", currentFont - 1, 364);
