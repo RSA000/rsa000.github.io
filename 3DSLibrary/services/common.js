@@ -253,12 +253,12 @@ var  bttnfClick = function(ev){
         if (this.dataset.name === "up"){
             setCookie("fontsize", currentFont + 1, 364);
             document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont + 1);
-            document.getElementsByClassName("topSubtitle")[0].fontSize = (currentFont + 1) + "px";
+            document.getElementsByClassName("topSubtitle")[0].style.fontSize = (currentFont + 1) + "px";
         }
         else if (this.dataset.name === "down"){
             setCookie("fontsize", currentFont - 1, 364);
             document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont - 1);
-            document.getElementsByClassName("topSubtitle")[0].fontSize = (currentFont - 1) + "px";
+            document.getElementsByClassName("topSubtitle")[0].style.fontSize = (currentFont - 1) + "px";
 
 
         }
@@ -273,12 +273,12 @@ var  bttnfClickMouse = function(ev){
     if ((this.dataset.name === "up") && (currentFont < 17)){
         setCookie("fontsize", currentFont + 1, 364);
         document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont + 1);
-        document.getElementsByClassName("topSubtitle")[0].fontSize = (currentFont + 1) + "px";
+        document.getElementsByClassName("topSubtitle")[0].style.fontSize = (currentFont + 1) + "px";
     }
     else if ((this.dataset.name === "down") && (currentFont > 10)){
         setCookie("fontsize", currentFont - 1, 364);
         document.getElementsByClassName("topSubtitle")[0].innerHTML = "Current Size: " + (currentFont - 1);
-        document.getElementsByClassName("topSubtitle")[0].fontSize = (currentFont - 1) + "px";
+        document.getElementsByClassName("topSubtitle")[0].style.fontSize = (currentFont - 1) + "px";
     }
 };
 
