@@ -20,7 +20,7 @@
     var textChunks = [];
     // Store textContainerRead element.
     var textContainer = document.getElementById('textContainerRead');
-    var pageIndex = document.getElementById("pageindex");
+    var pageIndex = $("#id=pageindex");
     var viewToggle = document.getElementById("viewToggle");
     var currentView = 0;
 
