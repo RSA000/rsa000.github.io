@@ -247,7 +247,7 @@ var  bttnClickMouse = function(ev){
 
 
 var  bttnfClick = function(ev){
-    var currentFont = parseInt(getCookie("fontSize"));
+    var currentFont = parseInt(getCookie("fontsize"));
     // If keydown is A key
     if ((ev.keyCode === 32) || (ev.keyCode == 13)){
         if (this.dataset.name === "up"){
