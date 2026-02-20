@@ -387,15 +387,6 @@ function menuHandleKeyDown(event){
 }
 
 
-/**
- *
- * Function sets logic for keydown events.
- */
-function handleKeyDown(e) {
-    menuHandleKeyDown(e));
-}
-
-
 
 /**
  * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
