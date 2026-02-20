@@ -20,6 +20,8 @@
     var textChunks = [];
     // Store textContainerRead element.
     var textContainer = document.getElementById('textContainerRead');
+    var pageIndex = document.getElementById("pageindex");
+
 
 
 
@@ -36,6 +38,7 @@
         // Display previous page.
         textContainer.innerHTML = textChunks[pageNum];
         textContainer.scrollTop = 0;
+        pageIndex.value = pageNum;
         checkFontSize();
         return;
     }
@@ -144,7 +147,6 @@
     // Add event listener for when content is loaded.
     document.addEventListener('DOMContentLoaded', function(ev) {
 
-        var pageIndex = document.getElementById("pageindex");
 
         window.removeEventListener("keydown", handleKeyDown);
 
