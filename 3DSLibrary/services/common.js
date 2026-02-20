@@ -91,9 +91,9 @@ function setCookie(cname, cvalue, exdays) {
  */
 function checkFontSize() {
     var fontSize = parseInt(getCookie("fontsize"));
-    // If fontSize is truethy (a number, 0 will register as false).
+    // If fontSize is a number greater than 0.
     if (fontSize) {
-        // Get and apply font settings with JQueary
+        // Get and apply font settings with JQueary to all divs, paragraphs and spanners.
         $("div").css("font-size", (fontSize + 3) + "px");
         $("p").css("font-size", fontSize + "px");
         $("span").css("font-size", (fontSize + 1) + "px");
