@@ -163,7 +163,7 @@ function checkTheme() {
 
     // If cookie value is not empty.
     if (themeCookie !== "") {
-        // If themeTag is truethy.
+        // If themeTag is truethy (length is not 0).
         if (themeTag.length) {
             themeTag.attr("href", "../assets/styles/" + themeCookie + ".css");
             setCookie("theme", themeCookie, 364);
@@ -209,7 +209,9 @@ function changeTheme(themeName){
 }
 
 
-
+/**
+ * Function updates topHeading and topSubtitle to elements value.
+ */
 var active = function() {
     // Get topHeading and subTitle element.
     var topHeading = $(".topHeading");
@@ -220,7 +222,9 @@ var active = function() {
 };
 
 
-
+/**
+ * Function updates topHeading and topSubtitle to default values.
+ */
 var inactive = function() {
     // Get topHeading and subTitle element.
     var topHeading = $(".topHeading");
@@ -231,7 +235,9 @@ var inactive = function() {
 };
 
 
-
+/**
+ * Function updates theme to element name value if event keycode is valid.
+ */
 var  bttnClick = function(ev){
     // If keydown is A key
     if ((ev.keyCode === 32) || (ev.keyCode == 13)){
@@ -240,7 +246,9 @@ var  bttnClick = function(ev){
 };
 
 
-
+/**
+ * Function updates theme to element name value.
+ */
 var  bttnClickMouse = function(ev){
     // If keydown is A key
     changeTheme(this.dataset.name);
@@ -248,6 +256,9 @@ var  bttnClickMouse = function(ev){
 
 
 
+/**
+ * Function updates font according to elements name (up or down) if events keyCode is valid.
+ */
 var  bttnfClick = function(ev){
     var currentFont = parseInt(getCookie("fontsize"));
     var currentSubtitle = document.getElementsByClassName("topSubtitle")[0];
@@ -267,7 +278,9 @@ var  bttnfClick = function(ev){
 };
 
 
-
+/**
+ * Function updates font according to elements name (up or down)
+ */
 var  bttnfClickMouse = function(ev){
     // If keydown is A key
     var currentFont = parseInt(getCookie("fontsize"));
@@ -306,7 +319,8 @@ var catClick = function(ev) {
  * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  *
- * This prevents the browser from moving the page using the arrow keys
+ * This prevents the browser from moving the page using the arrow keys and
+ * prevents default DS events for the D-pad and A key.
  * @param {keyboardEvent} event
  */
 function preventKey(event){
@@ -372,6 +386,11 @@ function menuHandleKeyDown(event, element){
     }
 }
 
+
+/**
+ *
+ * Function sets logic for keydown events.
+ */
 function handleKeyDown(e) {
     menuHandleKeyDown(e, document.getElementById('lowerScreenContents'));
 }
@@ -436,7 +455,7 @@ function registerNon3DSlink(a){
 
 
 
-        window.addEventListener("keydown", handleKeyDown);
+        window.addEventListener("keydown", menuHandleKeyDown);
 
         // For each elements, add event listener.
         for(var i = 0, l = elements.length; i<l; i++){
