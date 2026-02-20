@@ -47,7 +47,7 @@ function getText(url, callback) {
         success: function(data) {
             if (callback) callback(data);
         },
-        error: function(jqXHR, textStatus, errorThrown) {
+        error: function(textStatus, errorThrown) {
             console.error('Error loading text file:', errorThrown);
             alert("Error loading text file: " + errorThrown + " " + url);
         }
