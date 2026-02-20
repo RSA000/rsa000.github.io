@@ -233,12 +233,12 @@ height: 150px;
 
 /* Container */
 background-color: #c0a883;
-height: 385px;
-width: 295px;
+height: 367px;
+width: 294px;
 margin: 2px auto;
 overflow-y: scroll;
-padding: 8px;
-top: 15px;
+padding: 12px;
+top: 16px;
 position: relative;
 }
 

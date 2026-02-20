@@ -235,11 +235,13 @@ body {
 
 	/* Container */
 	background: papayawhip;
-	height: 385px;
+	height: 367px;
 	width: 294px;
 	margin: 2px auto;
 	overflow-y: scroll;
-	padding: 4px;
+	padding: 12px;
+	top: 16px;
+	position: relative;
 
 }
 
