@@ -228,7 +228,7 @@ var inactive = function() {
 /**
  * Function updates theme to element name value if event keycode is valid.
  */
-var  bttnClick = function(ev){
+var  themeButtonClick = function(ev){
     // If keydown is A key
     changeTheme(this.dataset.name);
 };
@@ -236,7 +236,7 @@ var  bttnClick = function(ev){
 /**
  * Function updates font according to elements name (up or down)
  */
-var  bttnfClick = function(ev){
+var  fontButtonClick = function(ev){
     // If keydown is A key
     var currentFont = parseInt(getCookie("fontsize"));
     var currentSubtitle = document.getElementsByClassName("topSubtitle")[0];
@@ -413,20 +413,20 @@ function registerNon3DSlink(a){
             if (elements[i].dataset.type === 'btn') {
                 elements[i].addEventListener("keydown", function(ev){
                     if ((ev.keyCode == 32) || (ev.keyCode == 13)){
-                        bttnClick.call(this, ev);
+                        themeButtonClick.call(this, ev);
                 }
             }, false);
-                elements[i].addEventListener("click", bttnClick, false);
+                elements[i].addEventListener("click", themeButtonClick, false);
             }
 
 
             if (elements[i].dataset.type === 'btnf') {
                 elements[i].addEventListener("keydown", function(ev){
                     if ((ev.keyCode == 32) || (ev.keyCode == 13)){
-                        bttnfClick.call(this, ev)
+                        fontButtonClick.call(this, ev)
                     }
                 }, false);
-                elements[i].addEventListener("click", bttnfClick, false);
+                elements[i].addEventListener("click", fontButtonClick, false);
             }
 
         }
