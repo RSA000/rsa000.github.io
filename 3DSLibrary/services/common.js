@@ -420,7 +420,7 @@ function registerNon3DSlink(a){
             }
 
 
-            if (elements[i].dataset.type === 'btn') {
+            if (elements[i].dataset.type === 'btnf') {
                 elements[i].addEventListener("keydown", bttnfClick, false);
                 elements[i].addEventListener("click", bttnfClickMouse, false);
             }
