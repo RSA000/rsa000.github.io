@@ -158,7 +158,7 @@
              else if (currentView === 1){
                  textContainer.style.height = "175px";
                  textContainer.style.width = "310px";
-                 textContainer.style.top = "225px";
+                 textContainer.style.top = "200px";
                  viewToggle.style.marginTop = "0px";
                  pageIndex.style.top = "0px";
                  viewToggle.style.top = "0px";
