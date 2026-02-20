@@ -157,7 +157,9 @@
              }
              else if (currentView === 1){
                  textContainer.style.top = "225px";
-                 pageIndex.style.top = "225px";
+                 pageIndex.style.top = "220px";
+                 viewToggle.style.top = "220px";
+
                  currentView = 2;
              }
              else if (currentView === 2){
@@ -165,6 +167,7 @@
                  textContainer.style.width = "294px";
                  textContainer.style.top = "0px";
                  pageIndex.style.top = "0px";
+                 viewToggle.style.top = "0px";
                  currentView = 0;
 
 
