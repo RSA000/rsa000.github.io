@@ -19,7 +19,7 @@
     // Create list variable for storing sub-divided book text.
     var textChunks = [];
     // Store textContainerRead element.
-    var textContainer = document.getElementById('textContainerRead');
+    var textContainer = $('#textContainerRead');
     var pageIndex = $("#pageindex");
     var viewToggle = document.getElementById("viewToggle");
     var currentView = 0;
@@ -35,8 +35,8 @@
     function updatePage(pageNum){
 
         // Display previous page.
-        textContainer.innerHTML = textChunks[pageNum];
-        textContainer.scrollTop = 0;
+        textContainer.html(textChunks[pageNum]);
+        textContainer.animate({scrollTop: "0px"}, 50);
         pageIndex.val(pageNum);
         checkFontSize();
         return;
@@ -148,7 +148,7 @@
 
          viewToggle.addEventListener("click", function(ev){
              if (currentView === 0){
-                 textContainer.style.height = "185px";
+                 textContainer.css({"height", "185px"})
                  viewToggle.style.marginTop = "100px";
                  currentView = 1;
              }
