@@ -151,8 +151,9 @@
 
          viewToggle.addEventListener("click", function(ev){
              if (currentView === 0){
-                 textContainer.style.height = "190px";
+                 textContainer.style.height = "185px";
                  textContainer.style.width = "95%";
+                 viewToggle.style.top = "5px";
                  currentView = 1;
              }
              else if (currentView === 1){
