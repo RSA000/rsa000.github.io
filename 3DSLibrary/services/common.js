@@ -344,7 +344,7 @@ function preventKey(event){
  * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
  * @param {KeyboardEvent} event
  */
-function menuHandleKeyDown(event, element){
+function menuHandleKeyDown(event){
     // Prevent default action when key is pressed down.
     preventKey(event);
 
@@ -392,7 +392,7 @@ function menuHandleKeyDown(event, element){
  * Function sets logic for keydown events.
  */
 function handleKeyDown(e) {
-    menuHandleKeyDown(e, document.getElementById('lowerScreenContents'));
+    menuHandleKeyDown(e));
 }
 
 
