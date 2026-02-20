@@ -162,7 +162,7 @@
                  textContainer.css({
                      "height": "175px",
                      "width": "294px",
-                     "top": "5px"
+                     "top": "220px"
                 });
                  viewToggle.css({
                      "marginTop": "0px",
