@@ -237,16 +237,6 @@ var  bttnClick = function(ev){
 
 
 /**
- * Function updates theme to element name value.
- */
-var  bttnClickMouse = function(ev){
-    // If keydown is A key
-    changeTheme(this.dataset.name);
-};
-
-
-
-/**
  * Function updates font according to elements name (up or down) if events keyCode is valid.
  */
 var  bttnfClick = function(ev){
@@ -453,7 +443,10 @@ function registerNon3DSlink(a){
 
             if (elements[i].dataset.type === 'btnf') {
                 elements[i].addEventListener("keydown", bttnfClick, false);
-                elements[i].addEventListener("click", bttnfClickMouse, false);
+                elements[i].addEventListener("click", function(ev){
+                    // If keydown is A key
+                    changeTheme(this.dataset.name);
+                });
             }
 
         }
