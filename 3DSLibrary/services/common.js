@@ -38,6 +38,25 @@ function is3DS(){
 
 
 /**
+ * Function calls necessary logic to configur browser for 3DS devices
+ */
+function config3DS(){
+    // Add event listener alert error events (necessary to see errors on 3DS system)..
+    window.addEventListener("error", function(e) {
+        alert(e.filename + ":" + e.lineno + " " + e.message);
+    }, false);
+
+    // Add non-3DS compatible warning to any relevant elements.
+    for(var i = 0, l = elements.length; i<l; i++){
+        // If 3DS attribute exists, add warning to link.
+        if (elements[i].getAttribute("nc")){
+            registerNon3DSlink(elements[i]);
+        }
+    }
+}
+
+
+/**
  * getText sends a JQuery GET request with a given url
  * and performs a function (callback) with that text.
  *
@@ -373,6 +392,8 @@ function registerNon3DSlink(anchor){
 
         // Select all anchors and buttons as JQ object.
         var elements = $('a, button');
+        var themeButtons = $(".themeButton");
+        var fontButtons = $(".fontButton");
 
         // Set tabindex for each element
         elements.each(function(index) {
@@ -384,39 +405,23 @@ function registerNon3DSlink(anchor){
         .on('blur', inactive);
 
         // Handle 'btn' (filtered from elements) elements keydown and click events.
-        elements.filter('[data-type="btn"]').on('keydown', function(ev) {
+        themeButtons.on('keydown', function(ev) {
             if (ev.keyCode === 32 || ev.keyCode === 13) {
                 themeButtonClick.call(this, ev);
             }
         }).on('click', themeButtonClick);
 
         // Handle 'btnf' elements keydown and click events.
-        elements.filter('[data-type="btnf"]').on('keydown', function(ev) {
+        fontButtons.on('keydown', function(ev) {
             if (ev.keyCode === 32 || ev.keyCode === 13) {
                 fontButtonClick.call(this, ev);
             }
         }).on('click', fontButtonClick);
 
-
         // If device is 3DS.
         if (is3DS()){
-
-            // Add event listener alert error events (necessary to see errors on 3DS system)..
-            window.addEventListener("error", function(e) {
-                alert(e.filename + ":" + e.lineno + " " + e.message);
-            }, false);
-
-            // Add non-3DS compatible warning to any relevant elements.
-            for(var i = 0, l = elements.length; i<l; i++){
-                // If 3DS attribute exists, add warning to link.
-                if (elements[i].getAttribute("nc")){
-                    registerNon3DSlink(elements[i]);
-                }
-            }
-        }
-        // Otherwise, set screen for desktop computers.
-        else{
-            document.body.style.margin = "10px auto";
+            // Configure 3DS
+            config3DS();
         }
     });
 })()
