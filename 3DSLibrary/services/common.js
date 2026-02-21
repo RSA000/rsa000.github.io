@@ -42,12 +42,14 @@ function is3DS(){
  */
 function getText(url, callback) {
     $.ajax({
+        // Set url and method.
         url: url,
         method: 'GET',
         // On success, perform callback function with returned data.
         success: function(data) {
             if (callback) callback(data);
         },
+        // On error alert user.
         error: function(textStatus, errorThrown) {
             console.error('Error loading text file:', errorThrown);
             alert("Error loading text file: " + errorThrown + " " + url);
@@ -138,7 +140,7 @@ function checkCurrentBook() {
     }
     else{
         alert("No book found!\nPlease select a book from the catalogue first.");
-        window.location.replace("../index.html")
+        window.location.replace("./index.html")
     }
 }
 
@@ -150,7 +152,6 @@ function checkTheme() {
     // Get theme cookie, and theme attributes from page and store in variables.
     var themeCookie = getCookie("theme");
     var themeTag = $("#theme");
-    var indexThemeTag = $("#themeindex");
 
     // If cookie value is not empty.
     if (themeCookie !== "") {
@@ -160,25 +161,12 @@ function checkTheme() {
             setCookie("theme", themeCookie, 364);
             return;
         }
-        // Otherwise, if indexThemeTag is truethy.
-        else if (indexThemeTag.length) {
-            var images = $(".upperScreenImages img");
-            indexThemeTag.attr("href", "assets/styles/" + themeCookie + ".css");
-            images.each(function() {
-                $(this).attr("src", "https://rsa000.github.io/3DSLibrary/assets/img/index/" + themeCookie + ".gif");
-            });
-            setCookie("theme", themeCookie, 364);
-            return;
-        }
     }
     // Otherwise, set default theme.
     else {
         alert("no theme set");
         if (themeTag.length) {
             themeTag.attr("href", "../assets/styles/globalvillage.css");
-        }
-        if (indexThemeTag.length) {
-            indexThemeTag.attr("href", "../assets/styles/globalvillage.css");
         }
         setCookie("theme", "globalvillage", 364);
         checkTheme();
@@ -352,7 +340,7 @@ function menuHandleKeyDown(event){
  * @param {container} - Container to serach in.
  * @param {String} - String to check for.
  */
-function includes(container,search){
+function includes(container, search){
     // If container is a string or an array.
     if (typeof(container) === 'string' || container instanceof Array){
         // Return true if indexo of container search is not -1 (string case).
