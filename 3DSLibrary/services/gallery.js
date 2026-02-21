@@ -73,6 +73,6 @@
             // When focused on, apply active function with "this" selected anchor.
             slides[i].addEventListener('focus', active, false);
         }
-    }, false);
+    });
 
 })()
