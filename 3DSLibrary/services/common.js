@@ -439,6 +439,7 @@ function registerNon3DSlink(anchor){
 
         // If device is 3DS.
         if (is3DS()){
+            alert("3DS");
             // Configure 3DS
             config3DS();
             // Set interval to center screen every 33 milliseconds (30fps).
