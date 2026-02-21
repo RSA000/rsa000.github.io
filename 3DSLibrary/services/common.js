@@ -104,7 +104,7 @@ function config3DS(){
     for(var i = 0, l = anchors.length; i<l; i++){
         // If 3DS attribute exists, add warning to link.
         if (anchors[i].getAttribute("nc")){
-            registerNon3DSlink(elements[i]);
+            registerNon3DSlink(anchors[i]);
         }
     }
 }
