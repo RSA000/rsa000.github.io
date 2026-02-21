@@ -429,6 +429,12 @@ function registerNon3DSlink(anchor){
                 "margin": "auto",
                 "width": "75%",
             });
+            $(".upperScreen").css({
+               "width": "75%",
+            });
+            $(".lowerScreen").css({
+                "width": "75%"
+            });
         }
     });
 })()
