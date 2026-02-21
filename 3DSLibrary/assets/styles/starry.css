@@ -91,7 +91,7 @@ body {
 	bottom: 20%;
 	position: relative;
 
-	left: 4%;
+	/*! left: -1%; */
 }
 
 /* Top screen lower left image. */
