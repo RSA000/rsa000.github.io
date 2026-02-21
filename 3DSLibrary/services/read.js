@@ -139,7 +139,6 @@
     }
 
 
-
     // Add event listener for when content is loaded.
     $(document).ready(function() {
 
