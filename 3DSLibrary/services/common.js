@@ -55,7 +55,23 @@ function config3DS(){
             registerNon3DSlink(elements[i]);
         }
     }
+}
 
+
+function configDesktop(){
+    $(document.body).css({
+        "margin": " 25px auto",
+        "width": "90%",
+    });
+    $(".upperScreen").css({
+        "width": "800px",
+    });
+    $(".lowerScreen").css({
+        "width": "750px"
+    });
+    $(".lowerScreenContents").css({
+        "width": "700px"
+    });
 }
 
 
@@ -427,20 +443,7 @@ function registerNon3DSlink(anchor){
         }
         // Configuration for regular desktop.
         else{
-            $(document.body).css({
-                "margin": " 25px auto",
-                "width": "90%",
-            });
-            $(".upperScreen").css({
-               "width": "800px",
-            });
-            $(".lowerScreen").css({
-                "width": "750px"
-            });
-            $(".lowerScreenContents").css({
-                "width": "700px"
-            });
-
+          configDesktop();
         }
     });
 })()
