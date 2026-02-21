@@ -19,7 +19,6 @@ const deviceType = window.navigator.userAgent;
 var index = 0;
 
 
-
 /**
  * The center function scrolls the screen to the centerX and centerY coordinates.
  */
