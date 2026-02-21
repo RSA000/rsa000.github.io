@@ -427,16 +427,16 @@ function registerNon3DSlink(anchor){
         else{
             $(document.body).css({
                 "margin": " 25px auto",
-                "width": "55%",
+                "width": "90%",
             });
             $(".upperScreen").css({
-               "width": "65%",
+               "width": "800px",
             });
             $(".lowerScreen").css({
-                "width": "65%"
+                "width": "750px"
             });
             $(".lowerScreenContents").css({
-                "width": "85%"
+                "width": "700px"
             });
 
         }
