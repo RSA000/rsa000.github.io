@@ -137,6 +137,9 @@ function configDesktop(){
     $(".lowerScreenContents").css({
         "width": "700px"
     });
+    $("#textContainerRead").css({
+       "width": "90%"
+    });
 }
 
 
