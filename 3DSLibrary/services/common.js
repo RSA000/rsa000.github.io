@@ -398,10 +398,11 @@ function registerNon3DSlink(a){
         // Set function for keydown events.
         window.addEventListener("keydown", menuHandleKeyDown);
 
+        // Select all elements as DOM list.
         var elements = document.querySelectorAll('a, button');
 
 
-        // Select all elements
+        // Select all elements as JQ object.
         var Jqelements = $(elements);
 
         // Set tabindex for each element
@@ -413,14 +414,14 @@ function registerNon3DSlink(a){
         Jqelements.on('focus', active)
         .on('blur', inactive);
 
-        // Handle 'btn' type elements
+        // Handle 'btn' element keydown and click events.
         Jqelements.filter('[data-type="btn"]').on('keydown', function(ev) {
             if (ev.keyCode === 32 || ev.keyCode === 13) {
                 themeButtonClick.call(this, ev);
             }
         }).on('click', themeButtonClick);
 
-        // Handle 'btnf' type elements
+        // Handle 'btnf' element keydown and click events.
         Jqelements.filter('[data-type="btnf"]').on('keydown', function(ev) {
             if (ev.keyCode === 32 || ev.keyCode === 13) {
                 fontButtonClick.call(this, ev);

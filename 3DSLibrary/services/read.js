@@ -146,7 +146,7 @@
 
 
     // Add event listener for when content is loaded.
-    document.addEventListener('DOMContentLoaded', function(ev) {
+    $(document).ready(function() {
 
          viewToggle.on("click", function(ev){
              // Case for full screen changing to top screen only.
@@ -208,5 +208,5 @@
         // Get book text and load into textContainerRead paragraph element in read.html.
         getText("https://rsa000.github.io/3DSLibrary/assets/texts/" + bookName, loadBook);
 
-    }, false);
+    });
 })();

@@ -58,7 +58,7 @@
 
 
     /* When content is loaded. */
-    document.addEventListener('DOMContentLoaded', function(ev) {
+    $(document).ready(function() { {
 
         window.removeEventListener("keydown", menuHandleKeyDown);
 
