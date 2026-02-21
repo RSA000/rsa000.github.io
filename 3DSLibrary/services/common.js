@@ -431,7 +431,7 @@ function registerNon3DSlink(anchor){
      $(document).ready(function() {
         index = 0;
 
-
+        configSelectables();
         // Check current theme and font size.
         checkTheme();
         checkFontSize();
