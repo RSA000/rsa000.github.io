@@ -139,7 +139,12 @@ function configDesktop(){
         "width": "700px"
     });
     $("#textContainerRead").css({
-       "width": "90%"
+        "font-size": "21px";
+        "width": "89%";
+        "height": "76%";
+        "position": "relative";
+        "top: 31px";
+        "margin-bottom": "31px";
     });
 }
 
