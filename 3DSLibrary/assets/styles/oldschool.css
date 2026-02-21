@@ -78,7 +78,7 @@ body {
 }
 
 /* Top screen lower left image. */
-#indexScreenUpperLeftPhoto{
+#indexPhotoL{
 
 	/* Container */
 	background: #000;
@@ -92,7 +92,7 @@ body {
 }
 
 /* Top screen lower right image. */
-#indexScreenUpperRightPhoto{
+#indexPhotoR{
 
 	/* Container */
 	background: #000;

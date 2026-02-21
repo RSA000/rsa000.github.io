@@ -95,7 +95,7 @@ position: relative;
 }
 
 /* Top screen lower left image. */
-#indexScreenUpperLeftPhoto{
+#indexPhotoL{
 
 /* Container */
 position: relative;
@@ -105,14 +105,14 @@ left: 1%;
 }
 
 /* Top screen lower right image. */
-#indexScreenUpperRightPhoto{
+#indexPhotoR{
 
 /* Container */
 background: papayawhip;
 position: relative;
 height: 72px;
 width: 60px;
-left: 60.8%;
+left: 61%;
 }
 
 /* Lower screen settings.*/
@@ -128,15 +128,15 @@ position: relative;
 }
 
 .lowerScreenContents {
-background-color: papayawhip;
-border: 4px dashed #28cece;
-border-radius: 10%;
-height: 200px;
-width: 280px;
-margin: auto;
-overflow-y: scroll;
-position: relative;
-top: 10px;
+	background-color: papayawhip;
+	border: 4px dashed #28cece;
+	border-radius: 10%;
+	height: 200px;
+	width: 280px;
+	margin: auto;
+	overflow-y: scroll;
+	position: relative;
+	top: 10px;
 }
 
 /* Lower Screen div link CSS. */
@@ -175,28 +175,27 @@ overflow-y: scroll;
 
 #lowerScreenGallery{
 
-/* Container */
-height: 210px;
-width: 290px;
-margin: 5px auto;
-overflow-y: scroll;
+	/* Container */
+	height: 210px;
+	width: 290px;
+	margin: 5px auto;
+	overflow-y: scroll;
 
 }
 
 .mySlides{
-/* Container */
-border: 3px dashed gray;
-top: 12px;
-left: 6px;
-position: relative;
-width: 125px;
-height: 60px;
+	/* Container */
+	border: 3px dashed gray;
+	top: 12px;
+	left: 6px;
+	position: relative;
+	width: 125px;
+	height: 60px;
 }
 
 #catalogueOptions a{
-border-radius: 10%;
-
-font-size: 16px;
+	border-radius: 10%;
+	font-size: 16px;
 }
 
 

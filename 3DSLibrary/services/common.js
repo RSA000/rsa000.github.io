@@ -122,12 +122,12 @@ function configDesktop() {
     $(".upperScreenImages").css({
         "bottom": "58%"
     });
-    $("#indexScreenUpperRightPhoto").css({
+    $("#indexPhotoR").css({
         "height": "128px",
         "width": "116px",
         "left": "465px"
     });
-    $("#indexScreenUpperLeftPhoto").css({
+    $("#indexPhotoL").css({
         "height": "128px",
         "width": "116px",
         "left": "10px"
