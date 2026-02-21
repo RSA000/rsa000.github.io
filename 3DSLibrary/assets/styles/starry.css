@@ -226,8 +226,12 @@ body {
 
 #galleryImage{
 	/* Container */
-	width: 300px;
+	margin: 5px auto;
+	width: 320px;
 	height: 150px;
+	position: relative;
+	left: -25px;
+	top: 5px;
 }
 
 
