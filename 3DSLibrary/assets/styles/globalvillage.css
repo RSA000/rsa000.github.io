@@ -90,6 +90,7 @@ body {
 .upperScreenImages{
 
   /* Container */
+    width: 90%;
   margin: auto;
   bottom: 32%;
   position: relative;
