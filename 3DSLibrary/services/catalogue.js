@@ -32,7 +32,6 @@
         var elements = document.getElementsByClassName('cat');
 
         for (var i = 0, l = elements.length; i<l; i++){
-            elements[i].removeEventListener("keydown", menuHandleKeyDown);
             elements[i].setAttribute('tabindex', i);
             // When focused on, apply active function with "this" selected elements.
             elements[i].addEventListener('focus', active, false);
