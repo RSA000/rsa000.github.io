@@ -14,6 +14,7 @@ const centerY = 277;
 
 // Declare constant value for user agent value (device type).
 const deviceType = window.navigator.userAgent;
+alert(deviceType);
 
 // Instantiate and set variable, index, to 0.
 var index = 0;
