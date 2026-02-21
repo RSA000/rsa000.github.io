@@ -423,5 +423,9 @@ function registerNon3DSlink(anchor){
             // Configure 3DS
             config3DS();
         }
+        // Configuration for regular desktop.
+        else{
+            $(window).css({"margin": "auto"});
+        }
     });
 })()
