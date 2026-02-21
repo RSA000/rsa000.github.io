@@ -23,8 +23,7 @@
 
 
     /**
-     * This function takes a number (0 or 1) that indicates the page direction and updates
-     * the textContainerReader
+     * This function updates text container to pages[pageNum]
      *
      * @param {Int} Page number to update to.
      */
