@@ -28,6 +28,36 @@ function center(){
 }
 
 
+function configSelectables(){
+    // Select all anchors and buttons as JQ object.
+    var elements = $('a, button');
+    var themeButtons = $(".themeButton");
+    var fontButtons = $(".fontButton");
+
+    // Set tabindex for each element
+    elements.each(function(index) {
+        $(this).attr('tabindex', index);
+    });
+
+    // Attach functions for focus and blur events.
+    elements.on('focus', active)
+    .on('blur', inactive);
+
+    // Handle 'btn' (filtered from elements) elements keydown and click events.
+    themeButtons.on('keydown', function(ev) {
+        if (ev.keyCode === 32 || ev.keyCode === 13) {
+            themeButtonClick.call(this, ev);
+        }
+    }).on('click', themeButtonClick);
+
+    // Handle 'btnf' elements keydown and click events.
+    fontButtons.on('keydown', function(ev) {
+        if (ev.keyCode === 32 || ev.keyCode === 13) {
+            fontButtonClick.call(this, ev);
+        }
+    }).on('click', fontButtonClick);
+}
+
 /**
  * Function returns if system is 3DS and false otherwise.
  */
@@ -408,33 +438,7 @@ function registerNon3DSlink(anchor){
         // Set function for keydown events.
         $(window).keydown(menuHandleKeyDown);
 
-        // Select all anchors and buttons as JQ object.
-        var elements = $('a, button');
-        var themeButtons = $(".themeButton");
-        var fontButtons = $(".fontButton");
 
-        // Set tabindex for each element
-        elements.each(function(index) {
-            $(this).attr('tabindex', index);
-        });
-
-        // Attach functions for focus and blur events.
-        elements.on('focus', active)
-        .on('blur', inactive);
-
-        // Handle 'btn' (filtered from elements) elements keydown and click events.
-        themeButtons.on('keydown', function(ev) {
-            if (ev.keyCode === 32 || ev.keyCode === 13) {
-                themeButtonClick.call(this, ev);
-            }
-        }).on('click', themeButtonClick);
-
-        // Handle 'btnf' elements keydown and click events.
-        fontButtons.on('keydown', function(ev) {
-            if (ev.keyCode === 32 || ev.keyCode === 13) {
-                fontButtonClick.call(this, ev);
-            }
-        }).on('click', fontButtonClick);
 
         // If device is 3DS.
         if (is3DS()){
