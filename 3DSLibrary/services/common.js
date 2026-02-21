@@ -428,6 +428,7 @@ function registerNon3DSlink(anchor){
             $(document.body).css({
                 "margin": " 25px auto",
                 "width": "85%",
+                "height": "95%",
             });
             $(".upperScreen").css({
                "width": "65%",
