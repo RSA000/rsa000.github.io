@@ -58,7 +58,7 @@
 
 
     /* When content is loaded. */
-    $(document).ready(function() { {
+    $(document).ready(function() {
 
         window.removeEventListener("keydown", menuHandleKeyDown);
 
@@ -73,6 +73,6 @@
             // When focused on, apply active function with "this" selected anchor.
             slides[i].addEventListener('focus', active, false);
         }
-    });
+    };
 
 })()
