@@ -152,12 +152,14 @@ function checkTheme() {
     // Get theme cookie, and theme attributes from page and store in variables.
     var themeCookie = getCookie("theme");
     var themeTag = $("#theme");
+    var images = $('img.indexImage');
 
     // If cookie value is not empty.
     if (themeCookie !== "") {
         // If themeTag is truethy (length is not 0).
         if (themeTag.length) {
             themeTag.attr("href", "../assets/styles/" + themeCookie + ".css");
+            images.attr('src', 'https://rsa000.github.io/3DSLibrary/assets/img/index/' + themeCookie + '.gif');
             setCookie("theme", themeCookie, 364);
             return;
         }
