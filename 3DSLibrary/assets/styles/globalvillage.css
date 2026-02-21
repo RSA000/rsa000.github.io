@@ -116,7 +116,7 @@ body {
   position: relative;
   height: 72px;
   width: 60px;
-  left: 79.5%;
+  left: 60%;
   border-radius: 32%;
 }
 
@@ -233,27 +233,26 @@ top: -10px;
 
 #textContainerRead{
 
-/* Container */
-background-color: #c0a883;
-height: 400px;
-width: 294px;
-margin: 2px auto;
-overflow-y: scroll;
-padding: 10px;
-top: 5px;
-position: relative;
+  /* Container */
+  background-color: #c0a883;
+  height: 400px;
+  width: 294px;
+  margin: 2px auto;
+  overflow-y: scroll;
+  padding: 10px;
+  top: 5px;
+  position: relative;
 }
 
 
 #themeSettings{
-border-radius: 4%;
-margin: 10px auto;
-text-align: center;
-width: 260px;
-height: 175px;
-background: #513985;
-left: 10px;
-position: relative;
+  border-radius: 4%;
+  margin: 10px auto;
+  text-align: center;
+  width: 260px;
+  height: 175px;
+  background: #513985;
+  position: relative;
 }
 
 

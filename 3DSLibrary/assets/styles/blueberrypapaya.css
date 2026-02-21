@@ -241,13 +241,12 @@ position: relative;
 
 
 #themeSettings{
-margin: 10px auto;
-text-align: center;
-width: 260px;
-height: 175px;
-background: #28cece;
-left: 10px;
-position: relative;
+	margin: 10px auto;
+	text-align: center;
+	width: 260px;
+	height: 175px;
+	background: #28cece;
+	position: relative;
 }
 
 
