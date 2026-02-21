@@ -447,6 +447,7 @@ function registerNon3DSlink(anchor){
         }
         // Configuration for regular desktop.
         else{
+            alert("desktop");
           configDesktop();
         }
     });
