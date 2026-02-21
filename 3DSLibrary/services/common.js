@@ -122,9 +122,9 @@ function configDesktop(){
         "bottom": "65%",
     });
     $("#indexScreenUpperRightPhoto").css({
-        "height: 128px";
-        "width: 116px";
-        "left: 500px";
+        "height": "128px";
+        "width": "116px";
+        "left": "500px";
     });
     $("#indexScreenUpperLeftPhoto").css({
         "height": "128px";
