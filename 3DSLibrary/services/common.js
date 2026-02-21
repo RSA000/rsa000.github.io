@@ -114,6 +114,7 @@ function configDesktop(){
     $(document.body).css({
         "margin": " 25px auto",
         "width": "90%",
+        "height": "85%",
     });
     $(".upperScreen").css({
         "width": "800px",
