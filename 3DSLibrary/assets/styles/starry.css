@@ -103,7 +103,7 @@ body {
 	position: relative;
 	height: 72px;
 	width: 60px;
-	left: auto;
+	left: 4%;
 }
 
 /* Top screen lower right image. */
@@ -117,7 +117,7 @@ body {
 	position: relative;
 	height: 72px;
 	width: 60px;
-	left: 56%;
+	left: 64%;
 }
 
 /* Lower screen settings.*/
