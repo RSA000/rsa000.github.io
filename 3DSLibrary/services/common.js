@@ -124,7 +124,7 @@ function configDesktop(){
     $("#indexScreenUpperRightPhoto").css({
         "height": "128px",
         "width": "116px",
-        "left": "500px",
+        "left": "475px",
     });
     $("#indexScreenUpperLeftPhoto").css({
         "height": "128px",
