@@ -12,8 +12,12 @@ const ENTER = 13;
 const centerX = 152;
 const centerY = 277;
 
+// Declare constant value for user agent value (device type).
+const deviceType = window.navigator.userAgent;
+
 // Instantiate and set variable, index, to 0.
 var index = 0;
+
 
 
 /**
@@ -29,7 +33,7 @@ function center(){
  */
 function is3DS(){
     // If userAgent string is equal to "Nintendo 3DS"
-    return includes(window.navigator.userAgent,"Nintendo 3DS");
+    return (deviceType === "Nintendo 3DS");
 }
 
 
@@ -329,27 +333,6 @@ function menuHandleKeyDown(event){
                 break;
         }
     }
-}
-
-
-/**
- * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
- * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
- * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- * includes takes a container and a search element and returns a boolean value
- * indicating if it exists within the container.
- *
- * @param {container} - Container to serach in.
- * @param {String} - String to check for.
- */
-function includes(container, search){
-    // If container is a string or an array.
-    if (typeof(container) === 'string' || container instanceof Array){
-        // Return true if indexo of container search is not -1 (string case).
-        return container.indexOf(search) !== -1;
-    }
-    // Return true if container index is not undefined (array case).
-    return container[search] !== undefined;
 }
 
 
