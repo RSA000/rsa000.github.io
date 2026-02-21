@@ -343,13 +343,13 @@ function menuHandleKeyDown(event){
  * Register an <a> that isn't meant to be opened on the 3DS
  * @param {element} a
  */
-function registerNon3DSlink(a){
+function registerNon3DSlink(anchor){
     // Add event listener for when elements is clicked.
-    a.addEventListener("click", function (e){
+    anchor.addEventListener("click", function(event){
         // Alert that link is not supported.
-        alert("The 3DS doesn't support this page. Please open \n" + a.href + "\n on a modern browser)");
+        alert("The 3DS doesn't support this page. Please open \n" + anchor.href + "\n on a modern browser)");
         // Prevent default action (navigating to link).
-        e.preventDefault();
+        event.preventDefault();
         return false;
     }, false);
 }
