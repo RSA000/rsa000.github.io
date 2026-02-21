@@ -406,18 +406,18 @@ function registerNon3DSlink(a){
             $(this).attr('tabindex', index);
         });
 
-        // Attach focus and blur events
+        // Attach functions for focus and blur events.
         elements.on('focus', active)
         .on('blur', inactive);
 
-        // Handle 'btn' element keydown and click events.
+        // Handle 'btn' (filtered from elements) elements keydown and click events.
         elements.filter('[data-type="btn"]').on('keydown', function(ev) {
             if (ev.keyCode === 32 || ev.keyCode === 13) {
                 themeButtonClick.call(this, ev);
             }
         }).on('click', themeButtonClick);
 
-        // Handle 'btnf' element keydown and click events.
+        // Handle 'btnf' elements keydown and click events.
         elements.filter('[data-type="btnf"]').on('keydown', function(ev) {
             if (ev.keyCode === 32 || ev.keyCode === 13) {
                 fontButtonClick.call(this, ev);
