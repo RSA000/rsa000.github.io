@@ -61,8 +61,6 @@ function configSelectables(){
  * Function returns if system is 3DS and false otherwise.
  */
 function is3DS(){
-    alert("3DS");
-
     // If userAgent string is equal to "Nintendo 3DS"
     return deviceType.includes("Nintendo 3DS");
 }
@@ -441,6 +439,7 @@ function registerNon3DSlink(anchor){
 
         // If device is 3DS.
         if (is3DS()){
+            alert("3DS");
             // Configure 3DS
             config3DS();
             // Set interval to center screen every 33 milliseconds (30fps).
