@@ -430,11 +430,15 @@ function registerNon3DSlink(anchor){
                 "width": "75%",
             });
             $(".upperScreen").css({
-               "width": "75%",
+               "width": "35%",
             });
             $(".lowerScreen").css({
-                "width": "75%"
+                "width": "35%"
             });
+            $(".lowerScreenContents").css({
+                "width": "35%"
+            });
+
         }
     });
 })()
