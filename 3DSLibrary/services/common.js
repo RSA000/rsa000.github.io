@@ -426,7 +426,7 @@ function registerNon3DSlink(anchor){
         // Configuration for regular desktop.
         else{
             $(document.body).css({
-                "margin": "auto",
+                "margin": " 25px auto",
                 "width": "75%",
             });
             $(".upperScreen").css({
