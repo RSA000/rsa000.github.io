@@ -9,7 +9,7 @@
 (function() {
 
     // If no book exists, redirect.
-    checkBookName();
+    checkCurrentBook();
 
     // Get current book name and page number cookie values and store in variables (string, int).
     var bookName = getCookie("bookname");

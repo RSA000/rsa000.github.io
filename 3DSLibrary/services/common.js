@@ -34,7 +34,7 @@ function is3DS(){
 
 
 /**
- * getText sends an XMLHttpRequest GET request with a given url
+ * getText sends a JQuery GET request with a given url
  * and performs a function (callback) with that text.
  *
  * @param {String} url
@@ -128,10 +128,11 @@ function getCookie(cname) {
     return "";
 }
 
+
 /**
  * Function alerts user if no bookname value is set to cookie and redirects to home page.
  */
-function checkBookName() {
+function checkCurrentBook() {
     if (getCookie("bookname") != "") {
         return;
     }
@@ -232,6 +233,7 @@ var  themeButtonClick = function(ev){
     // If keydown is A key
     changeTheme(this.dataset.name);
 };
+
 
 /**
  * Function updates font according to elements name (up or down)
@@ -340,7 +342,6 @@ function menuHandleKeyDown(event){
 }
 
 
-
 /**
  * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
@@ -379,7 +380,6 @@ function registerNon3DSlink(a){
         return false;
     }, false);
 }
-
 
 
 /*
