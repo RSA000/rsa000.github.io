@@ -89,10 +89,9 @@ body {
 	/* Container */
 	margin: auto;
 	bottom: 20%;
-	left: 10px;
+	left: 0%;
 	position: relative;
 
-	/*! left: -1%; */
 }
 
 /* Top screen lower left image. */
