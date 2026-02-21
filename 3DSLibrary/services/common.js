@@ -110,27 +110,27 @@ function config3DS(){
 }
 
 
-function configDesktop(){
+function configDesktop() {
     $(document.body).css({
-        "margin": " 25px auto",
+        "margin": "25px auto",
         "width": "90%",
-        "height": "85%",
+        "height": "85%"
     });
     $(".upperScreen").css({
-        "width": "800px",
+        "width": "800px"
     });
     $(".upperScreenImages").css({
-        "bottom": "65%",
+        "bottom": "65%"
     });
     $("#indexScreenUpperRightPhoto").css({
         "height": "128px",
         "width": "116px",
-        "left": "465px",
+        "left": "465px"
     });
     $("#indexScreenUpperLeftPhoto").css({
         "height": "128px",
         "width": "116px",
-        "left": "10px",
+        "left": "10px"
     });
     $(".lowerScreen").css({
         "width": "750px"
@@ -143,8 +143,8 @@ function configDesktop(){
         "width": "89%",
         "height": "76%",
         "position": "relative",
-        "top: 31px",
-        "margin-bottom", "31px",
+        "top": "31px",
+        "margin-bottom": "31px"
     });
 }
 
