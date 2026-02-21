@@ -11,7 +11,6 @@ const ENTER = 13;
 // Declare constant value for centering screen.
 const centerX = 152;
 const centerY = 277;
-
 // Declare constant value for user agent value (device type).
 const deviceType = window.navigator.userAgent;
 
@@ -92,15 +91,19 @@ function is3DS(){
  * Function calls necessary logic to configur browser for 3DS devices
  */
 function config3DS(){
+    var anchors = $('a');
+
+    // Set interval to center screen every 33 milliseconds (30fps).
+    setInterval(center, 33);
     // Add event listener alert error events (necessary to see errors on 3DS system)..
     window.addEventListener("error", function(e) {
         alert(e.filename + ":" + e.lineno + " " + e.message);
     }, false);
 
     // Add non-3DS compatible warning to any relevant elements.
-    for(var i = 0, l = elements.length; i<l; i++){
+    for(var i = 0, l = anchors.length; i<l; i++){
         // If 3DS attribute exists, add warning to link.
-        if (elements[i].getAttribute("nc")){
+        if (anchors[i].getAttribute("nc")){
             registerNon3DSlink(elements[i]);
         }
     }
@@ -461,11 +464,9 @@ function registerNon3DSlink(anchor){
 
         // If device is 3DS.
         if (is3DS()){
-            alert("3DS");
             // Configure 3DS
             config3DS();
-            // Set interval to center screen every 33 milliseconds (30fps).
-            setInterval(center, 33);
+
         }
         // Configuration for regular desktop.
         else{
