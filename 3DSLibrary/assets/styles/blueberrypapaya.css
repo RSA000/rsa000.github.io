@@ -108,7 +108,7 @@ left: 1%;
 #indexScreenUpperRightPhoto{
 
 /* Container */
-background: papayawhip;
+/*! background: papayawhip; */
 position: relative;
 height: 72px;
 width: 60px;
@@ -221,8 +221,6 @@ text-align: center;
 /* Container */
 width: 300px;
 height: 150px;
-position: relative;
-top: -10px;
 }
 
 
