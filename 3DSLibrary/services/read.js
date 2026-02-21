@@ -1,11 +1,7 @@
-/**
- *
- * This is the main Javascript functionality behind the "read.html" page and provides a means for
- * updating the text within the page of a currently selected book.
- *
- *
- */
 
+/**
+ * Main functionality for "read.html" page
+ */
 (function() {
 
     // If no book exists, redirect.
@@ -109,7 +105,7 @@
      * @param {event} keyBoardEvent.
      * @param {element} Javascript DOM element.
      */
-    function readHandleKeyDown(event, element){
+    function readKeyDown(event, element){
         // Prevent default action when key is pressed down.
         preventKey(event);
         // Switch case for each button press code.
@@ -194,7 +190,7 @@
 
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
-            readHandleKeyDown(e, document.getElementById('textContainerRead'));
+            readKeyDown(e, document.getElementById('textContainerRead'));
         });
 
 
