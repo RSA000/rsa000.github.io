@@ -436,7 +436,7 @@ function registerNon3DSlink(anchor){
                 "width": "35%"
             });
             $(".lowerScreenContents").css({
-                "width": "35%"
+                "width": "85%"
             });
 
         }
