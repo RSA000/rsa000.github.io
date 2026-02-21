@@ -129,7 +129,7 @@ function configDesktop(){
     $("#indexScreenUpperLeftPhoto").css({
         "height": "128px",
         "width": "116px",
-        "left": "500px",
+        "left": "10px",
     });
     $(".lowerScreen").css({
         "width": "750px"
