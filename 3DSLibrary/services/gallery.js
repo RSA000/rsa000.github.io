@@ -74,5 +74,4 @@
             slides[i].addEventListener('focus', active, false);
         }
     };
-
 })()
