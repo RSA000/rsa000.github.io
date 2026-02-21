@@ -425,7 +425,10 @@ function registerNon3DSlink(anchor){
         }
         // Configuration for regular desktop.
         else{
-            $(window).css({"margin": "auto"});
+            $(document.body).css({
+                "margin": "auto",
+                "width": "75%",
+            });
         }
     });
 })()
