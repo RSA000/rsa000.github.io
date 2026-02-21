@@ -387,7 +387,7 @@ function registerNon3DSlink(a){
  */
 (function(){
     /* When content is loaded. */
-    document.addEventListener('DOMContentLoaded', function(ev) {
+     $(document).ready(function() {
         index = 0;
 
         // Set interval to center screen every 33 milliseconds (30fps).
@@ -400,36 +400,33 @@ function registerNon3DSlink(a){
 
         var elements = document.querySelectorAll('a, button');
 
-        // For each elements, add event listener.
-        for(var i = 0, l = elements.length; i<l; i++){
-            // For each elements, add event listener.
 
-            elements[i].setAttribute('tabindex', i);
-            // When focused on, apply active function with "this" selected elements.
-            elements[i].addEventListener('focus', active, false);
-            // When no elements are selected, revert to greeting heading and subtitle.
-            elements[i].addEventListener('blur', inactive, false);
+        // Select all elements
+        var Jqelements = $(elements);
 
-            if (elements[i].dataset.type === 'btn') {
-                elements[i].addEventListener("keydown", function(ev){
-                    if ((ev.keyCode == 32) || (ev.keyCode == 13)){
-                        themeButtonClick.call(this, ev);
-                }
-            }, false);
-                elements[i].addEventListener("click", themeButtonClick, false);
+        // Set tabindex for each element
+        Jqelements.each(function(index) {
+            $(this).attr('tabindex', index);
+        });
+
+        // Attach focus and blur events
+        Jqelements.on('focus', active)
+        .on('blur', inactive);
+
+        // Handle 'btn' type elements
+        Jqelements.filter('[data-type="btn"]').on('keydown', function(ev) {
+            if (ev.keyCode === 32 || ev.keyCode === 13) {
+                themeButtonClick.call(this, ev);
             }
+        }).on('click', themeButtonClick);
 
-
-            if (elements[i].dataset.type === 'btnf') {
-                elements[i].addEventListener("keydown", function(ev){
-                    if ((ev.keyCode == 32) || (ev.keyCode == 13)){
-                        fontButtonClick.call(this, ev)
-                    }
-                }, false);
-                elements[i].addEventListener("click", fontButtonClick, false);
+        // Handle 'btnf' type elements
+        Jqelements.filter('[data-type="btnf"]').on('keydown', function(ev) {
+            if (ev.keyCode === 32 || ev.keyCode === 13) {
+                fontButtonClick.call(this, ev);
             }
+        }).on('click', fontButtonClick);
 
-        }
 
         // If device is 3DS.
         if (is3DS()){
@@ -451,5 +448,5 @@ function registerNon3DSlink(a){
         else{
             document.body.style.margin = "10px auto";
         }
-    }, false);
+    });
 })()
