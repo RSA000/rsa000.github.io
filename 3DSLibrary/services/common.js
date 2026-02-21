@@ -142,9 +142,9 @@ function configDesktop(){
         "font-size": "21px",
         "width": "89%",
         "height": "76%",
-        "position": "relative";
+        "position": "relative",
         "top: 31px",
-        "margin-bottom", "31px";
+        "margin-bottom", "31px",
     });
 }
 
