@@ -70,8 +70,6 @@ function is3DS(){
  * Function calls necessary logic to configur browser for 3DS devices
  */
 function config3DS(){
-    // Set interval to center screen every 33 milliseconds (30fps).
-    setInterval(center, 33);
     // Add event listener alert error events (necessary to see errors on 3DS system)..
     window.addEventListener("error", function(e) {
         alert(e.filename + ":" + e.lineno + " " + e.message);
@@ -443,6 +441,8 @@ function registerNon3DSlink(anchor){
         if (is3DS()){
             // Configure 3DS
             config3DS();
+            // Set interval to center screen every 33 milliseconds (30fps).
+            setInterval(center, 33);
         }
         // Configuration for regular desktop.
         else{
