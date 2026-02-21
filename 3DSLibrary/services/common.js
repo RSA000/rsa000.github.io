@@ -41,6 +41,8 @@ function is3DS(){
  * Function calls necessary logic to configur browser for 3DS devices
  */
 function config3DS(){
+    // Set interval to center screen every 33 milliseconds (30fps).
+    setInterval(center, 33);
     // Add event listener alert error events (necessary to see errors on 3DS system)..
     window.addEventListener("error", function(e) {
         alert(e.filename + ":" + e.lineno + " " + e.message);
@@ -53,6 +55,7 @@ function config3DS(){
             registerNon3DSlink(elements[i]);
         }
     }
+
 }
 
 
@@ -382,8 +385,7 @@ function registerNon3DSlink(anchor){
      $(document).ready(function() {
         index = 0;
 
-        // Set interval to center screen every 33 milliseconds (30fps).
-        setInterval(center, 33);
+
         // Check current theme and font size.
         checkTheme();
         checkFontSize();
