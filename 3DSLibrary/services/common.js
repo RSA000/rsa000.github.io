@@ -396,7 +396,7 @@ function registerNon3DSlink(a){
         checkTheme();
         checkFontSize();
         // Set function for keydown events.
-        window.addEventListener("keydown", menuHandleKeyDown);
+        $(window).keydown(menuHandleKeyDown);
 
         // Select all elements as DOM list.
         var elements = document.querySelectorAll('a, button');
