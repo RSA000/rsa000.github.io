@@ -19,24 +19,27 @@ const deviceType = window.navigator.userAgent;
 var index = 0;
 
 
-// array.includes and string.includes does not work on the 3DS browser
+// array.includes and string.includes does not work on the 3DS browser.
 /**
- * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ *
+ * Overloaded method for String.include
  *
  * Performs a linear interpolation between 2 numbers
  * @param  {Object, String, Array} container The object you want to search in
  * @param {*} search Value you want to check if exists
  * @return {Boolean}
  */
-function includes(container,search){
-    if (typeof(container) === 'string' || container instanceof Array){
-        return container.indexOf(search) !== -1;
+String.prototype.includes = function(search) {
+    // 'this' refers to the string instance
+    if (typeof(this) === 'string' || this instanceof String) {
+        return this.indexOf(search) !== -1;
     }
+    return false;
+};
 
-    return container[search] !== undefined;
-}
 
 /**
  * The center function scrolls the screen to the centerX and centerY coordinates.
