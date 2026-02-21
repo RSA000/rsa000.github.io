@@ -14,7 +14,6 @@ const centerY = 277;
 
 // Declare constant value for user agent value (device type).
 const deviceType = window.navigator.userAgent;
-alert(deviceType);
 
 // Instantiate and set variable, index, to 0.
 var index = 0;
@@ -64,7 +63,7 @@ function configSelectables(){
  */
 function is3DS(){
     // If userAgent string is equal to "Nintendo 3DS"
-    return (deviceType === "Nintendo 3DS");
+    return deviceType.includes("Nintendo 3DS");
 }
 
 
