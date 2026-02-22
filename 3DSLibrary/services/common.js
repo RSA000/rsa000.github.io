@@ -254,20 +254,6 @@ function getCookie(cname) {
 
 
 /**
- * Function alerts user if no bookname value is set to cookie and redirects to home page.
- */
-function checkCurrentBook() {
-    if (getCookie("bookname") != "") {
-        return;
-    }
-    else{
-        alert("No book found!\nPlease select a book from the catalogue first.");
-        window.location.replace("./index.html")
-    }
-}
-
-
-/**
  * Function checks if a theme is set. If a theme is not set, default theme is set
  */
 function checkTheme() {

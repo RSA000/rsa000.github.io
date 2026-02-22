@@ -4,9 +4,6 @@
  */
 (function() {
 
-    // If no book exists, redirect.
-    checkCurrentBook();
-
     // Get current book name and page number cookie values and store in variables (string, int).
     var bookName = getCookie("bookname");
     var pageNum = parseInt(getCookie('pagenum'));
@@ -20,6 +17,24 @@
     var textContainer = $('#textContainerRead');
     var pageIndex = $("#pageindex");
     var viewToggle = $("#viewToggle");
+
+    /**
+     * Function alerts user if no bookname value is set to cookie and redirects to home page.
+     */
+    function checkCurrentBook() {
+        if (getCookie("bookname") != "") {
+            return;
+        }
+        else{
+            alert("No book found!\nPlease select a book from the catalogue first.");
+            window.location.replace("./index.html")
+        }
+    }
+
+    // If no book exists, redirect.
+    checkCurrentBook();
+
+
 
 
     /**
