@@ -1,12 +1,8 @@
 /* HTML general body settings */
 
 body {
-background-color: #b6d164; 
-border: 4px dashed papayawhip;
-width: 500px;
-padding:50px;
-font-family: "Comic Sans MS", "Comic Sans", cursive;
-font-size: 16px;
+	background-color: #b6d164;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 
@@ -15,10 +11,6 @@ font-size: 16px;
 	/* Container */
 	background-color: papayawhip;
 	border-radius: 15%;
-	height: 213px;
-	width: 400px;
-	margin: auto;
-	position: relative;
 }
 
 
@@ -28,22 +20,6 @@ font-size: 16px;
 	background-color: #28cece;
 	border: 3px dashed papayawhip;
 	border-radius: 8%;
-	height: 80%;
-	width: 90%;
-	margin: auto;
-	position: relative;
-	top: 10%;
-}
-
-
-/* Container for upperScreen text.*/
-.upperScreenText{
-	/* Container */
-	border-radius:8%;
-	height: 140px;
-	width: 300px;
-	margin: auto;
-	padding-top: 5px;
 }
 
 
@@ -52,13 +28,8 @@ font-size: 16px;
 	/* Container */
 	background: papayawhip;
 	border: 2px dashed darkcyan;
-	height: 90x;
-	width: 290px;
-	margin: auto;
-
 	/* Text */
 	font-size: 27px;
-	text-align: center;
 	color: darkcyan;
 }
 
@@ -69,258 +40,65 @@ font-size: 16px;
 	background: papayawhip;
 	border: 2px dashed darkcyan;
 	border-radius:10%;
-	width: 190px;
-	margin: auto;
-	margin-top: 15px;
-	padding: 3px;
 	/* Text */
-	font-size: 12px;
-	text-align: center;
 	color: darkcyan;
 }
 
 
-/* Top Screen's images container. */
-.upperScreenImages{
-	/* Container */
-	margin: auto;
-	bottom: 32%;
-	position: relative;
-}
-
-
-/* Top screen lower left image. */
-#indexPhotoL{
-	/* Container */
-	position: relative;
-	height: 72px;
-	width: 60px;
-	left: 1%;
-}
-
-/* Top screen lower right image. */
-#indexPhotoR{
-
-/* Container */
-background: papayawhip;
-position: relative;
-height: 72px;
-width: 60px;
-left: 61%;
-}
-
 /* Lower screen settings.*/
 .lowerScreen{
-
-/* Container */
-border: 4px dashed #28cece;
-border-radius: 10%;
-height: 240px;
-width: 320px;
-margin: auto;
-position: relative;
+	/* Container */
+	border: 4px dashed #28cece;
+	border-radius: 10%;
 }
+
 
 .lowerScreenContents {
 	background-color: papayawhip;
 	border: 4px dashed #28cece;
 	border-radius: 10%;
-	height: 200px;
-	width: 280px;
-	margin: auto;
-	overflow-y: scroll;
-	position: relative;
-	top: 10px;
 }
+
 
 /* Lower Screen div link CSS. */
 .lowerScreenContents a {
-
-/* Container */
-width: 220px;
-background-color: #28cece;
-border: 2px dashed papayawhip;
-border-radius: 20%;
-display: block;
-margin: 4px auto;
-
-/* Text */
-font-size: 30px;
-text-align: center;
-color: white;
+	/* Container */
+	background-color: #28cece;
+	border: 2px dashed papayawhip;
+	/* Text */
+	color: white;
 }
 
 /* Lower Screen link CSS when hovering. */
 .lowerScreenContents a:hover {
-
-/* Container */
-background-color: #777;
-}
-
-.lowerScreenFeedback{
-
-/* Container */
-height: 200px;
-width: 300px;
-margin: 5px auto;
-overflow-y: scroll;
-}
-
-
-#lowerScreenGallery{
-
 	/* Container */
-	height: 210px;
-	width: 290px;
-	margin: 5px auto;
-	overflow-y: scroll;
-
+	background-color: #777;
 }
+
 
 .mySlides{
 	/* Container */
 	border: 3px dashed gray;
-	top: 12px;
-	left: 6px;
-	position: relative;
-	width: 125px;
-	height: 60px;
 }
+
 
 #catalogueOptions a{
 	border-radius: 10%;
-	font-size: 16px;
 }
 
 
 #upperScreenRead{
-
-/* Container */
-background-color: #c0a883;
-height: 450px;
-width: 394px;
-
-}
-
-
-#galleryImages {
-margin: 20px auto;
-position: static;
-text-align: center;
-}
-
-
-#galleryImage{
-/* Container */
-width: 300px;
-height: 150px;
-position: relative;
-top: -10px;
+	/* Container */
+	background-color: #c0a883;
 }
 
 
 #textContainerRead{
-
-/* Container */
-background-color: #c0a883;
-height: 400px;
-width: 294px;
-margin: 2px auto;
-overflow-y: scroll;
-padding: 10px;
-top: 5px;
-position: relative;
+	/* Container */
+	background-color: #c0a883;
 }
 
 
 #themeSettings{
-	margin: 10px auto;
-	text-align: center;
-	width: 260px;
-	height: 175px;
 	background: #28cece;
-	position: relative;
 }
-
-
-#themeSettings button{
-	width: 180px;
-	margin:5px auto;
-
-}
-
-#fontSettings{
-	position: relative;
-	margin:5px auto;
-
-}
-
-
-#fontSettings button{
-	width: 80px;
-}
-
-#feedbackForm{
-/* Container */
-margin: 5px 7px auto;
-}
-
-#feedbackFormName{
-
-/* Container */
-height: 30px;
-width: 280px;
-margin-bottom: 3px;
-padding: 2px;
-}
-
-#feedbackFormEmail{
-
-/* Container */
-height: 30px;
-width: 280px;
-margin-bottom: 3px;
-padding: 2px;
-
-}
-
-#feedbackFormMessage{
-
-/* Container */
-height: 80px;
-width: 280px;
-margin: audto;
-padding: 2px;
-
-}
-
-#feedbackFormButton{
-
-/* Container */
-margin: 5px auto;
-margin-left: 115px;
-
-}
-
-
-#pageindex{
-background-color: inherit;
-width: 40px;
-height: 15px;
-border-radius: 9%;
-position: relative;
-left: 43%;
-top: 2px;
-
-}
-
-
-#viewToggle{
-background: inherit;
-position: relative;
-}
-
-
-
-
-
