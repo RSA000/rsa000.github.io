@@ -120,7 +120,7 @@ function configDesktop() {
         "width": "800px"
     });
     $(".upperScreenImages").css({
-        "bottom": "58%"
+        "bottom": "64%"
     });
     $("#indexPhotoR").css({
         "height": "128px",
