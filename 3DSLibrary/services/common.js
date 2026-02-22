@@ -49,6 +49,15 @@ function center(){
 
 
 /**
+ * Function returns if system is 3DS and false otherwise.
+ */
+function is3DS(){
+    // If userAgent string is equal to "Nintendo 3DS"
+    return deviceType.includes("Nintendo 3DS");
+}
+
+
+/**
  *  configSelectables takes all anchors, themeButtons, and fontButtons of the
  *  current DOM and adds the
  *  appropriate eventlistener functions for each.
@@ -84,14 +93,6 @@ function configSelectables(){
 }
 
 
-/**
- * Function returns if system is 3DS and false otherwise.
- */
-function is3DS(){
-    // If userAgent string is equal to "Nintendo 3DS"
-    return deviceType.includes("Nintendo 3DS");
-}
-
 
 /**
  * Function calls necessary logic to configur browser for 3DS devices
@@ -114,6 +115,7 @@ function config3DS(){
         alert(e.filename + ":" + e.lineno + " " + e.message);
     }, false);
 }
+
 
 
 function configDesktop() {
