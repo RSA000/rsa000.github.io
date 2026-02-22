@@ -37,9 +37,9 @@
         // Add event listeners to each generated element
         var elements = $(".cat");
 
-        elements.on('focus', active, false);
-        elements.on('blur', inactive, false);
-        elements.on('click', catClick, false);
+        elements.on('focus', active);
+        elements.on('blur', inactive);
+        elements.on('click', catClick);
     }
 
 
