@@ -69,10 +69,9 @@ body {
 
 
 #textContainerRead {
-    font-size: 21px;
-    width: 89%;
-    height: 76%;
     position: relative;
-    top: 31px;
-    margin-bottom: 31px;
+    top: 10px;
+    width: 85%;
+    height: 86%;
+    margin: 10px auto;
 }
