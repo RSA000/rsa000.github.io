@@ -108,7 +108,7 @@ function config3DS(){
         alert("The 3DS doesn't support this page. Please open \n" + anchor.href + "\n on a modern browser)");
         // Prevent default action (navigating to link).
         event.preventDefault();
-    }
+    });
     // Add event listener alert error events (necessary to see errors on 3DS system)..
     window.addEventListener("error", function(e) {
         alert(e.filename + ":" + e.lineno + " " + e.message);
