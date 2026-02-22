@@ -1,13 +1,23 @@
 /* Styles for the body */
 body {
-    margin: 25px auto;
-    width: 90%;
-    height: 85%;
+    position: grid;
+    text-align: center;
 }
 
 
 .upperScreen {
-    width: 800px;
+    width: 90%;
+    height: 480px; 
+    margin: 10px auto;
+}
+
+.upperScreenContents{
+    height: 90%;
+}
+
+.upperScreenText{
+    
+   margin-top:50px;
 }
 
 
@@ -31,14 +41,29 @@ body {
     position: absolute;
 }
 
+.lowerScreen{
+    margin: auto;
+    height: 100px;
+    width: 50%;
+    
+}
 
-.lowerScreen {
-    width: 750px;
+.lowerScreen button{
+    display: inline;
 }
 
 
+#themeSettings{
+    position: grid;
+    justify-content: center;
+    margin: auto;
+    height:200px;
+    width: 50%;
+}
+
 .lowerScreenContents {
-    width: 700px;
+    margin: auto;
+    height: 200px;
 }
 
 
