@@ -418,7 +418,6 @@ function menuHandleKeyDown(event){
 (function(){
     /* When content is loaded. */
      $(document).ready(function() {
-        index = 0;
         // Set selectable element events, check current theme and font size.
         configSelectables();
         checkTheme();
