@@ -61,7 +61,7 @@ function configSelectables(){
     var themeButtons = $(".themeButton");
     var fontButtons = $(".fontButton");
 
-    // Set tabindex for each element
+    // Set tabindex for each element (index increments and is set to each elements tabindex attribute.
     elements.each(function(index) {
         $(this).attr('tabindex', index);
     });
@@ -70,14 +70,14 @@ function configSelectables(){
     elements.on('focus', active)
     .on('blur', inactive);
 
-    // Handle 'btn' (filtered from elements) elements keydown and click events.
+    // Set event handlers for theme button keydown events
     themeButtons.on('keydown', function(ev) {
         if (ev.keyCode === 32 || ev.keyCode === 13) {
             themeButtonClick.call(this, ev);
         }
     }).on('click', themeButtonClick);
 
-    // Handle 'btnf' elements keydown and click events.
+    // Set event handlesrs for font button keydown events.
     fontButtons.on('keydown', function(ev) {
         if (ev.keyCode === 32 || ev.keyCode === 13) {
             fontButtonClick.call(this, ev);
@@ -366,30 +366,7 @@ var catClick = function(ev) {
 };
 
 
-/**
- * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
- * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
- * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- *
- * This prevents the browser from moving the page using the arrow keys and
- * prevents default DS events for the D-pad and A key.
- * @param {keyboardEvent} event
- */
-function preventKey(event){
-    // Allow backspace, F5 (refresh), and ENTER.
-    var keyCode = event.keyCode;
-    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode == ENTER)){
-        return true;
-    }
-    // Allow character input.
-    if(event.charCode || (event.key && event.key.length === 1 ))
-        return true;
-    // Otherwise, prevent default action for event and return false.
-    else{
-        event.preventDefault();
-        return false;
-    }
-}
+
 
 
 /**
@@ -398,7 +375,7 @@ function preventKey(event){
  */
 function menuHandleKeyDown(event){
     // Prevent default action when key is pressed down.
-    preventKey(event);
+    preventDefault(event);
 
     var elements = document.querySelectorAll('a, button');
 
@@ -446,21 +423,17 @@ function menuHandleKeyDown(event){
     /* When content is loaded. */
      $(document).ready(function() {
         index = 0;
-
+        // Set selectable element events, check current theme and font size.
         configSelectables();
-        // Check current theme and font size.
         checkTheme();
         checkFontSize();
         // Set function for keydown events.
         $(window).keydown(menuHandleKeyDown);
 
-
-
         // If device is 3DS.
         if (is3DS()){
             // Configure 3DS
             config3DS();
-
         }
         // Configuration for regular desktop.
         else{
