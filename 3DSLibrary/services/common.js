@@ -42,12 +42,6 @@ String.prototype.includes = function(search) {
 
 
 /**
- * The center function scrolls the screen to the centerX and centerY coordinates.
- */
-
-
-
-/**
  * Function returns if system is 3DS and false otherwise.
  */
 function is3DS(){
