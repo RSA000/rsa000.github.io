@@ -366,7 +366,30 @@ var catClick = function(ev) {
 };
 
 
-
+/**
+ * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
+ * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
+ * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ *
+ * This prevents the browser from moving the page using the arrow keys and
+ * prevents default DS events for the D-pad and A key.
+ * @param {keyboardEvent} event
+ */
+function preventKey(event){
+    // Allow backspace, F5 (refresh), and ENTER.
+    var keyCode = event.keyCode;
+    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode == ENTER)){
+        return true;
+    }
+    // Allow character input.
+    if(event.charCode || (event.key && event.key.length === 1 ))
+        return true;
+    // Otherwise, prevent default action for event and return false.
+    else{
+        event.preventDefault();
+        return false;
+    }
+}
 
 
 /**
@@ -375,7 +398,7 @@ var catClick = function(ev) {
  */
 function menuHandleKeyDown(event){
     // Prevent default action when key is pressed down.
-    preventDefault(event);
+    preventKey(event);
 
     var elements = document.querySelectorAll('a, button');
 
