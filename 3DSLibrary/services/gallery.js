@@ -6,14 +6,6 @@
     var galleryImage = document.getElementById("galleryImage");
     var index = 0;
 
-    /* Simba's */
-
-    /* The active function changes the upper screen heading and subtitle the the selected elemements inner HTML and description attribute */
-    var active = function(ev) {
-        galleryImage.setAttribute("src", this.src);
-    };
-
-    /* End of Simbas */
 
     /**
      * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
@@ -71,7 +63,9 @@
         for(var i = 0; i < slideLength; i++){
             slides[i].setAttribute('tabindex', i);
             // When focused on, apply active function with "this" selected anchor.
-            slides[i].addEventListener('focus', active, false);
+            slides[i].addEventListener('focus', function(){
+                galleryImage.setAttribute("src", this.src);
+            }, false);
         }
     });
 })()
