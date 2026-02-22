@@ -18,6 +18,7 @@ const deviceType = window.navigator.userAgent;
 var index = 0;
 
 
+
 // array.includes and string.includes does not work on the 3DS browser.
 /**
  * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
@@ -43,9 +44,7 @@ String.prototype.includes = function(search) {
 /**
  * The center function scrolls the screen to the centerX and centerY coordinates.
  */
-function center(){
-    window.scrollTo(centerX, centerY);
-}
+
 
 
 /**
@@ -99,7 +98,9 @@ function configSelectables(){
  */
 function config3DS(){
     // Set interval to center screen every 33 milliseconds (30fps).
-    setInterval(center, 33);
+    setInterval(function(){
+        window.scrollTo(centerX, centerY);
+    }, 33);
 
     // Store all DOM anchors in variable.
     var anchors = $('a[nc]');
