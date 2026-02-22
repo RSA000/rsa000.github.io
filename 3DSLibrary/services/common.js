@@ -90,7 +90,6 @@ function configSelectables(){
 }
 
 
-
 /**
  * Function calls necessary logic to configur browser for 3DS devices
  */
