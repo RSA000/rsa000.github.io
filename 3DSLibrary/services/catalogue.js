@@ -5,7 +5,7 @@
     index = 0;
     // Set empty csvItems list
     var csvItems = [];
-    var url = "https://rsa000.github.io/3DSLibrary/assets/texts/catalog.json";
+    var url = "https://rsa000.github.io/3DSLibrary/assets/texts/catalogue.json";
 
 
     /**
