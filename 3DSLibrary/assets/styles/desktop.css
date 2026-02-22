@@ -83,4 +83,5 @@ body {
     width: 85%;
     height: 86%;
     margin: 10px auto;
+    overflow-y: scroll;
 }
