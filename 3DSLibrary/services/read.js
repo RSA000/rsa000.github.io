@@ -18,6 +18,8 @@
     var pageIndex = $("#pageindex");
     var viewToggle = $("#viewToggle");
 
+
+
     /**
      * Function alerts user if no bookname value is set to cookie and redirects to home page.
      */
@@ -30,11 +32,6 @@
             window.location.replace("./index.html")
         }
     }
-
-    // If no book exists, redirect.
-    checkCurrentBook();
-
-
 
 
     /**
@@ -157,47 +154,50 @@
     // Add event listener for when content is loaded.
     $(document).ready(function() {
 
-         viewToggle.on("click", function(ev){
-             // Case for full screen changing to top screen only.
-             switch(currentView){
-                 case 0:
-                     textContainer.css({
-                         "height": "185px"
-                     })
-                     viewToggle.css({
-                         "marginTop": "100px"
-                     });
-                     currentView = 1;
-                     break;
-                 // Case for top screen only changing to bottom screen only.
-                 case 1:
-                     textContainer.css({
-                         "height": "175px",
-                         "width": "294px",
-                         "top": "220px"
-                     });
-                     viewToggle.css({
-                         "marginTop": "0px",
-                         "top": "220px"
-                     });
-                     pageIndex.css({
-                         'top': '220px'
-                     });
-                     currentView = 2;
-                     break;
-                     // Case for lower screen only to full screen view.
-                 case 2:
-                     textContainer.css({
-                         'height': '400px',
-                         'width': '294px',
-                         'top': '5px'
-                     });
-                     pageIndex.css("top", "0px");
-                     viewToggle.css("top", "0px");
-                     currentView = 0;
-                     break;
-             }
-         });
+        // If no book exists, redirect.
+        checkCurrentBook();
+
+        viewToggle.on("click", function(ev){
+            // Case for full screen changing to top screen only.
+            switch(currentView){
+                case 0:
+                    textContainer.css({
+                        "height": "185px"
+                    })
+                    viewToggle.css({
+                        "marginTop": "100px"
+                    });
+                    currentView = 1;
+                    break;
+                // Case for top screen only changing to bottom screen only.
+                case 1:
+                    textContainer.css({
+                        "height": "175px",
+                        "width": "294px",
+                        "top": "220px"
+                    });
+                    viewToggle.css({
+                        "marginTop": "0px",
+                        "top": "220px"
+                    });
+                    pageIndex.css({
+                        'top': '220px'
+                    });
+                    currentView = 2;
+                    break;
+                    // Case for lower screen only to full screen view.
+                case 2:
+                    textContainer.css({
+                        'height': '400px',
+                        'width': '294px',
+                        'top': '5px'
+                    });
+                    pageIndex.css("top", "0px");
+                    viewToggle.css("top", "0px");
+                    currentView = 0;
+                    break;
+            }
+        });
 
         window.removeEventListener("keydown", menuHandleKeyDown);
 
@@ -207,7 +207,7 @@
         });
 
 
-        // Add event listener for when a key is pressed down.
+        // Add event listener for when ENTER key is pressed on index.
         pageIndex.on("keypress", function(e) {
             if (e.keyCode === ENTER){
                 updatePage(parseInt(pageIndex.val()));
