@@ -9,99 +9,93 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
 font-size: 16px;
 }
 
+
 /* Main container for upper screen.*/
 .upperScreen {
-
-/* Container */
-background-color: papayawhip;
-border-radius: 15%;
-height: 213px;
-width: 400px;
-margin: auto;
-position: relative;
+	/* Container */
+	background-color: papayawhip;
+	border-radius: 15%;
+	height: 213px;
+	width: 400px;
+	margin: auto;
+	position: relative;
 }
+
 
 /* Container for upperScreen contents.*/
 .upperScreenContents{
-
-/* Container */
-background-color: #28cece;
-border: 3px dashed papayawhip;
-border-radius: 8%;
-height: 80%;
-width: 90%;
-margin: auto;
-position: relative;
-top: 10%;
-
+	/* Container */
+	background-color: #28cece;
+	border: 3px dashed papayawhip;
+	border-radius: 8%;
+	height: 80%;
+	width: 90%;
+	margin: auto;
+	position: relative;
+	top: 10%;
 }
+
 
 /* Container for upperScreen text.*/
 .upperScreenText{
-
-/* Container */
-
-border-radius:8%;
-height: 140px;
-width: 300px;
-margin: auto;
-padding-top: 5px;
+	/* Container */
+	border-radius:8%;
+	height: 140px;
+	width: 300px;
+	margin: auto;
+	padding-top: 5px;
 }
 
 
 /* Top Heading settings.*/
 .topHeading{
+	/* Container */
+	background: papayawhip;
+	border: 2px dashed darkcyan;
+	height: 90x;
+	width: 290px;
+	margin: auto;
 
-/* Container */
-background: papayawhip;
-border: 2px dashed darkcyan;
-height: 90x;
-width: 290px;
-margin: auto;
-
-/* Text */
-font-size: 27px;
-text-align: center;
-color: darkcyan;
-
+	/* Text */
+	font-size: 27px;
+	text-align: center;
+	color: darkcyan;
 }
+
 
 /* Top Subtitle settings.*/
 .topSubtitle{
-
-/* Container */
-background: papayawhip;
-border: 2px dashed darkcyan;
-border-radius:10%;
-width: 190px;
-margin: auto;
-margin-top: 15px;
-padding: 3px;
-
-/* Text */
-font-size: 12px;
-text-align: center;
-color: darkcyan;
+	/* Container */
+	background: papayawhip;
+	border: 2px dashed darkcyan;
+	border-radius:10%;
+	width: 190px;
+	margin: auto;
+	margin-top: 15px;
+	padding: 3px;
+	/* Text */
+	font-size: 12px;
+	text-align: center;
+	color: darkcyan;
 }
+
 
 /* Top Screen's images container. */
 .upperScreenImages{
-
-/* Container */
-margin: auto;
-bottom: 32%;
-position: relative;
-
+	/* Container */
+	margin: auto;
+	bottom: 32%;
+	position: relative;
 }
+
 
 /* Top screen lower left image. */
 #indexPhotoL{
-
-/* Container */
-position: relative;
-height: 72px;
-width: 60px;
-left: 1%;
+	/* Container */
+	position: relative;
+	height: 72px;
+	width: 60px;
+	left: 1%;
 }
 
 /* Top screen lower right image. */

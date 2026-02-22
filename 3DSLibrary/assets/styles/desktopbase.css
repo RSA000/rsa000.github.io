@@ -1,0 +1,52 @@
+/* Styles for the body */
+body {
+    margin: 25px auto;
+    width: 90%;
+    height: 85%;
+}
+
+
+.upperScreen {
+    width: 800px;
+}
+
+
+.upperScreenImages {
+    bottom: 64%;
+}
+
+
+#indexPhotoR {
+    height: 128px;
+    width: 116px;
+    left: 465px;
+    position: absolute;
+}
+
+
+#indexPhotoL {
+    height: 128px;
+    width: 116px;
+    left: 10px;
+    position: absolute;
+}
+
+
+.lowerScreen {
+    width: 750px;
+}
+
+
+.lowerScreenContents {
+    width: 700px;
+}
+
+
+#textContainerRead {
+    font-size: 21px;
+    width: 89%;
+    height: 76%;
+    position: relative;
+    top: 31px;
+    margin-bottom: 31px;
+}

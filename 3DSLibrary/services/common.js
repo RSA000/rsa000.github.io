@@ -95,10 +95,12 @@ function configSelectables(){
  * Function calls necessary logic to configur browser for 3DS devices
  */
 function config3DS(){
+    $("#base").attr("href", "../styles/dsbase.css");
     // Set interval to center screen every 33 milliseconds (30fps).
     setInterval(function(){
         window.scrollTo(centerX, centerY);
     }, 33);
+
 
     // Store all DOM anchors in variable.
     var anchors = $('a[nc]');
@@ -120,41 +122,7 @@ function config3DS(){
  * Function sets CSS for desktop view
  */
 function configDesktop() {
-    $(document.body).css({
-        "margin": "25px auto",
-        "width": "90%",
-        "height": "85%"
-    });
-    $(".upperScreen").css({
-        "width": "800px"
-    });
-    $(".upperScreenImages").css({
-        "bottom": "64%"
-    });
-    $("#indexPhotoR").css({
-        "height": "128px",
-        "width": "116px",
-        "left": "465px"
-    });
-    $("#indexPhotoL").css({
-        "height": "128px",
-        "width": "116px",
-        "left": "10px"
-    });
-    $(".lowerScreen").css({
-        "width": "750px"
-    });
-    $(".lowerScreenContents").css({
-        "width": "700px"
-    });
-    $("#textContainerRead").css({
-        "font-size": "21px",
-        "width": "89%",
-        "height": "76%",
-        "position": "relative",
-        "top": "31px",
-        "margin-bottom": "31px"
-    });
+
 }
 
 
@@ -432,7 +400,7 @@ function menuHandleKeyDown(event){
         }
         // Configuration for regular desktop.
         else{
-          configDesktop();
+          $("#base").attr("href", "../styles/desktopbase.css");
         }
     });
 })()
