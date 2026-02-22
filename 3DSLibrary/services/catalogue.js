@@ -5,7 +5,7 @@
     index = 0;
     // Set empty csvItems list
     var csvItems = [];
-    var url = "https://rsa000.github.io/3DSLibrary/assets/texts/catalog.csv";
+    var url = "https://rsa000.github.io/3DSLibrary/assets/texts/catalog.json";
 
 
     /**
@@ -14,30 +14,34 @@
      * @param {list} csvItems are a list of CSV entries (book name, book description, and url to book).
      * @param {element} DOM element to update inner HTML code.
      */
-    function populateCatalogue(csvItems, element){
+    function populateCatalogue(jsonItems, element) {
         var catalogue = "";
 
-        // Start from 1 if first row is header
-        for (var i = 0; i < csvItems.length; i++){
-            var row = csvItems[i];
+        // Loop through each item in the JSON array
+        for (var i = 0; i < jsonItems.length; i++) {
+            var row = jsonItems[i];
             var name = row[0];
             var description = row[1];
             var url = row[2];
 
-            catalogue += '<a href="' + 'https://rsa000.github.io/3DSLibrary/views/read.html"' + ' data-bookname="' + url + "\"" + ' class="cat" ' + ' data-text="' + description + '">' + name + '</a>';
+            // Generate the anchor tag for each item
+            catalogue += '<a href="https://rsa000.github.io/3DSLibrary/views/read.html" ' +
+            'data-bookname="' + url + '" ' +
+            'class="cat" ' +
+            'data-text="' + description + '">' + name + '</a>';
         }
-        // Insert the generated HTML into the element with id 'elementId'
+
+        // Insert the generated HTML into the specified element
         element.innerHTML = catalogue;
 
+        // Add event listeners to each generated element
         var elements = document.getElementsByClassName('cat');
 
-        for (var i = 0, l = elements.length; i<l; i++){
+        for (var i = 0, l = elements.length; i < l; i++) {
             elements[i].setAttribute('tabindex', i);
-            // When focused on, apply active function with "this" selected elements.
             elements[i].addEventListener('focus', active, false);
-            // When no elements are selected, revert to greeting heading and subtitle.
             elements[i].addEventListener('blur', inactive, false);
-            elements[i].addEventListener("click", catClick, false);
+            elements[i].addEventListener('click', catClick, false);
         }
     }
 
