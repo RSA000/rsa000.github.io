@@ -105,7 +105,7 @@ function config3DS(){
     // Add non-3DS compatible warning to any relevant elements.
     anchors.on("click", function(event){
         // Alert that link is not supported.
-        alert("The 3DS doesn't support this page. Please open \n" + anchor.href + "\n on a modern browser)");
+        alert("The 3DS doesn't support this page. Please open \n" + $(this).attr('href') + "\n on a modern browser)");
         // Prevent default action (navigating to link).
         event.preventDefault();
     });
