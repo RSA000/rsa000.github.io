@@ -44,7 +44,7 @@ body {
 .lowerScreen {
     background: inherit;
     margin: auto;
-    height: 30vh;
+    height: 20vh;
     width: 70%;
     overflow-y: scroll;
 }
@@ -71,7 +71,14 @@ body {
 }
 
 .lowerScreenContents a{
-    font-size: 250%;
+    font-size: 225%;
+    display: inherit;
+    margin: auto;
+}
+
+
+.lowerScreenContents button{
+    font-size: 225%;
     display: inherit;
     margin: auto;
 }
