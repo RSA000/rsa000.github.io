@@ -4,7 +4,6 @@ body {
     font-size: 16px;
 }
 
-
 /* Main container for upper screen.*/
 .upperScreen {
     /* Container */
@@ -24,7 +23,6 @@ body {
     top: 10%;
 
 }
-
 
 /* Container for upperScreen text.*/
 .upperScreenText{
