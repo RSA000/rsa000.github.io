@@ -51,7 +51,7 @@
      *
      * @param {string} text - Raw text from CSV.
      */
-    function parseJSON(text){
+    function parseJSON(jsonData){
         // Create list for JSON entries.
         var jsonItems = [];
 
