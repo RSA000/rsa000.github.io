@@ -158,17 +158,18 @@ function configDesktop() {
 
 
 /**
- * getText sends a JQuery GET request with a given url
+ * get sends a JQuery GET request with a given url
  * and performs a function (callback) with that text.
  *
  * @param {String} url
  * @param {Function} callback
  */
-function getText(url, callback) {
+function get(url, dataType, callback) {
     $.ajax({
         // Set url and method.
         url: url,
         method: 'GET',
+        dataType: dataType,
         // On success, perform callback function with returned data.
         success: function(data) {
             if (callback) callback(data);
@@ -177,22 +178,6 @@ function getText(url, callback) {
         error: function(textStatus, errorThrown) {
             console.error('Error loading text file:', errorThrown);
             alert("Error loading text file: " + errorThrown + " " + url);
-        }
-    });
-}
-
-
-
-function getJSON(url, callback) {
-    $.ajax({
-        url: url,
-        dataType: 'json',
-        success: function(data) {
-            if (callback) callback(data);
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.error('Error loading JSON:', errorThrown);
-            alert("Error loading JSON: " + errorThrown + " " + url);
         }
     });
 }

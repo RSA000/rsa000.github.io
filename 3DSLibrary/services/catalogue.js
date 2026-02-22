@@ -76,5 +76,5 @@
         populateCatalogue(jsonItems, lowerScreenContents);
     }
 
-    getJSON(url, parseJSON);
+    get(url, "json", parseJSON);
 })()
