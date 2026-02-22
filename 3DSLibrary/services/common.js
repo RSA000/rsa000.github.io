@@ -182,6 +182,18 @@ function getText(url, callback) {
 }
 
 
+
+function getJSON(url, callback) {
+    $.getJSON(url, function(data) {
+        if (callback) callback(data);
+    }).fail(function(textStatus, error) {
+        console.error('Error loading JSON:', error);
+        alert("Error loading JSON: " + error + " " + url);
+    });
+}
+
+
+
 /**
  * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////  https://www.w3schools.com/js/js_cookies.asp          ///////
