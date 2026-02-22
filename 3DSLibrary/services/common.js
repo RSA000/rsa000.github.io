@@ -408,6 +408,8 @@ function menuHandleKeyDown(event){
                 // Focus on current elements index.
                 elements[index].focus();
                 break;
+            case ENTER:
+                elements[index].click();
         }
     }
 }
