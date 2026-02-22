@@ -184,11 +184,16 @@ function getText(url, callback) {
 
 
 function getJSON(url, callback) {
-    $.getJSON(url, function(data) {
-        if (callback) callback(data);
-    }).fail(function(textStatus, error) {
-        console.error('Error loading JSON:', error);
-        alert("Error loading JSON: " + error + " " + url);
+    $.ajax({
+        url: url,
+        dataType: 'json',
+        success: function(data) {
+            if (callback) callback(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('Error loading JSON:', errorThrown);
+            alert("Error loading JSON: " + errorThrown + " " + url);
+        }
     });
 }
 
