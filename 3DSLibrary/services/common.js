@@ -73,9 +73,13 @@ function configSelectables(){
     // Set event handlers for theme button keydown events
     themeButtons.on('keydown', function(ev) {
         if (ev.keyCode === 32 || ev.keyCode === 13) {
-            themeButtonClick.call(this, ev);
+            // If keydown is A key
+            changeTheme(this.dataset.name);
         }
-    }).on('click', themeButtonClick);
+    }).on('click', function() {
+        // If keydown is A key
+        changeTheme(this.dataset.name);
+    });
 
     // Set event handlesrs for font button keydown events.
     fontButtons.on('keydown', function(ev) {
@@ -112,7 +116,9 @@ function config3DS(){
 }
 
 
-
+/**
+ * Function sets CSS for desktop view
+ */
 function configDesktop() {
     $(document.body).css({
         "margin": "25px auto",
@@ -199,30 +205,6 @@ function setCookie(cname, cvalue, exdays) {
 
 
 /**
- * Function checks cookie, "fontsize," value and updates elements accordingly.
- * If no font is set, medium (13) is set.
- */
-function checkFontSize() {
-    var fontSize = parseInt(getCookie("fontsize"));
-    // If fontSize is a number greater than 0.
-    if (fontSize) {
-        // Get and apply font settings with JQueary to all divs, paragraphs and spanners.
-        $("div").css("font-size", (fontSize + 3) + "px");
-        $("p").css("font-size", fontSize + "px");
-        $("span").css("font-size", (fontSize + 1) + "px");
-        return;
-    }
-    // Otherwise, updated font to default size.
-    else {
-        alert("No font size found\nDefault set (13px)");
-        setCookie("fontsize", "13", 364);
-        checkFontSize();
-        return;
-    }
-}
-
-
-/**
  * <<<<<<<<<<<<<<<<<  w3schools (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
  * //////  https://www.w3schools.com/js/js_cookies.asp          ///////
  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -249,6 +231,30 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+
+
+/**
+ * Function checks cookie, "fontsize," value and updates elements accordingly.
+ * If no font is set, medium (13) is set.
+ */
+function checkFontSize() {
+    var fontSize = parseInt(getCookie("fontsize"));
+    // If fontSize is a number greater than 0.
+    if (fontSize) {
+        // Get and apply font settings with JQueary to all divs, paragraphs and spanners.
+        $("div").css("font-size", (fontSize + 3) + "px");
+        $("p").css("font-size", fontSize + "px");
+        $("span").css("font-size", (fontSize + 1) + "px");
+        return;
+    }
+    // Otherwise, updated font to default size.
+    else {
+        alert("No font size found\nDefault set (13px)");
+        setCookie("fontsize", "13", 364);
+        checkFontSize();
+        return;
+    }
 }
 
 
