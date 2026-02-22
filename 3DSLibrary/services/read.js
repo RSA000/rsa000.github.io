@@ -118,7 +118,7 @@
      */
     function readKeyDown(event, element){
         // Prevent default action when key is pressed down.
-        preventKey(event);
+        event.preventDefault();
         // Switch case for each button press code.
         switch(event.keyCode){
             case UP:

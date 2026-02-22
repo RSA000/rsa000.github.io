@@ -367,31 +367,6 @@ var catClick = function(ev) {
 
 
 /**
- * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
- * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
- * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- *
- * This prevents the browser from moving the page using the arrow keys and
- * prevents default DS events for the D-pad and A key.
- * @param {keyboardEvent} event
- */
-function preventKey(event){
-    // Allow backspace, F5 (refresh), and ENTER.
-    var keyCode = event.keyCode;
-    if ((keyCode === BACKSPACE) || (keyCode === F5) || (keyCode == ENTER)){
-        return true;
-    }
-    // Allow character input.
-    if(event.charCode || (event.key && event.key.length === 1 ))
-        return true;
-    // Otherwise, prevent default action for event and return false.
-    else{
-        return false;
-    }
-}
-
-
-/**
  * Process keydown logic. Call this when using window.onkeydown, and you want to use the global.js input detection system
  * @param {KeyboardEvent} event
  */
