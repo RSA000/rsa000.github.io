@@ -12,7 +12,8 @@ body {
 }
 
 .upperScreenContents{
-    height: 90%;
+    height: 99%;
+    justify-
 }
 
 .upperScreenText{
@@ -22,14 +23,14 @@ body {
 
 
 .upperScreenImages {
-    bottom: 64%;
+    position:relative;
 }
 
 
 #indexPhotoR {
     height: 128px;
     width: 116px;
-    left: 465px;
+    left: 80%;
     position: absolute;
 }
 
@@ -37,7 +38,7 @@ body {
 #indexPhotoL {
     height: 128px;
     width: 116px;
-    left: 10px;
+    left: 10%;
     position: absolute;
 }
 
