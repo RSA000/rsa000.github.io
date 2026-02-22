@@ -2,6 +2,7 @@
 body {
     position: grid;
     text-align: center;
+    padding:5px;
 }
 
 
@@ -88,7 +89,7 @@ body {
     position: relative;
     top: 10px;
     width: 85%;
-    height: 65vh;
+    height: 80vh;
     margin: 10px auto;
     overflow-y: scroll;
 }
