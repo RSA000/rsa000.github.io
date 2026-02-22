@@ -330,15 +330,6 @@ var inactive = function() {
 
 
 /**
- * Function updates theme to element name value if event keycode is valid.
- */
-var  themeButtonClick = function(ev){
-    // If keydown is A key
-    changeTheme(this.dataset.name);
-};
-
-
-/**
  * Function updates font according to elements name (up or down)
  */
 var  fontButtonClick = function(ev){
