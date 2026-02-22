@@ -95,7 +95,7 @@ function configSelectables(){
  * Function calls necessary logic to configur browser for 3DS devices
  */
 function config3DS(){
-    $("#base").attr("href", "../styles/ds.css");
+    $("#base").attr("href", "https://github.com/RSA000/rsa000.github.io/blob/main/3DSLibrary/assets/styles/ds.css");
     // Set interval to center screen every 33 milliseconds (30fps).
     setInterval(function(){
         window.scrollTo(centerX, centerY);
@@ -400,7 +400,7 @@ function menuHandleKeyDown(event){
         }
         // Configuration for regular desktop.
         else{
-          $("#base").attr("href", "../styles/desktop.css");
+          $("#base").attr("href", "https://github.com/RSA000/rsa000.github.io/blob/main/3DSLibrary/assets/styles/desktop.css");
         }
     });
 })()
