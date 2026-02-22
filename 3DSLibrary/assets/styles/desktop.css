@@ -41,13 +41,12 @@ body {
     position: absolute;
 }
 
-.lowerScreen{
+.lowerScreen {
     background: inherit;
     margin: auto;
-    height: 30%;
+    height: 30vh; /* Changed from 30% to 30vh */
     width: 70%;
     overflow-y: scroll;
-    
 }
 
 
