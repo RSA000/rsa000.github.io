@@ -81,7 +81,7 @@ body {
     position: relative;
     top: 10px;
     width: 85%;
-    height: 86%;
+    height: 95vh;
     margin: 10px auto;
     overflow-y: scroll;
 }
