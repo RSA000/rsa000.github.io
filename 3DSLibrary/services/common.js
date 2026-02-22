@@ -386,7 +386,6 @@ function preventKey(event){
         return true;
     // Otherwise, prevent default action for event and return false.
     else{
-        event.preventDefault();
         return false;
     }
 }
@@ -398,7 +397,7 @@ function preventKey(event){
  */
 function menuHandleKeyDown(event){
     // Prevent default action when key is pressed down.
-    preventKey(event);
+    event.preventDefault();
 
     var elements = document.querySelectorAll('a, button');
 
