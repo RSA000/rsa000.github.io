@@ -89,7 +89,6 @@ body {
 /* Lower Screen div link CSS. */
 .lowerScreenContents a {
   /* Container */
-  width: 220px;
   background-color: #513985;
   border: 2px dashed #dca165;
   border-radius: 20%;
