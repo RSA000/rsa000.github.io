@@ -16,6 +16,8 @@ const deviceType = window.navigator.userAgent;
 
 // Instantiate and set variable, index, to 0.
 var index = 0;
+// Set variable for page size (number of characters per page).
+var pageSize = 1850;
 
 
 
@@ -400,6 +402,8 @@ function menuHandleKeyDown(event){
         // Configuration for regular desktop.
         else{
           $("#base").attr("href", "../assets/styles/desktop.css");
+          // Update pagesize to desktop.
+          pageSize = 4000;
         }
     });
 })()

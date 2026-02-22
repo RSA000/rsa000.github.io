@@ -95,7 +95,7 @@
             position = segmentEnd;
 
             // If chunk is large enough, push current chunk to textChunks and reset
-            if (chunk.length >= 1800) {
+            if (chunk.length >= pageSize) {
                 textChunks.push(chunk);
                 chunk = "";
             }
