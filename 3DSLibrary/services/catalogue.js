@@ -51,30 +51,30 @@
      *
      * @param {string} text - Raw text from CSV.
      */
-    function parseCSV(text){
-        // Create list for csv entries.
-        csvItems = [];
-        var lowerScreenContents = document.getElementById("catalogueOptions");
-        // Store each CSV line in variable.
-        var lines = text.trim().split("\n");
+    function parseJSON(text){
+        // Create list for JSON entries.
+        var jsonItems = [];
 
-        // For each line.
-        for (var i = 0; i < lines.length; i++) {
-            // Entries are anything between two quoates and ignore spacing and commas in between; match multiple items.
-            var entries = lines[i].match(/(".*?[^ ,]+")/g);
-            // If there are any entries.
-            if (entries) {
-                // Remove surrounding quotes and add entry.
-                entries = entries.map(function(entry) {
-                    // Replace quote characters with empty string.
-                    return entry.replace(/^"|"$/g, '');
-                });
-                csvItems.push(entries);
-            }
+        // Assuming jsonData is an array of objects.
+        if (Array.isArray(jsonData)) {
+            jsonData.forEach(function(item) {
+                // Convert each object into an array of entries (values or key-value pairs).
+                // For example, if you want just values:
+                var entries = Object.values(item);
+                // Or, to include keys:
+                // var entries = Object.entries(item).flat();
+
+                jsonItems.push(entries);
+            });
+        } else {
+            console.error("JSON Error");
+            return;
         }
-        // Populate lowerScreenContents with anchor elements created from csv File.
-        populateCatalogue(csvItems, lowerScreenContents);
+
+        var lowerScreenContents = document.getElementById("catalogueOptions");
+        // Populate lowerScreenContents with anchor elements created from JSON data.
+        populateCatalogue(jsonItems, lowerScreenContents);
     }
 
-    getText(url, parseCSV);
+    getText(url, parseJSON);
 })()
