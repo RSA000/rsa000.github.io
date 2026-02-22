@@ -32,17 +32,14 @@
         }
 
         // Insert the generated HTML into the specified element
-        element.innerHTML = catalogue;
+        element.html(catalogue);
 
         // Add event listeners to each generated element
-        var elements = document.getElementsByClassName('cat');
+        var elements = $(".cat");
 
-        for (var i = 0, l = elements.length; i < l; i++) {
-            elements[i].setAttribute('tabindex', i);
-            elements[i].addEventListener('focus', active, false);
-            elements[i].addEventListener('blur', inactive, false);
-            elements[i].addEventListener('click', catClick, false);
-        }
+        elements.on('focus', active, false);
+        elements.on('blur', inactive, false);
+        elements.on('click', catClick, false);
     }
 
 
@@ -71,7 +68,7 @@
             return;
         }
 
-        var lowerScreenContents = document.getElementById("catalogueOptions");
+        var lowerScreenContents = $("#catalogueOptions");
         // Populate lowerScreenContents with anchor elements created from JSON data.
         populateCatalogue(jsonItems, lowerScreenContents);
     }
