@@ -48,19 +48,19 @@
      *
      * @param {string} text - Raw text from CSV.
      */
-    function parseJSON(jsonData){
+    function parseJSON(jsonData) {
         // Create list for JSON entries.
         var jsonItems = [];
 
         // Assuming jsonData is an array of objects.
         if (Array.isArray(jsonData)) {
             jsonData.forEach(function(item) {
-                // Convert each object into an array of entries (values or key-value pairs).
-                // For example, if you want just values:
-                var entries = Object.values(item);
-                // Or, to include keys:
-                // var entries = Object.entries(item).flat();
-
+                var entries = [];
+                for (var key in item) {
+                    if (item.hasOwnProperty(key)) {
+                        entries.push(item[key]);
+                    }
+                }
                 jsonItems.push(entries);
             });
         } else {
@@ -71,7 +71,7 @@
         var lowerScreenContents = $("#catalogueOptions");
         // Populate lowerScreenContents with anchor elements created from JSON data.
         populateCatalogue(jsonItems, lowerScreenContents);
-    }
+}
 
     get(url, "json", parseJSON);
 })()
