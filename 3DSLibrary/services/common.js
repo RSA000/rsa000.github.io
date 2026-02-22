@@ -24,7 +24,7 @@ var index = 0;
  * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
  * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  *
- * Overloaded method for String.include
+ * Overloaded method for String.includes instead of using function.
  *
  * Performs a linear interpolation between 2 numbers
  * @param  {Object, String, Array} container The object you want to search in
@@ -48,6 +48,11 @@ function center(){
 }
 
 
+/**
+ *  configSelectables takes all anchors, themeButtons, and fontButtons of the
+ *  current DOM and adds the
+ *  appropriate eventlistener functions for each.
+ */
 function configSelectables(){
     // Select all anchors and buttons as JQ object.
     var elements = $('a, button');
@@ -78,6 +83,7 @@ function configSelectables(){
     }).on('click', fontButtonClick);
 }
 
+
 /**
  * Function returns if system is 3DS and false otherwise.
  */
@@ -91,22 +97,22 @@ function is3DS(){
  * Function calls necessary logic to configur browser for 3DS devices
  */
 function config3DS(){
-    var anchors = $('a');
-
     // Set interval to center screen every 33 milliseconds (30fps).
     setInterval(center, 33);
+
+    // Store all DOM anchors in variable.
+    var anchors = $('a');
+    // Add non-3DS compatible warning to any relevant elements.
+    anchors.on("click", function(event){
+        // Alert that link is not supported.
+        alert("The 3DS doesn't support this page. Please open \n" + anchor.href + "\n on a modern browser)");
+        // Prevent default action (navigating to link).
+        event.preventDefault();
+
     // Add event listener alert error events (necessary to see errors on 3DS system)..
     window.addEventListener("error", function(e) {
         alert(e.filename + ":" + e.lineno + " " + e.message);
     }, false);
-
-    // Add non-3DS compatible warning to any relevant elements.
-    for(var i = 0, l = anchors.length; i<l; i++){
-        // If 3DS attribute exists, add warning to link.
-        if (anchors[i].getAttribute("nc")){
-            registerNon3DSlink(anchors[i]);
-        }
-    }
 }
 
 
@@ -445,25 +451,6 @@ function menuHandleKeyDown(event){
                 break;
         }
     }
-}
-
-
-/**
- * <<<<<<<<<<<<<<<<<<<<  Wolfyxon's (modified) stuff >>>>>>>>>>>>>>>>>>>>>>>
- * //////         https://github.com/Wolfyxon/3ds-web-stuff*         ///////
- * <<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- * Register an <a> that isn't meant to be opened on the 3DS
- * @param {element} a
- */
-function registerNon3DSlink(anchor){
-    // Add event listener for when elements is clicked.
-    anchor.addEventListener("click", function(event){
-        // Alert that link is not supported.
-        alert("The 3DS doesn't support this page. Please open \n" + anchor.href + "\n on a modern browser)");
-        // Prevent default action (navigating to link).
-        event.preventDefault();
-        return false;
-    }, false);
 }
 
 
