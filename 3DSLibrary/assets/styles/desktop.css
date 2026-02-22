@@ -74,6 +74,7 @@ body {
 .lowerScreenContents a{
     font-size: 250%;
     display: inherit;
+    margin: auto;
 }
 
 
