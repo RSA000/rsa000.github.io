@@ -101,7 +101,7 @@ function config3DS(){
     setInterval(center, 33);
 
     // Store all DOM anchors in variable.
-    var anchors = $('a');
+    var anchors = $('a[nc]');
     // Add non-3DS compatible warning to any relevant elements.
     anchors.on("click", function(event){
         // Alert that link is not supported.
