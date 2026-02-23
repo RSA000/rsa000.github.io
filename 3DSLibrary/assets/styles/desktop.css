@@ -82,6 +82,7 @@ width: 60%;
 }
 
 .lowerScreenContents a{
+    width: 84%;
     font-size: 225%;
     display: inherit;
     margin: auto;
@@ -89,6 +90,7 @@ width: 60%;
 
 
 .lowerScreenContents button{
+    width: 84%;
     font-size: 200%;
     display: inherit;
     margin: auto;
