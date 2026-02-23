@@ -1,0 +1,141 @@
+/* HTML general body settings */
+body {
+    /* Container */
+    background-color: black;
+    border: 4px dashed white;
+
+    /* Text */
+    font-family: monospace;
+    font-size: 16px;
+    top:3px;
+}
+
+/* Main container for upper screen.*/
+.upperScreen {
+
+    /* Container */
+    background-image: url("../../assets/img/backgrounds/garry.mpo");
+}
+
+/* Container for upperScreen contents.*/
+.upperScreenContents{
+
+    /* Container */
+    background-image: inherit;
+    background-size: 15%;
+    border: 4px solid gray;
+}
+
+/* Container for upperScreen text.*/
+.upperScreenText{
+    /* Container */
+    border-radius:8%;
+}
+
+
+/* Top Heading settings.*/
+.topHeading{
+    background: gray; border: 2px solid white; color: white;
+}
+
+/* Top Subtitle settings.*/
+.topSubtitle{
+    /* Container */
+    background: gray;
+    border: 2px solid white;
+    /* Text */
+    color: #ffebeb;
+}
+
+
+/* Top screen lower left image. */
+#indexPhotoL{
+/* Container */
+background: #000;
+border: 2px solid white;
+border-radius: 70%;
+}
+
+/* Top screen lower right image. */
+#indexPhotoR{
+
+/* Container */
+background: #000;
+border: 2px solid white;
+border-radius: 70%;
+left: 63%;
+
+}
+
+/* Lower screen settings.*/
+.lowerScreen{
+
+    /* Container */
+    background-image: url("../../assets/img/backgrounds/garry.mpo");
+
+}
+
+.lowerScreenContents{
+
+    /* Container */
+    border: 4px solid gray;
+
+}
+
+/* Lower Screen div link CSS. */
+.lowerScreenContents a {
+
+    /* Container */
+    background-color: #7c6447;
+    border-radius:10%;
+
+    color: white;
+}
+
+
+.mySlides{
+    /* Container */
+    border: 3px solid gray;
+}
+
+
+
+#galleryImage{
+/* Container */
+border: 5px solid gray;
+
+}
+
+
+#textContainerRead{
+/* Container */
+background: papayawhip;
+}
+
+#textContainerRead h1{
+font-size: 16px;
+}
+
+
+#themeSettings{
+background: url(../../assets/img/backgrounds/garry.mpo);
+}
+
+#themeSettings button{
+
+background-color: gray;
+color: white;
+
+}
+
+
+
+#pageindex{
+background-color: inherit;
+border-radius: 9%;
+
+}
+
+#viewToggle{
+background: inherit;
+}
