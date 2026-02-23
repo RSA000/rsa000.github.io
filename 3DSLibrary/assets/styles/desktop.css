@@ -10,7 +10,7 @@ body {
 /* Main container for upper screen.*/
 .upperScreen {
     /* Container */
-    height: 75vh;
+    height: 60vh;
     width: 400px;
     margin: auto;
     position: relative;
@@ -97,7 +97,7 @@ body {
 /* Lower screen settings.*/
 .lowerScreen{
     /* Container */
-    height: 20vh;
+    height: 45vh;
     width: 320px;
     margin: auto;
     position: relative;
@@ -105,7 +105,7 @@ body {
 
 .lowerScreenContents {
     border-radius: 10%;
-    height: 200px;
+    height: 90%;
     width: 280px;
     margin: auto;
     overflow-y: scroll;
