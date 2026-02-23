@@ -164,8 +164,8 @@ body {
 
 #upperScreenRead{
     /* Container */
-    height: 450px;
-    width: 394px;
+    height: 90%;
+    width: 80%;
 }
 
 #galleryImages {
