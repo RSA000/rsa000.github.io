@@ -17,10 +17,26 @@ body {
     height: 95vh;
 }
 
-.upperScreenContents{
-    position: relative;
-    height: 100%;
+.upperScreenContents {
+    display: flex;
+    flex-direction: column; / column */
+    align-items: center; /* Center items horizontally */
 }
+
+
+.upperScreenImages {
+    display: flex;
+    justify-content: space-around;  with space around */
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+#indexPhotoL, #indexPhotoR {
+height: 25vh;
+max-width: 45%;
+}
+
 
 .upperScreenText{
     width: 50%;
@@ -37,24 +53,6 @@ body {
 width: 60%;
 }
 
-.upperScreenImages{
-    top: -50%;
-    position: relative;
-}
-
-#indexPhotoR {
-position: absolute;
-height: 38vh;
-left: 379vh;
-top: -18vh;
-}
-
-
-#indexPhotoL {
-    position: absolute;
-    height: 25vh;
-    left: -25%;
-}
 
 .lowerScreen {
     background: inherit;
