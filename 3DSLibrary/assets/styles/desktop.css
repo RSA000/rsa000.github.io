@@ -26,6 +26,14 @@ body {
    margin-top:50px;
 }
 
+#topHeading{
+    width: 40%;
+}
+
+
+#topSubtitle{
+width: 60%;
+}
 
 .upperScreenImages {
     position:relative;
