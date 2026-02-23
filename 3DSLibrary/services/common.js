@@ -401,8 +401,8 @@ function menuHandleKeyDown(event){
         }
         // Configuration for regular desktop.
         else{
-            // Set base CSS to desktop.
-            $("#base").attr("href", "../assets/styles/desktop.css");
+            // Set base CSS to desktop. (currently, just the same as ds)
+            $("#base").attr("href", "../assets/styles/ds.css");
             // Update pagesize to desktop.
             pageSize = 4000;
             // Hide screen changing button.
