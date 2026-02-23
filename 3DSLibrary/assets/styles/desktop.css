@@ -1,6 +1,6 @@
 body {
     width: 95%;
-    height: 90vh;
+    height: 100vh;
     padding:50px;
     font-size: 16px;
     position: relative;
@@ -10,7 +10,7 @@ body {
 /* Main container for upper screen.*/
 .upperScreen {
     /* Container */
-    height: 213px;
+    height: 75vh;
     width: 400px;
     margin: auto;
     position: relative;
@@ -97,7 +97,7 @@ body {
 /* Lower screen settings.*/
 .lowerScreen{
     /* Container */
-    height: 240px;
+    height: 20vh;
     width: 320px;
     margin: auto;
     position: relative;
