@@ -42,16 +42,14 @@ width: 60%;
 
 
 #indexPhotoR {
-    height: 128px;
-    width: 116px;
+    height: 36vh;
     left: 80%;
     position: absolute;
 }
 
 
 #indexPhotoL {
-    height: 128px;
-    width: 116px;
+    height: 36vh;
     left: 10%;
     position: absolute;
 }
