@@ -199,7 +199,7 @@
             }
         });
 
-        window.removeEventListener("keydown", menuHandleKeyDown);
+        $(window).off("keydown", menuHandleKeyDown);
 
         // Add event listener for when a key is pressed down.
         window.addEventListener("keydown", function(e) {
