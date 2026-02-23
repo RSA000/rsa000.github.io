@@ -8,7 +8,7 @@ body {
 
 .upperScreen {
     width: 90%;
-    height: 90vh;
+    height: 60vh;
     margin: 10px auto;
 }
 
@@ -45,8 +45,8 @@ body {
 .lowerScreen {
     background: inherit;
     margin: auto;
-    height: 20vh;
-    width: 70%;
+    height: 30vh;
+    width: 60%;
     overflow-y: scroll;
 }
 
