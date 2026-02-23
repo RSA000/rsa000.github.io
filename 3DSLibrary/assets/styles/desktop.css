@@ -105,3 +105,8 @@ width: 60%;
     margin: 10px auto;
     overflow-y: scroll;
 }
+
+
+#readInputs{
+    margin: 25px auto;
+}
