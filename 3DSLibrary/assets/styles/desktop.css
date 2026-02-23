@@ -42,14 +42,14 @@ width: 60%;
 }
 
 #indexPhotoR {
-    position: relative;
+    position: absolute;
     height: 25vh;
     left: 25%;
 }
 
 
 #indexPhotoL {
-    position: relative;
+    position: absolute;
     height: 25vh;
     left: -25%;
 }
