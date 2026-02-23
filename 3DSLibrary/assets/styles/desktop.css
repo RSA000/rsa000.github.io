@@ -12,6 +12,11 @@ body {
     margin: 10px auto;
 }
 
+
+#upperScreenRead{
+height: 95vh;
+}
+
 .upperScreenContents{
     height: 100%;
 }
