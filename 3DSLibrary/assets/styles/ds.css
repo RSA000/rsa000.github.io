@@ -2,6 +2,7 @@ body {
     width: 500px;
     padding:50px;
     font-size: 16px;
+    position: relative;
 }
 
 /* Main container for upper screen.*/
