@@ -25,10 +25,7 @@ body {
 
 
 .upperScreenImages {
-    display: flex;
-    justify-content: space-around;  with space around */
-    width: 100%;
-    margin-top: 20px;
+    width: 85%;
 }
 
 
