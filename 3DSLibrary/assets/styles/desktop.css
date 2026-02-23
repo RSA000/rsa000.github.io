@@ -36,6 +36,10 @@ body {
 width: 60%;
 }
 
+.upperScreenImages{
+    top: -50%;
+    position: relative;
+}
 
 #indexPhotoR {
     position: relative;
