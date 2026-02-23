@@ -58,12 +58,10 @@ body {
 
 /* Top screen lower right image. */
 #indexPhotoR{
-
 	/* Container */
 	background: #000;
 	border: 2px solid white;
 	border-radius: 70%;
-
 }
 
 /* Lower screen settings.*/

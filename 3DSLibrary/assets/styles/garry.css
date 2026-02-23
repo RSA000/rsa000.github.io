@@ -50,19 +50,18 @@ body {
 
 /* Top screen lower left image. */
 #indexPhotoL{
-/* Container */
-background: #000;
-border: 2px solid white;
-border-radius: 70%;
+    /* Container */
+    background: #000;
+    border: 2px solid white;
+    border-radius: 70%;
 }
 
 /* Top screen lower right image. */
 #indexPhotoR{
-
-/* Container */
-background: #000;
-border: 2px solid white;
-border-radius: 70%;
+    /* Container */
+    background: #000;
+    border: 2px solid white;
+    border-radius: 70%;
 }
 
 /* Lower screen settings.*/
