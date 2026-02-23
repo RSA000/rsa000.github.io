@@ -201,6 +201,7 @@ body {
     width: 260px;
     height: 175px;
     position: relative;
+    overflow-y: scroll;
 }
 
 
