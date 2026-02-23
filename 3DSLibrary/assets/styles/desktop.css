@@ -44,6 +44,11 @@ max-width: 45%;
     margin-top:50px;
 }
 
+
+.upperScreenText::before, .upperScreenText::after {
+    content: url("/paint/view.php?id=249674&type=MPO&depth=2");
+}
+
 #topHeading{
     width: 40%;
 }
