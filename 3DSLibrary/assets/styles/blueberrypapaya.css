@@ -50,15 +50,15 @@ body {
 /* Lower screen settings.*/
 .lowerScreen{
 	/* Container */
+	background-color: papayawhip;
 	border: 4px dashed #28cece;
 	border-radius: 10%;
 }
 
 
 .lowerScreenContents {
-	background-color: papayawhip;
-	border: 4px dashed #28cece;
-	border-radius: 10%;
+	height: 100%;
+	width: 90%;
 }
 
 
@@ -67,6 +67,8 @@ body {
 	/* Container */
 	background-color: #28cece;
 	border: 2px dashed papayawhip;
+	border-radius: 5%;
+	margin: 5px; 
 	/* Text */
 	color: white;
 }
