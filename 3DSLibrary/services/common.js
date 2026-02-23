@@ -401,9 +401,12 @@ function menuHandleKeyDown(event){
         }
         // Configuration for regular desktop.
         else{
-          $("#base").attr("href", "../assets/styles/desktop.css");
-          // Update pagesize to desktop.
-          pageSize = 4000;
+            // Set base CSS to desktop.
+            $("#base").attr("href", "../assets/styles/desktop.css");
+            // Update pagesize to desktop.
+            pageSize = 4000;
+            // Hide screen changing button.
+            $("#viewToggle").hide();
         }
     });
 })()
