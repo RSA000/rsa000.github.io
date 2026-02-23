@@ -39,15 +39,15 @@ width: 60%;
 
 #indexPhotoR {
     position: relative;
-    height: 30vh;
-    left: 20%;
+    height: 25vh;
+    left: 25%;
 }
 
 
 #indexPhotoL {
     position: relative;
-    height: 30vh;
-    left: -20%;
+    height: 25vh;
+    left: -25%;
 }
 
 .lowerScreen {
