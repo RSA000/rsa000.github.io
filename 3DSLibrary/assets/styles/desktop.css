@@ -63,11 +63,12 @@ body {
     margin: auto;
     height:200px;
     width: 50%;
+    overflow-y: scroll;
 }
 
 .lowerScreenContents {
     margin: auto;
-    height: 200px;
+    height: 30vh;
     width: 70%;
 }
 
@@ -79,7 +80,7 @@ body {
 
 
 .lowerScreenContents button{
-    font-size: 225%;
+    font-size: 200%;
     display: inherit;
     margin: auto;
 }
