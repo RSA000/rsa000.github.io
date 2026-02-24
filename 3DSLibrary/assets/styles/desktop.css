@@ -16,8 +16,6 @@ body {
 }
 
 
-
-
 /* Container for upperScreen contents.*/
 .upperScreenContents{
     /* Container */
@@ -197,6 +195,7 @@ body {
 
 
 #themeSettings{
+    border-radius: 8%;
     margin: 10px auto;
     text-align: center;
     width: 260px;

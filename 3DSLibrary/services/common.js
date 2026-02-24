@@ -341,10 +341,9 @@ function menuHandleKeyDown(event){
     if(event.keyCode === 8) return true; //backspace
     if(event.keyCode === 116) return true; //f5
     if(event.keyCode === 13) return true; //enter
-
     if(event.charCode || (event.key && event.key.length === 1 )) return true
 
-    // Prevent default action when key is pressed down.
+    // Prevent default action when any other key is pressed down.
     event.preventDefault();
 
     var elements = document.querySelectorAll('a, button');
@@ -394,12 +393,12 @@ function menuHandleKeyDown(event){
 (function(){
     /* When content is loaded. */
      $(document).ready(function() {
+        // Set function for keydown events.
+        $(window).keydown(menuHandleKeyDown);
         // Set selectable element events, check current theme and font size.
         configSelectables();
         checkTheme();
         checkFontSize();
-        // Set function for keydown events.
-        $(window).keydown(menuHandleKeyDown);
 
         // If device is 3DS.
         if (is3DS()){
