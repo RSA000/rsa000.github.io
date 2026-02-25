@@ -134,7 +134,7 @@ function configDesktop() {
  * @param {String} url
  * @param {Function} callback
  */
-function get(url, dataType, callback) {
+function 3DSFetch(url, dataType, callback) {
     $.ajax({
         // Set url and method.
         url: url,
