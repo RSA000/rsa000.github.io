@@ -73,5 +73,5 @@
         populateCatalogue(jsonItems, lowerScreenContents);
     }
 
-    3DSFetch(url, "json", parseJSON);
+    DSFetch(url, "json", parseJSON);
 })()
